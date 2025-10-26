@@ -1046,13 +1046,13 @@ class _CameraPageState extends State<CameraPage> {
                     if (_showZoomSlider)
                       Positioned(
                         bottom: 120,
-                        left: MediaQuery.of(context).size.width * 0.15,
-                        right: MediaQuery.of(context).size.width * 0.15,
+                        left: MediaQuery.of(context).size.width * 0.2,
+                        right: MediaQuery.of(context).size.width * 0.2,
                         child: Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                           decoration: BoxDecoration(
-                            color: Colors.black.withOpacity(0.3),
-                            borderRadius: BorderRadius.circular(25),
+                            color: Colors.black.withOpacity(0.2),
+                            borderRadius: BorderRadius.circular(20),
                           ),
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
@@ -1062,11 +1062,11 @@ class _CameraPageState extends State<CameraPage> {
                                 '${_currentZoom.toStringAsFixed(1)}x',
                                 style: const TextStyle(
                                   color: Colors.white,
-                                  fontSize: 16,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              const SizedBox(height: 8),
+                              const SizedBox(height: 4),
 
                               // Horizontal slider with labels
                               Row(
@@ -1076,11 +1076,11 @@ class _CameraPageState extends State<CameraPage> {
                                     '${_minZoom.toStringAsFixed(1)}x',
                                     style: const TextStyle(
                                       color: Colors.white,
-                                      fontSize: 12,
+                                      fontSize: 10,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                  const SizedBox(width: 8),
+                                  const SizedBox(width: 6),
 
                                   // Slider
                                   Expanded(
@@ -1090,12 +1090,12 @@ class _CameraPageState extends State<CameraPage> {
                                         inactiveTrackColor: Colors.white.withOpacity(0.3),
                                         thumbColor: Colors.white,
                                         thumbShape: const RoundSliderThumbShape(
-                                          enabledThumbRadius: 10,
+                                          enabledThumbRadius: 6,
                                         ),
                                         overlayShape: const RoundSliderOverlayShape(
-                                          overlayRadius: 18,
+                                          overlayRadius: 12,
                                         ),
-                                        trackHeight: 4,
+                                        trackHeight: 2,
                                       ),
                                       child: Slider(
                                         value: _currentZoom,
@@ -1123,13 +1123,13 @@ class _CameraPageState extends State<CameraPage> {
                                     ),
                                   ),
 
-                                  const SizedBox(width: 8),
+                                  const SizedBox(width: 6),
                                   // Max zoom label
                                   Text(
                                     '${_maxZoom.toStringAsFixed(1)}x',
                                     style: const TextStyle(
                                       color: Colors.white,
-                                      fontSize: 12,
+                                      fontSize: 10,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
