@@ -614,6 +614,18 @@ class _CameraPageState extends State<CameraPage> {
   Offset _resetStartPosition = Offset.zero; // Start position for reset animation
   Offset _homePosition = Offset.zero; // Home position (center bottom)
 
+  // Zoom state
+  double _currentZoom = 1.0;
+  double _minZoom = 1.0;
+  double _maxZoom = 1.0;
+  bool _showZoomSlider = false;
+  Timer? _zoomSliderTimer;
+  double _baseZoom = 1.0; // Base zoom level for pinch gesture
+
+  // Pinch gesture tracking
+  double? _initialDistance;
+  Map<int, Offset> _pointers = {}; // Track all active pointers by ID
+
   @override
   void initState() {
     super.initState();
@@ -638,6 +650,20 @@ class _CameraPageState extends State<CameraPage> {
           debugPrint('Focus mode not supported: $e');
         }
 
+        // Get zoom capabilities - use device's actual range
+        try {
+          _minZoom = await _cameraController!.getMinZoomLevel();
+          _maxZoom = await _cameraController!.getMaxZoomLevel();
+          _currentZoom = 1.0;
+          _baseZoom = 1.0;
+
+          debugPrint('Device zoom range: $_minZoom - $_maxZoom');
+        } catch (e) {
+          debugPrint('Zoom not supported: $e');
+          _minZoom = 1.0;
+          _maxZoom = 1.0;
+        }
+
         if (mounted) {
           setState(() {
             _isInitialized = true;
@@ -652,6 +678,7 @@ class _CameraPageState extends State<CameraPage> {
   @override
   void dispose() {
     _resetTimer?.cancel();
+    _zoomSliderTimer?.cancel();
     _cameraController?.dispose();
     super.dispose();
   }
@@ -723,12 +750,80 @@ class _CameraPageState extends State<CameraPage> {
       body: _isInitialized
           ? LayoutBuilder(
               builder: (context, constraints) {
-                return Stack(
-                  children: [
-                    // Camera preview
-                    Positioned.fill(
-                      child: CameraPreview(_cameraController!),
-                    ),
+                return Listener(
+                  behavior: HitTestBehavior.translucent,
+                  onPointerDown: (event) {
+                    _pointers[event.pointer] = event.position;
+                    debugPrint('👆 Pointer down: ${event.pointer}, total pointers: ${_pointers.length}');
+
+                    if (_pointers.length == 2) {
+                      // Two fingers detected, start zoom
+                      final pointerList = _pointers.values.toList();
+                      _initialDistance = (pointerList[0] - pointerList[1]).distance;
+                      _baseZoom = _currentZoom;
+                      debugPrint('🔍 Two fingers detected, starting zoom. Initial distance: $_initialDistance');
+                      setState(() {
+                        _showZoomSlider = true;
+                      });
+                      _zoomSliderTimer?.cancel();
+                    }
+                  },
+                  onPointerMove: (event) {
+                    if (_pointers.containsKey(event.pointer)) {
+                      _pointers[event.pointer] = event.position;
+
+                      if (_pointers.length == 2 && _initialDistance != null && _initialDistance! > 0) {
+                        final pointerList = _pointers.values.toList();
+                        final currentDistance = (pointerList[0] - pointerList[1]).distance;
+                        final scale = currentDistance / _initialDistance!;
+
+                        // Apply sensitivity multiplier
+                        final scaleDelta = scale - 1.0;
+                        final sensitivityMultiplier = 2.5;
+                        final adjustedScale = 1.0 + (scaleDelta * sensitivityMultiplier);
+
+                        final newZoom = (_baseZoom * adjustedScale).clamp(_minZoom, _maxZoom);
+
+                        setState(() {
+                          _currentZoom = newZoom;
+                        });
+                        _cameraController?.setZoomLevel(newZoom);
+                      }
+                    }
+                  },
+                  onPointerUp: (event) {
+                    _pointers.remove(event.pointer);
+                    debugPrint('👆 Pointer up: ${event.pointer}, remaining pointers: ${_pointers.length}');
+
+                    if (_pointers.length < 2) {
+                      _initialDistance = null;
+
+                      if (_showZoomSlider) {
+                        _zoomSliderTimer?.cancel();
+                        _zoomSliderTimer = Timer(const Duration(milliseconds: 1500), () {
+                          if (mounted) {
+                            setState(() {
+                              _showZoomSlider = false;
+                            });
+                          }
+                        });
+                      }
+                    }
+                  },
+                  onPointerCancel: (event) {
+                    _pointers.remove(event.pointer);
+                    debugPrint('👆 Pointer cancel: ${event.pointer}, remaining pointers: ${_pointers.length}');
+
+                    if (_pointers.length < 2) {
+                      _initialDistance = null;
+                    }
+                  },
+                  child: Stack(
+                    children: [
+                      // Camera preview
+                      Positioned.fill(
+                        child: CameraPreview(_cameraController!),
+                      ),
 
                     // Rule of thirds grid
                     Positioned.fill(
@@ -784,6 +879,7 @@ class _CameraPageState extends State<CameraPage> {
                           },
                           child: GestureDetector(
                         onPanDown: (details) {
+                          debugPrint('📸 Camera button onPanDown called');
                           setState(() {
                             _isLongPressing = true;
                             _hasMoved = false;
@@ -796,6 +892,7 @@ class _CameraPageState extends State<CameraPage> {
                           _resetTimer?.cancel();
                           _resetTimer = Timer(const Duration(milliseconds: 1200), () {
                             if (mounted && _isLongPressing && !_hasMoved) {
+                              debugPrint('📸 Reset timer executed - returning to home position');
                               setState(() {
                                 _resetStartPosition = _buttonPosition; // Save current position
                                 _isResetting = true; // Enable animation for reset
@@ -817,6 +914,7 @@ class _CameraPageState extends State<CameraPage> {
                           });
                         },
                         onPanStart: (details) {
+                          debugPrint('📸 Camera button onPanStart called');
                           // Do nothing here - position will be set when actually dragging
                         },
                         onPanUpdate: (details) {
@@ -825,6 +923,7 @@ class _CameraPageState extends State<CameraPage> {
                             final distance = (details.globalPosition - _panStartPosition!).distance;
                             if (distance > 15) {
                               // User is dragging (increased threshold to 15 pixels)
+                              debugPrint('📸 Camera button dragging - distance: $distance');
                               setState(() {
                                 _hasMoved = true;
                                 _isResetting = false; // No animation when dragging
@@ -859,11 +958,15 @@ class _CameraPageState extends State<CameraPage> {
                           }
                         },
                         onPanEnd: (details) {
+                          debugPrint('📸 Camera button onPanEnd - hasMoved: $_hasMoved, resetTimerExecuted: $_resetTimerExecuted');
                           _resetTimer?.cancel();
 
                           // Only take picture if user didn't move AND timer didn't execute
                           if (!_hasMoved && !_resetTimerExecuted) {
+                            debugPrint('📸 Taking picture!');
                             _takePicture();
+                          } else {
+                            debugPrint('📸 Not taking picture - hasMoved: $_hasMoved, resetTimerExecuted: $_resetTimerExecuted');
                           }
 
                           setState(() {
@@ -874,6 +977,7 @@ class _CameraPageState extends State<CameraPage> {
                           });
                         },
                         onPanCancel: () {
+                          debugPrint('📸 Camera button onPanCancel called');
                           _resetTimer?.cancel();
 
                           setState(() {
@@ -937,7 +1041,106 @@ class _CameraPageState extends State<CameraPage> {
                         ),
                       ),
                     ),
-                  ],
+
+                    // Zoom slider (horizontal)
+                    if (_showZoomSlider)
+                      Positioned(
+                        bottom: 120,
+                        left: MediaQuery.of(context).size.width * 0.15,
+                        right: MediaQuery.of(context).size.width * 0.15,
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                          decoration: BoxDecoration(
+                            color: Colors.black.withOpacity(0.3),
+                            borderRadius: BorderRadius.circular(25),
+                          ),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              // Current zoom value
+                              Text(
+                                '${_currentZoom.toStringAsFixed(1)}x',
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              const SizedBox(height: 8),
+
+                              // Horizontal slider with labels
+                              Row(
+                                children: [
+                                  // Min zoom label
+                                  Text(
+                                    '${_minZoom.toStringAsFixed(1)}x',
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  const SizedBox(width: 8),
+
+                                  // Slider
+                                  Expanded(
+                                    child: SliderTheme(
+                                      data: SliderThemeData(
+                                        activeTrackColor: Colors.white,
+                                        inactiveTrackColor: Colors.white.withOpacity(0.3),
+                                        thumbColor: Colors.white,
+                                        thumbShape: const RoundSliderThumbShape(
+                                          enabledThumbRadius: 10,
+                                        ),
+                                        overlayShape: const RoundSliderOverlayShape(
+                                          overlayRadius: 18,
+                                        ),
+                                        trackHeight: 4,
+                                      ),
+                                      child: Slider(
+                                        value: _currentZoom,
+                                        min: _minZoom,
+                                        max: _maxZoom,
+                                        onChanged: (value) {
+                                          setState(() {
+                                            _currentZoom = value;
+                                          });
+
+                                          // Apply zoom to camera
+                                          _cameraController?.setZoomLevel(value);
+
+                                          // Reset auto-hide timer
+                                          _zoomSliderTimer?.cancel();
+                                          _zoomSliderTimer = Timer(const Duration(milliseconds: 1500), () {
+                                            if (mounted) {
+                                              setState(() {
+                                                _showZoomSlider = false;
+                                              });
+                                            }
+                                          });
+                                        },
+                                      ),
+                                    ),
+                                  ),
+
+                                  const SizedBox(width: 8),
+                                  // Max zoom label
+                                  Text(
+                                    '${_maxZoom.toStringAsFixed(1)}x',
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 );
               },
             )
