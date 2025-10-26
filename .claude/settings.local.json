@@ -14,7 +14,9 @@
       "Bash(adb devices:*)",
       "Bash(adb kill-server:*)",
       "Bash(adb start-server:*)",
-      "Bash(flutter run:*)"
+      "Bash(flutter run:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(flutter pub get:*)"
     ],
     "deny": [],
     "ask": []
