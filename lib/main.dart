@@ -1,14 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/rendering.dart';
 import 'package:camera/camera.dart';
 import 'dart:io';
 import 'dart:convert';
+import 'dart:async';
 import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart' as path;
 
 void main() {
   // Disable debug banners and overlays
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Disable debug paint borders
+  debugPaintSizeEnabled = false;
+  debugPaintBaselinesEnabled = false;
+  debugPaintPointersEnabled = false;
+  debugPaintLayerBordersEnabled = false;
+  debugRepaintRainbowEnabled = false;
+
   runApp(const MyApp());
 }
 
@@ -19,6 +29,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      debugShowMaterialGrid: false,
+      showPerformanceOverlay: false,
       title: 'Food App',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
@@ -594,6 +606,13 @@ class _CameraPageState extends State<CameraPage> {
   Offset _buttonPosition = Offset.zero;
   bool _isPositioned = false; // Whether button has been moved from initial position
   bool _isLongPressing = false;
+  Timer? _resetTimer;
+  Offset? _panStartPosition;
+  bool _hasMoved = false;
+  bool _resetTimerExecuted = false;
+  bool _isResetting = false; // Flag for reset animation
+  Offset _resetStartPosition = Offset.zero; // Start position for reset animation
+  Offset _homePosition = Offset.zero; // Home position (center bottom)
 
   @override
   void initState() {
@@ -632,6 +651,7 @@ class _CameraPageState extends State<CameraPage> {
 
   @override
   void dispose() {
+    _resetTimer?.cancel();
     _cameraController?.dispose();
     super.dispose();
   }
@@ -690,11 +710,16 @@ class _CameraPageState extends State<CameraPage> {
 
   @override
   Widget build(BuildContext context) {
+    // Hide system UI overlays
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [SystemUiOverlay.bottom]);
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Camera'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
+      extendBody: true,
+      extendBodyBehindAppBar: false,
       body: _isInitialized
           ? LayoutBuilder(
               builder: (context, constraints) {
@@ -713,51 +738,151 @@ class _CameraPageState extends State<CameraPage> {
                     ),
 
                     // Capture button at center bottom (draggable)
-                    Positioned(
-                      bottom: !_isPositioned ? 40 : null,
-                      left: !_isPositioned
-                          ? MediaQuery.of(context).size.width / 2 - 35
-                          : _buttonPosition.dx - (_isLongPressing ? 5 : 0),
-                      top: _isPositioned
-                          ? _buttonPosition.dy - (_isLongPressing ? 5 : 0)
-                          : null,
-                      child: GestureDetector(
-                        onPanStart: (details) {
+                    Builder(
+                      builder: (context) {
+                        // Calculate home position once
+                        if (_homePosition == Offset.zero) {
+                          WidgetsBinding.instance.addPostFrameCallback((_) {
+                            final screenWidth = MediaQuery.of(context).size.width;
+                            final stackHeight = constraints.maxHeight;
+                            setState(() {
+                              _homePosition = Offset(
+                                screenWidth / 2 - 35,
+                                stackHeight - 40 - 70,
+                              );
+                            });
+                          });
+                        }
+
+                        return TweenAnimationBuilder<Offset>(
+                          tween: _isResetting
+                              ? Tween<Offset>(
+                                  begin: _resetStartPosition,
+                                  end: _homePosition,
+                                )
+                              : Tween<Offset>(
+                                  begin: _buttonPosition,
+                                  end: _buttonPosition,
+                                ),
+                          duration: _isResetting
+                              ? const Duration(milliseconds: 500)
+                              : Duration.zero,
+                          curve: Curves.easeInOutCubic,
+                          builder: (context, animatedOffset, child) {
+                            final currentOffset = _isResetting ? animatedOffset : _buttonPosition;
+
+                            return Positioned(
+                              bottom: !_isPositioned && !_isResetting ? 40 : null,
+                              left: !_isPositioned && !_isResetting
+                                  ? MediaQuery.of(context).size.width / 2 - 35
+                                  : currentOffset.dx - (_isLongPressing ? 5 : 0),
+                              top: _isPositioned || _isResetting
+                                  ? currentOffset.dy - (_isLongPressing ? 5 : 0)
+                                  : null,
+                              child: child!,
+                            );
+                          },
+                          child: GestureDetector(
+                        onPanDown: (details) {
                           setState(() {
                             _isLongPressing = true;
+                            _hasMoved = false;
+                            _resetTimerExecuted = false;
+                            _isResetting = false; // Not resetting when user touches
+                            _panStartPosition = details.globalPosition;
+                          });
 
-                            // Calculate current position when drag starts
-                            if (!_isPositioned) {
-                              // constraints.maxHeight is the actual Stack height (body area)
-                              final currentTop = constraints.maxHeight - 40 - 70;
-                              _buttonPosition = Offset(
-                                MediaQuery.of(context).size.width / 2 - 35,
-                                currentTop,
-                              );
-                              _isPositioned = true;
+                          // Start 1.2-second timer when user touches button
+                          _resetTimer?.cancel();
+                          _resetTimer = Timer(const Duration(milliseconds: 1200), () {
+                            if (mounted && _isLongPressing && !_hasMoved) {
+                              setState(() {
+                                _resetStartPosition = _buttonPosition; // Save current position
+                                _isResetting = true; // Enable animation for reset
+                                _resetTimerExecuted = true;
+                              });
+
+                              // After animation duration, finalize the reset
+                              Future.delayed(const Duration(milliseconds: 500), () {
+                                if (mounted) {
+                                  setState(() {
+                                    _isPositioned = false;
+                                    _buttonPosition = Offset.zero;
+                                    _isLongPressing = false;
+                                    _isResetting = false;
+                                  });
+                                }
+                              });
                             }
                           });
                         },
+                        onPanStart: (details) {
+                          // Do nothing here - position will be set when actually dragging
+                        },
                         onPanUpdate: (details) {
-                          setState(() {
-                            _buttonPosition = Offset(
-                              (_buttonPosition.dx + details.delta.dx).clamp(
-                                0.0,
-                                MediaQuery.of(context).size.width - 70,
-                              ),
-                              (_buttonPosition.dy + details.delta.dy).clamp(
-                                0.0,
-                                constraints.maxHeight - 70,
-                              ),
-                            );
-                          });
+                          // Check if user has moved significantly
+                          if (_panStartPosition != null) {
+                            final distance = (details.globalPosition - _panStartPosition!).distance;
+                            if (distance > 15) {
+                              // User is dragging (increased threshold to 15 pixels)
+                              setState(() {
+                                _hasMoved = true;
+                                _isResetting = false; // No animation when dragging
+                              });
+                              _resetTimer?.cancel();
+
+                              // Calculate position on first move
+                              if (!_isPositioned) {
+                                final currentTop = constraints.maxHeight - 40 - 70;
+                                _buttonPosition = Offset(
+                                  MediaQuery.of(context).size.width / 2 - 35,
+                                  currentTop,
+                                );
+                                _isPositioned = true;
+                              }
+                            }
+                          }
+
+                          if (_hasMoved) {
+                            setState(() {
+                              _buttonPosition = Offset(
+                                (_buttonPosition.dx + details.delta.dx).clamp(
+                                  0.0,
+                                  MediaQuery.of(context).size.width - 70,
+                                ),
+                                (_buttonPosition.dy + details.delta.dy).clamp(
+                                  0.0,
+                                  constraints.maxHeight - 70,
+                                ),
+                              );
+                            });
+                          }
                         },
                         onPanEnd: (details) {
+                          _resetTimer?.cancel();
+
+                          // Only take picture if user didn't move AND timer didn't execute
+                          if (!_hasMoved && !_resetTimerExecuted) {
+                            _takePicture();
+                          }
+
                           setState(() {
                             _isLongPressing = false;
+                            _hasMoved = false;
+                            _resetTimerExecuted = false;
+                            _panStartPosition = null;
                           });
                         },
-                        onTap: !_isLongPressing ? _takePicture : null,
+                        onPanCancel: () {
+                          _resetTimer?.cancel();
+
+                          setState(() {
+                            _isLongPressing = false;
+                            _hasMoved = false;
+                            _resetTimerExecuted = false;
+                            _panStartPosition = null;
+                          });
+                        },
                         child: _isLoading
                             ? const CircularProgressIndicator(
                                 valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
@@ -782,6 +907,8 @@ class _CameraPageState extends State<CameraPage> {
                                 ),
                               ),
                       ),
+                        );
+                      },
                     ),
 
                     // Folder button - between capture button and right edge
