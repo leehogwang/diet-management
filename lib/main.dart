@@ -7,6 +7,7 @@ import 'dart:convert';
 import 'dart:async';
 import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart' as path;
+import 'package:image_picker/image_picker.dart';
 
 void main() {
   // Disable debug banners and overlays
@@ -1258,6 +1259,53 @@ class _GalleryDialogState extends State<GalleryDialog> {
     }
   }
 
+  Future<void> _addImageFromGallery() async {
+    try {
+      final ImagePicker picker = ImagePicker();
+      final XFile? image = await picker.pickImage(source: ImageSource.gallery);
+
+      if (image != null) {
+        // Get destination directory
+        final directory = await getApplicationDocumentsDirectory();
+        final foodPhotosDir = Directory('${directory.path}/temp_food_photos');
+        if (!await foodPhotosDir.exists()) {
+          await foodPhotosDir.create(recursive: true);
+        }
+
+        // Copy image to temp_food_photos folder
+        final timestamp = DateTime.now().millisecondsSinceEpoch;
+        final savedPath = '${foodPhotosDir.path}/food_$timestamp.jpg';
+        await File(image.path).copy(savedPath);
+
+        // Save initial markers (temp markers)
+        final initialMarkers = [
+          {'x': 0.3, 'y': 0.4, 'label': 'Food Item 1'},
+          {'x': 0.6, 'y': 0.5, 'label': 'Food Item 2'},
+          {'x': 0.5, 'y': 0.3, 'label': 'Food Item 3'},
+        ];
+        final markersPath = '${foodPhotosDir.path}/food_$timestamp.json';
+        final markersFile = File(markersPath);
+        await markersFile.writeAsString(jsonEncode(initialMarkers));
+
+        // Reload images
+        await _loadImages();
+
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('사진이 추가되었습니다')),
+          );
+        }
+      }
+    } catch (e) {
+      debugPrint('Error adding image: $e');
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('사진 추가 중 오류가 발생했습니다')),
+        );
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Dialog(
@@ -1320,6 +1368,10 @@ class _GalleryDialogState extends State<GalleryDialog> {
                             );
                           },
                         ),
+                      IconButton(
+                        icon: const Icon(Icons.add),
+                        onPressed: _addImageFromGallery,
+                      ),
                       IconButton(
                         icon: const Icon(Icons.close),
                         onPressed: () => Navigator.pop(context),
