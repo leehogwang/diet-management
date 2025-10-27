@@ -1164,6 +1164,9 @@ class _GalleryDialogState extends State<GalleryDialog> {
   bool _isLoading = true;
   bool _isSelectionMode = false;
   Set<String> _selectedImages = {};
+  final Map<String, GlobalKey> _itemKeys = {};
+  final Map<String, List<Map<String, dynamic>>> _imageMarkers = {};
+  bool _isDragging = false;
 
   @override
   void initState() {
@@ -1185,10 +1188,37 @@ class _GalleryDialogState extends State<GalleryDialog> {
 
         files.sort((a, b) => b.compareTo(a)); // Sort by newest first
 
+        // Load markers for each image
+        final Map<String, List<Map<String, dynamic>>> markersMap = {};
+        for (final imagePath in files) {
+          try {
+            final markersPath = imagePath.replaceAll('.jpg', '.json');
+            final markersFile = File(markersPath);
+            if (await markersFile.exists()) {
+              final jsonString = await markersFile.readAsString();
+              final List<dynamic> decoded = jsonDecode(jsonString);
+              markersMap[imagePath] = decoded.map((e) => Map<String, dynamic>.from(e)).toList();
+            } else {
+              markersMap[imagePath] = [];
+            }
+          } catch (e) {
+            debugPrint('Error loading markers for $imagePath: $e');
+            markersMap[imagePath] = [];
+          }
+        }
+
         if (mounted) {
           setState(() {
             _imagePaths = files;
+            _imageMarkers.clear();
+            _imageMarkers.addAll(markersMap);
             _isLoading = false;
+            // Create GlobalKeys for new images
+            for (final path in files) {
+              if (!_itemKeys.containsKey(path)) {
+                _itemKeys[path] = GlobalKey();
+              }
+            }
           });
         }
       } else {
@@ -1411,13 +1441,19 @@ class _GalleryDialogState extends State<GalleryDialog> {
                           itemBuilder: (context, index) {
                             final imagePath = _imagePaths[index];
                             final isSelected = _selectedImages.contains(imagePath);
+                            final itemKey = _itemKeys[imagePath]!;
 
-                            return GestureDetector(
+                            return AnimatedScale(
+                              key: itemKey,
+                              scale: isSelected ? 0.9 : 1.0,
+                              duration: const Duration(milliseconds: 150),
+                              curve: Curves.easeOut,
+                              child: GestureDetector(
+                              behavior: HitTestBehavior.opaque,
                               onTap: () {
                                 if (_isSelectionMode) {
                                   _toggleSelection(imagePath);
                                 } else {
-                                  Navigator.pop(context);
                                   showDialog(
                                     context: context,
                                     builder: (context) => PhotoPreviewDialog(
@@ -1426,43 +1462,120 @@ class _GalleryDialogState extends State<GalleryDialog> {
                                   );
                                 }
                               },
-                              onLongPress: () {
+                              onLongPressStart: (details) {
                                 setState(() {
                                   _isSelectionMode = true;
-                                  _toggleSelection(imagePath);
+                                  _isDragging = true;
+                                  if (!_selectedImages.contains(imagePath)) {
+                                    _selectedImages.add(imagePath);
+                                  }
                                 });
                               },
-                              child: Stack(
-                                children: [
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(8),
-                                    child: Image.file(
-                                      File(imagePath),
-                                      fit: BoxFit.cover,
-                                      width: double.infinity,
-                                      height: double.infinity,
-                                    ),
-                                  ),
-                                  if (isSelected)
-                                    Positioned.fill(
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          color: Colors.blue.withOpacity(0.5),
+                              onLongPressMoveUpdate: (details) {
+                                if (_isDragging) {
+                                  // Check all items to see which one is under the pointer
+                                  for (final path in _imagePaths) {
+                                    final key = _itemKeys[path];
+                                    if (key?.currentContext != null) {
+                                      final RenderBox? box = key!.currentContext!.findRenderObject() as RenderBox?;
+                                      if (box != null) {
+                                        final position = box.localToGlobal(Offset.zero);
+                                        final size = box.size;
+
+                                        // Check if pointer is within this item
+                                        if (details.globalPosition.dx >= position.dx &&
+                                            details.globalPosition.dx <= position.dx + size.width &&
+                                            details.globalPosition.dy >= position.dy &&
+                                            details.globalPosition.dy <= position.dy + size.height) {
+                                          if (!_selectedImages.contains(path)) {
+                                            setState(() {
+                                              _selectedImages.add(path);
+                                            });
+                                          }
+                                          break; // Found the item, no need to check others
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              onLongPressEnd: (details) {
+                                setState(() {
+                                  _isDragging = false;
+                                });
+                              },
+                              child: Container(
+                                color: Colors.transparent,
+                                child: LayoutBuilder(
+                                  builder: (context, constraints) {
+                                    final markers = _imageMarkers[imagePath] ?? [];
+                                    return Stack(
+                                      children: [
+                                        ClipRRect(
                                           borderRadius: BorderRadius.circular(8),
-                                          border: Border.all(
-                                            color: Colors.blue,
-                                            width: 3,
+                                          child: Image.file(
+                                            File(imagePath),
+                                            fit: BoxFit.cover,
+                                            width: double.infinity,
+                                            height: double.infinity,
                                           ),
                                         ),
-                                        child: const Icon(
-                                          Icons.check_circle,
-                                          color: Colors.white,
-                                          size: 40,
-                                        ),
-                                      ),
-                                    ),
-                                ],
+                                        // Display markers as small dots
+                                        ...markers.map((marker) {
+                                          final x = (marker['x'] as num).toDouble();
+                                          final y = (marker['y'] as num).toDouble();
+                                          return Positioned(
+                                            left: constraints.maxWidth * x - 6,
+                                            top: constraints.maxHeight * y - 6,
+                                            child: IgnorePointer(
+                                              child: Container(
+                                                width: 12,
+                                                height: 12,
+                                                decoration: BoxDecoration(
+                                                  color: Colors.red.withOpacity(0.8),
+                                                  shape: BoxShape.circle,
+                                                  border: Border.all(
+                                                    color: Colors.white,
+                                                    width: 1.5,
+                                                  ),
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      color: Colors.black.withOpacity(0.3),
+                                                      blurRadius: 2,
+                                                      spreadRadius: 0.5,
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          );
+                                        }).toList(),
+                                        if (isSelected)
+                                          Positioned.fill(
+                                            child: IgnorePointer(
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                  color: Colors.blue.withOpacity(0.5),
+                                                  borderRadius: BorderRadius.circular(8),
+                                                  border: Border.all(
+                                                    color: Colors.blue,
+                                                    width: 3,
+                                                  ),
+                                                ),
+                                                child: const Icon(
+                                                  Icons.check_circle,
+                                                  color: Colors.white,
+                                                  size: 40,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                      ],
+                                    );
+                                  },
+                                ),
                               ),
+                            ),
                             );
                           },
                         ),
