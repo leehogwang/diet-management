@@ -48,7 +48,10 @@ class _SignInScreenState extends State<SignInScreen> {
   }
 
   void _handleSignUp() {
-    _showTemporaryDialog('회원가입', '회원가입 페이지로 이동합니다.');
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const SignUpScreen()),
+    );
   }
 
   @override
