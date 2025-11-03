@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'sign_up_screen.dart';
-import 'main_navigation_screen.dart';
+import 'patch1_screen.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
@@ -41,10 +41,10 @@ class _SignInScreenState extends State<SignInScreen> {
   }
 
   void _handleSignIn() {
-    // 성공적으로 로그인되면 메인 화면으로 이동
+    // 성공적으로 로그인되면 patch-1 화면으로 이동
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => const MainNavigationScreen()),
+      MaterialPageRoute(builder: (context) => const Patch1Screen()),
     );
   }
 
