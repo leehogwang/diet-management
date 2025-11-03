@@ -1,4 +1,11 @@
 {
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "0f0bfb5522a3440da8f0bdbeadcd6297.H5Rgf84xArWhuhfZ",
+    "ANTHROPIC_BASE_URL": "https://api.z.ai/api/anthropic",
+    "API_TIMEOUT_MS": "3000000",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "glm-4.6"
+  },
   "permissions": {
     "allow": [
       "Bash(flutter create:*)",
@@ -17,7 +24,9 @@
       "Bash(flutter run:*)",
       "WebFetch(domain:github.com)",
       "Bash(flutter pub get:*)",
-      "Bash(flutter build:*)"
+      "Bash(flutter build:*)",
+      "Bash(git fetch:*)",
+      "Bash(flutter analyze:*)"
     ],
     "deny": [],
     "ask": []

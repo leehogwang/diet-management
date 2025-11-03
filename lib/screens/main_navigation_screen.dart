@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter/rendering.dart';
 import 'package:camera/camera.dart';
 import 'dart:io';
 import 'dart:convert';
@@ -9,62 +7,25 @@ import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart' as path;
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'services/openai_service.dart';
-import 'screens/sign_in_screen.dart';
+import 'package:fl_chart/fl_chart.dart';
+import '../services/openai_service.dart';
+import '../models/nutrition_data.dart';
+import 'nutrition_monitoring_screen.dart';
 
-Future<void> main() async {
-  // Disable debug banners and overlays
-  WidgetsFlutterBinding.ensureInitialized();
-
-  // Load environment variables
-  await dotenv.load(fileName: ".env");
-
-  // Disable debug paint borders
-  debugPaintSizeEnabled = false;
-  debugPaintBaselinesEnabled = false;
-  debugPaintPointersEnabled = false;
-  debugPaintLayerBordersEnabled = false;
-  debugRepaintRainbowEnabled = false;
-
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MainNavigationScreen extends StatefulWidget {
+  const MainNavigationScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      debugShowMaterialGrid: false,
-      showPerformanceOverlay: false,
-      title: 'Food App',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        useMaterial3: true,
-        focusColor: Colors.transparent,
-        highlightColor: Colors.transparent,
-        splashColor: Colors.transparent.withOpacity(0.1),
-      ),
-      home: const SignInScreen(),
-    );
-  }
+  State<MainNavigationScreen> createState() => _MainNavigationScreenState();
 }
 
-class MainScreen extends StatefulWidget {
-  const MainScreen({super.key});
-
-  @override
-  State<MainScreen> createState() => _MainScreenState();
-}
-
-class _MainScreenState extends State<MainScreen> {
+class _MainNavigationScreenState extends State<MainNavigationScreen> {
   int _currentIndex = 0;
 
   final List<Widget> _pages = [
     const HomePage(),
     const CameraPage(),
-    const PlaceholderPage(title: 'Tab 3'),
+    const NutritionMonitoringScreen(),
     const UserInfoPage(),
   ];
 
@@ -90,8 +51,8 @@ class _MainScreenState extends State<MainScreen> {
             label: 'Photo',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.circle),
-            label: 'null',
+            icon: Icon(Icons.bar_chart),
+            label: 'Nutrition',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
@@ -160,26 +121,26 @@ class _HomePageState extends State<HomePage> {
             ),
             ListTile(
               leading: const Icon(Icons.circle_outlined),
-              title: const Text('null'),
+              title: const Text('Patch-1 Features'),
               onTap: () {
                 Navigator.pop(context);
-                _showPlaceholderDialog('메뉴 1');
+                _showPlaceholderDialog('Patch-1 Features');
               },
             ),
             ListTile(
               leading: const Icon(Icons.circle_outlined),
-              title: const Text('null'),
+              title: const Text('Yoon-1 Features'),
               onTap: () {
                 Navigator.pop(context);
-                _showPlaceholderDialog('메뉴 2');
+                _showPlaceholderDialog('Yoon-1 Features');
               },
             ),
             ListTile(
               leading: const Icon(Icons.circle_outlined),
-              title: const Text('null'),
+              title: const Text('Data Import'),
               onTap: () {
                 Navigator.pop(context);
-                _showPlaceholderDialog('메뉴 3');
+                _showPlaceholderDialog('Data Import');
               },
             ),
             ListTile(
@@ -552,50 +513,7 @@ class UserInfoPage extends StatelessWidget {
   }
 }
 
-class PlaceholderPage extends StatelessWidget {
-  final String title;
-
-  const PlaceholderPage({super.key, required this.title});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.construction,
-              size: 100,
-              color: Colors.grey[400],
-            ),
-            const SizedBox(height: 20),
-            Text(
-              title,
-              style: const TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              '준비 중입니다',
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.grey[600],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
+// Camera Page - Reusing your existing camera functionality
 class CameraPage extends StatefulWidget {
   const CameraPage({super.key});
 
@@ -612,15 +530,15 @@ class _CameraPageState extends State<CameraPage> {
 
   // Draggable button state
   Offset _buttonPosition = Offset.zero;
-  bool _isPositioned = false; // Whether button has been moved from initial position
+  bool _isPositioned = false;
   bool _isLongPressing = false;
   Timer? _resetTimer;
   Offset? _panStartPosition;
   bool _hasMoved = false;
   bool _resetTimerExecuted = false;
-  bool _isResetting = false; // Flag for reset animation
-  Offset _resetStartPosition = Offset.zero; // Start position for reset animation
-  Offset _homePosition = Offset.zero; // Home position (center bottom)
+  bool _isResetting = false;
+  Offset _resetStartPosition = Offset.zero;
+  Offset _homePosition = Offset.zero;
 
   // Zoom state
   double _currentZoom = 1.0;
@@ -628,11 +546,11 @@ class _CameraPageState extends State<CameraPage> {
   double _maxZoom = 1.0;
   bool _showZoomSlider = false;
   Timer? _zoomSliderTimer;
-  double _baseZoom = 1.0; // Base zoom level for pinch gesture
+  double _baseZoom = 1.0;
 
   // Pinch gesture tracking
   double? _initialDistance;
-  Map<int, Offset> _pointers = {}; // Track all active pointers by ID
+  Map<int, Offset> _pointers = {};
 
   @override
   void initState() {
@@ -666,7 +584,7 @@ class _CameraPageState extends State<CameraPage> {
           debugPrint('Focus mode not supported: $e');
         }
 
-        // Get zoom capabilities - use device's actual range
+        // Get zoom capabilities
         try {
           _minZoom = await _cameraController!.getMinZoomLevel();
           _maxZoom = await _cameraController!.getMaxZoomLevel();
@@ -712,7 +630,6 @@ class _CameraPageState extends State<CameraPage> {
       final XFile photo = await _cameraController!.takePicture();
 
       if (mounted) {
-        // Auto-save the picture
         final directory = await getApplicationDocumentsDirectory();
         final foodPhotosDir = Directory('${directory.path}/temp_food_photos');
         if (!await foodPhotosDir.exists()) {
@@ -723,14 +640,13 @@ class _CameraPageState extends State<CameraPage> {
         final savedPath = '${foodPhotosDir.path}/food_$timestamp.jpg';
         await File(photo.path).copy(savedPath);
 
-        // AI로 음식 분석
+        // AI analysis
         try {
           if (_claudeService == null) {
             throw Exception('Claude 서비스가 초기화되지 않았습니다');
           }
           final analysisResult = await _claudeService!.analyzeFoodImage(File(savedPath));
 
-          // 분석된 음식들로 마커 생성
           final foods = analysisResult['foods'] as List<dynamic>? ?? [];
           final markers = foods.map((food) => {
             'x': food['x'] ?? 0.5,
@@ -738,7 +654,6 @@ class _CameraPageState extends State<CameraPage> {
             'label': food['name'] ?? 'Unknown',
           }).toList();
 
-          // 마커 저장
           final markersPath = '${foodPhotosDir.path}/food_$timestamp.json';
           final markersFile = File(markersPath);
           await markersFile.writeAsString(jsonEncode(markers));
@@ -747,10 +662,7 @@ class _CameraPageState extends State<CameraPage> {
             _isLoading = false;
           });
 
-          // 영양 정보 팝업 표시
           final nutrition = analysisResult['nutrition'] as Map<String, dynamic>? ?? {};
-
-          // 감지된 음식 이름 리스트
           final foodNames = foods.map((food) => food['name'] ?? 'Unknown').toList();
 
           showDialog(
@@ -869,7 +781,6 @@ class _CameraPageState extends State<CameraPage> {
         } catch (e) {
           debugPrint('AI 분석 실패: $e');
 
-          // AI 분석 실패 시 기본 마커 사용
           final initialMarkers = [
             {'x': 0.3, 'y': 0.4, 'label': 'Food Item 1'},
             {'x': 0.6, 'y': 0.5, 'label': 'Food Item 2'},
@@ -883,7 +794,6 @@ class _CameraPageState extends State<CameraPage> {
             _isLoading = false;
           });
 
-          // 에러 메시지 표시 후 사진 미리보기
           showDialog(
             context: context,
             builder: (context) => AlertDialog(
@@ -938,16 +848,11 @@ class _CameraPageState extends State<CameraPage> {
 
   @override
   Widget build(BuildContext context) {
-    // Hide system UI overlays
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [SystemUiOverlay.bottom]);
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('Camera'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
-      extendBody: true,
-      extendBodyBehindAppBar: false,
       body: _isInitialized
           ? LayoutBuilder(
               builder: (context, constraints) {
@@ -955,14 +860,11 @@ class _CameraPageState extends State<CameraPage> {
                   behavior: HitTestBehavior.translucent,
                   onPointerDown: (event) {
                     _pointers[event.pointer] = event.position;
-                    debugPrint('👆 Pointer down: ${event.pointer}, total pointers: ${_pointers.length}');
 
                     if (_pointers.length == 2) {
-                      // Two fingers detected, start zoom
                       final pointerList = _pointers.values.toList();
                       _initialDistance = (pointerList[0] - pointerList[1]).distance;
                       _baseZoom = _currentZoom;
-                      debugPrint('🔍 Two fingers detected, starting zoom. Initial distance: $_initialDistance');
                       setState(() {
                         _showZoomSlider = true;
                       });
@@ -978,7 +880,6 @@ class _CameraPageState extends State<CameraPage> {
                         final currentDistance = (pointerList[0] - pointerList[1]).distance;
                         final scale = currentDistance / _initialDistance!;
 
-                        // Apply sensitivity multiplier
                         final scaleDelta = scale - 1.0;
                         final sensitivityMultiplier = 2.5;
                         final adjustedScale = 1.0 + (scaleDelta * sensitivityMultiplier);
@@ -994,7 +895,6 @@ class _CameraPageState extends State<CameraPage> {
                   },
                   onPointerUp: (event) {
                     _pointers.remove(event.pointer);
-                    debugPrint('👆 Pointer up: ${event.pointer}, remaining pointers: ${_pointers.length}');
 
                     if (_pointers.length < 2) {
                       _initialDistance = null;
@@ -1013,7 +913,6 @@ class _CameraPageState extends State<CameraPage> {
                   },
                   onPointerCancel: (event) {
                     _pointers.remove(event.pointer);
-                    debugPrint('👆 Pointer cancel: ${event.pointer}, remaining pointers: ${_pointers.length}');
 
                     if (_pointers.length < 2) {
                       _initialDistance = null;
@@ -1021,325 +920,294 @@ class _CameraPageState extends State<CameraPage> {
                   },
                   child: Stack(
                     children: [
-                      // Camera preview
                       Positioned.fill(
                         child: CameraPreview(_cameraController!),
                       ),
 
-                    // Rule of thirds grid
-                    Positioned.fill(
-                      child: CustomPaint(
-                        painter: GridPainter(),
+                      Positioned.fill(
+                        child: CustomPaint(
+                          painter: GridPainter(),
+                        ),
                       ),
-                    ),
 
-                    // Capture button at center bottom (draggable)
-                    Builder(
-                      builder: (context) {
-                        // Calculate home position once
-                        if (_homePosition == Offset.zero) {
-                          WidgetsBinding.instance.addPostFrameCallback((_) {
-                            final screenWidth = MediaQuery.of(context).size.width;
-                            final stackHeight = constraints.maxHeight;
-                            setState(() {
-                              _homePosition = Offset(
-                                screenWidth / 2 - 35,
-                                stackHeight - 40 - 70,
-                              );
-                            });
-                          });
-                        }
-
-                        return TweenAnimationBuilder<Offset>(
-                          tween: _isResetting
-                              ? Tween<Offset>(
-                                  begin: _resetStartPosition,
-                                  end: _homePosition,
-                                )
-                              : Tween<Offset>(
-                                  begin: _buttonPosition,
-                                  end: _buttonPosition,
-                                ),
-                          duration: _isResetting
-                              ? const Duration(milliseconds: 500)
-                              : Duration.zero,
-                          curve: Curves.easeInOutCubic,
-                          builder: (context, animatedOffset, child) {
-                            final currentOffset = _isResetting ? animatedOffset : _buttonPosition;
-
-                            return Positioned(
-                              bottom: !_isPositioned && !_isResetting ? 40 : null,
-                              left: !_isPositioned && !_isResetting
-                                  ? MediaQuery.of(context).size.width / 2 - 35
-                                  : currentOffset.dx - (_isLongPressing ? 5 : 0),
-                              top: _isPositioned || _isResetting
-                                  ? currentOffset.dy - (_isLongPressing ? 5 : 0)
-                                  : null,
-                              child: child!,
-                            );
-                          },
-                          child: GestureDetector(
-                        onPanDown: (details) {
-                          debugPrint('📸 Camera button onPanDown called');
-                          setState(() {
-                            _isLongPressing = true;
-                            _hasMoved = false;
-                            _resetTimerExecuted = false;
-                            _isResetting = false; // Not resetting when user touches
-                            _panStartPosition = details.globalPosition;
-                          });
-
-                          // Start 1.2-second timer when user touches button
-                          _resetTimer?.cancel();
-                          _resetTimer = Timer(const Duration(milliseconds: 1200), () {
-                            if (mounted && _isLongPressing && !_hasMoved) {
-                              debugPrint('📸 Reset timer executed - returning to home position');
+                      Builder(
+                        builder: (context) {
+                          if (_homePosition == Offset.zero) {
+                            WidgetsBinding.instance.addPostFrameCallback((_) {
+                              final screenWidth = MediaQuery.of(context).size.width;
+                              final stackHeight = constraints.maxHeight;
                               setState(() {
-                                _resetStartPosition = _buttonPosition; // Save current position
-                                _isResetting = true; // Enable animation for reset
-                                _resetTimerExecuted = true;
+                                _homePosition = Offset(
+                                  screenWidth / 2 - 35,
+                                  stackHeight - 40 - 70,
+                                );
                               });
+                            });
+                          }
 
-                              // After animation duration, finalize the reset
-                              Future.delayed(const Duration(milliseconds: 500), () {
-                                if (mounted) {
+                          return TweenAnimationBuilder<Offset>(
+                            tween: _isResetting
+                                ? Tween<Offset>(
+                                    begin: _resetStartPosition,
+                                    end: _homePosition,
+                                  )
+                                : Tween<Offset>(
+                                    begin: _buttonPosition,
+                                    end: _buttonPosition,
+                                  ),
+                            duration: _isResetting
+                                ? const Duration(milliseconds: 500)
+                                : Duration.zero,
+                            curve: Curves.easeInOutCubic,
+                            builder: (context, animatedOffset, child) {
+                              final currentOffset = _isResetting ? animatedOffset : _buttonPosition;
+
+                              return Positioned(
+                                bottom: !_isPositioned && !_isResetting ? 40 : null,
+                                left: !_isPositioned && !_isResetting
+                                    ? MediaQuery.of(context).size.width / 2 - 35
+                                    : currentOffset.dx - (_isLongPressing ? 5 : 0),
+                                top: _isPositioned || _isResetting
+                                    ? currentOffset.dy - (_isLongPressing ? 5 : 0)
+                                    : null,
+                                child: child!,
+                              );
+                            },
+                            child: GestureDetector(
+                              onPanDown: (details) {
+                                setState(() {
+                                  _isLongPressing = true;
+                                  _hasMoved = false;
+                                  _resetTimerExecuted = false;
+                                  _isResetting = false;
+                                  _panStartPosition = details.globalPosition;
+                                });
+
+                                _resetTimer?.cancel();
+                                _resetTimer = Timer(const Duration(milliseconds: 1200), () {
+                                  if (mounted && _isLongPressing && !_hasMoved) {
+                                    setState(() {
+                                      _resetStartPosition = _buttonPosition;
+                                      _isResetting = true;
+                                      _resetTimerExecuted = true;
+                                    });
+
+                                    Future.delayed(const Duration(milliseconds: 500), () {
+                                      if (mounted) {
+                                        setState(() {
+                                          _isPositioned = false;
+                                          _buttonPosition = Offset.zero;
+                                          _isLongPressing = false;
+                                          _isResetting = false;
+                                        });
+                                      }
+                                    });
+                                  }
+                                });
+                              },
+                              onPanStart: (details) {
+                                // Do nothing here
+                              },
+                              onPanUpdate: (details) {
+                                if (_panStartPosition != null) {
+                                  final distance = (details.globalPosition - _panStartPosition!).distance;
+                                  if (distance > 15) {
+                                    setState(() {
+                                      _hasMoved = true;
+                                      _isResetting = false;
+                                    });
+                                    _resetTimer?.cancel();
+
+                                    if (!_isPositioned) {
+                                      final currentTop = constraints.maxHeight - 40 - 70;
+                                      _buttonPosition = Offset(
+                                        MediaQuery.of(context).size.width / 2 - 35,
+                                        currentTop,
+                                      );
+                                      _isPositioned = true;
+                                    }
+                                  }
+                                }
+
+                                if (_hasMoved) {
                                   setState(() {
-                                    _isPositioned = false;
-                                    _buttonPosition = Offset.zero;
-                                    _isLongPressing = false;
-                                    _isResetting = false;
+                                    _buttonPosition = Offset(
+                                      (_buttonPosition.dx + details.delta.dx).clamp(
+                                        0.0,
+                                        MediaQuery.of(context).size.width - 70,
+                                      ),
+                                      (_buttonPosition.dy + details.delta.dy).clamp(
+                                        0.0,
+                                        constraints.maxHeight - 70,
+                                      ),
+                                    );
                                   });
                                 }
-                              });
-                            }
-                          });
-                        },
-                        onPanStart: (details) {
-                          debugPrint('📸 Camera button onPanStart called');
-                          // Do nothing here - position will be set when actually dragging
-                        },
-                        onPanUpdate: (details) {
-                          // Check if user has moved significantly
-                          if (_panStartPosition != null) {
-                            final distance = (details.globalPosition - _panStartPosition!).distance;
-                            if (distance > 15) {
-                              // User is dragging (increased threshold to 15 pixels)
-                              debugPrint('📸 Camera button dragging - distance: $distance');
-                              setState(() {
-                                _hasMoved = true;
-                                _isResetting = false; // No animation when dragging
-                              });
-                              _resetTimer?.cancel();
+                              },
+                              onPanEnd: (details) {
+                                _resetTimer?.cancel();
 
-                              // Calculate position on first move
-                              if (!_isPositioned) {
-                                final currentTop = constraints.maxHeight - 40 - 70;
-                                _buttonPosition = Offset(
-                                  MediaQuery.of(context).size.width / 2 - 35,
-                                  currentTop,
-                                );
-                                _isPositioned = true;
-                              }
-                            }
-                          }
+                                if (!_hasMoved && !_resetTimerExecuted) {
+                                  _takePicture();
+                                }
 
-                          if (_hasMoved) {
-                            setState(() {
-                              _buttonPosition = Offset(
-                                (_buttonPosition.dx + details.delta.dx).clamp(
-                                  0.0,
-                                  MediaQuery.of(context).size.width - 70,
-                                ),
-                                (_buttonPosition.dy + details.delta.dy).clamp(
-                                  0.0,
-                                  constraints.maxHeight - 70,
-                                ),
-                              );
-                            });
-                          }
-                        },
-                        onPanEnd: (details) {
-                          debugPrint('📸 Camera button onPanEnd - hasMoved: $_hasMoved, resetTimerExecuted: $_resetTimerExecuted');
-                          _resetTimer?.cancel();
+                                setState(() {
+                                  _isLongPressing = false;
+                                  _hasMoved = false;
+                                  _resetTimerExecuted = false;
+                                  _panStartPosition = null;
+                                });
+                              },
+                              onPanCancel: () {
+                                _resetTimer?.cancel();
 
-                          // Only take picture if user didn't move AND timer didn't execute
-                          if (!_hasMoved && !_resetTimerExecuted) {
-                            debugPrint('📸 Taking picture!');
-                            _takePicture();
-                          } else {
-                            debugPrint('📸 Not taking picture - hasMoved: $_hasMoved, resetTimerExecuted: $_resetTimerExecuted');
-                          }
-
-                          setState(() {
-                            _isLongPressing = false;
-                            _hasMoved = false;
-                            _resetTimerExecuted = false;
-                            _panStartPosition = null;
-                          });
-                        },
-                        onPanCancel: () {
-                          debugPrint('📸 Camera button onPanCancel called');
-                          _resetTimer?.cancel();
-
-                          setState(() {
-                            _isLongPressing = false;
-                            _hasMoved = false;
-                            _resetTimerExecuted = false;
-                            _panStartPosition = null;
-                          });
-                        },
-                        child: _isLoading
-                            ? const CircularProgressIndicator(
-                                valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-                              )
-                            : AnimatedContainer(
-                                duration: const Duration(milliseconds: 200),
-                                width: _isLongPressing ? 80 : 70,
-                                height: _isLongPressing ? 80 : 70,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  border: Border.all(
-                                    color: Colors.white,
-                                    width: 4,
-                                  ),
-                                ),
-                                child: Container(
-                                  margin: const EdgeInsets.all(4),
-                                  decoration: const BoxDecoration(
-                                    color: Colors.white,
-                                    shape: BoxShape.circle,
-                                  ),
-                                ),
-                              ),
-                      ),
-                        );
-                      },
-                    ),
-
-                    // Folder button - between capture button and right edge
-                    Positioned(
-                      bottom: 40,
-                      left: MediaQuery.of(context).size.width * 0.75 - 25,
-                      child: GestureDetector(
-                        onTap: () {
-                          showDialog(
-                            context: context,
-                            builder: (context) => const GalleryDialog(),
+                                setState(() {
+                                  _isLongPressing = false;
+                                  _hasMoved = false;
+                                  _resetTimerExecuted = false;
+                                  _panStartPosition = null;
+                                });
+                              },
+                              child: _isLoading
+                                  ? const CircularProgressIndicator(
+                                      valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                                    )
+                                  : AnimatedContainer(
+                                      duration: const Duration(milliseconds: 200),
+                                      width: _isLongPressing ? 80 : 70,
+                                      height: _isLongPressing ? 80 : 70,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        border: Border.all(
+                                          color: Colors.white,
+                                          width: 4,
+                                        ),
+                                      ),
+                                      child: Container(
+                                        margin: const EdgeInsets.all(4),
+                                        decoration: const BoxDecoration(
+                                          color: Colors.white,
+                                          shape: BoxShape.circle,
+                                        ),
+                                      ),
+                                    ),
+                            ),
                           );
                         },
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: Colors.white.withOpacity(0.3),
-                            shape: BoxShape.circle,
-                          ),
-                          child: const Icon(
-                            Icons.folder,
-                            color: Colors.white,
-                            size: 30,
-                          ),
-                        ),
                       ),
-                    ),
 
-                    // Zoom slider (horizontal)
-                    if (_showZoomSlider)
                       Positioned(
-                        bottom: 120,
-                        left: MediaQuery.of(context).size.width * 0.2,
-                        right: MediaQuery.of(context).size.width * 0.2,
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                          decoration: BoxDecoration(
-                            color: Colors.black.withOpacity(0.2),
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              // Current zoom value
-                              Text(
-                                '${_currentZoom.toStringAsFixed(1)}x',
-                                style: const TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              const SizedBox(height: 4),
-
-                              // Horizontal slider with labels
-                              Row(
-                                children: [
-                                  // Min zoom label
-                                  Text(
-                                    '${_minZoom.toStringAsFixed(1)}x',
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  const SizedBox(width: 6),
-
-                                  // Slider
-                                  Expanded(
-                                    child: SliderTheme(
-                                      data: SliderThemeData(
-                                        activeTrackColor: Colors.white,
-                                        inactiveTrackColor: Colors.white.withOpacity(0.3),
-                                        thumbColor: Colors.white,
-                                        thumbShape: const RoundSliderThumbShape(
-                                          enabledThumbRadius: 6,
-                                        ),
-                                        overlayShape: const RoundSliderOverlayShape(
-                                          overlayRadius: 12,
-                                        ),
-                                        trackHeight: 2,
-                                      ),
-                                      child: Slider(
-                                        value: _currentZoom,
-                                        min: _minZoom,
-                                        max: _maxZoom,
-                                        onChanged: (value) {
-                                          setState(() {
-                                            _currentZoom = value;
-                                          });
-
-                                          // Apply zoom to camera
-                                          _cameraController?.setZoomLevel(value);
-
-                                          // Reset auto-hide timer
-                                          _zoomSliderTimer?.cancel();
-                                          _zoomSliderTimer = Timer(const Duration(milliseconds: 1500), () {
-                                            if (mounted) {
-                                              setState(() {
-                                                _showZoomSlider = false;
-                                              });
-                                            }
-                                          });
-                                        },
-                                      ),
-                                    ),
-                                  ),
-
-                                  const SizedBox(width: 6),
-                                  // Max zoom label
-                                  Text(
-                                    '${_maxZoom.toStringAsFixed(1)}x',
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
+                        bottom: 40,
+                        left: MediaQuery.of(context).size.width * 0.75 - 25,
+                        child: GestureDetector(
+                          onTap: () {
+                            showDialog(
+                              context: context,
+                              builder: (context) => const GalleryDialog(),
+                            );
+                          },
+                          child: Container(
+                            width: 50,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              color: Colors.white.withOpacity(0.3),
+                              shape: BoxShape.circle,
+                            ),
+                            child: const Icon(
+                              Icons.folder,
+                              color: Colors.white,
+                              size: 30,
+                            ),
                           ),
                         ),
                       ),
+
+                      if (_showZoomSlider)
+                        Positioned(
+                          bottom: 120,
+                          left: MediaQuery.of(context).size.width * 0.2,
+                          right: MediaQuery.of(context).size.width * 0.2,
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                            decoration: BoxDecoration(
+                              color: Colors.black.withOpacity(0.2),
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(
+                                  '${_currentZoom.toStringAsFixed(1)}x',
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                const SizedBox(height: 4),
+                                Row(
+                                  children: [
+                                    Text(
+                                      '${_minZoom.toStringAsFixed(1)}x',
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    const SizedBox(width: 6),
+                                    Expanded(
+                                      child: SliderTheme(
+                                        data: SliderThemeData(
+                                          activeTrackColor: Colors.white,
+                                          inactiveTrackColor: Colors.white.withOpacity(0.3),
+                                          thumbColor: Colors.white,
+                                          thumbShape: const RoundSliderThumbShape(
+                                            enabledThumbRadius: 6,
+                                          ),
+                                          overlayShape: const RoundSliderOverlayShape(
+                                            overlayRadius: 12,
+                                          ),
+                                          trackHeight: 2,
+                                        ),
+                                        child: Slider(
+                                          value: _currentZoom,
+                                          min: _minZoom,
+                                          max: _maxZoom,
+                                          onChanged: (value) {
+                                            setState(() {
+                                              _currentZoom = value;
+                                            });
+
+                                            _cameraController?.setZoomLevel(value);
+
+                                            _zoomSliderTimer?.cancel();
+                                            _zoomSliderTimer = Timer(const Duration(milliseconds: 1500), () {
+                                              if (mounted) {
+                                                setState(() {
+                                                  _showZoomSlider = false;
+                                                });
+                                              }
+                                            });
+                                          },
+                                        ),
+                                      ),
+                                    ),
+                                    const SizedBox(width: 6),
+                                    Text(
+                                      '${_maxZoom.toStringAsFixed(1)}x',
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                     ],
                   ),
                 );
@@ -1352,6 +1220,7 @@ class _CameraPageState extends State<CameraPage> {
   }
 }
 
+// Supporting classes remain the same...
 class GalleryDialog extends StatefulWidget {
   const GalleryDialog({super.key});
 
@@ -1386,9 +1255,8 @@ class _GalleryDialogState extends State<GalleryDialog> {
             .map((item) => item.path)
             .toList();
 
-        files.sort((a, b) => b.compareTo(a)); // Sort by newest first
+        files.sort((a, b) => b.compareTo(a));
 
-        // Load markers for each image
         final Map<String, List<Map<String, dynamic>>> markersMap = {};
         for (final imagePath in files) {
           try {
@@ -1413,7 +1281,6 @@ class _GalleryDialogState extends State<GalleryDialog> {
             _imageMarkers.clear();
             _imageMarkers.addAll(markersMap);
             _isLoading = false;
-            // Create GlobalKeys for new images
             for (final path in files) {
               if (!_itemKeys.containsKey(path)) {
                 _itemKeys[path] = GlobalKey();
@@ -1438,76 +1305,22 @@ class _GalleryDialogState extends State<GalleryDialog> {
     }
   }
 
-  void _toggleSelection(String imagePath) {
-    setState(() {
-      if (_selectedImages.contains(imagePath)) {
-        _selectedImages.remove(imagePath);
-        if (_selectedImages.isEmpty) {
-          _isSelectionMode = false;
-        }
-      } else {
-        _selectedImages.add(imagePath);
-      }
-    });
-  }
-
-  Future<void> _deleteSelectedImages() async {
-    try {
-      for (String imagePath in _selectedImages) {
-        // Delete image file
-        final imageFile = File(imagePath);
-        if (await imageFile.exists()) {
-          await imageFile.delete();
-        }
-
-        // Delete corresponding JSON file
-        final jsonPath = imagePath.replaceAll('.jpg', '.json');
-        final jsonFile = File(jsonPath);
-        if (await jsonFile.exists()) {
-          await jsonFile.delete();
-        }
-      }
-
-      setState(() {
-        _imagePaths.removeWhere((path) => _selectedImages.contains(path));
-        _selectedImages.clear();
-        _isSelectionMode = false;
-      });
-
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('선택된 사진이 삭제되었습니다')),
-        );
-      }
-    } catch (e) {
-      debugPrint('Error deleting images: $e');
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('사진 삭제 중 오류가 발생했습니다')),
-        );
-      }
-    }
-  }
-
   Future<void> _addImageFromGallery() async {
     try {
       final ImagePicker picker = ImagePicker();
       final XFile? image = await picker.pickImage(source: ImageSource.gallery);
 
       if (image != null) {
-        // Get destination directory
         final directory = await getApplicationDocumentsDirectory();
         final foodPhotosDir = Directory('${directory.path}/temp_food_photos');
         if (!await foodPhotosDir.exists()) {
           await foodPhotosDir.create(recursive: true);
         }
 
-        // Copy image to temp_food_photos folder
         final timestamp = DateTime.now().millisecondsSinceEpoch;
         final savedPath = '${foodPhotosDir.path}/food_$timestamp.jpg';
         await File(image.path).copy(savedPath);
 
-        // Save initial markers (temp markers)
         final initialMarkers = [
           {'x': 0.3, 'y': 0.4, 'label': 'Food Item 1'},
           {'x': 0.6, 'y': 0.5, 'label': 'Food Item 2'},
@@ -1517,7 +1330,6 @@ class _GalleryDialogState extends State<GalleryDialog> {
         final markersFile = File(markersPath);
         await markersFile.writeAsString(jsonEncode(initialMarkers));
 
-        // Reload images
         await _loadImages();
 
         if (mounted) {
@@ -1550,7 +1362,6 @@ class _GalleryDialogState extends State<GalleryDialog> {
         ),
         child: Column(
           children: [
-            // Header with close button and delete button
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               decoration: BoxDecoration(
@@ -1572,32 +1383,6 @@ class _GalleryDialogState extends State<GalleryDialog> {
                   ),
                   Row(
                     children: [
-                      if (_isSelectionMode && _selectedImages.isNotEmpty)
-                        IconButton(
-                          icon: const Icon(Icons.delete),
-                          onPressed: () {
-                            showDialog(
-                              context: context,
-                              builder: (context) => AlertDialog(
-                                title: const Text('삭제 확인'),
-                                content: Text('${_selectedImages.length}개의 사진을 삭제하시겠습니까?'),
-                                actions: [
-                                  TextButton(
-                                    onPressed: () => Navigator.pop(context),
-                                    child: const Text('취소'),
-                                  ),
-                                  TextButton(
-                                    onPressed: () {
-                                      Navigator.pop(context);
-                                      _deleteSelectedImages();
-                                    },
-                                    child: const Text('삭제'),
-                                  ),
-                                ],
-                              ),
-                            );
-                          },
-                        ),
                       IconButton(
                         icon: const Icon(Icons.add),
                         onPressed: _addImageFromGallery,
@@ -1611,8 +1396,6 @@ class _GalleryDialogState extends State<GalleryDialog> {
                 ],
               ),
             ),
-
-            // Gallery grid
             Expanded(
               child: _isLoading
                   ? const Center(child: CircularProgressIndicator())
@@ -1640,174 +1423,36 @@ class _GalleryDialogState extends State<GalleryDialog> {
                           itemCount: _imagePaths.length,
                           itemBuilder: (context, index) {
                             final imagePath = _imagePaths[index];
-                            final isSelected = _selectedImages.contains(imagePath);
                             final itemKey = _itemKeys[imagePath]!;
 
-                            return AnimatedScale(
+                            return GestureDetector(
                               key: itemKey,
-                              scale: isSelected ? 0.9 : 1.0,
-                              duration: const Duration(milliseconds: 150),
-                              curve: Curves.easeOut,
-                              child: GestureDetector(
-                              behavior: HitTestBehavior.opaque,
                               onTap: () {
-                                if (_isSelectionMode) {
-                                  _toggleSelection(imagePath);
-                                } else {
-                                  showDialog(
-                                    context: context,
-                                    builder: (context) => PhotoPreviewDialog(
-                                      imagePath: imagePath,
-                                    ),
-                                  );
-                                }
-                              },
-                              onLongPressStart: (details) {
-                                setState(() {
-                                  _isSelectionMode = true;
-                                  _isDragging = true;
-                                  if (!_selectedImages.contains(imagePath)) {
-                                    _selectedImages.add(imagePath);
-                                  }
-                                });
-                              },
-                              onLongPressMoveUpdate: (details) {
-                                if (_isDragging) {
-                                  // Check all items to see which one is under the pointer
-                                  for (final path in _imagePaths) {
-                                    final key = _itemKeys[path];
-                                    if (key?.currentContext != null) {
-                                      final RenderBox? box = key!.currentContext!.findRenderObject() as RenderBox?;
-                                      if (box != null) {
-                                        final position = box.localToGlobal(Offset.zero);
-                                        final size = box.size;
-
-                                        // Check if pointer is within this item
-                                        if (details.globalPosition.dx >= position.dx &&
-                                            details.globalPosition.dx <= position.dx + size.width &&
-                                            details.globalPosition.dy >= position.dy &&
-                                            details.globalPosition.dy <= position.dy + size.height) {
-                                          if (!_selectedImages.contains(path)) {
-                                            setState(() {
-                                              _selectedImages.add(path);
-                                            });
-                                          }
-                                          break; // Found the item, no need to check others
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              },
-                              onLongPressEnd: (details) {
-                                setState(() {
-                                  _isDragging = false;
-                                });
+                                showDialog(
+                                  context: context,
+                                  builder: (context) => PhotoPreviewDialog(
+                                    imagePath: imagePath,
+                                  ),
+                                );
                               },
                               child: Container(
-                                color: Colors.transparent,
-                                child: LayoutBuilder(
-                                  builder: (context, constraints) {
-                                    final markers = _imageMarkers[imagePath] ?? [];
-                                    return Stack(
-                                      children: [
-                                        ClipRRect(
-                                          borderRadius: BorderRadius.circular(8),
-                                          child: Image.file(
-                                            File(imagePath),
-                                            fit: BoxFit.cover,
-                                            width: double.infinity,
-                                            height: double.infinity,
-                                          ),
-                                        ),
-                                        // Display markers as small dots
-                                        ...markers.map((marker) {
-                                          final x = (marker['x'] as num).toDouble();
-                                          final y = (marker['y'] as num).toDouble();
-                                          return Positioned(
-                                            left: constraints.maxWidth * x - 6,
-                                            top: constraints.maxHeight * y - 6,
-                                            child: IgnorePointer(
-                                              child: Container(
-                                                width: 12,
-                                                height: 12,
-                                                decoration: BoxDecoration(
-                                                  color: Colors.red.withOpacity(0.8),
-                                                  shape: BoxShape.circle,
-                                                  border: Border.all(
-                                                    color: Colors.white,
-                                                    width: 1.5,
-                                                  ),
-                                                  boxShadow: [
-                                                    BoxShadow(
-                                                      color: Colors.black.withOpacity(0.3),
-                                                      blurRadius: 2,
-                                                      spreadRadius: 0.5,
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ),
-                                          );
-                                        }).toList(),
-                                        if (isSelected)
-                                          Positioned.fill(
-                                            child: IgnorePointer(
-                                              child: Container(
-                                                decoration: BoxDecoration(
-                                                  color: Colors.blue.withOpacity(0.5),
-                                                  borderRadius: BorderRadius.circular(8),
-                                                  border: Border.all(
-                                                    color: Colors.blue,
-                                                    width: 3,
-                                                  ),
-                                                ),
-                                                child: const Icon(
-                                                  Icons.check_circle,
-                                                  color: Colors.white,
-                                                  size: 40,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                      ],
-                                    );
-                                  },
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8),
+                                  child: Image.file(
+                                    File(imagePath),
+                                    fit: BoxFit.cover,
+                                    width: double.infinity,
+                                    height: double.infinity,
+                                  ),
                                 ),
                               ),
-                            ),
                             );
                           },
                         ),
             ),
-
-            // Selection mode info
-            if (_isSelectionMode)
-              Container(
-                padding: const EdgeInsets.all(12),
-                color: Colors.grey[200],
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      '${_selectedImages.length}개 선택됨',
-                      style: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: () {
-                        setState(() {
-                          _selectedImages.clear();
-                          _isSelectionMode = false;
-                        });
-                      },
-                      child: const Text('취소'),
-                    ),
-                  ],
-                ),
-              ),
           ],
         ),
       ),
@@ -1859,102 +1504,6 @@ class _PhotoPreviewDialogState extends State<PhotoPreviewDialog> {
     }
   }
 
-  Future<void> _saveMarkers() async {
-    try {
-      final markersPath = widget.imagePath.replaceAll('.jpg', '.json');
-      final markersFile = File(markersPath);
-      await markersFile.writeAsString(jsonEncode(_markers));
-    } catch (e) {
-      debugPrint('Error saving markers: $e');
-    }
-  }
-
-  Future<void> _editMarker(int index) async {
-    final controller = TextEditingController(text: _markers[index]['label']);
-
-    final result = await showDialog<String>(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('음식 이름 수정'),
-        content: TextField(
-          controller: controller,
-          decoration: const InputDecoration(
-            hintText: '음식 이름을 입력하세요',
-          ),
-          autofocus: true,
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('취소'),
-          ),
-          TextButton(
-            onPressed: () => Navigator.pop(context, controller.text),
-            child: const Text('확인'),
-          ),
-        ],
-      ),
-    );
-
-    if (result != null && result.isNotEmpty) {
-      setState(() {
-        _markers[index]['label'] = result;
-      });
-      await _saveMarkers();
-    }
-  }
-
-  Future<void> _deletePhoto() async {
-    final confirm = await showDialog<bool>(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('사진 삭제'),
-        content: const Text('이 사진을 삭제하시겠습니까?'),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context, false),
-            child: const Text('취소'),
-          ),
-          TextButton(
-            onPressed: () => Navigator.pop(context, true),
-            child: const Text('삭제'),
-          ),
-        ],
-      ),
-    );
-
-    if (confirm == true) {
-      try {
-        // Delete image file
-        final imageFile = File(widget.imagePath);
-        if (await imageFile.exists()) {
-          await imageFile.delete();
-        }
-
-        // Delete JSON file
-        final jsonPath = widget.imagePath.replaceAll('.jpg', '.json');
-        final jsonFile = File(jsonPath);
-        if (await jsonFile.exists()) {
-          await jsonFile.delete();
-        }
-
-        if (mounted) {
-          Navigator.pop(context); // Close preview dialog
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('사진이 삭제되었습니다')),
-          );
-        }
-      } catch (e) {
-        debugPrint('Error deleting photo: $e');
-        if (mounted) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('사진 삭제 중 오류가 발생했습니다')),
-          );
-        }
-      }
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     if (_isLoading) {
@@ -1973,7 +1522,6 @@ class _PhotoPreviewDialogState extends State<PhotoPreviewDialog> {
         height: MediaQuery.of(context).size.height * 0.85,
         child: Stack(
           children: [
-            // Display the captured image
             Center(
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(12),
@@ -1984,84 +1532,54 @@ class _PhotoPreviewDialogState extends State<PhotoPreviewDialog> {
               ),
             ),
 
-            // Test markers overlay
             ...(_markers.asMap().entries.map((entry) {
-              final index = entry.key;
               final marker = entry.value;
               return Positioned(
                 left: MediaQuery.of(context).size.width * 0.9 * marker['x'],
                 top: MediaQuery.of(context).size.height * 0.85 * marker['y'],
-                child: GestureDetector(
-                  onTap: () => _editMarker(index),
-                  child: Column(
-                    children: [
-                      // Marker icon
-                      Container(
-                        width: 40,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          color: Colors.red.withOpacity(0.7),
-                          shape: BoxShape.circle,
-                          border: Border.all(
-                            color: Colors.white,
-                            width: 2,
-                          ),
-                        ),
-                        child: const Icon(
-                          Icons.restaurant,
+                child: Column(
+                  children: [
+                    Container(
+                      width: 40,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: Colors.red.withOpacity(0.7),
+                        shape: BoxShape.circle,
+                        border: Border.all(
                           color: Colors.white,
-                          size: 24,
+                          width: 2,
                         ),
                       ),
-                      const SizedBox(height: 4),
-                      // Label
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 8,
-                          vertical: 4,
-                        ),
-                        decoration: BoxDecoration(
-                          color: Colors.black87,
-                          borderRadius: BorderRadius.circular(4),
-                        ),
-                        child: Text(
-                          marker['label'],
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 12,
-                            fontWeight: FontWeight.bold,
-                          ),
+                      child: const Icon(
+                        Icons.restaurant,
+                        color: Colors.white,
+                        size: 24,
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 8,
+                        vertical: 4,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.black87,
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      child: Text(
+                        marker['label'],
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               );
             }).toList()),
 
-            // Delete button at top left
-            Positioned(
-              top: 30,
-              left: 10,
-              child: GestureDetector(
-                onTap: _deletePhoto,
-                child: Container(
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color: Colors.black54,
-                    shape: BoxShape.circle,
-                  ),
-                  child: const Icon(
-                    Icons.delete,
-                    color: Colors.white,
-                    size: 24,
-                  ),
-                ),
-              ),
-            ),
-
-            // Close button at top right
             Positioned(
               top: 30,
               right: 10,
@@ -2082,28 +1600,6 @@ class _PhotoPreviewDialogState extends State<PhotoPreviewDialog> {
                 ),
               ),
             ),
-
-            // Bottom instructions
-            Positioned(
-              bottom: 20,
-              left: 20,
-              right: 20,
-              child: Container(
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: Colors.black87,
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: const Text(
-                  '마커를 탭하여 음식 이름을 추가하거나 수정할 수 있습니다.',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 14,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            ),
           ],
         ),
       ),
@@ -2111,7 +1607,6 @@ class _PhotoPreviewDialogState extends State<PhotoPreviewDialog> {
   }
 }
 
-// Custom painter for camera grid
 class GridPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
@@ -2120,7 +1615,6 @@ class GridPainter extends CustomPainter {
       ..strokeWidth = 1.0
       ..style = PaintingStyle.stroke;
 
-    // Draw vertical lines (2 lines dividing into 3 sections)
     final verticalStep = size.width / 3;
     canvas.drawLine(
       Offset(verticalStep, 0),
@@ -2133,7 +1627,6 @@ class GridPainter extends CustomPainter {
       paint,
     );
 
-    // Draw horizontal lines (2 lines dividing into 3 sections)
     final horizontalStep = size.height / 3;
     canvas.drawLine(
       Offset(0, horizontalStep),
