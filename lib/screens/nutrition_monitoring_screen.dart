@@ -13,39 +13,182 @@ class NutritionMonitoringScreen extends StatefulWidget {
 }
 
 class _NutritionMonitoringScreenState extends State<NutritionMonitoringScreen> {
-  TimePeriod _selectedPeriod = TimePeriod.week;
-  final List<NutritionData> _allData = NutritionData.generateSampleData();
+  TimePeriod _selectedPeriod = TimePeriod.day;
+  List<NutritionData> _allData = [];
+  bool _isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadNutritionData();
+  }
+
+  Future<void> _loadNutritionData() async {
+    final data = await NutritionData.loadRealData();
+    if (mounted) {
+      setState(() {
+        _allData = data;
+        _isLoading = false;
+      });
+    }
+  }
 
   List<NutritionData> get _filteredData {
     final now = DateTime.now();
     switch (_selectedPeriod) {
       case TimePeriod.day:
-        // 오늘 하루의 시간대별 데이터 (24시간)
-        return _allData.where((data) {
+        // 오늘 하루의 시간대별 데이터 (24시간) - 같은 시간대 합치기
+        final todayData = _allData.where((data) {
           return data.date.year == now.year &&
               data.date.month == now.month &&
               data.date.day == now.day;
         }).toList();
+
+        // 시간대별로 그룹화하여 합산
+        final Map<int, NutritionData> hourlyData = {};
+        for (final data in todayData) {
+          final hour = data.date.hour;
+          if (hourlyData.containsKey(hour)) {
+            // 같은 시간대 데이터가 있으면 합산
+            final existing = hourlyData[hour]!;
+            hourlyData[hour] = NutritionData(
+              date: DateTime(now.year, now.month, now.day, hour),
+              calories: existing.calories + data.calories,
+              sodium: existing.sodium + data.sodium,
+              sugar: existing.sugar + data.sugar,
+              carbohydrates: existing.carbohydrates + data.carbohydrates,
+              imagePath: existing.imagePath, // 첫 번째 이미지 경로 유지
+            );
+          } else {
+            // 새로운 시간대
+            hourlyData[hour] = NutritionData(
+              date: DateTime(now.year, now.month, now.day, hour),
+              calories: data.calories,
+              sodium: data.sodium,
+              sugar: data.sugar,
+              carbohydrates: data.carbohydrates,
+              imagePath: data.imagePath,
+            );
+          }
+        }
+
+        // 시간 순서대로 정렬하여 반환
+        final result = hourlyData.values.toList()
+          ..sort((a, b) => a.date.compareTo(b.date));
+        return result;
+
       case TimePeriod.week:
-        // 최근 7일
-        return _allData
+        // 최근 7일 - 같은 날짜 합치기
+        final weekData = _allData
             .where((data) =>
                 data.date.isAfter(now.subtract(const Duration(days: 7))))
-            .toList()
+            .toList();
+
+        // 날짜별로 그룹화하여 합산
+        final Map<String, NutritionData> dailyData = {};
+        for (final data in weekData) {
+          final dateKey = '${data.date.year}-${data.date.month}-${data.date.day}';
+          if (dailyData.containsKey(dateKey)) {
+            // 같은 날짜 데이터가 있으면 합산
+            final existing = dailyData[dateKey]!;
+            dailyData[dateKey] = NutritionData(
+              date: DateTime(data.date.year, data.date.month, data.date.day),
+              calories: existing.calories + data.calories,
+              sodium: existing.sodium + data.sodium,
+              sugar: existing.sugar + data.sugar,
+              carbohydrates: existing.carbohydrates + data.carbohydrates,
+              imagePath: existing.imagePath,
+            );
+          } else {
+            // 새로운 날짜
+            dailyData[dateKey] = NutritionData(
+              date: DateTime(data.date.year, data.date.month, data.date.day),
+              calories: data.calories,
+              sodium: data.sodium,
+              sugar: data.sugar,
+              carbohydrates: data.carbohydrates,
+              imagePath: data.imagePath,
+            );
+          }
+        }
+
+        return dailyData.values.toList()
           ..sort((a, b) => a.date.compareTo(b.date));
+
       case TimePeriod.month:
-        // 최근 30일
-        return _allData
+        // 최근 30일 - 같은 날짜 합치기
+        final monthData = _allData
             .where((data) =>
                 data.date.isAfter(now.subtract(const Duration(days: 30))))
-            .toList()
+            .toList();
+
+        // 날짜별로 그룹화하여 합산
+        final Map<String, NutritionData> dailyData = {};
+        for (final data in monthData) {
+          final dateKey = '${data.date.year}-${data.date.month}-${data.date.day}';
+          if (dailyData.containsKey(dateKey)) {
+            // 같은 날짜 데이터가 있으면 합산
+            final existing = dailyData[dateKey]!;
+            dailyData[dateKey] = NutritionData(
+              date: DateTime(data.date.year, data.date.month, data.date.day),
+              calories: existing.calories + data.calories,
+              sodium: existing.sodium + data.sodium,
+              sugar: existing.sugar + data.sugar,
+              carbohydrates: existing.carbohydrates + data.carbohydrates,
+              imagePath: existing.imagePath,
+            );
+          } else {
+            // 새로운 날짜
+            dailyData[dateKey] = NutritionData(
+              date: DateTime(data.date.year, data.date.month, data.date.day),
+              calories: data.calories,
+              sodium: data.sodium,
+              sugar: data.sugar,
+              carbohydrates: data.carbohydrates,
+              imagePath: data.imagePath,
+            );
+          }
+        }
+
+        return dailyData.values.toList()
           ..sort((a, b) => a.date.compareTo(b.date));
+
       case TimePeriod.year:
-        // 최근 12개월
-        return _allData
+        // 최근 12개월 - 같은 날짜 합치기
+        final yearData = _allData
             .where((data) =>
                 data.date.isAfter(now.subtract(const Duration(days: 365))))
-            .toList()
+            .toList();
+
+        // 날짜별로 그룹화하여 합산
+        final Map<String, NutritionData> dailyData = {};
+        for (final data in yearData) {
+          final dateKey = '${data.date.year}-${data.date.month}-${data.date.day}';
+          if (dailyData.containsKey(dateKey)) {
+            // 같은 날짜 데이터가 있으면 합산
+            final existing = dailyData[dateKey]!;
+            dailyData[dateKey] = NutritionData(
+              date: DateTime(data.date.year, data.date.month, data.date.day),
+              calories: existing.calories + data.calories,
+              sodium: existing.sodium + data.sodium,
+              sugar: existing.sugar + data.sugar,
+              carbohydrates: existing.carbohydrates + data.carbohydrates,
+              imagePath: existing.imagePath,
+            );
+          } else {
+            // 새로운 날짜
+            dailyData[dateKey] = NutritionData(
+              date: DateTime(data.date.year, data.date.month, data.date.day),
+              calories: data.calories,
+              sodium: data.sodium,
+              sugar: data.sugar,
+              carbohydrates: data.carbohydrates,
+              imagePath: data.imagePath,
+            );
+          }
+        }
+
+        return dailyData.values.toList()
           ..sort((a, b) => a.date.compareTo(b.date));
     }
   }
@@ -69,63 +212,89 @@ class _NutritionMonitoringScreenState extends State<NutritionMonitoringScreen> {
       appBar: AppBar(
         title: const Text('영양정보 모니터링'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.refresh),
+            onPressed: _loadNutritionData,
+          ),
+        ],
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // 기간 선택 버튼
-            _buildPeriodSelector(),
-            const SizedBox(height: 24),
+      body: _isLoading
+          ? const Center(child: CircularProgressIndicator())
+          : _allData.isEmpty
+              ? const Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.no_food, size: 80, color: Colors.grey),
+                      SizedBox(height: 16),
+                      Text(
+                        '분석된 음식 데이터가 없습니다\n사진을 찍어 음식을 분석해주세요',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.grey,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
+                )
+              : SingleChildScrollView(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // 기간 선택 버튼
+                      _buildPeriodSelector(),
+                      const SizedBox(height: 24),
 
-            // 칼로리 막대 그래프
-            const Text(
-              '칼로리 (kcal)',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 12),
-            Card(
-              elevation: 4,
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: SizedBox(
-                  height: 250,
-                  child: _buildCaloriesBarChart(),
+                      // 칼로리 막대 그래프
+                      const Text(
+                        '칼로리 (kcal)',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                      Card(
+                        elevation: 4,
+                        child: Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: SizedBox(
+                            height: 250,
+                            child: _buildCaloriesBarChart(),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 24),
+
+                      // 영양소 선 그래프
+                      const Text(
+                        '영양소',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                      Card(
+                        elevation: 4,
+                        child: Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: SizedBox(
+                            height: 250,
+                            child: _buildNutrientsLineChart(),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+
+                      // 범례
+                      _buildLegend(),
+                    ],
+                  ),
                 ),
-              ),
-            ),
-            const SizedBox(height: 24),
-
-            // 영양소 선 그래프
-            const Text(
-              '영양소',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 12),
-            Card(
-              elevation: 4,
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: SizedBox(
-                  height: 250,
-                  child: _buildNutrientsLineChart(),
-                ),
-              ),
-            ),
-            const SizedBox(height: 16),
-
-            // 범례
-            _buildLegend(),
-          ],
-        ),
-      ),
     );
   }
 
@@ -164,7 +333,7 @@ class _NutritionMonitoringScreenState extends State<NutritionMonitoringScreen> {
 
     return BarChart(
       BarChartData(
-        alignment: BarChartAlignment.spaceAround,
+        alignment: BarChartAlignment.start,
         maxY: 2500,
         minY: 0,
         barTouchData: BarTouchData(

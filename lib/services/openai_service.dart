@@ -19,7 +19,7 @@ class ClaudeService {
 
       print('📤 Sending request to Claude API...');
 
-      // Claude 3.5 Haiku (가장 저렴하고 빠름)
+      // Claude Sonnet 4.5 (2025년 최신 모델 - 코딩 및 에이전트 작업에 최적화)
       final response = await http.post(
         Uri.parse('https://api.anthropic.com/v1/messages'),
         headers: {
@@ -28,7 +28,7 @@ class ClaudeService {
           'anthropic-version': '2023-06-01',
         },
         body: jsonEncode({
-          'model': 'claude-3-5-haiku-20241022', 
+          'model': 'claude-sonnet-4-5-20250929', 
           'max_tokens': 1024,
           'messages': [
             {
@@ -51,18 +51,28 @@ class ClaudeService {
     {
       "name": "음식명",
       "x": 0.5,
-      "y": 0.5
+      "y": 0.5,
+      "nutrition": {
+        "calories": 해당_음식_칼로리,
+        "sugar": 해당_음식_당_g,
+        "protein": 해당_음식_단백질_g,
+        "fat": 해당_음식_지방_g,
+        "sodium": 해당_음식_나트륨_mg,
+        "carbohydrates": 해당_음식_탄수화물_g
+      }
     }
   ],
   "nutrition": {
     "calories": 총_칼로리,
-    "sugar": 당_g,
-    "protein": 단백질_g,
-    "fat": 지방_g,
-    "sodium": 나트륨_mg
+    "sugar": 총_당_g,
+    "protein": 총_단백질_g,
+    "fat": 총_지방_g,
+    "sodium": 총_나트륨_mg,
+    "carbohydrates": 총_탄수화물_g
   }
 }
 
+각 음식의 위치(x, y)는 0.0~1.0 사이 값이며, 각 음식마다 개별 영양 정보를 포함해야 합니다.
 JSON만 반환하세요. 다른 설명은 필요없습니다.'''
                 }
               ]

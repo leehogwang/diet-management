@@ -22,12 +22,31 @@ class MainNavigationScreen extends StatefulWidget {
 class _MainNavigationScreenState extends State<MainNavigationScreen> {
   int _currentIndex = 0;
 
-  final List<Widget> _pages = [
-    const HomePage(),
-    const CameraPage(),
-    const NutritionMonitoringScreen(),
-    const UserInfoPage(),
-  ];
+  late final List<Widget> _pages;
+
+  @override
+  void initState() {
+    super.initState();
+    _pages = [
+      HomePage(onNavigateToNutrition: () => _navigateToTab(2)),
+      const CameraPage(),
+      const NutritionMonitoringScreen(key: ValueKey('nutrition')),
+      const UserInfoPage(),
+    ];
+  }
+
+  void _navigateToTab(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
+
+  void _refreshNutritionData() {
+    // NutritionMonitoringScreen이 새로고갈되도록 키 변경
+    setState(() {
+      _pages[2] = NutritionMonitoringScreen(key: ValueKey('nutrition_${DateTime.now().millisecondsSinceEpoch}'));
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,6 +59,11 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
           setState(() {
             _currentIndex = index;
           });
+
+          // Nutrition 탭으로 이동 시 데이터 새로고침
+          if (index == 2) {
+            _refreshNutritionData();
+          }
         },
         items: const [
           BottomNavigationBarItem(
@@ -65,7 +89,9 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
 }
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  final VoidCallback onNavigateToNutrition;
+
+  const HomePage({super.key, required this.onNavigateToNutrition});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -359,38 +385,40 @@ class _HomePageState extends State<HomePage> {
                     _selectedDate.year == DateTime.now().year;
 
                 return Expanded(
-                  child: InkWell(
-                    onTap: () => _showPlaceholderDialog('$dayNumber일'),
-                    child: Container(
-                      height: 60,
-                      margin: const EdgeInsets.all(2),
-                      decoration: BoxDecoration(
-                        color: isToday ? Colors.orange.shade100 : null,
-                        borderRadius: BorderRadius.circular(8),
-                        border: Border.all(
-                          color: Colors.grey.shade300,
-                          width: 0.5,
-                        ),
+                  child: Container(
+                    height: 60,
+                    margin: const EdgeInsets.all(2),
+                    decoration: BoxDecoration(
+                      color: isToday ? Colors.orange.shade100 : null,
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(
+                        color: Colors.grey.shade300,
+                        width: 0.5,
                       ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          const SizedBox(height: 4),
-                          Text(
-                            '$dayNumber',
-                            style: TextStyle(
-                              color: dayIndex == 0
-                                  ? Colors.red
-                                  : dayIndex == 6
-                                      ? Colors.blue
-                                      : Colors.black,
-                              fontWeight: isToday ? FontWeight.bold : FontWeight.normal,
-                              fontSize: 14,
-                            ),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        const SizedBox(height: 4),
+                        Text(
+                          '$dayNumber',
+                          style: TextStyle(
+                            color: dayIndex == 0
+                                ? Colors.red
+                                : dayIndex == 6
+                                    ? Colors.blue
+                                    : Colors.black,
+                            fontWeight: isToday ? FontWeight.bold : FontWeight.normal,
+                            fontSize: 14,
                           ),
-                          const SizedBox(height: 4),
-                          // Blank space for future information
-                          Container(
+                        ),
+                        const SizedBox(height: 4),
+                        // Blank space for future information - 클릭 시 Nutrition 탭으로 이동
+                        InkWell(
+                          onTap: () {
+                            widget.onNavigateToNutrition();
+                          },
+                          child: Container(
                             width: 30,
                             height: 20,
                             decoration: BoxDecoration(
@@ -398,8 +426,8 @@ class _HomePageState extends State<HomePage> {
                               borderRadius: BorderRadius.circular(4),
                             ),
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 );
@@ -652,6 +680,14 @@ class _CameraPageState extends State<CameraPage> {
             'x': food['x'] ?? 0.5,
             'y': food['y'] ?? 0.5,
             'label': food['name'] ?? 'Unknown',
+            'nutrition': food['nutrition'] ?? {
+              'calories': 0,
+              'sugar': 0,
+              'protein': 0,
+              'fat': 0,
+              'sodium': 0,
+              'carbohydrates': 0,
+            },
           }).toList();
 
           final markersPath = '${foodPhotosDir.path}/food_$timestamp.json';
@@ -664,6 +700,16 @@ class _CameraPageState extends State<CameraPage> {
 
           final nutrition = analysisResult['nutrition'] as Map<String, dynamic>? ?? {};
           final foodNames = foods.map((food) => food['name'] ?? 'Unknown').toList();
+
+          // 영양 데이터 저장
+          await NutritionData.saveNutritionData(
+            date: DateTime.now(),
+            calories: (nutrition['calories'] ?? 0).toDouble(),
+            sodium: (nutrition['sodium'] ?? 0).toDouble(),
+            sugar: (nutrition['sugar'] ?? 0).toDouble(),
+            carbohydrates: (nutrition['carbohydrates'] ?? 0).toDouble(),
+            imagePath: savedPath,
+          );
 
           showDialog(
             context: context,
@@ -1236,10 +1282,13 @@ class _GalleryDialogState extends State<GalleryDialog> {
   final Map<String, GlobalKey> _itemKeys = {};
   final Map<String, List<Map<String, dynamic>>> _imageMarkers = {};
   bool _isDragging = false;
+  ClaudeService? _claudeService;
 
   @override
   void initState() {
     super.initState();
+    final apiKey = dotenv.env['CLAUDE_API_KEY'];
+    _claudeService = ClaudeService(apiKey ?? '');
     _loadImages();
   }
 
@@ -1305,12 +1354,68 @@ class _GalleryDialogState extends State<GalleryDialog> {
     }
   }
 
+  void _toggleSelection(String imagePath) {
+    setState(() {
+      if (_selectedImages.contains(imagePath)) {
+        _selectedImages.remove(imagePath);
+        if (_selectedImages.isEmpty) {
+          _isSelectionMode = false;
+        }
+      } else {
+        _selectedImages.add(imagePath);
+      }
+    });
+  }
+
+  Future<void> _deleteSelectedImages() async {
+    try {
+      for (String imagePath in _selectedImages) {
+        // Delete image file
+        final imageFile = File(imagePath);
+        if (await imageFile.exists()) {
+          await imageFile.delete();
+        }
+
+        // Delete corresponding JSON file
+        final jsonPath = imagePath.replaceAll('.jpg', '.json');
+        final jsonFile = File(jsonPath);
+        if (await jsonFile.exists()) {
+          await jsonFile.delete();
+        }
+      }
+
+      setState(() {
+        _imagePaths.removeWhere((path) => _selectedImages.contains(path));
+        _selectedImages.clear();
+        _isSelectionMode = false;
+      });
+
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('선택된 사진이 삭제되었습니다')),
+        );
+      }
+    } catch (e) {
+      debugPrint('Error deleting images: $e');
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('사진 삭제 중 오류가 발생했습니다')),
+        );
+      }
+    }
+  }
+
   Future<void> _addImageFromGallery() async {
     try {
       final ImagePicker picker = ImagePicker();
       final XFile? image = await picker.pickImage(source: ImageSource.gallery);
 
       if (image != null) {
+        // 로딩 상태 표시
+        setState(() {
+          _isLoading = true;
+        });
+
         final directory = await getApplicationDocumentsDirectory();
         final foodPhotosDir = Directory('${directory.path}/temp_food_photos');
         if (!await foodPhotosDir.exists()) {
@@ -1321,31 +1426,229 @@ class _GalleryDialogState extends State<GalleryDialog> {
         final savedPath = '${foodPhotosDir.path}/food_$timestamp.jpg';
         await File(image.path).copy(savedPath);
 
-        final initialMarkers = [
-          {'x': 0.3, 'y': 0.4, 'label': 'Food Item 1'},
-          {'x': 0.6, 'y': 0.5, 'label': 'Food Item 2'},
-          {'x': 0.5, 'y': 0.3, 'label': 'Food Item 3'},
-        ];
-        final markersPath = '${foodPhotosDir.path}/food_$timestamp.json';
-        final markersFile = File(markersPath);
-        await markersFile.writeAsString(jsonEncode(initialMarkers));
+        // AI로 음식 분석
+        try {
+          if (_claudeService == null) {
+            throw Exception('Claude 서비스가 초기화되지 않았습니다');
+          }
+          final analysisResult = await _claudeService!.analyzeFoodImage(File(savedPath));
 
-        await _loadImages();
+          // 분석된 음식들로 마커 생성
+          final foods = analysisResult['foods'] as List<dynamic>? ?? [];
+          final markers = foods.map((food) => {
+            'x': food['x'] ?? 0.5,
+            'y': food['y'] ?? 0.5,
+            'label': food['name'] ?? 'Unknown',
+            'nutrition': food['nutrition'] ?? {
+              'calories': 0,
+              'sugar': 0,
+              'protein': 0,
+              'fat': 0,
+              'sodium': 0,
+              'carbohydrates': 0,
+            },
+          }).toList();
 
-        if (mounted) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('사진이 추가되었습니다')),
+          // 마커 저장
+          final markersPath = '${foodPhotosDir.path}/food_$timestamp.json';
+          final markersFile = File(markersPath);
+          await markersFile.writeAsString(jsonEncode(markers));
+
+          // 영양 데이터 저장
+          final nutrition = analysisResult['nutrition'] as Map<String, dynamic>? ?? {};
+          await NutritionData.saveNutritionData(
+            date: DateTime.now(),
+            calories: (nutrition['calories'] ?? 0).toDouble(),
+            sodium: (nutrition['sodium'] ?? 0).toDouble(),
+            sugar: (nutrition['sugar'] ?? 0).toDouble(),
+            carbohydrates: (nutrition['carbohydrates'] ?? 0).toDouble(),
+            imagePath: savedPath,
           );
+
+          setState(() {
+            _isLoading = false;
+          });
+
+          await _loadImages();
+
+          if (mounted) {
+            // 분석 결과 팝업 표시
+            final foodNames = foods.map((food) => food['name'] ?? 'Unknown').toList();
+
+            showDialog(
+              context: context,
+              barrierDismissible: false,
+              builder: (context) => AlertDialog(
+                title: const Text(
+                  '음식 분석 완료',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                content: SingleChildScrollView(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        '영양 정보',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blue,
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                      _buildNutritionRow('칼로리', '${nutrition['calories'] ?? 0}', 'kcal'),
+                      const SizedBox(height: 8),
+                      _buildNutritionRow('당', '${nutrition['sugar'] ?? 0}', 'g'),
+                      const SizedBox(height: 8),
+                      _buildNutritionRow('단백질', '${nutrition['protein'] ?? 0}', 'g'),
+                      const SizedBox(height: 8),
+                      _buildNutritionRow('지방', '${nutrition['fat'] ?? 0}', 'g'),
+                      const SizedBox(height: 8),
+                      _buildNutritionRow('나트륨', '${nutrition['sodium'] ?? 0}', 'mg'),
+                      const SizedBox(height: 20),
+                      const Divider(),
+                      const SizedBox(height: 12),
+                      const Text(
+                        '인식된 음식',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.orange,
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      if (foodNames.isEmpty)
+                        const Text(
+                          '감지된 음식이 없습니다.',
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.grey,
+                          ),
+                        )
+                      else
+                        ...foodNames.asMap().entries.map((entry) => Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 4),
+                          child: Row(
+                            children: [
+                              Container(
+                                width: 24,
+                                height: 24,
+                                decoration: BoxDecoration(
+                                  color: Colors.orange.shade100,
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    '${entry.key + 1}',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.orange.shade900,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(width: 8),
+                              Expanded(
+                                child: Text(
+                                  entry.value,
+                                  style: const TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        )).toList(),
+                    ],
+                  ),
+                ),
+                actions: [
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: const Text('확인'),
+                  ),
+                ],
+              ),
+            );
+          }
+        } catch (e) {
+          debugPrint('AI 분석 실패: $e');
+
+          // AI 분석 실패 시 기본 마커 사용
+          final initialMarkers = [
+            {'x': 0.3, 'y': 0.4, 'label': 'Food Item 1'},
+            {'x': 0.6, 'y': 0.5, 'label': 'Food Item 2'},
+            {'x': 0.5, 'y': 0.3, 'label': 'Food Item 3'},
+          ];
+          final markersPath = '${foodPhotosDir.path}/food_$timestamp.json';
+          final markersFile = File(markersPath);
+          await markersFile.writeAsString(jsonEncode(initialMarkers));
+
+          setState(() {
+            _isLoading = false;
+          });
+
+          await _loadImages();
+
+          if (mounted) {
+            showDialog(
+              context: context,
+              builder: (context) => AlertDialog(
+                title: const Text('AI 분석 실패'),
+                content: Text('음식 분석에 실패했습니다.\n\n오류: $e'),
+                actions: [
+                  TextButton(
+                    onPressed: () => Navigator.pop(context),
+                    child: const Text('확인'),
+                  ),
+                ],
+              ),
+            );
+          }
         }
       }
     } catch (e) {
       debugPrint('Error adding image: $e');
+      setState(() {
+        _isLoading = false;
+      });
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text('사진 추가 중 오류가 발생했습니다')),
         );
       }
     }
+  }
+
+  Widget _buildNutritionRow(String label, String value, String unit) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          label,
+          style: const TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        Text(
+          '$value $unit',
+          style: const TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            color: Colors.green,
+          ),
+        ),
+      ],
+    );
   }
 
   @override
@@ -1383,6 +1686,32 @@ class _GalleryDialogState extends State<GalleryDialog> {
                   ),
                   Row(
                     children: [
+                      if (_isSelectionMode)
+                        IconButton(
+                          icon: const Icon(Icons.delete),
+                          onPressed: () async {
+                            final confirm = await showDialog<bool>(
+                              context: context,
+                              builder: (context) => AlertDialog(
+                                title: const Text('사진 삭제'),
+                                content: Text('선택된 ${_selectedImages.length}개의 사진을 삭제하시겠습니까?'),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () => Navigator.pop(context, false),
+                                    child: const Text('취소'),
+                                  ),
+                                  TextButton(
+                                    onPressed: () => Navigator.pop(context, true),
+                                    child: const Text('삭제'),
+                                  ),
+                                ],
+                              ),
+                            );
+                            if (confirm == true) {
+                              await _deleteSelectedImages();
+                            }
+                          },
+                        ),
                       IconButton(
                         icon: const Icon(Icons.add),
                         onPressed: _addImageFromGallery,
@@ -1423,29 +1752,139 @@ class _GalleryDialogState extends State<GalleryDialog> {
                           itemCount: _imagePaths.length,
                           itemBuilder: (context, index) {
                             final imagePath = _imagePaths[index];
+                            final isSelected = _selectedImages.contains(imagePath);
                             final itemKey = _itemKeys[imagePath]!;
 
-                            return GestureDetector(
+                            return AnimatedScale(
                               key: itemKey,
-                              onTap: () {
-                                showDialog(
-                                  context: context,
-                                  builder: (context) => PhotoPreviewDialog(
-                                    imagePath: imagePath,
-                                  ),
-                                );
-                              },
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(8),
-                                  child: Image.file(
-                                    File(imagePath),
-                                    fit: BoxFit.cover,
-                                    width: double.infinity,
-                                    height: double.infinity,
+                              scale: isSelected ? 0.9 : 1.0,
+                              duration: const Duration(milliseconds: 150),
+                              curve: Curves.easeOut,
+                              child: GestureDetector(
+                                behavior: HitTestBehavior.opaque,
+                                onTap: () {
+                                  if (_isSelectionMode) {
+                                    _toggleSelection(imagePath);
+                                  } else {
+                                    showDialog(
+                                      context: context,
+                                      builder: (context) => PhotoPreviewDialog(
+                                        imagePath: imagePath,
+                                      ),
+                                    );
+                                  }
+                                },
+                                onLongPressStart: (details) {
+                                  setState(() {
+                                    _isSelectionMode = true;
+                                    _isDragging = true;
+                                    if (!_selectedImages.contains(imagePath)) {
+                                      _selectedImages.add(imagePath);
+                                    }
+                                  });
+                                },
+                                onLongPressMoveUpdate: (details) {
+                                  if (_isDragging) {
+                                    // Check all items to see which one is under the pointer
+                                    for (final path in _imagePaths) {
+                                      final key = _itemKeys[path];
+                                      if (key?.currentContext != null) {
+                                        final RenderBox? box = key!.currentContext!.findRenderObject() as RenderBox?;
+                                        if (box != null) {
+                                          final position = box.localToGlobal(Offset.zero);
+                                          final size = box.size;
+
+                                          // Check if pointer is within this item
+                                          if (details.globalPosition.dx >= position.dx &&
+                                              details.globalPosition.dx <= position.dx + size.width &&
+                                              details.globalPosition.dy >= position.dy &&
+                                              details.globalPosition.dy <= position.dy + size.height) {
+                                            if (!_selectedImages.contains(path)) {
+                                              setState(() {
+                                                _selectedImages.add(path);
+                                              });
+                                            }
+                                            break; // Found the item, no need to check others
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                onLongPressEnd: (details) {
+                                  setState(() {
+                                    _isDragging = false;
+                                  });
+                                },
+                                child: Container(
+                                  color: Colors.transparent,
+                                  child: LayoutBuilder(
+                                    builder: (context, constraints) {
+                                      final markers = _imageMarkers[imagePath] ?? [];
+                                      return Stack(
+                                        children: [
+                                          ClipRRect(
+                                            borderRadius: BorderRadius.circular(8),
+                                            child: Image.file(
+                                              File(imagePath),
+                                              fit: BoxFit.cover,
+                                              width: double.infinity,
+                                              height: double.infinity,
+                                            ),
+                                          ),
+                                          // Display markers as small dots
+                                          ...markers.map((marker) {
+                                            final x = (marker['x'] as num).toDouble();
+                                            final y = (marker['y'] as num).toDouble();
+                                            return Positioned(
+                                              left: constraints.maxWidth * x - 6,
+                                              top: constraints.maxHeight * y - 6,
+                                              child: IgnorePointer(
+                                                child: Container(
+                                                  width: 12,
+                                                  height: 12,
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.red.withOpacity(0.8),
+                                                    shape: BoxShape.circle,
+                                                    border: Border.all(
+                                                      color: Colors.white,
+                                                      width: 1.5,
+                                                    ),
+                                                    boxShadow: [
+                                                      BoxShadow(
+                                                        color: Colors.black.withOpacity(0.3),
+                                                        blurRadius: 2,
+                                                        spreadRadius: 0.5,
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
+                                            );
+                                          }).toList(),
+                                          if (isSelected)
+                                            Positioned.fill(
+                                              child: IgnorePointer(
+                                                child: Container(
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.blue.withOpacity(0.5),
+                                                    borderRadius: BorderRadius.circular(8),
+                                                    border: Border.all(
+                                                      color: Colors.blue,
+                                                      width: 3,
+                                                    ),
+                                                  ),
+                                                  child: const Icon(
+                                                    Icons.check_circle,
+                                                    color: Colors.white,
+                                                    size: 40,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                        ],
+                                      );
+                                    },
                                   ),
                                 ),
                               ),
@@ -1453,6 +1892,34 @@ class _GalleryDialogState extends State<GalleryDialog> {
                           },
                         ),
             ),
+
+            // Selection mode info
+            if (_isSelectionMode)
+              Container(
+                padding: const EdgeInsets.all(12),
+                color: Colors.grey[200],
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '${_selectedImages.length}개 선택됨',
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        setState(() {
+                          _selectedImages.clear();
+                          _isSelectionMode = false;
+                        });
+                      },
+                      child: const Text('취소'),
+                    ),
+                  ],
+                ),
+              ),
           ],
         ),
       ),
@@ -1504,6 +1971,29 @@ class _PhotoPreviewDialogState extends State<PhotoPreviewDialog> {
     }
   }
 
+  Widget _buildNutritionRow(String label, String value, String unit) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          label,
+          style: const TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        Text(
+          '$value $unit',
+          style: const TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            color: Colors.green,
+          ),
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     if (_isLoading) {
@@ -1537,45 +2027,99 @@ class _PhotoPreviewDialogState extends State<PhotoPreviewDialog> {
               return Positioned(
                 left: MediaQuery.of(context).size.width * 0.9 * marker['x'],
                 top: MediaQuery.of(context).size.height * 0.85 * marker['y'],
-                child: Column(
-                  children: [
-                    Container(
-                      width: 40,
-                      height: 40,
-                      decoration: BoxDecoration(
-                        color: Colors.red.withOpacity(0.7),
-                        shape: BoxShape.circle,
-                        border: Border.all(
+                child: GestureDetector(
+                  onTap: () {
+                    // 마커 클릭 시 해당 음식의 영양 정보 표시
+                    final nutrition = marker['nutrition'] as Map<String, dynamic>?;
+                    if (nutrition != null) {
+                      showDialog(
+                        context: context,
+                        builder: (context) => AlertDialog(
+                          title: Text(
+                            marker['label'] ?? 'Unknown',
+                            style: const TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          content: SingleChildScrollView(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  '영양 정보',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.blue,
+                                  ),
+                                ),
+                                const SizedBox(height: 12),
+                                _buildNutritionRow('칼로리', '${nutrition['calories'] ?? 0}', 'kcal'),
+                                const SizedBox(height: 8),
+                                _buildNutritionRow('당', '${nutrition['sugar'] ?? 0}', 'g'),
+                                const SizedBox(height: 8),
+                                _buildNutritionRow('단백질', '${nutrition['protein'] ?? 0}', 'g'),
+                                const SizedBox(height: 8),
+                                _buildNutritionRow('지방', '${nutrition['fat'] ?? 0}', 'g'),
+                                const SizedBox(height: 8),
+                                _buildNutritionRow('나트륨', '${nutrition['sodium'] ?? 0}', 'mg'),
+                                const SizedBox(height: 8),
+                                _buildNutritionRow('탄수화물', '${nutrition['carbohydrates'] ?? 0}', 'g'),
+                              ],
+                            ),
+                          ),
+                          actions: [
+                            TextButton(
+                              onPressed: () => Navigator.pop(context),
+                              child: const Text('확인'),
+                            ),
+                          ],
+                        ),
+                      );
+                    }
+                  },
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 40,
+                        height: 40,
+                        decoration: BoxDecoration(
+                          color: Colors.red.withOpacity(0.7),
+                          shape: BoxShape.circle,
+                          border: Border.all(
+                            color: Colors.white,
+                            width: 2,
+                          ),
+                        ),
+                        child: const Icon(
+                          Icons.restaurant,
                           color: Colors.white,
-                          width: 2,
+                          size: 24,
                         ),
                       ),
-                      child: const Icon(
-                        Icons.restaurant,
-                        color: Colors.white,
-                        size: 24,
-                      ),
-                    ),
-                    const SizedBox(height: 4),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 8,
-                        vertical: 4,
-                      ),
-                      decoration: BoxDecoration(
-                        color: Colors.black87,
-                        borderRadius: BorderRadius.circular(4),
-                      ),
-                      child: Text(
-                        marker['label'],
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
+                      const SizedBox(height: 4),
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 8,
+                          vertical: 4,
+                        ),
+                        decoration: BoxDecoration(
+                          color: Colors.black87,
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        child: Text(
+                          marker['label'],
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               );
             }).toList()),
