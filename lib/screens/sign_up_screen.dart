@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'sign_in_screen.dart';
+import 'personal_settings_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -24,13 +25,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   void _handleSignUp() {
     if (_formKey.currentState!.validate()) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('회원가입이 완료되었습니다!')),
+      // 회원가입 완료 후 개인 설정 화면으로 이동
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const PersonalSettingsPage()),
       );
-      // 회원가입 완료 후 로그인 화면으로 돌아가기
-      Future.delayed(const Duration(seconds: 1), () {
-        Navigator.pop(context);
-      });
     }
   }
 
