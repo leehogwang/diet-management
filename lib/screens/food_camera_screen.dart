@@ -1,4 +1,6 @@
 import 'dart:io';
+import 'dart:typed_data';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import '../services/food_database_service.dart';
@@ -17,10 +19,16 @@ class _FoodCameraScreenState extends State<FoodCameraScreen> {
   final FoodDatabaseService _foodDb = FoodDatabaseService();
 
   XFile? _imageFile;
+  Uint8List? _imageBytes;
   bool _isProcessing = false;
   String? _recognizedFood;
+  double? _predictedWeight; // LLM이 예측한 중량 (g)
   FoodItem? _matchedFoodItem;
   List<FoodItem>? _similarFoods;
+  double? _adjustedCalories; // 중량 조정된 칼로리
+  double? _adjustedProtein; // 중량 조정된 단백질
+  double? _adjustedFat; // 중량 조정된 지방
+  double? _adjustedCarbs; // 중량 조정된 탄수화물
 
   @override
   void initState() {
@@ -67,8 +75,10 @@ class _FoodCameraScreenState extends State<FoodCameraScreen> {
       );
 
       if (photo != null) {
+        final bytes = await photo.readAsBytes();
         setState(() {
           _imageFile = photo;
+          _imageBytes = bytes;
           _isProcessing = true;
         });
         await _processImage();
@@ -96,8 +106,10 @@ class _FoodCameraScreenState extends State<FoodCameraScreen> {
       );
 
       if (photo != null) {
+        final bytes = await photo.readAsBytes();
         setState(() {
           _imageFile = photo;
+          _imageBytes = bytes;
           _isProcessing = true;
         });
         await _processImage();
@@ -114,34 +126,36 @@ class _FoodCameraScreenState extends State<FoodCameraScreen> {
     }
   }
 
-  // 이미지 처리 및 음식 인식 (Mock)
+  // 이미지 처리 및 음식 인식 (중량 예측 포함)
   Future<void> _processImage() async {
     // TODO: 실제 AI 모델 연동 시 여기를 수정
     // 현재는 Mock 데이터로 시뮬레이션
 
     await Future.delayed(const Duration(seconds: 2));
 
-    // Mock: 랜덤으로 음식 이름 예측
-    final mockFoodNames = [
-      '김치찌개',
-      '된장찌개',
-      '비빔밥',
-      '불고기',
-      '삼겹살',
-      '김밥',
-      '라면',
-      '치킨',
-      '피자',
-      '햄버거',
-      '샐러드',
-      '스테이크',
+    // Mock: 랜덤으로 음식 이름과 중량 예측
+    final mockFoodData = [
+      {'name': '김치찌개', 'weight': 450.0},
+      {'name': '된장찌개', 'weight': 400.0},
+      {'name': '비빔밥', 'weight': 350.0},
+      {'name': '불고기', 'weight': 250.0},
+      {'name': '삼겹살', 'weight': 180.0},
+      {'name': '김밥', 'weight': 200.0},
+      {'name': '라면', 'weight': 550.0},
+      {'name': '치킨', 'weight': 300.0},
+      {'name': '피자', 'weight': 280.0},
+      {'name': '햄버거', 'weight': 220.0},
+      {'name': '샐러드', 'weight': 150.0},
+      {'name': '스테이크', 'weight': 200.0},
     ];
 
-    final randomIndex = DateTime.now().second % mockFoodNames.length;
-    final predictedFood = mockFoodNames[randomIndex];
+    final randomIndex = DateTime.now().second % mockFoodData.length;
+    final predictedFood = mockFoodData[randomIndex]['name'] as String;
+    final predictedWeight = mockFoodData[randomIndex]['weight'] as double;
 
     setState(() {
       _recognizedFood = predictedFood;
+      _predictedWeight = predictedWeight;
       _isProcessing = false;
     });
 
@@ -160,6 +174,11 @@ class _FoodCameraScreenState extends State<FoodCameraScreen> {
       _matchedFoodItem = results.isNotEmpty ? results.first : null;
     });
 
+    // 예측된 중량을 기반으로 영양정보 재계산
+    if (_matchedFoodItem != null && _predictedWeight != null) {
+      _calculateAdjustedNutrition(_matchedFoodItem!, _predictedWeight!);
+    }
+
     if (results.isEmpty) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -172,17 +191,31 @@ class _FoodCameraScreenState extends State<FoodCameraScreen> {
     }
   }
 
+  // 예측된 중량을 기반으로 영양정보 재계산
+  void _calculateAdjustedNutrition(FoodItem foodItem, double predictedWeight) {
+    // 데이터베이스의 영양정보는 100g 기준이므로 예측된 중량에 맞게 조정
+    final weightRatio = predictedWeight / 100.0;
+
+    setState(() {
+      _adjustedCalories = foodItem.calories * weightRatio;
+      _adjustedProtein = foodItem.protein * weightRatio;
+      _adjustedFat = foodItem.fat * weightRatio;
+      _adjustedCarbs = foodItem.carbohydrates * weightRatio;
+    });
+  }
+
   // 선택한 음식을 데이터베이스에 저장
   Future<void> _saveMeal(FoodItem foodItem) async {
+    // 조정된 영양정보 사용 (예측 중량 기반)
     final meal = MealNutrition(
       dateTime: DateTime.now(),
       mealType: _getMealTypeByTime(DateTime.now()),
       foodName: foodItem.name,
-      calories: foodItem.calories,
-      carbohydrates: foodItem.carbohydrates,
-      protein: foodItem.protein,
-      fat: foodItem.fat,
-      notes: '카메라로 촬영한 음식 (인식: $_recognizedFood)',
+      calories: _adjustedCalories ?? foodItem.calories,
+      carbohydrates: _adjustedCarbs ?? foodItem.carbohydrates,
+      protein: _adjustedProtein ?? foodItem.protein,
+      fat: _adjustedFat ?? foodItem.fat,
+      notes: '카메라로 촬영한 음식 (인식: $_recognizedFood, 예측 중량: ${_predictedWeight?.toStringAsFixed(0)}g)',
     );
 
     try {
@@ -252,10 +285,15 @@ class _FoodCameraScreenState extends State<FoodCameraScreen> {
                       child: _imageFile != null
                           ? ClipRRect(
                               borderRadius: BorderRadius.circular(8),
-                              child: Image.file(
-                                File(_imageFile!.path),
-                                fit: BoxFit.cover,
-                              ),
+                              child: kIsWeb
+                                  ? Image.memory(
+                                      _imageBytes!,
+                                      fit: BoxFit.cover,
+                                    )
+                                  : Image.file(
+                                      File(_imageFile!.path),
+                                      fit: BoxFit.cover,
+                                    ),
                             )
                           : const Center(
                               child: Column(
@@ -348,6 +386,17 @@ class _FoodCameraScreenState extends State<FoodCameraScreen> {
                                 color: Colors.blue,
                               ),
                             ),
+                            if (_predictedWeight != null) ...[
+                              const SizedBox(height: 4),
+                              Text(
+                                '예측 중량: ${_predictedWeight!.toStringAsFixed(0)}g',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.grey[700],
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ],
                           ],
                         ),
                       ),
@@ -368,27 +417,101 @@ class _FoodCameraScreenState extends State<FoodCameraScreen> {
                     Card(
                       elevation: 3,
                       color: Colors.green.shade50,
-                      child: ListTile(
-                        title: Text(
-                          _matchedFoodItem!.name,
-                          style: const TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        subtitle: Text(
-                          '칼로리: ${_matchedFoodItem!.calories}kcal\n'
-                          '탄수화물: ${_matchedFoodItem!.carbohydrates}g, '
-                          '단백질: ${_matchedFoodItem!.protein}g, '
-                          '지방: ${_matchedFoodItem!.fat}g',
-                        ),
-                        trailing: ElevatedButton(
-                          onPressed: () => _saveMeal(_matchedFoodItem!),
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.green,
-                            foregroundColor: Colors.white,
-                          ),
-                          child: const Text('저장'),
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              _matchedFoodItem!.name,
+                              style: const TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            const SizedBox(height: 12),
+
+                            // 기존 영양정보 (100g 기준)
+                            Container(
+                              padding: const EdgeInsets.all(12),
+                              decoration: BoxDecoration(
+                                color: Colors.grey[100],
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    '데이터베이스 영양정보 (100g 기준)',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.grey[600],
+                                    ),
+                                  ),
+                                  const SizedBox(height: 4),
+                                  Text(
+                                    '칼로리: ${_matchedFoodItem!.calories}kcal | '
+                                    '탄: ${_matchedFoodItem!.carbohydrates}g, '
+                                    '단: ${_matchedFoodItem!.protein}g, '
+                                    '지: ${_matchedFoodItem!.fat}g',
+                                    style: const TextStyle(fontSize: 14),
+                                  ),
+                                ],
+                              ),
+                            ),
+
+                            // 조정된 영양정보 (예측 중량 기준)
+                            if (_predictedWeight != null) ...[
+                              const SizedBox(height: 12),
+                              Container(
+                                padding: const EdgeInsets.all(12),
+                                decoration: BoxDecoration(
+                                  color: Colors.blue[50],
+                                  borderRadius: BorderRadius.circular(8),
+                                  border: Border.all(color: Colors.blue.shade200),
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      '조정된 영양정보 (${_predictedWeight!.toStringAsFixed(0)}g 기준)',
+                                      style: const TextStyle(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.blue,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 4),
+                                    Text(
+                                      '칼로리: ${_adjustedCalories?.toStringAsFixed(1)}kcal | '
+                                      '탄: ${_adjustedCarbs?.toStringAsFixed(1)}g, '
+                                      '단: ${_adjustedProtein?.toStringAsFixed(1)}g, '
+                                      '지: ${_adjustedFat?.toStringAsFixed(1)}g',
+                                      style: const TextStyle(fontSize: 14),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+
+                            const SizedBox(height: 16),
+                            SizedBox(
+                              width: double.infinity,
+                              child: ElevatedButton(
+                                onPressed: () => _saveMeal(_matchedFoodItem!),
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.green,
+                                  foregroundColor: Colors.white,
+                                  padding: const EdgeInsets.all(16),
+                                ),
+                                child: const Text(
+                                  '식단에 저장',
+                                  style: TextStyle(fontSize: 16),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
@@ -411,20 +534,74 @@ class _FoodCameraScreenState extends State<FoodCameraScreen> {
                       itemCount: _similarFoods!.length - 1,
                       itemBuilder: (context, index) {
                         final food = _similarFoods![index + 1];
+
+                        // 예측 중량을 기준으로 영양정보 계산
+                        final weightRatio = _predictedWeight != null ? _predictedWeight! / 100.0 : 1.0;
+                        final adjustedCal = food.calories * weightRatio;
+                        final adjustedCarbs = food.carbohydrates * weightRatio;
+                        final adjustedProtein = food.protein * weightRatio;
+                        final adjustedFat = food.fat * weightRatio;
+
                         return Card(
-                          child: ListTile(
-                            title: Text(food.name),
-                            subtitle: Text(
-                              '칼로리: ${food.calories}kcal | '
-                              '탄: ${food.carbohydrates}g, '
-                              '단: ${food.protein}g, '
-                              '지: ${food.fat}g',
-                              style: const TextStyle(fontSize: 12),
-                            ),
-                            trailing: IconButton(
-                              icon: const Icon(Icons.check_circle_outline),
-                              color: Colors.blue,
-                              onPressed: () => _saveMeal(food),
+                          child: Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  food.name,
+                                  style: const TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                const SizedBox(height: 4),
+
+                                // 기존 영양정보 (100g 기준)
+                                Text(
+                                  '데이터베이스 (100g): ${food.calories}kcal | '
+                                  '탄: ${food.carbohydrates}g, 단: ${food.protein}g, 지: ${food.fat}g',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: Colors.grey[600],
+                                  ),
+                                ),
+
+                                // 조정된 영양정보 (예측 중량 기준)
+                                if (_predictedWeight != null) ...[
+                                  Text(
+                                    '조정됨 (${_predictedWeight!.toStringAsFixed(0)}g): ${adjustedCal.toStringAsFixed(1)}kcal | '
+                                    '탄: ${adjustedCarbs.toStringAsFixed(1)}g, 단: ${adjustedProtein.toStringAsFixed(1)}g, 지: ${adjustedFat.toStringAsFixed(1)}g',
+                                    style: const TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.blue,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ],
+
+                                const SizedBox(height: 8),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    ElevatedButton(
+                                      onPressed: () {
+                                        // 선택된 음식으로 조정된 영양정보 계산
+                                        if (_predictedWeight != null) {
+                                          _calculateAdjustedNutrition(food, _predictedWeight!);
+                                        }
+                                        _saveMeal(food);
+                                      },
+                                      style: ElevatedButton.styleFrom(
+                                        backgroundColor: Colors.blue,
+                                        foregroundColor: Colors.white,
+                                        minimumSize: const Size(80, 36),
+                                      ),
+                                      child: const Text('선택'),
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
                           ),
                         );

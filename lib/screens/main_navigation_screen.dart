@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:camera/camera.dart';
 import 'dart:io';
 import 'dart:convert';
 import 'dart:async';
+import 'dart:typed_data';
 import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart' as path;
 import 'package:image_picker/image_picker.dart';
@@ -1825,12 +1827,22 @@ class _GalleryDialogState extends State<GalleryDialog> {
                                         children: [
                                           ClipRRect(
                                             borderRadius: BorderRadius.circular(8),
-                                            child: Image.file(
-                                              File(imagePath),
-                                              fit: BoxFit.cover,
-                                              width: double.infinity,
-                                              height: double.infinity,
-                                            ),
+                                            child: kIsWeb
+                                                ? Image.network(
+                                                    imagePath,
+                                                    fit: BoxFit.cover,
+                                                    width: double.infinity,
+                                                    height: double.infinity,
+                                                    errorBuilder: (context, error, stackTrace) {
+                                                      return const Icon(Icons.broken_image);
+                                                    },
+                                                  )
+                                                : Image.file(
+                                                    File(imagePath),
+                                                    fit: BoxFit.cover,
+                                                    width: double.infinity,
+                                                    height: double.infinity,
+                                                  ),
                                           ),
                                           // Display markers as small dots
                                           ...markers.map((marker) {
@@ -2015,10 +2027,18 @@ class _PhotoPreviewDialogState extends State<PhotoPreviewDialog> {
             Center(
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(12),
-                child: Image.file(
-                  File(widget.imagePath),
-                  fit: BoxFit.contain,
-                ),
+                child: kIsWeb
+                    ? Image.network(
+                        widget.imagePath,
+                        fit: BoxFit.contain,
+                        errorBuilder: (context, error, stackTrace) {
+                          return const Icon(Icons.broken_image);
+                        },
+                      )
+                    : Image.file(
+                        File(widget.imagePath),
+                        fit: BoxFit.contain,
+                      ),
               ),
             ),
 
