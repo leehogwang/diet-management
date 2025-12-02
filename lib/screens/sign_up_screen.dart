@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'home_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -43,7 +44,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
   }
 
   void _handleSignUp() {
-    _showTemporaryDialog('회원가입', '회원가입 버튼이 클릭되었습니다.');
+    // 회원가입 성공 시 HomeScreen으로 이동
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => const HomeScreen()),
+    );
   }
 
   @override

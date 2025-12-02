@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'sign_up_screen.dart';
+import 'home_screen.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
@@ -40,7 +41,11 @@ class _SignInScreenState extends State<SignInScreen> {
   }
 
   void _handleSignIn() {
-    _showTemporaryDialog('로그인', '로그인 버튼이 클릭되었습니다.');
+    // 로그인 성공 시 HomeScreen으로 이동
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => const HomeScreen()),
+    );
   }
 
   void _handleForgotPassword() {
