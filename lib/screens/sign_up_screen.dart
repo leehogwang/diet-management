@@ -28,7 +28,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
       // 회원가입 완료 후 개인 설정 화면으로 이동
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const PersonalSettingsPage()),
+        MaterialPageRoute(builder: (context) => const PersonalSettingsScreen(
+          palette: 'sage',
+          isDarkMode: false,
+        )),
       );
     }
   }
