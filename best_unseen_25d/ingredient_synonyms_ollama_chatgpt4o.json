@@ -1,0 +1,1331 @@
+{
+  "almond milk": [
+    "almond beverage",
+    "almond drink",
+    "almond-based milk",
+    "almond non-dairy milk",
+    "almond milk alternative"
+  ],
+  "almonds": [
+    "almond nuts",
+    "sweet almonds",
+    "almond kernels",
+    "almond seeds",
+    "almond"
+  ],
+  "apple": [
+    "red apple",
+    "green apple",
+    "granny smith",
+    "fuji apple",
+    "gala apple"
+  ],
+  "apple cider": [],
+  "artichokes": [
+    "globe artichokes",
+    "green artichokes",
+    "baby artichokes",
+    "french artichokes",
+    "italian artichokes"
+  ],
+  "arugula": [
+    "rocket",
+    "rucola",
+    "roquette",
+    "rucoli",
+    "rugula"
+  ],
+  "asparagus": [],
+  "avocado": [],
+  "baby carrots": [],
+  "bacon": [
+    "pork bacon",
+    "smoked bacon",
+    "streaky bacon",
+    "back bacon",
+    "cured bacon"
+  ],
+  "bagels": [
+    "bagel",
+    "bagel bread",
+    "bagel roll",
+    "bagel bun",
+    "bagel loaf"
+  ],
+  "banana": [
+    "plantain",
+    "dessert banana",
+    "cavendish banana",
+    "gros michel banana",
+    "lady finger banana"
+  ],
+  "banana with peel": [],
+  "barbecue sauce": [
+    "bbq sauce",
+    "barbeque sauce",
+    "grilling sauce",
+    "smoky sauce",
+    "barbecue glaze"
+  ],
+  "barley": [
+    "pearl barley",
+    "hulled barley",
+    "barley grains",
+    "barley groats",
+    "barley kernels"
+  ],
+  "basil": [
+    "sweet basil",
+    "genovese basil",
+    "thai basil",
+    "holy basil",
+    "lemon basil"
+  ],
+  "bean(seed)": [
+    "legume",
+    "pulse",
+    "bean pod",
+    "bean legume",
+    "bean pulse"
+  ],
+  "beef": [
+    "ground beef",
+    "steak",
+    "beef chuck",
+    "beef brisket",
+    "beef tenderloin"
+  ],
+  "beets": [
+    "beetroot",
+    "red beet",
+    "table beet",
+    "garden beet",
+    "sugar beet"
+  ],
+  "bell peppers": [
+    "capsicum",
+    "sweet peppers",
+    "green peppers",
+    "red peppers",
+    "yellow peppers"
+  ],
+  "berries": [],
+  "biscuits": [
+    "cookies",
+    "crackers",
+    "scones",
+    "digestive biscuits",
+    "shortbread"
+  ],
+  "black beans": [
+    "turtle beans",
+    "frijoles negros",
+    "black turtle beans",
+    "black gram",
+    "black kidney beans"
+  ],
+  "blackberries": [
+    "blackberry",
+    "bramble berry",
+    "bramble",
+    "dewberry",
+    "rubus fruit"
+  ],
+  "blue cheese": [
+    "roquefort",
+    "gorgonzola",
+    "stilton",
+    "bleu d'auvergne",
+    "danish blue"
+  ],
+  "blueberries": [
+    "wild blueberries",
+    "cultivated blueberries",
+    "bilberries",
+    "huckleberries",
+    "lowbush blueberries"
+  ],
+  "bok choy": [
+    "pak choi",
+    "chinese cabbage",
+    "pak choy",
+    "bok choi",
+    "choy sum"
+  ],
+  "bread": [
+    "loaf",
+    "baked bread",
+    "sliced bread",
+    "bread roll",
+    "baguette"
+  ],
+  "bread crumbs": [
+    "panko",
+    "breadcrumb",
+    "dried bread crumbs",
+    "cracker crumbs",
+    "matzo meal"
+  ],
+  "brisket": [
+    "beef brisket",
+    "smoked brisket",
+    "corned beef brisket",
+    "barbecue brisket",
+    "braised brisket"
+  ],
+  "broccoli": [
+    "broccoli florets",
+    "broccoli heads",
+    "broccoli crowns",
+    "broccoli stems",
+    "broccoli stalks"
+  ],
+  "broth": [
+    "stock",
+    "bouillon",
+    "consommé",
+    "soup base",
+    "liquid seasoning"
+  ],
+  "brown rice": [
+    "whole grain rice",
+    "hulled rice",
+    "unpolished rice",
+    "natural rice",
+    "integral rice"
+  ],
+  "brown sugar": [
+    "light brown sugar",
+    "dark brown sugar",
+    "demerara sugar",
+    "muscovado sugar",
+    "turbinado sugar"
+  ],
+  "brownies": [],
+  "brussels sprouts": [],
+  "bulgur": [
+    "cracked wheat",
+    "bulgur wheat",
+    "bulghur",
+    "bulgar",
+    "burghul"
+  ],
+  "butter": [
+    "margarine",
+    "ghee",
+    "clarified butter",
+    "dairy spread",
+    "butterfat"
+  ],
+  "buttermilk": [],
+  "cabbage": [
+    "savoy cabbage",
+    "napa cabbage",
+    "red cabbage",
+    "green cabbage",
+    "bok choy"
+  ],
+  "caesar dressing": [
+    "creamy caesar dressing",
+    "classic caesar dressing",
+    "traditional caesar dressing",
+    "original caesar dressing",
+    "caesar salad dressing"
+  ],
+  "caesar salad": [],
+  "cantaloupe": [
+    "muskmelon",
+    "rockmelon",
+    "sweet melon",
+    "spanspek"
+  ],
+  "carrot": [
+    "baby carrot",
+    "daucus carota",
+    "carrot root",
+    "carrot sticks",
+    "carrot slices"
+  ],
+  "cashews": [
+    "cashew nuts",
+    "raw cashews",
+    "whole cashews",
+    "unsalted cashews",
+    "roasted cashews"
+  ],
+  "cauliflower": [],
+  "celery": [],
+  "celery root": [
+    "celeriac",
+    "knob celery",
+    "turnip-rooted celery",
+    "root celery"
+  ],
+  "cereal": [],
+  "chard": [
+    "swiss chard",
+    "silverbeet",
+    "perpetual spinach",
+    "leaf beet",
+    "seakale beet"
+  ],
+  "chayote squash": [
+    "chayote",
+    "vegetable pear",
+    "mirliton",
+    "christophene",
+    "chocho"
+  ],
+  "cheddar cheese": [
+    "sharp cheddar",
+    "mild cheddar",
+    "aged cheddar",
+    "white cheddar",
+    "yellow cheddar"
+  ],
+  "cheese": [
+    "cheddar",
+    "mozzarella",
+    "gouda",
+    "brie",
+    "feta"
+  ],
+  "cheese pizza": [
+    "mozzarella pizza",
+    "cheese-topped pizza",
+    "cheesy pizza",
+    "pizza with cheese",
+    "cheese pie"
+  ],
+  "cherry tomatoes": [
+    "grape tomatoes",
+    "baby tomatoes",
+    "mini tomatoes",
+    "cocktail tomatoes",
+    "pear tomatoes"
+  ],
+  "chia seeds": [
+    "salvia hispanica",
+    "chia grain",
+    "chia seed"
+  ],
+  "chicken": [
+    "poultry",
+    "chicken breast",
+    "chicken thigh",
+    "chicken drumstick",
+    "chicken wing"
+  ],
+  "chicken apple sausage": [],
+  "chicken breast": [
+    "boneless chicken breast",
+    "skinless chicken breast",
+    "chicken fillet",
+    "chicken tenderloin",
+    "chicken cutlet"
+  ],
+  "chicken salad": [],
+  "chicken thighs": [
+    "boneless chicken thighs",
+    "skinless chicken thighs",
+    "chicken thigh fillets",
+    "deboned chicken thighs",
+    "chicken leg quarters"
+  ],
+  "chickpeas": [
+    "garbanzo beans",
+    "ceci beans",
+    "gram"
+  ],
+  "chilaquiles": [],
+  "chili": [
+    "chili pepper",
+    "chile",
+    "chilli",
+    "hot pepper",
+    "capsicum"
+  ],
+  "chive": [
+    "allium schoenoprasum",
+    "ciboulette",
+    "schnittlauch",
+    "chives",
+    "chive leaves"
+  ],
+  "cilantro": [
+    "coriander",
+    "chinese parsley",
+    "dhaniya",
+    "fresh coriander",
+    "coriander leaves"
+  ],
+  "cod": [
+    "atlantic cod",
+    "pacific cod",
+    "gadus morhua",
+    "gadus macrocephalus",
+    "codfish"
+  ],
+  "coleslaw": [],
+  "collards": [
+    "collard greens",
+    "collard leaves",
+    "collard cabbage",
+    "brassica oleracea var. viridis",
+    "colewort"
+  ],
+  "cookies": [],
+  "corn": [
+    "maize",
+    "sweetcorn",
+    "corn kernels",
+    "corn on the cob",
+    "cornmeal"
+  ],
+  "corn on the cob": [
+    "sweetcorn cob",
+    "fresh corn cob",
+    "maize cob",
+    "corn ear",
+    "boiled corn cob"
+  ],
+  "cornmeal": [
+    "maize flour",
+    "polenta",
+    "corn flour",
+    "corn meal",
+    "masa harina"
+  ],
+  "cottage cheese": [
+    "curd cheese",
+    "paneer",
+    "quark",
+    "farmer cheese",
+    "curds"
+  ],
+  "country rice": [],
+  "couscous": [],
+  "cranberries": [
+    "dried cranberries",
+    "fresh cranberries",
+    "cranberry juice",
+    "cranberry sauce",
+    "cranberry extract"
+  ],
+  "cream": [
+    "heavy cream",
+    "whipping cream",
+    "double cream",
+    "single cream",
+    "light cream"
+  ],
+  "cream cheese": [
+    "soft cheese",
+    "fresh cheese",
+    "spreadable cheese",
+    "white cheese",
+    "unaged cheese"
+  ],
+  "crepes": [],
+  "croutons": [],
+  "cucumbers": [
+    "gherkin",
+    "pickling cucumber",
+    "slicing cucumber",
+    "english cucumber",
+    "armenian cucumber"
+  ],
+  "curries": [],
+  "dates": [
+    "date fruit",
+    "dried dates",
+    "fresh dates",
+    "medjool dates",
+    "deglet noor dates"
+  ],
+  "deprecated": [],
+  "dumplings": [],
+  "edamame": [
+    "young soybeans",
+    "immature soybeans",
+    "green soybeans",
+    "vegetable soybeans",
+    "fresh soybeans"
+  ],
+  "egg whites": [
+    "albumen",
+    "egg white",
+    "liquid egg whites",
+    "pasteurized egg whites",
+    "egg white protein"
+  ],
+  "eggplant": [
+    "aubergine",
+    "brinjal",
+    "melongene",
+    "garden egg",
+    "guinea squash"
+  ],
+  "eggs": [
+    "chicken eggs",
+    "hen eggs",
+    "farm eggs",
+    "organic eggs",
+    "free-range eggs"
+  ],
+  "endive": [
+    "escarole",
+    "chicory",
+    "belgian endive",
+    "witloof",
+    "frisée"
+  ],
+  "feta cheese": [
+    "greek cheese",
+    "brined cheese",
+    "white cheese",
+    "crumbly cheese",
+    "salty cheese"
+  ],
+  "figs": [
+    "dried figs",
+    "fresh figs",
+    "black mission figs",
+    "calimyrna figs",
+    "smyrna figs"
+  ],
+  "fish": [
+    "seafood",
+    "finfish",
+    "saltwater fish",
+    "freshwater fish",
+    "catch"
+  ],
+  "flatbread": [
+    "naan",
+    "pita",
+    "tortilla",
+    "chapati",
+    "lavash"
+  ],
+  "flour": [
+    "all-purpose flour",
+    "plain flour",
+    "wheat flour",
+    "white flour",
+    "baking flour"
+  ],
+  "fried rice": [],
+  "frozen yogurt": [],
+  "fruit salad": [],
+  "garden salad": [],
+  "garlic": [
+    "allium sativum",
+    "garlic cloves",
+    "garlic bulb",
+    "fresh garlic",
+    "raw garlic"
+  ],
+  "ginger": [
+    "ginger root",
+    "fresh ginger",
+    "ground ginger",
+    "ginger powder",
+    "ginger spice"
+  ],
+  "goat cheese": [
+    "chèvre",
+    "caprine cheese",
+    "fromage de chèvre",
+    "goat's milk cheese",
+    "chevre cheese"
+  ],
+  "granola": [],
+  "grapefruit juice": [
+    "citrus juice",
+    "grapefruit extract",
+    "grapefruit beverage",
+    "grapefruit drink",
+    "grapefruit nectar"
+  ],
+  "grapes": [
+    "table grapes",
+    "seedless grapes",
+    "red grapes",
+    "green grapes",
+    "black grapes"
+  ],
+  "greek salad": [],
+  "greek yogurt": [
+    "strained yogurt",
+    "yiaourti",
+    "labneh",
+    "skyr",
+    "süzme yoğurt"
+  ],
+  "green beans": [
+    "string beans",
+    "snap beans",
+    "haricots verts",
+    "french beans",
+    "runner beans"
+  ],
+  "green onions": [
+    "scallions",
+    "spring onions",
+    "salad onions",
+    "bunching onions",
+    "shallots"
+  ],
+  "grilled chicken": [
+    "charbroiled chicken",
+    "barbecued chicken",
+    "broiled chicken",
+    "roasted chicken breast",
+    "grilled poultry"
+  ],
+  "ground turkey": [
+    "minced turkey",
+    "turkey mince",
+    "turkey ground",
+    "turkey burger meat",
+    "turkey meat mince"
+  ],
+  "ham": [
+    "cured ham",
+    "smoked ham",
+    "prosciutto",
+    "serrano ham",
+    "country ham"
+  ],
+  "hash browns": [
+    "shredded potatoes",
+    "potato hash",
+    "hashed browns",
+    "fried potato shreds",
+    "potato patties"
+  ],
+  "hominy": [],
+  "honey": [
+    "bee honey",
+    "natural honey",
+    "raw honey",
+    "pure honey",
+    "wildflower honey"
+  ],
+  "honeydew melons": [
+    "cucumis melo",
+    "green melon",
+    "honeydew"
+  ],
+  "hummus": [],
+  "ice cream cones": [
+    "wafer cones",
+    "sugar cones",
+    "cake cones",
+    "waffle cones",
+    "cornet"
+  ],
+  "jalapenos": [
+    "jalapeño peppers",
+    "jalapeños",
+    "jalapeno peppers",
+    "jalapeno chiles",
+    "jalapeno chilies"
+  ],
+  "jams": [
+    "fruit preserves",
+    "fruit spreads",
+    "conserves",
+    "jellies",
+    "marmalades"
+  ],
+  "jicama": [],
+  "kale": [
+    "curly kale",
+    "lacinato kale",
+    "tuscan kale",
+    "dinosaur kale",
+    "black kale"
+  ],
+  "ketchup": [
+    "tomato ketchup",
+    "catsup",
+    "red sauce",
+    "tomato sauce",
+    "ketchup sauce"
+  ],
+  "kimchi": [],
+  "kiwi": [],
+  "lamb": [
+    "mutton",
+    "sheep meat",
+    "lamb meat",
+    "young sheep",
+    "lamb flesh"
+  ],
+  "lasagna": [],
+  "leeks": [
+    "allium porrum",
+    "wild leek",
+    "garden leek",
+    "scallion",
+    "spring onion"
+  ],
+  "lemon": [
+    "citrus limon",
+    "lemon zest",
+    "lemon juice",
+    "lemon peel",
+    "lemon rind"
+  ],
+  "lemon juice": [
+    "citrus juice",
+    "fresh lemon juice",
+    "squeezed lemon juice",
+    "lemon extract",
+    "lemon concentrate"
+  ],
+  "lentils": [
+    "red lentils",
+    "green lentils",
+    "brown lentils",
+    "yellow lentils",
+    "black lentils"
+  ],
+  "lettuce": [
+    "romaine lettuce",
+    "iceberg lettuce",
+    "butterhead lettuce",
+    "leaf lettuce",
+    "cos lettuce"
+  ],
+  "lime": [
+    "key lime",
+    "persian lime",
+    "mexican lime",
+    "tahiti lime",
+    "bearss lime"
+  ],
+  "mandarin oranges": [
+    "tangerines",
+    "satsumas",
+    "clementines",
+    "naartjies",
+    "mandarins"
+  ],
+  "mangos": [
+    "mango",
+    "mango fruit",
+    "tropical mango",
+    "ripe mango",
+    "fresh mango"
+  ],
+  "mashed potatoes": [
+    "creamed potatoes",
+    "smashed potatoes",
+    "whipped potatoes",
+    "pureed potatoes",
+    "potato mash"
+  ],
+  "mayonnaise": [
+    "mayo",
+    "aioli",
+    "egg mayonnaise",
+    "salad cream",
+    "dressing"
+  ],
+  "milk": [
+    "whole milk",
+    "skim milk",
+    "2% milk",
+    "1% milk",
+    "nonfat milk"
+  ],
+  "millet": [
+    "pearl millet",
+    "foxtail millet",
+    "finger millet",
+    "proso millet",
+    "barnyard millet"
+  ],
+  "mixed greens": [
+    "spring mix",
+    "mesclun",
+    "salad greens",
+    "leafy greens",
+    "baby greens"
+  ],
+  "mozzarella cheese": [
+    "fresh mozzarella",
+    "buffalo mozzarella",
+    "mozzarella di bufala",
+    "low-moisture mozzarella",
+    "whole milk mozzarella"
+  ],
+  "multigrain bread": [
+    "whole grain bread",
+    "mixed grain bread",
+    "multiseed bread",
+    "seven grain bread",
+    "nine grain bread"
+  ],
+  "mushroom": [
+    "button mushroom",
+    "cremini mushroom",
+    "portobello mushroom",
+    "shiitake mushroom",
+    "oyster mushroom"
+  ],
+  "mustard": [
+    "yellow mustard",
+    "dijon mustard",
+    "spicy brown mustard",
+    "whole grain mustard",
+    "stone ground mustard"
+  ],
+  "mustard greens": [
+    "leaf mustard",
+    "brassica juncea",
+    "indian mustard",
+    "chinese mustard",
+    "kai choy"
+  ],
+  "noodles": [
+    "pasta",
+    "spaghetti",
+    "fettuccine",
+    "vermicelli",
+    "linguine"
+  ],
+  "nopales": [
+    "prickly pear cactus pads",
+    "cactus paddles",
+    "cactus pads",
+    "nopalitos",
+    "cactus leaves"
+  ],
+  "nuts": [],
+  "oatmeal": [
+    "rolled oats",
+    "porridge oats",
+    "instant oats",
+    "steel-cut oats",
+    "quick oats"
+  ],
+  "oats": [
+    "rolled oats",
+    "oatmeal",
+    "steel-cut oats",
+    "quick oats",
+    "instant oats"
+  ],
+  "olive oil": [
+    "extra virgin olive oil",
+    "virgin olive oil",
+    "pure olive oil",
+    "light olive oil",
+    "cold-pressed olive oil"
+  ],
+  "olives": [
+    "green olives",
+    "black olives",
+    "kalamata olives",
+    "manzanilla olives",
+    "castelvetrano olives"
+  ],
+  "omelets": [],
+  "onions": [
+    "yellow onions",
+    "red onions",
+    "white onions",
+    "sweet onions",
+    "shallots"
+  ],
+  "orange": [
+    "navel orange",
+    "valencia orange",
+    "blood orange",
+    "mandarin orange",
+    "clementine"
+  ],
+  "orange juice": [
+    "fresh orange juice",
+    "oj",
+    "citrus juice",
+    "orange extract",
+    "squeezed orange juice"
+  ],
+  "orange with peel": [],
+  "oregano": [
+    "wild marjoram",
+    "origanum",
+    "pot marjoram",
+    "origanum vulgare",
+    "mexican oregano"
+  ],
+  "parmesan cheese": [
+    "parmigiano-reggiano",
+    "grated parmesan",
+    "shredded parmesan",
+    "parmesan",
+    "parmesan cheese block"
+  ],
+  "parsley": [
+    "curly parsley",
+    "flat-leaf parsley",
+    "italian parsley",
+    "garden parsley",
+    "petroselinum crispum"
+  ],
+  "parsnips": [],
+  "pasta": [
+    "spaghetti",
+    "macaroni",
+    "penne",
+    "fettuccine",
+    "linguine"
+  ],
+  "pasta salad": [],
+  "pears": [
+    "bartlett pears",
+    "anjou pears",
+    "bosc pears",
+    "asian pears",
+    "seckel pears"
+  ],
+  "pecans": [
+    "pecan nuts",
+    "pecan kernels",
+    "shelled pecans",
+    "raw pecans",
+    "toasted pecans"
+  ],
+  "pepper": [
+    "black pepper",
+    "white pepper",
+    "ground pepper",
+    "peppercorn",
+    "cracked pepper"
+  ],
+  "pepperoni": [],
+  "pepperoni pizza": [],
+  "pesto": [],
+  "pickles": [
+    "gherkins",
+    "dill pickles",
+    "bread and butter pickles",
+    "sweet pickles",
+    "cornichons"
+  ],
+  "pilaf": [],
+  "pineapple": [
+    "ananas",
+    "pineapple fruit",
+    "tropical pineapple",
+    "fresh pineapple",
+    "pineapple slices"
+  ],
+  "pinto beans": [
+    "frijoles pintos",
+    "speckled beans",
+    "poroto pinto",
+    "judión pinto",
+    "feijão carioca"
+  ],
+  "pistachios": [
+    "pistachio nuts",
+    "green almonds",
+    "pista",
+    "pistachio kernels",
+    "pistachio seeds"
+  ],
+  "pita bread": [
+    "flatbread",
+    "pocket bread",
+    "arabic bread",
+    "lebanese bread",
+    "syrian bread"
+  ],
+  "pizza": [],
+  "plate only": [],
+  "poached eggs": [],
+  "pork": [
+    "swine",
+    "hog meat",
+    "pig meat",
+    "pork meat",
+    "pork flesh"
+  ],
+  "potato chips": [
+    "crisps",
+    "potato crisps",
+    "chip snacks",
+    "fried potato chips",
+    "potato wafers"
+  ],
+  "potatoes": [
+    "spuds",
+    "taters",
+    "tubers",
+    "bakers",
+    "new potatoes"
+  ],
+  "pumpkin seeds": [
+    "pepitas",
+    "shelled pumpkin seeds",
+    "raw pumpkin seeds",
+    "roasted pumpkin seeds",
+    "toasted pumpkin seeds"
+  ],
+  "quinoa": [
+    "keen-wah",
+    "quinoa grain",
+    "quinoa seeds",
+    "quinoa cereal",
+    "quinoa groats"
+  ],
+  "radishes": [],
+  "raisins": [
+    "dried grapes",
+    "sultanas",
+    "currants",
+    "dried sultanas",
+    "dried currants"
+  ],
+  "raspberries": [
+    "red raspberries",
+    "rubus idaeus",
+    "framboise",
+    "raspberry fruit",
+    "wild raspberries"
+  ],
+  "rice noodles": [
+    "rice vermicelli",
+    "rice sticks",
+    "bihun",
+    "mee hoon",
+    "sen lek"
+  ],
+  "roast chicken": [
+    "baked chicken",
+    "grilled chicken",
+    "rotisserie chicken",
+    "oven-roasted chicken",
+    "spit-roasted chicken"
+  ],
+  "roasted potatoes": [
+    "baked potatoes",
+    "oven-roasted potatoes",
+    "crispy potatoes",
+    "roast potatoes",
+    "seasoned potatoes"
+  ],
+  "rosemary": [],
+  "salmon": [
+    "atlantic salmon",
+    "sockeye salmon",
+    "chinook salmon",
+    "coho salmon",
+    "pink salmon"
+  ],
+  "salsa": [
+    "pico de gallo",
+    "salsa fresca",
+    "salsa cruda",
+    "salsa roja",
+    "salsa picante"
+  ],
+  "salt": [
+    "sodium chloride",
+    "table salt",
+    "sea salt",
+    "kosher salt",
+    "rock salt"
+  ],
+  "sandwiches": [],
+  "sausage": [
+    "bratwurst",
+    "chorizo",
+    "banger",
+    "kielbasa",
+    "frankfurter"
+  ],
+  "scrambled eggs": [],
+  "seeds": [],
+  "shallots": [
+    "eschalots",
+    "scallions",
+    "green onions",
+    "spring onions",
+    "salad onions"
+  ],
+  "shrimp": [
+    "prawn",
+    "langoustine",
+    "scampi",
+    "crevette",
+    "gambero"
+  ],
+  "snow peas": [
+    "sugar snap peas",
+    "mangetout",
+    "chinese pea pods",
+    "snap peas",
+    "edible-pod peas"
+  ],
+  "sour cream": [
+    "crema",
+    "crème fraîche",
+    "smetana",
+    "nata agria",
+    "sour topping"
+  ],
+  "sourdough bread": [
+    "artisan bread",
+    "levain bread",
+    "fermented bread",
+    "natural leaven bread",
+    "wild yeast bread"
+  ],
+  "soy sauce": [
+    "shoyu",
+    "soya sauce",
+    "tamari",
+    "light soy sauce",
+    "dark soy sauce"
+  ],
+  "spaghetti": [
+    "pasta",
+    "spaghetti noodles",
+    "spaghetti pasta",
+    "spaghetti strands",
+    "spaghetti sticks"
+  ],
+  "spinach (cooked)": [
+    "boiled spinach",
+    "steamed spinach",
+    "sautéed spinach",
+    "wilted spinach",
+    "blanched spinach"
+  ],
+  "spinach (raw)": [
+    "baby spinach",
+    "fresh spinach",
+    "leaf spinach",
+    "spinacia oleracea",
+    "uncooked spinach"
+  ],
+  "squash": [
+    "butternut squash",
+    "acorn squash",
+    "spaghetti squash",
+    "kabocha squash",
+    "delicata squash"
+  ],
+  "steak": [
+    "beef steak",
+    "sirloin steak",
+    "ribeye steak",
+    "tenderloin steak",
+    "strip steak"
+  ],
+  "strawberries": [
+    "fresh strawberries",
+    "wild strawberries",
+    "garden strawberries",
+    "cultivated strawberries",
+    "organic strawberries"
+  ],
+  "succotash": [],
+  "sugar": [
+    "granulated sugar",
+    "white sugar",
+    "table sugar",
+    "caster sugar",
+    "powdered sugar"
+  ],
+  "sun dried tomatoes": [
+    "dried tomatoes",
+    "dehydrated tomatoes",
+    "tomato sun-dried",
+    "sun-dried tomato slices",
+    "sun-dried tomato halves"
+  ],
+  "sunflower seeds": [
+    "sunflower kernels",
+    "hulled sunflower seeds",
+    "raw sunflower seeds",
+    "roasted sunflower seeds",
+    "shelled sunflower seeds"
+  ],
+  "sweet potato": [
+    "yam",
+    "batata",
+    "kumara",
+    "ipomoea batatas",
+    "orange sweet potato"
+  ],
+  "syrup": [
+    "molasses",
+    "treacle",
+    "agave nectar",
+    "maple syrup",
+    "corn syrup"
+  ],
+  "tacos": [],
+  "tatsoi": [],
+  "tempeh": [],
+  "teriyaki sauce": [
+    "teriyaki glaze",
+    "teriyaki marinade",
+    "teriyaki dressing",
+    "teriyaki dip",
+    "teriyaki condiment"
+  ],
+  "thyme": [
+    "thymus vulgaris",
+    "garden thyme",
+    "common thyme",
+    "french thyme",
+    "english thyme"
+  ],
+  "toast": [],
+  "tofu": [
+    "bean curd",
+    "soybean curd",
+    "soy curd"
+  ],
+  "tomatillo": [],
+  "tomatoes": [
+    "roma tomatoes",
+    "cherry tomatoes",
+    "grape tomatoes",
+    "heirloom tomatoes",
+    "plum tomatoes"
+  ],
+  "tortilla": [
+    "flatbread",
+    "wrap",
+    "soft taco shell",
+    "corn tortilla",
+    "flour tortilla"
+  ],
+  "tortilla chips": [
+    "corn chips",
+    "nacho chips",
+    "crispy tortilla chips",
+    "corn tortilla chips",
+    "salted tortilla chips"
+  ],
+  "tuna": [
+    "albacore",
+    "skipjack",
+    "yellowfin",
+    "bluefin",
+    "bonito"
+  ],
+  "tuna salad": [],
+  "turkey": [
+    "ground turkey",
+    "turkey breast",
+    "turkey thigh",
+    "turkey meat",
+    "turkey slices"
+  ],
+  "turkey bacon": [
+    "smoked turkey bacon",
+    "lean turkey bacon",
+    "low-fat turkey bacon",
+    "cured turkey bacon",
+    "sliced turkey bacon"
+  ],
+  "turnips": [
+    "white turnips",
+    "purple-top turnips",
+    "yellow turnips",
+    "rutabagas",
+    "swedes"
+  ],
+  "vegetable oil": [
+    "canola oil",
+    "sunflower oil",
+    "corn oil",
+    "soybean oil",
+    "safflower oil"
+  ],
+  "vinaigrette": [],
+  "vinegar": [
+    "acetic acid",
+    "balsamic vinegar",
+    "apple cider vinegar",
+    "white vinegar",
+    "red wine vinegar"
+  ],
+  "waffles": [],
+  "walnuts": [
+    "english walnuts",
+    "persian walnuts",
+    "juglans regia",
+    "common walnuts",
+    "carpathian walnuts"
+  ],
+  "water": [],
+  "watermelon": [],
+  "wheat berry": [
+    "whole wheat kernel",
+    "wheat grain",
+    "whole wheat berry",
+    "wheat kernel",
+    "wheat seed"
+  ],
+  "wheat bread": [
+    "whole wheat bread",
+    "brown bread",
+    "wholemeal bread",
+    "whole grain bread",
+    "multigrain bread"
+  ],
+  "white beans": [
+    "navy beans",
+    "cannellini beans",
+    "great northern beans",
+    "haricot beans",
+    "pea beans"
+  ],
+  "white rice": [
+    "polished rice",
+    "milled rice",
+    "refined rice",
+    "hulled rice",
+    "processed rice"
+  ],
+  "white wine": [],
+  "wild rice": [
+    "canadian rice",
+    "water oats",
+    "indian rice",
+    "manoomin",
+    "zizania"
+  ],
+  "wine": [],
+  "yam": [
+    "sweet potato",
+    "ube",
+    "nyami",
+    "igname",
+    "batata"
+  ],
+  "yogurt": [
+    "greek yogurt",
+    "plain yogurt",
+    "natural yogurt",
+    "strained yogurt",
+    "curd"
+  ],
+  "zucchini": [
+    "courgette",
+    "summer squash",
+    "green squash"
+  ]
+}

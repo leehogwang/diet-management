@@ -1,0 +1,51 @@
+data:
+  xlsx_path: "052.건강관리를_위한_음식_이미지_데이터/통합_영양성분DB.xlsx"
+  db_category: "음식"
+  csv_path_std: "전국통합식품영양성분정보_음식_표준데이터.csv"
+  std_carb_max: 2.0
+  root_296: "/mnt/data/food_leehogwang/296.비전영역,_음식이미지_및_정보소개_텍스트_데이터/01-1.정식개방데이터"
+  view: "측면"
+  rebuild_manifest: false
+  enable_text_only: true
+
+embedding:
+  model: "models/gemini-embedding-2"
+  cache_path: "text_baseline_the_best/emb_cache_with_ingredients.json"
+  api_key_env: "GEMINI_KEY"
+
+model:
+  text_hidden1: 512
+  text_hidden2: 64       # 512 -> 64로 축소 (시각 특징 1280차원 대비 20:1 병목화)
+  image_dim: 1024        # ConvNeXt-base + GeM 출력 차원 (고정, torchvision 구조상 결정됨)
+  head_hidden: 2048
+  dropout: 0.3
+  freeze_backbone_layers: true   # features[0:3] 동결
+  modality_dropout_prob: 0.3     # 이미지 보유 샘플도 이 확률로 mask token 대체
+
+freq:
+  enabled: true
+  mode: "spatial"
+  r_low: 0.15
+  r_high: 0.85
+  window_alpha: 0.25
+  cnx_tap: 5
+  vgg_out_dim: 512
+  freeze_vgg_layers: true
+  mixer1_token_hidden: 256
+  mixer1_channel_hidden: 2048
+  conv_dims: [512, 256]
+  mixer2_dim: 256
+  mixer2_token_hidden: 64
+  mixer2_channel_hidden: 512
+
+augmentation:
+  enabled: false
+
+training:
+  lr: 0.0003
+  weight_decay: 0.0001
+  batch_size: 64
+  epochs: 500
+  patience: 10
+  device: "cuda:0"
+  image_workers: 0
