@@ -1,0 +1,102 @@
+# 스모크 테스트 전용: 로컬 test_dataset_296 + 가짜(해시) 임베딩. 실제 학습에 쓰지 말 것.
+seed: 42
+device: cuda:0
+paths:
+  storage_root: /home/player0070/2025-2/n296_stage3_3
+  output_dir: runs/smoke
+  manifest: data/manifest_test296.csv
+  text_only_manifest: null
+  emb_cache: data/emb_cache_FAKE.json
+  image_cache_dir: data/image_cache
+data:
+  root_296: /mnt/data/food_leehogwang/296.비전영역,_음식이미지_및_정보소개_텍스트_데이터/01-1.정식개방데이터
+  view: 측면
+  xlsx_path: 052.건강관리를_위한_음식_이미지_데이터/통합_영양성분DB.xlsx
+  db_category: 음식
+  csv_path_std: 전국통합식품영양성분정보_음식_표준데이터.csv
+  std_carb_max: 2.0
+  enable_text_only: false
+  image_size: 224
+  cache_max_side: 384
+  use_bbox_crop: false
+  split_by: food_code
+  val_ratio: 0.1
+  exclude_manifest: null
+  text_template: '{food_name}'
+embedding:
+  provider: gemini
+  model: models/gemini-embedding-2
+  dim: 3072
+  api_key_env: GEMINI_KEY
+  task_type: SEMANTIC_SIMILARITY
+  batch_size: 50
+model:
+  text_hidden1: 512
+  text_hidden2: 512
+  image_dim: 1024
+  head_hidden: 2048
+  dropout: 0.3
+  freeze_backbone_layers: true
+  modality_dropout_prob: 0.3
+freq:
+  enabled: true
+  mode: spatial
+  r_low: 0.15
+  r_high: 0.85
+  window_alpha: 0.25
+  cnx_tap: 5
+  vgg_out_dim: 512
+  freeze_vgg_layers: true
+  mixer1_token_hidden: 256
+  mixer1_channel_hidden: 2048
+  conv_dims:
+  - 512
+  - 256
+  mixer2_dim: 256
+  mixer2_token_hidden: 64
+  mixer2_channel_hidden: 512
+augmentation:
+  enabled: false
+training:
+  lr: 0.0003
+  weight_decay: 0.0001
+  batch_size: 16
+  epochs: 500
+  patience: 10
+  image_workers: 4
+  loss: smooth_l1
+  loss_weights:
+    calories: 1.0
+    mass: 0.5
+    fat: 1.0
+    carb: 0.5
+    protein: 1.0
+  amp: true
+stages:
+- name: stage1_text
+  train_modules:
+  - text_encoder
+  - nutrition_head
+  image_mode: masked
+  epochs: 100
+- name: stage2_image
+  train_modules:
+  - image_encoder
+  - freq_encoder
+  - mixer1
+  - conv_blocks
+  - cnx_proj
+  - mixer2
+  - pooling
+  - mask_token
+  - mix_mask_token
+  - nutrition_head
+  image_mode: full
+  modality_dropout: false
+  epochs: 100
+- name: stage3_fusion
+  train_modules: all
+  image_mode: full
+  modality_dropout: true
+  lr_scale: 0.3
+  epochs: 500

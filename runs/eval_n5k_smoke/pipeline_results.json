@@ -1,0 +1,203 @@
+[
+  {
+    "image_path": "/home/students/cs/202321024/2025_2/2025_2-2/2025-2/n296_stage3_4/data/n5k/img/dish_1550704903/camera_A_camera_A_frame_010.jpg",
+    "cls_top5": [
+      {
+        "code": "02011025",
+        "name": "볶음우동",
+        "prob": 0.3777369260787964
+      },
+      {
+        "code": "05011004",
+        "name": "문어숙회",
+        "prob": 0.2127428501844406
+      },
+      {
+        "code": "05011002",
+        "name": "도미찜",
+        "prob": 0.10928715765476227
+      },
+      {
+        "code": "10014006",
+        "name": "채소튀김",
+        "prob": 0.02845536731183529
+      },
+      {
+        "code": "02011014",
+        "name": "비빔국수",
+        "prob": 0.024861184880137444
+      }
+    ],
+    "cls_name": "볶음우동",
+    "cls_prob": 0.3777369260787964,
+    "threshold": 0.7,
+    "gemini_name": "피망",
+    "error": null,
+    "name_source": "gemini",
+    "food_name": "피망",
+    "ingredients": [
+      "피망",
+      "파프리카"
+    ],
+    "category": "반찬",
+    "q_level": "Q2",
+    "q_prob": 0.9962080717086792,
+    "q_ratio": 0.5,
+    "q_ratio_expected": 0.5010135173797607,
+    "q_category": "반찬",
+    "q_probs": {
+      "Q1": 0.0012,
+      "Q2": 0.9962,
+      "Q3": 0.0008,
+      "Q4": 0.001,
+      "Q5": 0.0008
+    },
+    "q_applied": true,
+    "scale": 0.5,
+    "text": "피망 (재료: 피망, 파프리카)",
+    "pred_calories": 67.33819860073984,
+    "pred_mass": 57.94598588702644,
+    "pred_fat": 2.484040259825359,
+    "pred_carb": 8.929861475628702,
+    "pred_protein": 2.3431458954468116,
+    "pred_calories_q4": 134.6763972014797,
+    "pred_mass_q4": 115.89197177405288,
+    "pred_fat_q4": 4.968080519650718,
+    "pred_carb_q4": 17.859722951257403,
+    "pred_protein_q4": 4.686291790893623
+  },
+  {
+    "image_path": "/home/students/cs/202321024/2025_2/2025_2-2/2025-2/n296_stage3_4/data/n5k/img/dish_1550705288/camera_A_camera_A_frame_010.jpg",
+    "cls_top5": [
+      {
+        "code": "10014002",
+        "name": "고구마맛탕",
+        "prob": 0.9862630367279053
+      },
+      {
+        "code": "10014001",
+        "name": "감자튀김",
+        "prob": 0.0011405341792851686
+      },
+      {
+        "code": "10012008",
+        "name": "탕수육",
+        "prob": 0.0005625779740512371
+      },
+      {
+        "code": "10011005",
+        "name": "오징어튀김",
+        "prob": 0.0005047646118327975
+      },
+      {
+        "code": "09014002",
+        "name": "감자조림",
+        "prob": 0.0004179317329544574
+      }
+    ],
+    "cls_name": "고구마맛탕",
+    "cls_prob": 0.9862630367279053,
+    "threshold": 0.7,
+    "gemini_name": null,
+    "error": null,
+    "name_source": "classifier",
+    "food_name": "고구마맛탕",
+    "ingredients": [
+      "고구마",
+      "설탕",
+      "식용유"
+    ],
+    "category": "조림",
+    "q_level": "Q2",
+    "q_prob": 0.9147909283638,
+    "q_ratio": 0.5,
+    "q_ratio_expected": 0.5187631249427795,
+    "q_category": "조림",
+    "q_probs": {
+      "Q1": 0.0151,
+      "Q2": 0.9148,
+      "Q3": 0.0577,
+      "Q4": 0.0045,
+      "Q5": 0.0078
+    },
+    "q_applied": true,
+    "scale": 0.5,
+    "text": "고구마맛탕 (재료: 고구마, 설탕, 식용유)",
+    "pred_calories": 225.24871417613136,
+    "pred_mass": 96.83998693442523,
+    "pred_fat": 6.094516150120646,
+    "pred_carb": 40.81672157785017,
+    "pred_protein": 1.8363260100239405,
+    "pred_calories_q4": 450.4974283522627,
+    "pred_mass_q4": 193.67997386885045,
+    "pred_fat_q4": 12.189032300241292,
+    "pred_carb_q4": 81.63344315570033,
+    "pred_protein_q4": 3.672652020047881
+  },
+  {
+    "image_path": "/home/students/cs/202321024/2025_2/2025_2-2/2025-2/n296_stage3_4/data/n5k/img/dish_1550705370/camera_A_camera_A_frame_010.jpg",
+    "cls_top5": [
+      {
+        "code": "10014003",
+        "name": "고구마튀김",
+        "prob": 0.4106772541999817
+      },
+      {
+        "code": "10012002",
+        "name": "닭튀김",
+        "prob": 0.26160934567451477
+      },
+      {
+        "code": "05011004",
+        "name": "문어숙회",
+        "prob": 0.06722845882177353
+      },
+      {
+        "code": "10012007",
+        "name": "치킨가스",
+        "prob": 0.03581486642360687
+      },
+      {
+        "code": "10012003",
+        "name": "돈가스",
+        "prob": 0.031052879989147186
+      }
+    ],
+    "cls_name": "고구마튀김",
+    "cls_prob": 0.4106772541999817,
+    "threshold": 0.7,
+    "gemini_name": "스테이크",
+    "error": null,
+    "name_source": "gemini",
+    "food_name": "스테이크",
+    "ingredients": [
+      "소고기"
+    ],
+    "category": "구이",
+    "q_level": "Q1",
+    "q_prob": 0.9213671088218689,
+    "q_ratio": 0.25,
+    "q_ratio_expected": 0.2777629792690277,
+    "q_category": "구이",
+    "q_probs": {
+      "Q1": 0.9214,
+      "Q2": 0.064,
+      "Q3": 0.0036,
+      "Q4": 0.0044,
+      "Q5": 0.0067
+    },
+    "q_applied": true,
+    "scale": 0.25,
+    "text": "스테이크 (재료: 소고기)",
+    "pred_calories": 97.06257664374823,
+    "pred_mass": 48.82015601787635,
+    "pred_fat": 5.172655974731424,
+    "pred_carb": 6.454405557060094,
+    "pred_protein": 5.843184979924952,
+    "pred_calories_q4": 388.2503065749929,
+    "pred_mass_q4": 195.2806240715054,
+    "pred_fat_q4": 20.690623898925697,
+    "pred_carb_q4": 25.817622228240374,
+    "pred_protein_q4": 23.372739919699807
+  }
+]

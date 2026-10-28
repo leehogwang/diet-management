@@ -1,0 +1,3 @@
+﻿image,sample_id,food_code,gt_food_name,pred_food_name,pred_ingredients,error,model
+A_13_A13010_대하구이_02_01.jpg,2,A13010,대하구이,새우소금구이,새우 | 굵은소금,,gemini-3.8-flash
+A_13_A13010_대하구이_02_04.jpg,2,A13010,대하구이,새우 소금구이,새우 | 굵은 소금,,gemini-3.8-flash

@@ -1,0 +1,401 @@
+/home/player0070/2025-2/n296_stage3_3/n296/eval_pipeline.py:54: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  t = t.groupby("name", group_keys=False).apply(lambda g: g.sample(min(n, len(g)), random_state=seed))
+/home/player0070/2025-2/n296_stage3_3/n296/eval_pipeline.py:86: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  t = m.groupby("food_name", group_keys=False).apply(lambda g: g.sample(min(n, len(g)), random_state=seed))
+/home/player0070/2025-2/n296_stage3_3/n296/eval_pipeline.py:72: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  t = t.groupby(["food_name", "q_level"], group_keys=False).apply(lambda g: g.sample(min(n, len(g)), random_state=seed))
+             images  foods
+set                       
+aihub122        109    109
+quantity122     115     23
+이미지 224장, 이전 결과 재사용 109장, 새로 처리 115장
+recognize:   0%|          | 0/115 [00:00<?, ?it/s]Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+recognize:   1%|          | 1/115 [00:06<13:01,  6.86s/it]recognize:   2%|▏         | 2/115 [00:14<14:14,  7.56s/it]recognize:   3%|▎         | 3/115 [00:21<13:24,  7.18s/it]recognize:   3%|▎         | 4/115 [00:28<13:12,  7.14s/it]recognize:   4%|▍         | 5/115 [00:33<11:22,  6.20s/it]recognize:   5%|▌         | 6/115 [00:40<11:42,  6.45s/it]recognize:   6%|▌         | 7/115 [00:41<08:45,  4.87s/it]recognize:   7%|▋         | 8/115 [00:47<09:03,  5.08s/it]recognize:   8%|▊         | 9/115 [00:50<08:04,  4.57s/it]recognize:   9%|▊         | 10/115 [00:55<07:51,  4.49s/it]recognize:  10%|▉         | 11/115 [00:59<07:39,  4.42s/it]recognize:  10%|█         | 12/115 [01:07<09:24,  5.48s/it]recognize:  11%|█▏        | 13/115 [01:12<09:15,  5.45s/it]recognize:  12%|█▏        | 14/115 [01:17<08:40,  5.15s/it]recognize:  13%|█▎        | 15/115 [01:21<07:59,  4.80s/it]recognize:  14%|█▍        | 16/115 [01:30<09:59,  6.06s/it]recognize:  15%|█▍        | 17/115 [01:35<09:24,  5.76s/it]recognize:  16%|█▌        | 18/115 [01:39<08:50,  5.47s/it]recognize:  17%|█▋        | 19/115 [01:44<08:10,  5.11s/it]recognize:  17%|█▋        | 20/115 [01:47<07:17,  4.60s/it]recognize:  18%|█▊        | 21/115 [01:56<09:07,  5.83s/it]recognize:  19%|█▉        | 22/115 [02:01<08:46,  5.66s/it]recognize:  20%|██        | 23/115 [02:09<09:36,  6.27s/it]recognize:  21%|██        | 24/115 [02:14<09:00,  5.94s/it]recognize:  22%|██▏       | 25/115 [02:18<08:06,  5.41s/it]recognize:  23%|██▎       | 26/115 [02:25<08:52,  5.99s/it]recognize:  23%|██▎       | 27/115 [02:34<09:55,  6.77s/it]recognize:  24%|██▍       | 28/115 [02:40<09:29,  6.55s/it]recognize:  25%|██▌       | 29/115 [02:48<09:53,  6.90s/it]recognize:  26%|██▌       | 30/115 [02:52<08:30,  6.01s/it]recognize:  27%|██▋       | 31/115 [02:56<07:39,  5.47s/it]recognize:  28%|██▊       | 32/115 [03:04<08:37,  6.24s/it]recognize:  29%|██▊       | 33/115 [03:12<09:26,  6.91s/it]recognize:  30%|██▉       | 34/115 [03:18<08:48,  6.53s/it]recognize:  30%|███       | 35/115 [03:23<07:56,  5.95s/it]recognize:  31%|███▏      | 36/115 [03:27<07:21,  5.58s/it]recognize:  32%|███▏      | 37/115 [03:30<06:13,  4.79s/it]recognize:  33%|███▎      | 38/115 [03:35<06:14,  4.86s/it]recognize:  34%|███▍      | 39/115 [03:40<05:57,  4.70s/it]recognize:  35%|███▍      | 40/115 [03:43<05:21,  4.29s/it]recognize:  36%|███▌      | 41/115 [03:48<05:29,  4.45s/it]recognize:  37%|███▋      | 42/115 [03:52<05:19,  4.37s/it]recognize:  37%|███▋      | 43/115 [03:56<05:16,  4.39s/it]recognize:  38%|███▊      | 44/115 [04:04<06:18,  5.33s/it]recognize:  39%|███▉      | 45/115 [04:13<07:21,  6.31s/it]recognize:  40%|████      | 46/115 [04:21<08:02,  7.00s/it]recognize:  41%|████      | 47/115 [04:30<08:23,  7.41s/it]recognize:  42%|████▏     | 48/115 [04:35<07:28,  6.69s/it]recognize:  43%|████▎     | 49/115 [04:39<06:42,  6.10s/it]recognize:  43%|████▎     | 50/115 [04:44<06:04,  5.60s/it]recognize:  44%|████▍     | 51/115 [04:47<05:16,  4.95s/it]recognize:  45%|████▌     | 52/115 [04:52<05:08,  4.90s/it]recognize:  46%|████▌     | 53/115 [04:56<04:47,  4.63s/it]recognize:  47%|████▋     | 54/115 [05:00<04:36,  4.53s/it]recognize:  48%|████▊     | 55/115 [05:05<04:38,  4.65s/it]recognize:  49%|████▊     | 56/115 [05:09<04:17,  4.36s/it]recognize:  50%|████▉     | 57/115 [05:14<04:18,  4.45s/it]recognize:  50%|█████     | 58/115 [05:22<05:18,  5.59s/it]recognize:  51%|█████▏    | 59/115 [05:30<05:50,  6.25s/it]recognize:  52%|█████▏    | 60/115 [05:34<05:17,  5.78s/it]recognize:  53%|█████▎    | 61/115 [05:39<04:56,  5.48s/it]recognize:  54%|█████▍    | 62/115 [05:43<04:29,  5.09s/it]recognize:  55%|█████▍    | 63/115 [05:48<04:18,  4.98s/it]recognize:  56%|█████▌    | 64/115 [05:53<04:22,  5.14s/it]recognize:  57%|█████▋    | 65/115 [05:56<03:37,  4.34s/it]recognize:  57%|█████▋    | 66/115 [06:01<03:41,  4.52s/it]recognize:  58%|█████▊    | 67/115 [06:04<03:22,  4.23s/it]recognize:  59%|█████▉    | 68/115 [06:09<03:19,  4.25s/it]recognize:  60%|██████    | 69/115 [06:16<03:53,  5.07s/it]recognize:  61%|██████    | 70/115 [06:21<03:53,  5.19s/it]recognize:  62%|██████▏   | 71/115 [06:26<03:46,  5.15s/it]recognize:  63%|██████▎   | 72/115 [06:30<03:25,  4.77s/it]recognize:  63%|██████▎   | 73/115 [06:34<03:15,  4.65s/it]recognize:  64%|██████▍   | 74/115 [06:39<03:13,  4.71s/it]recognize:  65%|██████▌   | 75/115 [06:43<03:01,  4.55s/it]recognize:  66%|██████▌   | 76/115 [06:51<03:37,  5.58s/it]recognize:  67%|██████▋   | 77/115 [07:01<04:21,  6.88s/it]recognize:  68%|██████▊   | 78/115 [07:05<03:42,  6.00s/it]recognize:  69%|██████▊   | 79/115 [07:13<03:50,  6.41s/it]recognize:  70%|██████▉   | 80/115 [07:22<04:12,  7.21s/it]recognize:  70%|███████   | 81/115 [07:31<04:22,  7.72s/it]recognize:  71%|███████▏  | 82/115 [07:36<03:46,  6.86s/it]recognize:  72%|███████▏  | 83/115 [07:39<03:10,  5.95s/it]recognize:  73%|███████▎  | 84/115 [07:43<02:44,  5.31s/it]recognize:  74%|███████▍  | 85/115 [07:48<02:30,  5.02s/it]recognize:  75%|███████▍  | 86/115 [07:51<02:16,  4.70s/it]recognize:  76%|███████▌  | 87/115 [07:57<02:20,  5.04s/it]recognize:  77%|███████▋  | 88/115 [08:01<02:07,  4.71s/it]recognize:  77%|███████▋  | 89/115 [08:05<01:52,  4.34s/it]recognize:  78%|███████▊  | 90/115 [08:09<01:51,  4.45s/it]recognize:  79%|███████▉  | 91/115 [08:14<01:45,  4.40s/it]recognize:  80%|████████  | 92/115 [08:18<01:41,  4.42s/it]recognize:  81%|████████  | 93/115 [08:22<01:31,  4.16s/it]recognize:  82%|████████▏ | 94/115 [08:26<01:26,  4.12s/it]recognize:  83%|████████▎ | 95/115 [08:31<01:26,  4.31s/it]recognize:  83%|████████▎ | 96/115 [08:35<01:25,  4.48s/it]recognize:  84%|████████▍ | 97/115 [08:42<01:30,  5.01s/it]recognize:  85%|████████▌ | 98/115 [08:45<01:17,  4.59s/it]recognize:  86%|████████▌ | 99/115 [08:48<01:02,  3.92s/it]recognize:  87%|████████▋ | 100/115 [08:52<01:00,  4.04s/it]recognize:  88%|████████▊ | 101/115 [09:00<01:15,  5.37s/it]recognize:  89%|████████▊ | 102/115 [09:09<01:21,  6.27s/it]recognize:  90%|████████▉ | 103/115 [09:18<01:25,  7.14s/it]recognize:  90%|█████████ | 104/115 [09:23<01:11,  6.47s/it]recognize:  91%|█████████▏| 105/115 [09:26<00:56,  5.62s/it]recognize:  92%|█████████▏| 106/115 [09:37<01:02,  6.94s/it]recognize:  93%|█████████▎| 107/115 [09:39<00:45,  5.67s/it]recognize:  94%|█████████▍| 108/115 [09:44<00:37,  5.33s/it]recognize:  95%|█████████▍| 109/115 [09:47<00:29,  4.83s/it]recognize:  96%|█████████▌| 110/115 [09:53<00:24,  4.97s/it]recognize:  97%|█████████▋| 111/115 [09:57<00:18,  4.61s/it]recognize:  97%|█████████▋| 112/115 [10:01<00:13,  4.63s/it]recognize:  98%|█████████▊| 113/115 [10:18<00:16,  8.35s/it]recognize:  99%|█████████▉| 114/115 [10:24<00:07,  7.64s/it]recognize: 100%|██████████| 115/115 [10:32<00:00,  7.74s/it]recognize: 100%|██████████| 115/115 [10:32<00:00,  5.50s/it]
+quantity:   0%|          | 0/224 [00:00<?, ?it/s]quantity:   0%|          | 1/224 [00:00<02:48,  1.32it/s]quantity:   9%|▉         | 21/224 [00:00<00:06, 32.60it/s]quantity:  18%|█▊        | 41/224 [00:00<00:02, 63.10it/s]quantity:  27%|██▋       | 61/224 [00:01<00:01, 90.92it/s]quantity:  36%|███▌      | 81/224 [00:01<00:01, 115.30it/s]quantity:  45%|████▌     | 101/224 [00:01<00:00, 135.24it/s]quantity:  54%|█████▎    | 120/224 [00:01<00:00, 148.54it/s]quantity:  62%|██████▏   | 139/224 [00:01<00:00, 156.78it/s]quantity:  71%|███████   | 158/224 [00:01<00:00, 162.98it/s]quantity:  79%|███████▉  | 177/224 [00:01<00:00, 167.32it/s]quantity:  88%|████████▊ | 196/224 [00:01<00:00, 170.62it/s]quantity:  96%|█████████▌| 214/224 [00:01<00:00, 172.69it/s]quantity: 100%|██████████| 224/224 [00:01<00:00, 112.06it/s]
+텍스트 206종 중 새로 임베딩할 것 192종 (provider=gemini)
+embed:   0%|          | 0/4 [00:00<?, ?it/s]embed:  25%|██▌       | 1/4 [00:02<00:07,  2.38s/it]embed:  50%|█████     | 2/4 [00:04<00:04,  2.41s/it]  Gemini 오류(429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 100, model: gemini-embedding-2\nPlease retry in 34.650750398s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerMinutePerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-2'}, 'quotaValue': '100'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '34s'}]}}); 5s 후 재시도
+  Gemini 오류(429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 100, model: gemini-embedding-2\nPlease retry in 29.31981226s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerMinutePerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-2'}, 'quotaValue': '100'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '29s'}]}}); 10s 후 재시도
+  Gemini 오류(429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 100, model: gemini-embedding-2\nPlease retry in 18.980747547s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerMinutePerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-embedding-2', 'location': 'global'}, 'quotaValue': '100'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '18s'}]}}); 20s 후 재시도
+  Gemini 오류(429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 100, model: gemini-embedding-2\nPlease retry in 58.610106556s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerMinutePerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-2'}, 'quotaValue': '100'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '58s'}]}}); 40s 후 재시도
+embed:  75%|███████▌  | 3/4 [01:23<00:37, 37.33s/it]embed: 100%|██████████| 4/4 [01:26<00:00, 23.59s/it]embed: 100%|██████████| 4/4 [01:26<00:00, 21.55s/it]
+nutrition:   0%|          | 0/14 [00:00<?, ?it/s]nutrition:   7%|▋         | 1/14 [00:00<00:11,  1.18it/s]nutrition:  21%|██▏       | 3/14 [00:01<00:03,  3.48it/s]nutrition:  36%|███▌      | 5/14 [00:01<00:01,  5.42it/s]nutrition:  50%|█████     | 7/14 [00:01<00:01,  6.94it/s]nutrition:  64%|██████▍   | 9/14 [00:01<00:00,  8.09it/s]nutrition:  79%|███████▊  | 11/14 [00:01<00:00,  8.94it/s]nutrition:  93%|█████████▎| 13/14 [00:01<00:00,  9.57it/s]nutrition: 100%|██████████| 14/14 [00:02<00:00,  6.96it/s]
+텍스트 109종 중 새로 임베딩할 것 0종 (provider=gemini)
+nutrition:   0%|          | 0/14 [00:00<?, ?it/s]nutrition:  14%|█▍        | 2/14 [00:00<00:01, 11.49it/s]nutrition:  29%|██▊       | 4/14 [00:00<00:00, 11.51it/s]nutrition:  43%|████▎     | 6/14 [00:00<00:00, 11.48it/s]nutrition:  57%|█████▋    | 8/14 [00:00<00:00, 11.40it/s]nutrition:  71%|███████▏  | 10/14 [00:00<00:00, 11.31it/s]nutrition:  86%|████████▌ | 12/14 [00:01<00:00, 11.24it/s]nutrition: 100%|██████████| 14/14 [00:01<00:00, 11.21it/s]nutrition: 100%|██████████| 14/14 [00:01<00:00, 11.30it/s]
+{
+  "aihub122": {
+    "images": 109,
+    "foods": 109,
+    "to_gemini": 0.147,
+    "name_acc": 0.78,
+    "category_acc": 0.945,
+    "pipeline": {
+      "cal": 30.3,
+      "fat": 35.7,
+      "prot": 33.4,
+      "mass": 27.2,
+      "carb_head": 30.8,
+      "mean_pmae": 33.1
+    },
+    "pipeline_q4": {
+      "cal": 16.6,
+      "fat": 25.3,
+      "prot": 20.8,
+      "mass": 13.3,
+      "carb_head": 16.5,
+      "mean_pmae": 20.9
+    },
+    "q_level_counts": {
+      "Q1": 6,
+      "Q2": 5,
+      "Q3": 23,
+      "Q4": 43,
+      "Q5": 32
+    },
+    "q_applied": 0.972,
+    "by_source_classifier": {
+      "images": 93,
+      "name_acc": 0.892,
+      "cal": 29.8,
+      "fat": 34.1,
+      "prot": 32.4,
+      "mass": 25.6,
+      "carb_head": 30.7,
+      "mean_pmae": 32.1
+    },
+    "by_source_gemini": {
+      "images": 16,
+      "name_acc": 0.125,
+      "cal": 33.1,
+      "fat": 51.6,
+      "prot": 42.0,
+      "mass": 36.7,
+      "carb_head": 31.7,
+      "mean_pmae": 42.2
+    },
+    "oracle": {
+      "cal": 25.3,
+      "fat": 27.0,
+      "prot": 24.8,
+      "mass": 22.2,
+      "carb_head": 27.9,
+      "mean_pmae": 25.7
+    },
+    "nut_unseen": {
+      "images": 26,
+      "pipeline": {
+        "cal": 47.3,
+        "fat": 49.8,
+        "prot": 46.9,
+        "mass": 34.0,
+        "carb_head": 51.3,
+        "mean_pmae": 48.0
+      },
+      "oracle": {
+        "cal": 42.8,
+        "fat": 48.9,
+        "prot": 38.3,
+        "mass": 26.9,
+        "carb_head": 50.0,
+        "mean_pmae": 43.3
+      }
+    },
+    "nut_seen": {
+      "images": 83,
+      "pipeline": {
+        "cal": 25.3,
+        "fat": 31.3,
+        "prot": 29.1,
+        "mass": 25.2,
+        "carb_head": 25.2,
+        "mean_pmae": 28.6
+      },
+      "oracle": {
+        "cal": 20.2,
+        "fat": 20.1,
+        "prot": 20.5,
+        "mass": 20.8,
+        "carb_head": 21.8,
+        "mean_pmae": 20.3
+      }
+    },
+    "name_wrong": {
+      "images": 24,
+      "pipeline": {
+        "cal": 33.1,
+        "fat": 64.6,
+        "prot": 49.6,
+        "mass": 26.8,
+        "carb_head": 24.2,
+        "mean_pmae": 49.1
+      },
+      "oracle": {
+        "cal": 18.7,
+        "fat": 26.8,
+        "prot": 18.7,
+        "mass": 15.8,
+        "carb_head": 17.6,
+        "mean_pmae": 21.4
+      }
+    },
+    "name_correct": {
+      "images": 85,
+      "pipeline": {
+        "cal": 29.5,
+        "fat": 30.0,
+        "prot": 30.0,
+        "mass": 27.3,
+        "carb_head": 33.0,
+        "mean_pmae": 29.8
+      },
+      "oracle": {
+        "cal": 27.0,
+        "fat": 27.0,
+        "prot": 26.1,
+        "mass": 24.0,
+        "carb_head": 31.3,
+        "mean_pmae": 26.7
+      }
+    }
+  },
+  "quantity122": {
+    "images": 115,
+    "foods": 23,
+    "to_gemini": 0.261,
+    "name_acc": 0.661,
+    "category_acc": 0.948,
+    "pipeline": {
+      "cal": 22.5,
+      "fat": 35.4,
+      "prot": 35.9,
+      "mass": 14.8,
+      "carb_head": 17.7,
+      "mean_pmae": 31.3
+    },
+    "pipeline_q4": {
+      "cal": 57.6,
+      "fat": 66.1,
+      "prot": 62.8,
+      "mass": 54.6,
+      "carb_head": 57.3,
+      "mean_pmae": 62.2
+    },
+    "q_level_counts": {
+      "Q1": 23,
+      "Q2": 23,
+      "Q3": 23,
+      "Q4": 22,
+      "Q5": 24
+    },
+    "q_applied": 0.983,
+    "by_source_classifier": {
+      "images": 85,
+      "name_acc": 0.8,
+      "cal": 20.3,
+      "fat": 31.5,
+      "prot": 31.9,
+      "mass": 12.6,
+      "carb_head": 13.8,
+      "mean_pmae": 27.9
+    },
+    "by_source_gemini": {
+      "images": 30,
+      "name_acc": 0.267,
+      "cal": 31.4,
+      "fat": 53.7,
+      "prot": 48.7,
+      "mass": 22.8,
+      "carb_head": 32.8,
+      "mean_pmae": 44.6
+    },
+    "q_acc": 0.991,
+    "q_acc_within1": 1.0,
+    "oracle_q": {
+      "cal": 12.0,
+      "fat": 16.9,
+      "prot": 15.7,
+      "mass": 8.4,
+      "carb_head": 12.0,
+      "mean_pmae": 14.8
+    },
+    "gt_Q1": {
+      "images": 23,
+      "pipeline": {
+        "cal": 40.1,
+        "fat": 62.1,
+        "prot": 57.5,
+        "mass": 28.7,
+        "carb_head": 29.0,
+        "mean_pmae": 53.2
+      },
+      "pipeline_q4": {
+        "cal": 309.8,
+        "fat": 301.8,
+        "prot": 296.2,
+        "mass": 329.6,
+        "carb_head": 331.2,
+        "mean_pmae": 302.6
+      }
+    },
+    "gt_Q2": {
+      "images": 23,
+      "pipeline": {
+        "cal": 23.2,
+        "fat": 37.4,
+        "prot": 36.4,
+        "mass": 16.3,
+        "carb_head": 19.0,
+        "mean_pmae": 32.3
+      },
+      "pipeline_q4": {
+        "cal": 95.7,
+        "fat": 106.2,
+        "prot": 95.4,
+        "mass": 104.1,
+        "carb_head": 105.4,
+        "mean_pmae": 99.1
+      }
+    },
+    "gt_Q3": {
+      "images": 23,
+      "pipeline": {
+        "cal": 20.2,
+        "fat": 29.3,
+        "prot": 31.0,
+        "mass": 14.0,
+        "carb_head": 19.0,
+        "mean_pmae": 26.8
+      },
+      "pipeline_q4": {
+        "cal": 37.4,
+        "fat": 44.4,
+        "prot": 40.5,
+        "mass": 35.6,
+        "carb_head": 40.9,
+        "mean_pmae": 40.8
+      }
+    },
+    "gt_Q4": {
+      "images": 23,
+      "pipeline": {
+        "cal": 22.6,
+        "fat": 36.7,
+        "prot": 35.9,
+        "mass": 13.5,
+        "carb_head": 15.0,
+        "mean_pmae": 31.7
+      },
+      "pipeline_q4": {
+        "cal": 22.0,
+        "fat": 36.7,
+        "prot": 35.1,
+        "mass": 12.5,
+        "carb_head": 14.3,
+        "mean_pmae": 31.3
+      }
+    },
+    "gt_Q5": {
+      "images": 23,
+      "pipeline": {
+        "cal": 20.1,
+        "fat": 31.8,
+        "prot": 34.2,
+        "mass": 13.0,
+        "carb_head": 16.3,
+        "mean_pmae": 28.7
+      },
+      "pipeline_q4": {
+        "cal": 32.5,
+        "fat": 39.4,
+        "prot": 38.5,
+        "mass": 24.9,
+        "carb_head": 27.6,
+        "mean_pmae": 36.8
+      }
+    },
+    "oracle": {
+      "cal": 13.8,
+      "fat": 19.0,
+      "prot": 17.3,
+      "mass": 9.9,
+      "carb_head": 13.6,
+      "mean_pmae": 16.7
+    },
+    "nut_unseen": {
+      "images": 30,
+      "pipeline": {
+        "cal": 46.9,
+        "fat": 56.2,
+        "prot": 70.9,
+        "mass": 28.4,
+        "carb_head": 39.6,
+        "mean_pmae": 58.0
+      },
+      "oracle": {
+        "cal": 44.5,
+        "fat": 55.8,
+        "prot": 69.2,
+        "mass": 26.8,
+        "carb_head": 41.8,
+        "mean_pmae": 56.5
+      }
+    },
+    "nut_seen": {
+      "images": 85,
+      "pipeline": {
+        "cal": 16.4,
+        "fat": 29.8,
+        "prot": 29.5,
+        "mass": 11.8,
+        "carb_head": 11.4,
+        "mean_pmae": 25.2
+      },
+      "oracle": {
+        "cal": 6.0,
+        "fat": 9.1,
+        "prot": 8.0,
+        "mass": 6.2,
+        "carb_head": 5.6,
+        "mean_pmae": 7.7
+      }
+    },
+    "name_wrong": {
+      "images": 39,
+      "pipeline": {
+        "cal": 29.4,
+        "fat": 59.5,
+        "prot": 49.6,
+        "mass": 17.8,
+        "carb_head": 21.1,
+        "mean_pmae": 46.2
+      },
+      "oracle": {
+        "cal": 10.9,
+        "fat": 16.1,
+        "prot": 12.4,
+        "mass": 8.4,
+        "carb_head": 14.0,
+        "mean_pmae": 13.1
+      }
+    },
+    "name_correct": {
+      "images": 76,
+      "pipeline": {
+        "cal": 18.3,
+        "fat": 24.8,
+        "prot": 26.4,
+        "mass": 12.8,
+        "carb_head": 15.5,
+        "mean_pmae": 23.2
+      },
+      "oracle": {
+        "cal": 15.6,
+        "fat": 20.3,
+        "prot": 20.7,
+        "mass": 11.0,
+        "carb_head": 13.3,
+        "mean_pmae": 18.8
+      }
+    }
+  }
+}
+저장: /home/player0070/2025-2/n296_stage3_3/runs/pipeline_eval_q2/results.csv, summary.json

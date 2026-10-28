@@ -1,0 +1,5204 @@
+[
+  {
+    "image": "A_13_A13010_대하구이_02_01.jpg",
+    "sample_id": 2,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "새우 소금구이",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 소금구이\",\n  \"ingredients\": [\n    \"새우\",\n    \"굵은 소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_02_02.jpg",
+    "sample_id": 2,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "소금구이 새우",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"소금구이 새우\",\n  \"ingredients\": [\n    \"새우\",\n    \"굵은 소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_02_03.jpg",
+    "sample_id": 2,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "새우 소금구이",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 소금구이\",\n  \"ingredients\": [\n    \"새우\",\n    \"굵은 소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_02_04.jpg",
+    "sample_id": 2,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "새우 소금구이",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 소금구이\",\n  \"ingredients\": [\n    \"새우\",\n    \"굵은 소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_02_05.jpg",
+    "sample_id": 2,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "소금구이 새우",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"소금구이 새우\",\n  \"ingredients\": [\n    \"새우\",\n    \"굵은 소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_02_06.jpg",
+    "sample_id": 2,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "소금구이 새우",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"소금구이 새우\",\n  \"ingredients\": [\n    \"새우\",\n    \"굵은 소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_02_07.jpg",
+    "sample_id": 2,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "새우 소금구이",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 소금구이\",\n  \"ingredients\": [\n    \"새우\",\n    \"굵은 소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_02_08.jpg",
+    "sample_id": 2,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "새우 소금구이",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 소금구이\",\n  \"ingredients\": [\n    \"새우\",\n    \"굵은 소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_18_01.jpg",
+    "sample_id": 18,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "소금구이 새우",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"소금구이 새우\",\n  \"ingredients\": [\n    \"새우\",\n    \"굵은 소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_18_02.jpg",
+    "sample_id": 18,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "새우 소금구이",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 소금구이\",\n  \"ingredients\": [\n    \"새우\",\n    \"굵은 소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_18_03.jpg",
+    "sample_id": 18,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "새우 소금구이",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 소금구이\",\n  \"ingredients\": [\n    \"새우\",\n    \"굵은 소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_18_04.jpg",
+    "sample_id": 18,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "소금구이 새우",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"소금구이 새우\",\n  \"ingredients\": [\n    \"새우\",\n    \"굵은 소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_18_05.jpg",
+    "sample_id": 18,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "소금구이 새우",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"소금구이 새우\",\n  \"ingredients\": [\n    \"새우\",\n    \"굵은 소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_18_06.jpg",
+    "sample_id": 18,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "새우 소금구이",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 소금구이\",\n  \"ingredients\": [\n    \"새우\",\n    \"굵은 소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_18_07.jpg",
+    "sample_id": 18,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "새우 소금구이",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 소금구이\",\n  \"ingredients\": [\n    \"새우\",\n    \"굵은 소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_18_08.jpg",
+    "sample_id": 18,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "새우 소금구이",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 소금구이\",\n  \"ingredients\": [\n    \"새우\",\n    \"굵은 소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_19_01.jpg",
+    "sample_id": 19,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "소금구이 새우",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"소금구이 새우\",\n  \"ingredients\": [\n    \"새우\",\n    \"굵은 소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_19_02.jpg",
+    "sample_id": 19,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "소금구이 새우",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"소금구이 새우\",\n  \"ingredients\": [\n    \"새우\",\n    \"굵은 소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_19_03.jpg",
+    "sample_id": 19,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "새우 소금구이",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 소금구이\",\n  \"ingredients\": [\n    \"새우\",\n    \"굵은 소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_19_04.jpg",
+    "sample_id": 19,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "새우 소금구이",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 소금구이\",\n  \"ingredients\": [\n    \"새우\",\n    \"굵은 소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_19_05.jpg",
+    "sample_id": 19,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "새우 소금구이",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 소금구이\",\n  \"ingredients\": [\n    \"새우\",\n    \"굵은 소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_19_06.jpg",
+    "sample_id": 19,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "새우구이 덮밥",
+    "pred_ingredients": [
+      "새우",
+      "쌀밥",
+      "소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우구이 덮밥\",\n  \"ingredients\": [\n    \"새우\",\n    \"쌀밥\",\n    \"소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_19_07.jpg",
+    "sample_id": 19,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "새우 소금구이",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 소금구이\",\n  \"ingredients\": [\n    \"새우\",\n    \"굵은 소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_19_08.jpg",
+    "sample_id": 19,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "새우 소금구이",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 소금구이\",\n  \"ingredients\": [\n    \"새우\",\n    \"굵은 소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_01_01.jpg",
+    "sample_id": 1,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "새우 토스트",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "다진 돼지고기",
+      "계란",
+      "전분",
+      "식용유"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 토스트\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"다진 돼지고기\",\n    \"계란\",\n    \"전분\",\n    \"식용유\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_01_02.jpg",
+    "sample_id": 1,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "새우 토스트",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "계란",
+      "전분",
+      "식용유"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 토스트\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"계란\",\n    \"전분\",\n    \"식용유\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_01_03.jpg",
+    "sample_id": 1,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "무떡 샌드위치",
+    "pred_ingredients": [
+      "무",
+      "쌀가루",
+      "새우",
+      "돼지고기",
+      "표고버섯",
+      "식용유"
+    ],
+    "raw_response": "{\n  \"food_name\": \"무떡 샌드위치\",\n  \"ingredients\": [\n    \"무\",\n    \"쌀가루\",\n    \"새우\",\n    \"돼지고기\",\n    \"표고버섯\",\n    \"식용유\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_01_04.jpg",
+    "sample_id": 1,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "무떡 샌드위치",
+    "pred_ingredients": [
+      "무",
+      "쌀가루",
+      "새우",
+      "돼지고기",
+      "표고버섯",
+      "식용유"
+    ],
+    "raw_response": "{\n  \"food_name\": \"무떡 샌드위치\",\n  \"ingredients\": [\n    \"무\",\n    \"쌀가루\",\n    \"새우\",\n    \"돼지고기\",\n    \"표고버섯\",\n    \"식용유\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_01_05.jpg",
+    "sample_id": 1,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "새우 토스트",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "계란",
+      "전분",
+      "식용유"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 토스트\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"계란\",\n    \"전분\",\n    \"식용유\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_01_06.jpg",
+    "sample_id": 1,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "식용유",
+      "전분",
+      "달걀 흰자",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"식용유\",\n    \"전분\",\n    \"달걀 흰자\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_01_07.jpg",
+    "sample_id": 1,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "달걀 흰자",
+      "전분",
+      "식용유",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"달걀 흰자\",\n    \"전분\",\n    \"식용유\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_01_08.jpg",
+    "sample_id": 1,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "달걀 흰자",
+      "전분",
+      "식용유",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"달걀 흰자\",\n    \"전분\",\n    \"식용유\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_13_01.jpg",
+    "sample_id": 13,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "달걀 흰자",
+      "전분",
+      "식용유",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"달걀 흰자\",\n    \"전분\",\n    \"식용유\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_13_02.jpg",
+    "sample_id": 13,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "달걀 흰자",
+      "전분",
+      "식용유",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"달걀 흰자\",\n    \"전분\",\n    \"식용유\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_13_03.jpg",
+    "sample_id": 13,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "프렌치 토스트",
+    "pred_ingredients": [
+      "식빵",
+      "계란",
+      "우유",
+      "버터",
+      "설탕",
+      "시나몬 가루"
+    ],
+    "raw_response": "{\n  \"food_name\": \"프렌치 토스트\",\n  \"ingredients\": [\n    \"식빵\",\n    \"계란\",\n    \"우유\",\n    \"버터\",\n    \"설탕\",\n    \"시나몬 가루\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_13_04.jpg",
+    "sample_id": 13,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "초코 식빵 러스크",
+    "pred_ingredients": [
+      "식빵",
+      "초콜릿",
+      "버터",
+      "설탕"
+    ],
+    "raw_response": "{\n  \"food_name\": \"초코 식빵 러스크\",\n  \"ingredients\": [\n    \"식빵\",\n    \"초콜릿\",\n    \"버터\",\n    \"설탕\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_13_05.jpg",
+    "sample_id": 13,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "식용유",
+      "전분",
+      "달걀 흰자",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"식용유\",\n    \"전분\",\n    \"달걀 흰자\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_13_06.jpg",
+    "sample_id": 13,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "달걀 흰자",
+      "전분",
+      "식용유",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"달걀 흰자\",\n    \"전분\",\n    \"식용유\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_13_07.jpg",
+    "sample_id": 13,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "달걀 흰자",
+      "전분",
+      "소금",
+      "후추",
+      "식용유"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"달걀 흰자\",\n    \"전분\",\n    \"소금\",\n    \"후추\",\n    \"식용유\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_13_08.jpg",
+    "sample_id": 13,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "프렌치 토스트",
+    "pred_ingredients": [
+      "식빵",
+      "계란",
+      "우유",
+      "설탕",
+      "버터",
+      "시나몬 가루"
+    ],
+    "raw_response": "{\n  \"food_name\": \"프렌치 토스트\",\n  \"ingredients\": [\n    \"식빵\",\n    \"계란\",\n    \"우유\",\n    \"설탕\",\n    \"버터\",\n    \"시나몬 가루\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_14_01.jpg",
+    "sample_id": 14,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "새우 토스트",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "다진 돼지고기",
+      "계란",
+      "전분",
+      "식용유"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 토스트\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"다진 돼지고기\",\n    \"계란\",\n    \"전분\",\n    \"식용유\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_14_02.jpg",
+    "sample_id": 14,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "전분",
+      "달걀 흰자",
+      "식용유",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"전분\",\n    \"달걀 흰자\",\n    \"식용유\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_14_03.jpg",
+    "sample_id": 14,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "달걀 흰자",
+      "전분",
+      "소금",
+      "후추",
+      "식용유"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"달걀 흰자\",\n    \"전분\",\n    \"소금\",\n    \"후추\",\n    \"식용유\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_14_04.jpg",
+    "sample_id": 14,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "달걀 흰자",
+      "전분",
+      "소금",
+      "후추",
+      "식용유"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"달걀 흰자\",\n    \"전분\",\n    \"소금\",\n    \"후추\",\n    \"식용유\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_14_05.jpg",
+    "sample_id": 14,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "새우 토스트",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "다진 돼지고기",
+      "계란",
+      "전분",
+      "식용유"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 토스트\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"다진 돼지고기\",\n    \"계란\",\n    \"전분\",\n    \"식용유\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_14_06.jpg",
+    "sample_id": 14,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "새우 토스트",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "기름",
+      "전분",
+      "달걀",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 토스트\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"기름\",\n    \"전분\",\n    \"달걀\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_14_07.jpg",
+    "sample_id": 14,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "새우 토스트",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "다진 돼지고기",
+      "계란",
+      "전분",
+      "식용유"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 토스트\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"다진 돼지고기\",\n    \"계란\",\n    \"전분\",\n    \"식용유\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_14_08.jpg",
+    "sample_id": 14,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "새우 토스트",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "다진 마늘",
+      "계란",
+      "전분",
+      "식용유"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 토스트\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"다진 마늘\",\n    \"계란\",\n    \"전분\",\n    \"식용유\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_16_01.jpg",
+    "sample_id": 16,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "달걀 흰자",
+      "전분",
+      "식용유",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"달걀 흰자\",\n    \"전분\",\n    \"식용유\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_16_02.jpg",
+    "sample_id": 16,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "달걀 흰자",
+      "전분",
+      "식용유",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"달걀 흰자\",\n    \"전분\",\n    \"식용유\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_16_03.jpg",
+    "sample_id": 16,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "달걀 흰자",
+      "전분",
+      "식용유",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"달걀 흰자\",\n    \"전분\",\n    \"식용유\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_16_04.jpg",
+    "sample_id": 16,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "식용유",
+      "전분",
+      "달걀 흰자",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"식용유\",\n    \"전분\",\n    \"달걀 흰자\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_16_05.jpg",
+    "sample_id": 16,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "달걀 흰자",
+      "전분",
+      "식용유",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"달걀 흰자\",\n    \"전분\",\n    \"식용유\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_16_06.jpg",
+    "sample_id": 16,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "전분",
+      "달걀 흰자",
+      "식용유",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"전분\",\n    \"달걀 흰자\",\n    \"식용유\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_16_07.jpg",
+    "sample_id": 16,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "새우 토스트",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "다진 마늘",
+      "계란",
+      "전분",
+      "식용유",
+      "후추",
+      "소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 토스트\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"다진 마늘\",\n    \"계란\",\n    \"전분\",\n    \"식용유\",\n    \"후추\",\n    \"소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_16_08.jpg",
+    "sample_id": 16,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "식용유",
+      "전분",
+      "달걀 흰자",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"식용유\",\n    \"전분\",\n    \"달걀 흰자\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_22_01.jpg",
+    "sample_id": 22,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "프렌치 토스트",
+    "pred_ingredients": [
+      "식빵",
+      "계란",
+      "우유",
+      "버터",
+      "설탕"
+    ],
+    "raw_response": "{\n  \"food_name\": \"프렌치 토스트\",\n  \"ingredients\": [\n    \"식빵\",\n    \"계란\",\n    \"우유\",\n    \"버터\",\n    \"설탕\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_22_02.jpg",
+    "sample_id": 22,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "달걀 흰자",
+      "전분",
+      "식용유",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"달걀 흰자\",\n    \"전분\",\n    \"식용유\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_22_03.jpg",
+    "sample_id": 22,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "새우 토스트",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "다진 돼지고기",
+      "계란",
+      "전분",
+      "식용유"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 토스트\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"다진 돼지고기\",\n    \"계란\",\n    \"전분\",\n    \"식용유\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_22_04.jpg",
+    "sample_id": 22,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "달걀 흰자",
+      "전분",
+      "소금",
+      "후추",
+      "식용유"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"달걀 흰자\",\n    \"전분\",\n    \"소금\",\n    \"후추\",\n    \"식용유\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_22_05.jpg",
+    "sample_id": 22,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "달걀 흰자",
+      "전분",
+      "식용유",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"달걀 흰자\",\n    \"전분\",\n    \"식용유\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_22_06.jpg",
+    "sample_id": 22,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "달걀 흰자",
+      "전분",
+      "식용유",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"달걀 흰자\",\n    \"전분\",\n    \"식용유\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_22_07.jpg",
+    "sample_id": 22,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "새우 토스트",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "다진 마늘",
+      "계란",
+      "전분",
+      "식용유",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 토스트\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"다진 마늘\",\n    \"계란\",\n    \"전분\",\n    \"식용유\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_22_08.jpg",
+    "sample_id": 22,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "달걀 흰자",
+      "전분",
+      "소금",
+      "후추",
+      "식용유"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"달걀 흰자\",\n    \"전분\",\n    \"소금\",\n    \"후추\",\n    \"식용유\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_02_01.jpg",
+    "sample_id": 2,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀국수 면",
+      "소고기",
+      "숙주나물",
+      "고수",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀국수 면\",\n    \"소고기\",\n    \"숙주나물\",\n    \"고수\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_02_02.jpg",
+    "sample_id": 2,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "소고기",
+      "숙주나물",
+      "고수",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀면\",\n    \"소고기\",\n    \"숙주나물\",\n    \"고수\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_02_03.jpg",
+    "sample_id": 2,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀국수 면",
+      "소고기",
+      "숙주나물",
+      "고수",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀국수 면\",\n    \"소고기\",\n    \"숙주나물\",\n    \"고수\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_02_04.jpg",
+    "sample_id": 2,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "소고기",
+      "숙주나물",
+      "고수",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀면\",\n    \"소고기\",\n    \"숙주나물\",\n    \"고수\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_02_05.jpg",
+    "sample_id": 2,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "소고기",
+      "숙주나물",
+      "고수",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀면\",\n    \"소고기\",\n    \"숙주나물\",\n    \"고수\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_02_06.jpg",
+    "sample_id": 2,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "소고기",
+      "숙주나물",
+      "고수",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀면\",\n    \"소고기\",\n    \"숙주나물\",\n    \"고수\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_02_07.jpg",
+    "sample_id": 2,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "숙주나물",
+      "고수",
+      "소고기",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀면\",\n    \"숙주나물\",\n    \"고수\",\n    \"소고기\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_02_08.jpg",
+    "sample_id": 2,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "소고기",
+      "숙주나물",
+      "고수",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀면\",\n    \"소고기\",\n    \"숙주나물\",\n    \"고수\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_05_01.jpg",
+    "sample_id": 5,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "소고기",
+      "숙주나물",
+      "청양고추",
+      "홍고추",
+      "쪽파",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀면\",\n    \"소고기\",\n    \"숙주나물\",\n    \"청양고추\",\n    \"홍고추\",\n    \"쪽파\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_05_02.jpg",
+    "sample_id": 5,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀국수 면",
+      "소고기",
+      "숙주나물",
+      "대파",
+      "쪽파",
+      "홍고추",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀국수 면\",\n    \"소고기\",\n    \"숙주나물\",\n    \"대파\",\n    \"쪽파\",\n    \"홍고추\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_05_03.jpg",
+    "sample_id": 5,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "소고기",
+      "숙주나물",
+      "대파",
+      "홍고추",
+      "쪽파",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀면\",\n    \"소고기\",\n    \"숙주나물\",\n    \"대파\",\n    \"홍고추\",\n    \"쪽파\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_05_04.jpg",
+    "sample_id": 5,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀국수 면",
+      "소고기",
+      "숙주나물",
+      "대파",
+      "쪽파",
+      "홍고추",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀국수 면\",\n    \"소고기\",\n    \"숙주나물\",\n    \"대파\",\n    \"쪽파\",\n    \"홍고추\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_05_05.jpg",
+    "sample_id": 5,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "소고기",
+      "숙주나물",
+      "대파",
+      "홍고추",
+      "청양고추",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀면\",\n    \"소고기\",\n    \"숙주나물\",\n    \"대파\",\n    \"홍고추\",\n    \"청양고추\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_05_06.jpg",
+    "sample_id": 5,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "소고기",
+      "숙주나물",
+      "홍고추",
+      "청양고추",
+      "대파",
+      "쪽파",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀면\",\n    \"소고기\",\n    \"숙주나물\",\n    \"홍고추\",\n    \"청양고추\",\n    \"대파\",\n    \"쪽파\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_05_07.jpg",
+    "sample_id": 5,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀국수 면",
+      "소고기",
+      "숙주나물",
+      "홍고추",
+      "청양고추",
+      "쪽파",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀국수 면\",\n    \"소고기\",\n    \"숙주나물\",\n    \"홍고추\",\n    \"청양고추\",\n    \"쪽파\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_05_08.jpg",
+    "sample_id": 5,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "소고기",
+      "숙주나물",
+      "육수",
+      "홍고추",
+      "청양고추",
+      "쪽파"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀면\",\n    \"소고기\",\n    \"숙주나물\",\n    \"육수\",\n    \"홍고추\",\n    \"청양고추\",\n    \"쪽파\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_33_01.jpg",
+    "sample_id": 33,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "소고기",
+      "숙주나물",
+      "대파",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀면\",\n    \"소고기\",\n    \"숙주나물\",\n    \"대파\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_33_02.jpg",
+    "sample_id": 33,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "소고기",
+      "숙주나물",
+      "대파",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀면\",\n    \"소고기\",\n    \"숙주나물\",\n    \"대파\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_33_03.jpg",
+    "sample_id": 33,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "소고기",
+      "숙주나물",
+      "육수",
+      "파"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀면\",\n    \"소고기\",\n    \"숙주나물\",\n    \"육수\",\n    \"파\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_33_04.jpg",
+    "sample_id": 33,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "소고기",
+      "숙주나물",
+      "육수",
+      "파"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀면\",\n    \"소고기\",\n    \"숙주나물\",\n    \"육수\",\n    \"파\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_33_05.jpg",
+    "sample_id": 33,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "소고기",
+      "숙주나물",
+      "파",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀면\",\n    \"소고기\",\n    \"숙주나물\",\n    \"파\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_33_06.jpg",
+    "sample_id": 33,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "소고기",
+      "숙주나물",
+      "육수",
+      "파"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀면\",\n    \"소고기\",\n    \"숙주나물\",\n    \"육수\",\n    \"파\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_33_07.jpg",
+    "sample_id": 33,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "소고기",
+      "숙주나물",
+      "육수",
+      "파"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀면\",\n    \"소고기\",\n    \"숙주나물\",\n    \"육수\",\n    \"파\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_33_08.jpg",
+    "sample_id": 33,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "소고기",
+      "숙주나물",
+      "대파",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀면\",\n    \"소고기\",\n    \"숙주나물\",\n    \"대파\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_09_01.jpg",
+    "sample_id": 9,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "밀면",
+    "pred_ingredients": [
+      "밀면",
+      "새우",
+      "계란 지단",
+      "오이",
+      "당근",
+      "얼음",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"밀면\",\n  \"ingredients\": [\n    \"밀면\",\n    \"새우\",\n    \"계란 지단\",\n    \"오이\",\n    \"당근\",\n    \"얼음\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_09_02.jpg",
+    "sample_id": 9,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "해물냉채",
+    "pred_ingredients": [
+      "새우",
+      "달걀지단",
+      "당근",
+      "오이",
+      "얼음",
+      "냉채 육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"해물냉채\",\n  \"ingredients\": [\n    \"새우\",\n    \"달걀지단\",\n    \"당근\",\n    \"오이\",\n    \"얼음\",\n    \"냉채 육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_09_03.jpg",
+    "sample_id": 9,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "냉국수",
+    "pred_ingredients": [
+      "새우",
+      "계란 지단",
+      "당근",
+      "오이",
+      "얼음",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"냉국수\",\n  \"ingredients\": [\n    \"새우\",\n    \"계란 지단\",\n    \"당근\",\n    \"오이\",\n    \"얼음\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_09_04.jpg",
+    "sample_id": 9,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "중국식 냉면",
+    "pred_ingredients": [
+      "새우",
+      "오이",
+      "당근",
+      "달걀 지단",
+      "얼음",
+      "냉면 육수",
+      "면"
+    ],
+    "raw_response": "{\n  \"food_name\": \"중국식 냉면\",\n  \"ingredients\": [\n    \"새우\",\n    \"오이\",\n    \"당근\",\n    \"달걀 지단\",\n    \"얼음\",\n    \"냉면 육수\",\n    \"면\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_09_05.jpg",
+    "sample_id": 9,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "해물냉채",
+    "pred_ingredients": [
+      "새우",
+      "오이",
+      "당근",
+      "달걀지단",
+      "얼음",
+      "냉채 육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"해물냉채\",\n  \"ingredients\": [\n    \"새우\",\n    \"오이\",\n    \"당근\",\n    \"달걀지단\",\n    \"얼음\",\n    \"냉채 육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_09_06.jpg",
+    "sample_id": 9,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "밀면",
+    "pred_ingredients": [
+      "밀가루 면",
+      "새우",
+      "계란 지단",
+      "당근",
+      "오이",
+      "얼음",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"밀면\",\n  \"ingredients\": [\n    \"밀가루 면\",\n    \"새우\",\n    \"계란 지단\",\n    \"당근\",\n    \"오이\",\n    \"얼음\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_09_07.jpg",
+    "sample_id": 9,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "냉국수",
+    "pred_ingredients": [
+      "국수",
+      "새우",
+      "당근",
+      "달걀 지단",
+      "얼음",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"냉국수\",\n  \"ingredients\": [\n    \"국수\",\n    \"새우\",\n    \"당근\",\n    \"달걀 지단\",\n    \"얼음\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_09_08.jpg",
+    "sample_id": 9,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "냉국수",
+    "pred_ingredients": [
+      "국수",
+      "새우",
+      "달걀 지단",
+      "당근",
+      "얼음",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"냉국수\",\n  \"ingredients\": [\n    \"국수\",\n    \"새우\",\n    \"달걀 지단\",\n    \"당근\",\n    \"얼음\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_16_01.jpg",
+    "sample_id": 16,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "라멘",
+    "pred_ingredients": [
+      "면",
+      "닭고기",
+      "새우",
+      "삶은 달걀",
+      "숙주나물",
+      "무순",
+      "할라피뇨",
+      "당근",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"라멘\",\n  \"ingredients\": [\n    \"면\",\n    \"닭고기\",\n    \"새우\",\n    \"삶은 달걀\",\n    \"숙주나물\",\n    \"무순\",\n    \"할라피뇨\",\n    \"당근\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_16_02.jpg",
+    "sample_id": 16,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "라멘",
+    "pred_ingredients": [
+      "라면 면",
+      "닭가슴살",
+      "새우",
+      "삶은 달걀",
+      "당근",
+      "무순",
+      "노란 파프리카",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"라멘\",\n  \"ingredients\": [\n    \"라면 면\",\n    \"닭가슴살\",\n    \"새우\",\n    \"삶은 달걀\",\n    \"당근\",\n    \"무순\",\n    \"노란 파프리카\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_16_03.jpg",
+    "sample_id": 16,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "라면",
+    "pred_ingredients": [
+      "라면 면",
+      "닭가슴살",
+      "새우",
+      "삶은 달걀",
+      "당근",
+      "무순",
+      "파프리카",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"라면\",\n  \"ingredients\": [\n    \"라면 면\",\n    \"닭가슴살\",\n    \"새우\",\n    \"삶은 달걀\",\n    \"당근\",\n    \"무순\",\n    \"파프리카\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_16_04.jpg",
+    "sample_id": 16,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "라면",
+    "pred_ingredients": [
+      "라면 면",
+      "닭가슴살",
+      "새우",
+      "삶은 달걀",
+      "당근",
+      "파프리카",
+      "무순",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"라면\",\n  \"ingredients\": [\n    \"라면 면\",\n    \"닭가슴살\",\n    \"새우\",\n    \"삶은 달걀\",\n    \"당근\",\n    \"파프리카\",\n    \"무순\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_16_05.jpg",
+    "sample_id": 16,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "라멘",
+    "pred_ingredients": [
+      "라면 면",
+      "닭가슴살",
+      "새우",
+      "삶은 달걀",
+      "당근",
+      "파프리카",
+      "무순",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"라멘\",\n  \"ingredients\": [\n    \"라면 면\",\n    \"닭가슴살\",\n    \"새우\",\n    \"삶은 달걀\",\n    \"당근\",\n    \"파프리카\",\n    \"무순\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_16_06.jpg",
+    "sample_id": 16,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "해물 라면",
+    "pred_ingredients": [
+      "라면 면",
+      "새우",
+      "삶은 달걀",
+      "당근",
+      "빨간 파프리카",
+      "노란 파프리카",
+      "무순",
+      "팽이버섯",
+      "닭고기"
+    ],
+    "raw_response": "{\n  \"food_name\": \"해물 라면\",\n  \"ingredients\": [\n    \"라면 면\",\n    \"새우\",\n    \"삶은 달걀\",\n    \"당근\",\n    \"빨간 파프리카\",\n    \"노란 파프리카\",\n    \"무순\",\n    \"팽이버섯\",\n    \"닭고기\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_16_07.jpg",
+    "sample_id": 16,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "해물 라면",
+    "pred_ingredients": [
+      "라면 면",
+      "새우",
+      "삶은 달걀",
+      "당근",
+      "빨간 파프리카",
+      "노란 파프리카",
+      "무순",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"해물 라면\",\n  \"ingredients\": [\n    \"라면 면\",\n    \"새우\",\n    \"삶은 달걀\",\n    \"당근\",\n    \"빨간 파프리카\",\n    \"노란 파프리카\",\n    \"무순\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_16_08.jpg",
+    "sample_id": 16,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "새우 라멘",
+    "pred_ingredients": [
+      "라면 면",
+      "새우",
+      "삶은 달걀",
+      "당근",
+      "파프리카",
+      "무순",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 라멘\",\n  \"ingredients\": [\n    \"라면 면\",\n    \"새우\",\n    \"삶은 달걀\",\n    \"당근\",\n    \"파프리카\",\n    \"무순\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_43_01.jpg",
+    "sample_id": 43,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "중국식 냉면",
+    "pred_ingredients": [
+      "중화면",
+      "새우",
+      "오이",
+      "당근",
+      "적양배추",
+      "목이버섯",
+      "방울토마토",
+      "냉면 육수",
+      "얼음"
+    ],
+    "raw_response": "{\n  \"food_name\": \"중국식 냉면\",\n  \"ingredients\": [\n    \"중화면\",\n    \"새우\",\n    \"오이\",\n    \"당근\",\n    \"적양배추\",\n    \"목이버섯\",\n    \"방울토마토\",\n    \"냉면 육수\",\n    \"얼음\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_43_02.jpg",
+    "sample_id": 43,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "중국식 냉면",
+    "pred_ingredients": [
+      "중화면",
+      "새우",
+      "오징어",
+      "해삼",
+      "당근",
+      "오이",
+      "적양배추",
+      "방울토마토",
+      "냉면 육수",
+      "얼음"
+    ],
+    "raw_response": "{\n  \"food_name\": \"중국식 냉면\",\n  \"ingredients\": [\n    \"중화면\",\n    \"새우\",\n    \"오징어\",\n    \"해삼\",\n    \"당근\",\n    \"오이\",\n    \"적양배추\",\n    \"방울토마토\",\n    \"냉면 육수\",\n    \"얼음\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_43_03.jpg",
+    "sample_id": 43,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "중국식 냉면",
+    "pred_ingredients": [
+      "중화면",
+      "새우",
+      "오징어",
+      "해삼",
+      "오이",
+      "당근",
+      "적양배추",
+      "방울토마토",
+      "냉면 육수",
+      "얼음"
+    ],
+    "raw_response": "{\n  \"food_name\": \"중국식 냉면\",\n  \"ingredients\": [\n    \"중화면\",\n    \"새우\",\n    \"오징어\",\n    \"해삼\",\n    \"오이\",\n    \"당근\",\n    \"적양배추\",\n    \"방울토마토\",\n    \"냉면 육수\",\n    \"얼음\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_43_04.jpg",
+    "sample_id": 43,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "중국식 냉면",
+    "pred_ingredients": [
+      "중화면",
+      "새우",
+      "오징어",
+      "해삼",
+      "오이",
+      "당근",
+      "적양배추",
+      "방울토마토",
+      "냉면 육수",
+      "깨"
+    ],
+    "raw_response": "{\n  \"food_name\": \"중국식 냉면\",\n  \"ingredients\": [\n    \"중화면\",\n    \"새우\",\n    \"오징어\",\n    \"해삼\",\n    \"오이\",\n    \"당근\",\n    \"적양배추\",\n    \"방울토마토\",\n    \"냉면 육수\",\n    \"깨\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_43_05.jpg",
+    "sample_id": 43,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "냉짬뽕",
+    "pred_ingredients": [
+      "중화면",
+      "냉짬뽕 육수",
+      "새우",
+      "오징어",
+      "오이",
+      "당근",
+      "적양배추",
+      "방울토마토",
+      "목이버섯"
+    ],
+    "raw_response": "{\n  \"food_name\": \"냉짬뽕\",\n  \"ingredients\": [\n    \"중화면\",\n    \"냉짬뽕 육수\",\n    \"새우\",\n    \"오징어\",\n    \"오이\",\n    \"당근\",\n    \"적양배추\",\n    \"방울토마토\",\n    \"목이버섯\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_43_06.jpg",
+    "sample_id": 43,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "냉라멘",
+    "pred_ingredients": [
+      "라멘 면",
+      "냉육수",
+      "새우",
+      "오이",
+      "당근",
+      "적양배추",
+      "방울토마토",
+      "목이버섯"
+    ],
+    "raw_response": "{\n  \"food_name\": \"냉라멘\",\n  \"ingredients\": [\n    \"라멘 면\",\n    \"냉육수\",\n    \"새우\",\n    \"오이\",\n    \"당근\",\n    \"적양배추\",\n    \"방울토마토\",\n    \"목이버섯\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_43_07.jpg",
+    "sample_id": 43,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "냉라멘",
+    "pred_ingredients": [
+      "라멘 면",
+      "냉육수",
+      "적양배추",
+      "오이",
+      "당근",
+      "방울토마토",
+      "새우",
+      "버섯"
+    ],
+    "raw_response": "{\n  \"food_name\": \"냉라멘\",\n  \"ingredients\": [\n    \"라멘 면\",\n    \"냉육수\",\n    \"적양배추\",\n    \"오이\",\n    \"당근\",\n    \"방울토마토\",\n    \"새우\",\n    \"버섯\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_43_08.jpg",
+    "sample_id": 43,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "냉라멘",
+    "pred_ingredients": [
+      "라멘 면",
+      "냉육수",
+      "적양배추",
+      "당근",
+      "방울토마토",
+      "새우",
+      "오이",
+      "버섯"
+    ],
+    "raw_response": "{\n  \"food_name\": \"냉라멘\",\n  \"ingredients\": [\n    \"라멘 면\",\n    \"냉육수\",\n    \"적양배추\",\n    \"당근\",\n    \"방울토마토\",\n    \"새우\",\n    \"오이\",\n    \"버섯\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12003_간장닭갈비_01_01.jpg",
+    "sample_id": 1,
+    "food_code": "B12003",
+    "gt_food_name": "간장닭갈비",
+    "pred_food_name": "찜닭",
+    "pred_ingredients": [
+      "닭고기",
+      "간장",
+      "설탕",
+      "마늘",
+      "떡",
+      "양파",
+      "대파"
+    ],
+    "raw_response": "{\n  \"food_name\": \"찜닭\",\n  \"ingredients\": [\n    \"닭고기\",\n    \"간장\",\n    \"설탕\",\n    \"마늘\",\n    \"떡\",\n    \"양파\",\n    \"대파\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12003_간장닭갈비_01_02.jpg",
+    "sample_id": 1,
+    "food_code": "B12003",
+    "gt_food_name": "간장닭갈비",
+    "pred_food_name": "닭갈비",
+    "pred_ingredients": [
+      "닭고기",
+      "고추장",
+      "간장",
+      "설탕",
+      "마늘",
+      "양파",
+      "고구마"
+    ],
+    "raw_response": "{\n  \"food_name\": \"닭갈비\",\n  \"ingredients\": [\n    \"닭고기\",\n    \"고추장\",\n    \"간장\",\n    \"설탕\",\n    \"마늘\",\n    \"양파\",\n    \"고구마\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12003_간장닭갈비_01_03.jpg",
+    "sample_id": 1,
+    "food_code": "B12003",
+    "gt_food_name": "간장닭갈비",
+    "pred_food_name": "닭갈비",
+    "pred_ingredients": [
+      "닭고기",
+      "고추장",
+      "간장",
+      "설탕",
+      "마늘",
+      "고구마",
+      "양파"
+    ],
+    "raw_response": "{\n  \"food_name\": \"닭갈비\",\n  \"ingredients\": [\n    \"닭고기\",\n    \"고추장\",\n    \"간장\",\n    \"설탕\",\n    \"마늘\",\n    \"고구마\",\n    \"양파\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12003_간장닭갈비_01_04.jpg",
+    "sample_id": 1,
+    "food_code": "B12003",
+    "gt_food_name": "간장닭갈비",
+    "pred_food_name": "닭갈비",
+    "pred_ingredients": [
+      "닭고기",
+      "고추장",
+      "고춧가루",
+      "간장",
+      "설탕",
+      "마늘",
+      "양파",
+      "떡"
+    ],
+    "raw_response": "{\n  \"food_name\": \"닭갈비\",\n  \"ingredients\": [\n    \"닭고기\",\n    \"고추장\",\n    \"고춧가루\",\n    \"간장\",\n    \"설탕\",\n    \"마늘\",\n    \"양파\",\n    \"떡\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12003_간장닭갈비_01_05.jpg",
+    "sample_id": 1,
+    "food_code": "B12003",
+    "gt_food_name": "간장닭갈비",
+    "pred_food_name": "닭갈비",
+    "pred_ingredients": [
+      "닭고기",
+      "고추장",
+      "고춧가루",
+      "간장",
+      "설탕",
+      "마늘",
+      "양파",
+      "고구마"
+    ],
+    "raw_response": "{\n  \"food_name\": \"닭갈비\",\n  \"ingredients\": [\n    \"닭고기\",\n    \"고추장\",\n    \"고춧가루\",\n    \"간장\",\n    \"설탕\",\n    \"마늘\",\n    \"양파\",\n    \"고구마\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12003_간장닭갈비_01_06.jpg",
+    "sample_id": 1,
+    "food_code": "B12003",
+    "gt_food_name": "간장닭갈비",
+    "pred_food_name": "닭갈비",
+    "pred_ingredients": [
+      "닭고기",
+      "떡볶이 떡",
+      "고추장",
+      "간장",
+      "설탕",
+      "마늘",
+      "양파",
+      "대파"
+    ],
+    "raw_response": "{\n  \"food_name\": \"닭갈비\",\n  \"ingredients\": [\n    \"닭고기\",\n    \"떡볶이 떡\",\n    \"고추장\",\n    \"간장\",\n    \"설탕\",\n    \"마늘\",\n    \"양파\",\n    \"대파\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12003_간장닭갈비_01_07.jpg",
+    "sample_id": 1,
+    "food_code": "B12003",
+    "gt_food_name": "간장닭갈비",
+    "pred_food_name": "닭갈비",
+    "pred_ingredients": [
+      "닭고기",
+      "떡볶이 떡",
+      "고추장",
+      "간장",
+      "설탕",
+      "마늘",
+      "참깨"
+    ],
+    "raw_response": "{\n  \"food_name\": \"닭갈비\",\n  \"ingredients\": [\n    \"닭고기\",\n    \"떡볶이 떡\",\n    \"고추장\",\n    \"간장\",\n    \"설탕\",\n    \"마늘\",\n    \"참깨\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12003_간장닭갈비_01_08.jpg",
+    "sample_id": 1,
+    "food_code": "B12003",
+    "gt_food_name": "간장닭갈비",
+    "pred_food_name": "찜닭",
+    "pred_ingredients": [
+      "닭고기",
+      "떡",
+      "간장",
+      "설탕",
+      "마늘",
+      "참기름"
+    ],
+    "raw_response": "{\n  \"food_name\": \"찜닭\",\n  \"ingredients\": [\n    \"닭고기\",\n    \"떡\",\n    \"간장\",\n    \"설탕\",\n    \"마늘\",\n    \"참기름\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12005_갈비전골_14_01.jpg",
+    "sample_id": 14,
+    "food_code": "B12005",
+    "gt_food_name": "갈비전골",
+    "pred_food_name": "김치찜",
+    "pred_ingredients": [
+      "돼지고기",
+      "김치",
+      "고춧가루",
+      "다진 마늘",
+      "대파",
+      "양파",
+      "설탕"
+    ],
+    "raw_response": "{\n  \"food_name\": \"김치찜\",\n  \"ingredients\": [\n    \"돼지고기\",\n    \"김치\",\n    \"고춧가루\",\n    \"다진 마늘\",\n    \"대파\",\n    \"양파\",\n    \"설탕\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12005_갈비전골_14_02.jpg",
+    "sample_id": 14,
+    "food_code": "B12005",
+    "gt_food_name": "갈비전골",
+    "pred_food_name": "돼지고기 김치찜",
+    "pred_ingredients": [
+      "돼지고기",
+      "김치",
+      "고춧가루",
+      "양파",
+      "대파",
+      "마늘",
+      "설탕"
+    ],
+    "raw_response": "{\n  \"food_name\": \"돼지고기 김치찜\",\n  \"ingredients\": [\n    \"돼지고기\",\n    \"김치\",\n    \"고춧가루\",\n    \"양파\",\n    \"대파\",\n    \"마늘\",\n    \"설탕\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12005_갈비전골_14_03.jpg",
+    "sample_id": 14,
+    "food_code": "B12005",
+    "gt_food_name": "갈비전골",
+    "pred_food_name": "김치찌개",
+    "pred_ingredients": [
+      "김치",
+      "돼지고기",
+      "양파",
+      "대파",
+      "고춧가루",
+      "다진 마늘",
+      "물"
+    ],
+    "raw_response": "{\n  \"food_name\": \"김치찌개\",\n  \"ingredients\": [\n    \"김치\",\n    \"돼지고기\",\n    \"양파\",\n    \"대파\",\n    \"고춧가루\",\n    \"다진 마늘\",\n    \"물\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12005_갈비전골_14_04.jpg",
+    "sample_id": 14,
+    "food_code": "B12005",
+    "gt_food_name": "갈비전골",
+    "pred_food_name": "김치찜",
+    "pred_ingredients": [
+      "김치",
+      "돼지고기",
+      "고춧가루",
+      "다진 마늘",
+      "설탕",
+      "간장",
+      "물"
+    ],
+    "raw_response": "{\n  \"food_name\": \"김치찜\",\n  \"ingredients\": [\n    \"김치\",\n    \"돼지고기\",\n    \"고춧가루\",\n    \"다진 마늘\",\n    \"설탕\",\n    \"간장\",\n    \"물\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12005_갈비전골_14_05.jpg",
+    "sample_id": 14,
+    "food_code": "B12005",
+    "gt_food_name": "갈비전골",
+    "pred_food_name": "돼지고기 김치찜",
+    "pred_ingredients": [
+      "돼지고기",
+      "김치",
+      "양파",
+      "대파",
+      "고춧가루",
+      "다진 마늘",
+      "간장"
+    ],
+    "raw_response": "{\n  \"food_name\": \"돼지고기 김치찜\",\n  \"ingredients\": [\n    \"돼지고기\",\n    \"김치\",\n    \"양파\",\n    \"대파\",\n    \"고춧가루\",\n    \"다진 마늘\",\n    \"간장\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12005_갈비전골_14_06.jpg",
+    "sample_id": 14,
+    "food_code": "B12005",
+    "gt_food_name": "갈비전골",
+    "pred_food_name": "김치찜",
+    "pred_ingredients": [
+      "김치",
+      "돼지고기",
+      "고춧가루",
+      "다진 마늘",
+      "대파",
+      "양파"
+    ],
+    "raw_response": "{\n  \"food_name\": \"김치찜\",\n  \"ingredients\": [\n    \"김치\",\n    \"돼지고기\",\n    \"고춧가루\",\n    \"다진 마늘\",\n    \"대파\",\n    \"양파\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12005_갈비전골_14_07.jpg",
+    "sample_id": 14,
+    "food_code": "B12005",
+    "gt_food_name": "갈비전골",
+    "pred_food_name": "돼지고기 김치찌개",
+    "pred_ingredients": [
+      "돼지고기",
+      "김치",
+      "대파",
+      "양파",
+      "고춧가루",
+      "다진 마늘",
+      "물"
+    ],
+    "raw_response": "{\n  \"food_name\": \"돼지고기 김치찌개\",\n  \"ingredients\": [\n    \"돼지고기\",\n    \"김치\",\n    \"대파\",\n    \"양파\",\n    \"고춧가루\",\n    \"다진 마늘\",\n    \"물\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12005_갈비전골_14_08.jpg",
+    "sample_id": 14,
+    "food_code": "B12005",
+    "gt_food_name": "갈비전골",
+    "pred_food_name": "김치찌개",
+    "pred_ingredients": [
+      "김치",
+      "돼지고기",
+      "양파",
+      "대파",
+      "고춧가루",
+      "다진 마늘",
+      "물"
+    ],
+    "raw_response": "{\n  \"food_name\": \"김치찌개\",\n  \"ingredients\": [\n    \"김치\",\n    \"돼지고기\",\n    \"양파\",\n    \"대파\",\n    \"고춧가루\",\n    \"다진 마늘\",\n    \"물\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12061_등갈비찜_13_01.jpg",
+    "sample_id": 13,
+    "food_code": "B12061",
+    "gt_food_name": "등갈비찜",
+    "pred_food_name": "김치찜",
+    "pred_ingredients": [
+      "김치",
+      "돼지고기",
+      "대파",
+      "양파",
+      "고춧가루",
+      "다진 마늘",
+      "설탕"
+    ],
+    "raw_response": "{\n  \"food_name\": \"김치찜\",\n  \"ingredients\": [\n    \"김치\",\n    \"돼지고기\",\n    \"대파\",\n    \"양파\",\n    \"고춧가루\",\n    \"다진 마늘\",\n    \"설탕\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12061_등갈비찜_13_02.jpg",
+    "sample_id": 13,
+    "food_code": "B12061",
+    "gt_food_name": "등갈비찜",
+    "pred_food_name": "김치찜",
+    "pred_ingredients": [
+      "김치",
+      "돼지고기",
+      "대파",
+      "고춧가루",
+      "다진 마늘",
+      "설탕"
+    ],
+    "raw_response": "{\n  \"food_name\": \"김치찜\",\n  \"ingredients\": [\n    \"김치\",\n    \"돼지고기\",\n    \"대파\",\n    \"고춧가루\",\n    \"다진 마늘\",\n    \"설탕\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12061_등갈비찜_13_03.jpg",
+    "sample_id": 13,
+    "food_code": "B12061",
+    "gt_food_name": "등갈비찜",
+    "pred_food_name": "김치찜",
+    "pred_ingredients": [
+      "김치",
+      "돼지고기",
+      "대파",
+      "양파",
+      "고춧가루",
+      "다진 마늘",
+      "설탕"
+    ],
+    "raw_response": "{\n  \"food_name\": \"김치찜\",\n  \"ingredients\": [\n    \"김치\",\n    \"돼지고기\",\n    \"대파\",\n    \"양파\",\n    \"고춧가루\",\n    \"다진 마늘\",\n    \"설탕\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12061_등갈비찜_13_04.jpg",
+    "sample_id": 13,
+    "food_code": "B12061",
+    "gt_food_name": "등갈비찜",
+    "pred_food_name": "김치찜",
+    "pred_ingredients": [
+      "김치",
+      "돼지고기",
+      "양파",
+      "대파",
+      "고춧가루",
+      "다진 마늘",
+      "설탕",
+      "물"
+    ],
+    "raw_response": "{\n  \"food_name\": \"김치찜\",\n  \"ingredients\": [\n    \"김치\",\n    \"돼지고기\",\n    \"양파\",\n    \"대파\",\n    \"고춧가루\",\n    \"다진 마늘\",\n    \"설탕\",\n    \"물\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12061_등갈비찜_13_05.jpg",
+    "sample_id": 13,
+    "food_code": "B12061",
+    "gt_food_name": "등갈비찜",
+    "pred_food_name": "김치찜",
+    "pred_ingredients": [
+      "김치",
+      "돼지고기",
+      "대파",
+      "양파",
+      "고춧가루",
+      "다진 마늘",
+      "설탕"
+    ],
+    "raw_response": "{\n  \"food_name\": \"김치찜\",\n  \"ingredients\": [\n    \"김치\",\n    \"돼지고기\",\n    \"대파\",\n    \"양파\",\n    \"고춧가루\",\n    \"다진 마늘\",\n    \"설탕\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12061_등갈비찜_13_06.jpg",
+    "sample_id": 13,
+    "food_code": "B12061",
+    "gt_food_name": "등갈비찜",
+    "pred_food_name": "김치찜",
+    "pred_ingredients": [
+      "김치",
+      "돼지고기",
+      "대파",
+      "고춧가루",
+      "다진 마늘",
+      "설탕",
+      "물"
+    ],
+    "raw_response": "{\n  \"food_name\": \"김치찜\",\n  \"ingredients\": [\n    \"김치\",\n    \"돼지고기\",\n    \"대파\",\n    \"고춧가루\",\n    \"다진 마늘\",\n    \"설탕\",\n    \"물\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12061_등갈비찜_13_07.jpg",
+    "sample_id": 13,
+    "food_code": "B12061",
+    "gt_food_name": "등갈비찜",
+    "pred_food_name": "김치찜",
+    "pred_ingredients": [
+      "김치",
+      "돼지고기",
+      "대파",
+      "양파",
+      "고춧가루",
+      "다진 마늘",
+      "설탕"
+    ],
+    "raw_response": "{\n  \"food_name\": \"김치찜\",\n  \"ingredients\": [\n    \"김치\",\n    \"돼지고기\",\n    \"대파\",\n    \"양파\",\n    \"고춧가루\",\n    \"다진 마늘\",\n    \"설탕\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12061_등갈비찜_13_08.jpg",
+    "sample_id": 13,
+    "food_code": "B12061",
+    "gt_food_name": "등갈비찜",
+    "pred_food_name": "김치찜",
+    "pred_ingredients": [
+      "김치",
+      "돼지고기",
+      "대파",
+      "고춧가루",
+      "다진 마늘",
+      "설탕",
+      "물"
+    ],
+    "raw_response": "{\n  \"food_name\": \"김치찜\",\n  \"ingredients\": [\n    \"김치\",\n    \"돼지고기\",\n    \"대파\",\n    \"고춧가루\",\n    \"다진 마늘\",\n    \"설탕\",\n    \"물\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12104_생태찌개_14_01.jpg",
+    "sample_id": 14,
+    "food_code": "B12104",
+    "gt_food_name": "생태찌개",
+    "pred_food_name": "김치찌개",
+    "pred_ingredients": [
+      "김치",
+      "두부",
+      "돼지고기",
+      "무",
+      "콩나물",
+      "고춧가루",
+      "물"
+    ],
+    "raw_response": "{\n  \"food_name\": \"김치찌개\",\n  \"ingredients\": [\n    \"김치\",\n    \"두부\",\n    \"돼지고기\",\n    \"무\",\n    \"콩나물\",\n    \"고춧가루\",\n    \"물\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12104_생태찌개_14_02.jpg",
+    "sample_id": 14,
+    "food_code": "B12104",
+    "gt_food_name": "생태찌개",
+    "pred_food_name": "동태찌개",
+    "pred_ingredients": [
+      "동태",
+      "두부",
+      "무",
+      "콩나물",
+      "고춧가루",
+      "마늘",
+      "파"
+    ],
+    "raw_response": "{\n  \"food_name\": \"동태찌개\",\n  \"ingredients\": [\n    \"동태\",\n    \"두부\",\n    \"무\",\n    \"콩나물\",\n    \"고춧가루\",\n    \"마늘\",\n    \"파\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12104_생태찌개_14_03.jpg",
+    "sample_id": 14,
+    "food_code": "B12104",
+    "gt_food_name": "생태찌개",
+    "pred_food_name": "동태찌개",
+    "pred_ingredients": [
+      "동태",
+      "두부",
+      "무",
+      "콩나물",
+      "고춧가루",
+      "대파",
+      "마늘"
+    ],
+    "raw_response": "{\n  \"food_name\": \"동태찌개\",\n  \"ingredients\": [\n    \"동태\",\n    \"두부\",\n    \"무\",\n    \"콩나물\",\n    \"고춧가루\",\n    \"대파\",\n    \"마늘\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12104_생태찌개_14_04.jpg",
+    "sample_id": 14,
+    "food_code": "B12104",
+    "gt_food_name": "생태찌개",
+    "pred_food_name": "동태찌개",
+    "pred_ingredients": [
+      "동태",
+      "두부",
+      "무",
+      "콩나물",
+      "고춧가루",
+      "대파",
+      "마늘"
+    ],
+    "raw_response": "{\n  \"food_name\": \"동태찌개\",\n  \"ingredients\": [\n    \"동태\",\n    \"두부\",\n    \"무\",\n    \"콩나물\",\n    \"고춧가루\",\n    \"대파\",\n    \"마늘\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12104_생태찌개_14_05.jpg",
+    "sample_id": 14,
+    "food_code": "B12104",
+    "gt_food_name": "생태찌개",
+    "pred_food_name": "동태찌개",
+    "pred_ingredients": [
+      "동태",
+      "두부",
+      "콩나물",
+      "고춧가루",
+      "마늘",
+      "파",
+      "무"
+    ],
+    "raw_response": "{\n  \"food_name\": \"동태찌개\",\n  \"ingredients\": [\n    \"동태\",\n    \"두부\",\n    \"콩나물\",\n    \"고춧가루\",\n    \"마늘\",\n    \"파\",\n    \"무\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12104_생태찌개_14_06.jpg",
+    "sample_id": 14,
+    "food_code": "B12104",
+    "gt_food_name": "생태찌개",
+    "pred_food_name": "동태찌개",
+    "pred_ingredients": [
+      "동태",
+      "두부",
+      "콩나물",
+      "고춧가루",
+      "마늘",
+      "파",
+      "무"
+    ],
+    "raw_response": "{\n  \"food_name\": \"동태찌개\",\n  \"ingredients\": [\n    \"동태\",\n    \"두부\",\n    \"콩나물\",\n    \"고춧가루\",\n    \"마늘\",\n    \"파\",\n    \"무\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12104_생태찌개_14_07.jpg",
+    "sample_id": 14,
+    "food_code": "B12104",
+    "gt_food_name": "생태찌개",
+    "pred_food_name": "동태찌개",
+    "pred_ingredients": [
+      "동태",
+      "두부",
+      "콩나물",
+      "고춧가루",
+      "마늘",
+      "파",
+      "무"
+    ],
+    "raw_response": "{\n  \"food_name\": \"동태찌개\",\n  \"ingredients\": [\n    \"동태\",\n    \"두부\",\n    \"콩나물\",\n    \"고춧가루\",\n    \"마늘\",\n    \"파\",\n    \"무\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12104_생태찌개_14_08.jpg",
+    "sample_id": 14,
+    "food_code": "B12104",
+    "gt_food_name": "생태찌개",
+    "pred_food_name": "동태찌개",
+    "pred_ingredients": [
+      "동태",
+      "두부",
+      "콩나물",
+      "고춧가루",
+      "마늘",
+      "파",
+      "무"
+    ],
+    "raw_response": "{\n  \"food_name\": \"동태찌개\",\n  \"ingredients\": [\n    \"동태\",\n    \"두부\",\n    \"콩나물\",\n    \"고춧가루\",\n    \"마늘\",\n    \"파\",\n    \"무\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_11_01.jpg",
+    "sample_id": 11,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "순두부찌개",
+    "pred_ingredients": [
+      "순두부",
+      "고추기름",
+      "고춧가루",
+      "대파",
+      "양파",
+      "마늘",
+      "달걀"
+    ],
+    "raw_response": "{\n  \"food_name\": \"순두부찌개\",\n  \"ingredients\": [\n    \"순두부\",\n    \"고추기름\",\n    \"고춧가루\",\n    \"대파\",\n    \"양파\",\n    \"마늘\",\n    \"달걀\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_11_02.jpg",
+    "sample_id": 11,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "순두부찌개",
+    "pred_ingredients": [
+      "순두부",
+      "고추기름",
+      "고춧가루",
+      "양파",
+      "대파",
+      "마늘",
+      "물",
+      "소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"순두부찌개\",\n  \"ingredients\": [\n    \"순두부\",\n    \"고추기름\",\n    \"고춧가루\",\n    \"양파\",\n    \"대파\",\n    \"마늘\",\n    \"물\",\n    \"소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_11_03.jpg",
+    "sample_id": 11,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "순두부찌개",
+    "pred_ingredients": [
+      "순두부",
+      "고추기름",
+      "고춧가루",
+      "양파",
+      "대파",
+      "마늘",
+      "달걀",
+      "바지락"
+    ],
+    "raw_response": "{\n  \"food_name\": \"순두부찌개\",\n  \"ingredients\": [\n    \"순두부\",\n    \"고추기름\",\n    \"고춧가루\",\n    \"양파\",\n    \"대파\",\n    \"마늘\",\n    \"달걀\",\n    \"바지락\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_11_04.jpg",
+    "sample_id": 11,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "순두부찌개",
+    "pred_ingredients": [
+      "순두부",
+      "고추기름",
+      "고춧가루",
+      "양파",
+      "대파",
+      "마늘",
+      "바지락",
+      "달걀"
+    ],
+    "raw_response": "{\n  \"food_name\": \"순두부찌개\",\n  \"ingredients\": [\n    \"순두부\",\n    \"고추기름\",\n    \"고춧가루\",\n    \"양파\",\n    \"대파\",\n    \"마늘\",\n    \"바지락\",\n    \"달걀\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_11_05.jpg",
+    "sample_id": 11,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "순두부찌개",
+    "pred_ingredients": [
+      "순두부",
+      "고추기름",
+      "고춧가루",
+      "양파",
+      "대파",
+      "마늘",
+      "돼지고기",
+      "바지락",
+      "달걀"
+    ],
+    "raw_response": "{\n  \"food_name\": \"순두부찌개\",\n  \"ingredients\": [\n    \"순두부\",\n    \"고추기름\",\n    \"고춧가루\",\n    \"양파\",\n    \"대파\",\n    \"마늘\",\n    \"돼지고기\",\n    \"바지락\",\n    \"달걀\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_11_06.jpg",
+    "sample_id": 11,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "순두부찌개",
+    "pred_ingredients": [
+      "순두부",
+      "고추기름",
+      "고춧가루",
+      "대파",
+      "양파",
+      "다진 마늘",
+      "간장",
+      "소금",
+      "물"
+    ],
+    "raw_response": "{\n  \"food_name\": \"순두부찌개\",\n  \"ingredients\": [\n    \"순두부\",\n    \"고추기름\",\n    \"고춧가루\",\n    \"대파\",\n    \"양파\",\n    \"다진 마늘\",\n    \"간장\",\n    \"소금\",\n    \"물\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_11_07.jpg",
+    "sample_id": 11,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "김치찌개",
+    "pred_ingredients": [
+      "김치",
+      "돼지고기",
+      "두부",
+      "대파",
+      "양파",
+      "고춧가루",
+      "다진 마늘"
+    ],
+    "raw_response": "{\n  \"food_name\": \"김치찌개\",\n  \"ingredients\": [\n    \"김치\",\n    \"돼지고기\",\n    \"두부\",\n    \"대파\",\n    \"양파\",\n    \"고춧가루\",\n    \"다진 마늘\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_11_08.jpg",
+    "sample_id": 11,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "순두부찌개",
+    "pred_ingredients": [
+      "순두부",
+      "고추기름",
+      "고춧가루",
+      "양파",
+      "대파",
+      "마늘",
+      "애호박",
+      "바지락",
+      "달걀"
+    ],
+    "raw_response": "{\n  \"food_name\": \"순두부찌개\",\n  \"ingredients\": [\n    \"순두부\",\n    \"고추기름\",\n    \"고춧가루\",\n    \"양파\",\n    \"대파\",\n    \"마늘\",\n    \"애호박\",\n    \"바지락\",\n    \"달걀\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12153_케이준양념감자_09_01.jpg",
+    "sample_id": 9,
+    "food_code": "B12153",
+    "gt_food_name": "케이준양념감자",
+    "pred_food_name": "감자튀김",
+    "pred_ingredients": [
+      "감자",
+      "식용유",
+      "소금",
+      "시즈닝"
+    ],
+    "raw_response": "{\n  \"food_name\": \"감자튀김\",\n  \"ingredients\": [\n    \"감자\",\n    \"식용유\",\n    \"소금\",\n    \"시즈닝\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12153_케이준양념감자_09_02.jpg",
+    "sample_id": 9,
+    "food_code": "B12153",
+    "gt_food_name": "케이준양념감자",
+    "pred_food_name": "감자튀김",
+    "pred_ingredients": [
+      "감자",
+      "식용유",
+      "소금",
+      "시즈닝"
+    ],
+    "raw_response": "{\n  \"food_name\": \"감자튀김\",\n  \"ingredients\": [\n    \"감자\",\n    \"식용유\",\n    \"소금\",\n    \"시즈닝\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12153_케이준양념감자_09_03.jpg",
+    "sample_id": 9,
+    "food_code": "B12153",
+    "gt_food_name": "케이준양념감자",
+    "pred_food_name": "감자튀김",
+    "pred_ingredients": [
+      "감자",
+      "식용유",
+      "소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"감자튀김\",\n  \"ingredients\": [\n    \"감자\",\n    \"식용유\",\n    \"소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12153_케이준양념감자_09_04.jpg",
+    "sample_id": 9,
+    "food_code": "B12153",
+    "gt_food_name": "케이준양념감자",
+    "pred_food_name": "감자튀김",
+    "pred_ingredients": [
+      "감자",
+      "식용유",
+      "소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"감자튀김\",\n  \"ingredients\": [\n    \"감자\",\n    \"식용유\",\n    \"소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12153_케이준양념감자_09_05.jpg",
+    "sample_id": 9,
+    "food_code": "B12153",
+    "gt_food_name": "케이준양념감자",
+    "pred_food_name": "감자튀김",
+    "pred_ingredients": [
+      "감자",
+      "식용유",
+      "소금",
+      "시즈닝"
+    ],
+    "raw_response": "{\n  \"food_name\": \"감자튀김\",\n  \"ingredients\": [\n    \"감자\",\n    \"식용유\",\n    \"소금\",\n    \"시즈닝\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12153_케이준양념감자_09_06.jpg",
+    "sample_id": 9,
+    "food_code": "B12153",
+    "gt_food_name": "케이준양념감자",
+    "pred_food_name": "감자튀김",
+    "pred_ingredients": [
+      "감자",
+      "식용유",
+      "소금",
+      "시즈닝"
+    ],
+    "raw_response": "{\n  \"food_name\": \"감자튀김\",\n  \"ingredients\": [\n    \"감자\",\n    \"식용유\",\n    \"소금\",\n    \"시즈닝\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12153_케이준양념감자_09_07.jpg",
+    "sample_id": 9,
+    "food_code": "B12153",
+    "gt_food_name": "케이준양념감자",
+    "pred_food_name": "감자튀김",
+    "pred_ingredients": [
+      "감자",
+      "식용유",
+      "소금",
+      "시즈닝"
+    ],
+    "raw_response": "{\n  \"food_name\": \"감자튀김\",\n  \"ingredients\": [\n    \"감자\",\n    \"식용유\",\n    \"소금\",\n    \"시즈닝\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12153_케이준양념감자_09_08.jpg",
+    "sample_id": 9,
+    "food_code": "B12153",
+    "gt_food_name": "케이준양념감자",
+    "pred_food_name": "감자튀김",
+    "pred_ingredients": [
+      "감자",
+      "식용유",
+      "소금",
+      "시즈닝"
+    ],
+    "raw_response": "{\n  \"food_name\": \"감자튀김\",\n  \"ingredients\": [\n    \"감자\",\n    \"식용유\",\n    \"소금\",\n    \"시즈닝\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12155_코울슬로_14_01.jpg",
+    "sample_id": 14,
+    "food_code": "B12155",
+    "gt_food_name": "코울슬로",
+    "pred_food_name": "마카로니 샐러드",
+    "pred_ingredients": [
+      "마카로니",
+      "옥수수",
+      "당근",
+      "마요네즈",
+      "파슬리"
+    ],
+    "raw_response": "{\n  \"food_name\": \"마카로니 샐러드\",\n  \"ingredients\": [\n    \"마카로니\",\n    \"옥수수\",\n    \"당근\",\n    \"마요네즈\",\n    \"파슬리\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12155_코울슬로_14_02.jpg",
+    "sample_id": 14,
+    "food_code": "B12155",
+    "gt_food_name": "코울슬로",
+    "pred_food_name": "코울슬로",
+    "pred_ingredients": [
+      "양배추",
+      "당근",
+      "옥수수",
+      "마요네즈",
+      "식초",
+      "설탕",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"코울슬로\",\n  \"ingredients\": [\n    \"양배추\",\n    \"당근\",\n    \"옥수수\",\n    \"마요네즈\",\n    \"식초\",\n    \"설탕\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12155_코울슬로_14_03.jpg",
+    "sample_id": 14,
+    "food_code": "B12155",
+    "gt_food_name": "코울슬로",
+    "pred_food_name": "마카로니 샐러드",
+    "pred_ingredients": [
+      "마카로니",
+      "옥수수",
+      "당근",
+      "마요네즈",
+      "파슬리"
+    ],
+    "raw_response": "{\n  \"food_name\": \"마카로니 샐러드\",\n  \"ingredients\": [\n    \"마카로니\",\n    \"옥수수\",\n    \"당근\",\n    \"마요네즈\",\n    \"파슬리\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12155_코울슬로_14_04.jpg",
+    "sample_id": 14,
+    "food_code": "B12155",
+    "gt_food_name": "코울슬로",
+    "pred_food_name": "마카로니 샐러드",
+    "pred_ingredients": [
+      "마카로니",
+      "옥수수",
+      "당근",
+      "마요네즈",
+      "양파",
+      "파슬리"
+    ],
+    "raw_response": "{\n  \"food_name\": \"마카로니 샐러드\",\n  \"ingredients\": [\n    \"마카로니\",\n    \"옥수수\",\n    \"당근\",\n    \"마요네즈\",\n    \"양파\",\n    \"파슬리\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12155_코울슬로_14_05.jpg",
+    "sample_id": 14,
+    "food_code": "B12155",
+    "gt_food_name": "코울슬로",
+    "pred_food_name": "콘 샐러드",
+    "pred_ingredients": [
+      "옥수수",
+      "양배추",
+      "당근",
+      "마요네즈",
+      "설탕",
+      "식초"
+    ],
+    "raw_response": "{\n  \"food_name\": \"콘 샐러드\",\n  \"ingredients\": [\n    \"옥수수\",\n    \"양배추\",\n    \"당근\",\n    \"마요네즈\",\n    \"설탕\",\n    \"식초\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12155_코울슬로_14_06.jpg",
+    "sample_id": 14,
+    "food_code": "B12155",
+    "gt_food_name": "코울슬로",
+    "pred_food_name": "마카로니 샐러드",
+    "pred_ingredients": [
+      "마카로니",
+      "옥수수",
+      "당근",
+      "마요네즈",
+      "양파"
+    ],
+    "raw_response": "{\n  \"food_name\": \"마카로니 샐러드\",\n  \"ingredients\": [\n    \"마카로니\",\n    \"옥수수\",\n    \"당근\",\n    \"마요네즈\",\n    \"양파\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12155_코울슬로_14_07.jpg",
+    "sample_id": 14,
+    "food_code": "B12155",
+    "gt_food_name": "코울슬로",
+    "pred_food_name": "마카로니 샐러드",
+    "pred_ingredients": [
+      "마카로니",
+      "옥수수",
+      "당근",
+      "마요네즈",
+      "양파",
+      "파슬리"
+    ],
+    "raw_response": "{\n  \"food_name\": \"마카로니 샐러드\",\n  \"ingredients\": [\n    \"마카로니\",\n    \"옥수수\",\n    \"당근\",\n    \"마요네즈\",\n    \"양파\",\n    \"파슬리\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12155_코울슬로_14_08.jpg",
+    "sample_id": 14,
+    "food_code": "B12155",
+    "gt_food_name": "코울슬로",
+    "pred_food_name": "마카로니 샐러드",
+    "pred_ingredients": [
+      "마카로니",
+      "옥수수",
+      "당근",
+      "마요네즈",
+      "양파",
+      "파슬리"
+    ],
+    "raw_response": "{\n  \"food_name\": \"마카로니 샐러드\",\n  \"ingredients\": [\n    \"마카로니\",\n    \"옥수수\",\n    \"당근\",\n    \"마요네즈\",\n    \"양파\",\n    \"파슬리\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12160_크림함박스테이크_07_01.jpg",
+    "sample_id": 7,
+    "food_code": "B12160",
+    "gt_food_name": "크림함박스테이크",
+    "pred_food_name": "함박 스테이크",
+    "pred_ingredients": [
+      "다진 소고기",
+      "다진 돼지고기",
+      "양파",
+      "빵가루",
+      "계란",
+      "크림 소스",
+      "파슬리",
+      "피클"
+    ],
+    "raw_response": "{\n  \"food_name\": \"함박 스테이크\",\n  \"ingredients\": [\n    \"다진 소고기\",\n    \"다진 돼지고기\",\n    \"양파\",\n    \"빵가루\",\n    \"계란\",\n    \"크림 소스\",\n    \"파슬리\",\n    \"피클\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12160_크림함박스테이크_07_02.jpg",
+    "sample_id": 7,
+    "food_code": "B12160",
+    "gt_food_name": "크림함박스테이크",
+    "pred_food_name": "함박 스테이크",
+    "pred_ingredients": [
+      "다진 소고기",
+      "다진 돼지고기",
+      "양파",
+      "빵가루",
+      "계란",
+      "우유",
+      "크림 소스",
+      "파슬리",
+      "피클"
+    ],
+    "raw_response": "{\n  \"food_name\": \"함박 스테이크\",\n  \"ingredients\": [\n    \"다진 소고기\",\n    \"다진 돼지고기\",\n    \"양파\",\n    \"빵가루\",\n    \"계란\",\n    \"우유\",\n    \"크림 소스\",\n    \"파슬리\",\n    \"피클\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12160_크림함박스테이크_07_03.jpg",
+    "sample_id": 7,
+    "food_code": "B12160",
+    "gt_food_name": "크림함박스테이크",
+    "pred_food_name": "함박 스테이크",
+    "pred_ingredients": [
+      "다진 소고기",
+      "다진 돼지고기",
+      "양파",
+      "빵가루",
+      "계란",
+      "크림 소스",
+      "파슬리",
+      "피클"
+    ],
+    "raw_response": "{\n  \"food_name\": \"함박 스테이크\",\n  \"ingredients\": [\n    \"다진 소고기\",\n    \"다진 돼지고기\",\n    \"양파\",\n    \"빵가루\",\n    \"계란\",\n    \"크림 소스\",\n    \"파슬리\",\n    \"피클\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12160_크림함박스테이크_07_04.jpg",
+    "sample_id": 7,
+    "food_code": "B12160",
+    "gt_food_name": "크림함박스테이크",
+    "pred_food_name": "함박 스테이크",
+    "pred_ingredients": [
+      "다진 소고기",
+      "다진 돼지고기",
+      "양파",
+      "빵가루",
+      "계란",
+      "크림 소스",
+      "파슬리",
+      "할라피뇨",
+      "피클"
+    ],
+    "raw_response": "{\n  \"food_name\": \"함박 스테이크\",\n  \"ingredients\": [\n    \"다진 소고기\",\n    \"다진 돼지고기\",\n    \"양파\",\n    \"빵가루\",\n    \"계란\",\n    \"크림 소스\",\n    \"파슬리\",\n    \"할라피뇨\",\n    \"피클\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12160_크림함박스테이크_07_05.jpg",
+    "sample_id": 7,
+    "food_code": "B12160",
+    "gt_food_name": "크림함박스테이크",
+    "pred_food_name": "함박 스테이크",
+    "pred_ingredients": [
+      "다진 소고기",
+      "다진 돼지고기",
+      "양파",
+      "빵가루",
+      "계란",
+      "크림 소스",
+      "파슬리",
+      "피클",
+      "할라피뇨"
+    ],
+    "raw_response": "{\n  \"food_name\": \"함박 스테이크\",\n  \"ingredients\": [\n    \"다진 소고기\",\n    \"다진 돼지고기\",\n    \"양파\",\n    \"빵가루\",\n    \"계란\",\n    \"크림 소스\",\n    \"파슬리\",\n    \"피클\",\n    \"할라피뇨\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12160_크림함박스테이크_07_06.jpg",
+    "sample_id": 7,
+    "food_code": "B12160",
+    "gt_food_name": "크림함박스테이크",
+    "pred_food_name": "햄버그 스테이크",
+    "pred_ingredients": [
+      "다진 소고기",
+      "다진 돼지고기",
+      "양파",
+      "빵가루",
+      "계란",
+      "우유",
+      "크림 소스",
+      "파슬리",
+      "피클"
+    ],
+    "raw_response": "{\n  \"food_name\": \"햄버그 스테이크\",\n  \"ingredients\": [\n    \"다진 소고기\",\n    \"다진 돼지고기\",\n    \"양파\",\n    \"빵가루\",\n    \"계란\",\n    \"우유\",\n    \"크림 소스\",\n    \"파슬리\",\n    \"피클\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12160_크림함박스테이크_07_07.jpg",
+    "sample_id": 7,
+    "food_code": "B12160",
+    "gt_food_name": "크림함박스테이크",
+    "pred_food_name": "함박 스테이크",
+    "pred_ingredients": [
+      "다진 소고기",
+      "다진 돼지고기",
+      "양파",
+      "빵가루",
+      "계란",
+      "크림 소스",
+      "파슬리",
+      "할라피뇨",
+      "피클"
+    ],
+    "raw_response": "{\n  \"food_name\": \"함박 스테이크\",\n  \"ingredients\": [\n    \"다진 소고기\",\n    \"다진 돼지고기\",\n    \"양파\",\n    \"빵가루\",\n    \"계란\",\n    \"크림 소스\",\n    \"파슬리\",\n    \"할라피뇨\",\n    \"피클\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12160_크림함박스테이크_07_08.jpg",
+    "sample_id": 7,
+    "food_code": "B12160",
+    "gt_food_name": "크림함박스테이크",
+    "pred_food_name": "치킨 프라이드 스테이크",
+    "pred_ingredients": [
+      "소고기",
+      "밀가루",
+      "계란",
+      "우유",
+      "버터",
+      "후추",
+      "소금",
+      "파슬리",
+      "할라피뇨",
+      "피클"
+    ],
+    "raw_response": "{\n  \"food_name\": \"치킨 프라이드 스테이크\",\n  \"ingredients\": [\n    \"소고기\",\n    \"밀가루\",\n    \"계란\",\n    \"우유\",\n    \"버터\",\n    \"후추\",\n    \"소금\",\n    \"파슬리\",\n    \"할라피뇨\",\n    \"피클\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_30_01.jpg",
+    "sample_id": 30,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "달걀 흰자",
+      "전분",
+      "소금",
+      "후추",
+      "식용유"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"달걀 흰자\",\n    \"전분\",\n    \"소금\",\n    \"후추\",\n    \"식용유\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_30_02.jpg",
+    "sample_id": 30,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "달걀 흰자",
+      "전분",
+      "소금",
+      "후추",
+      "식용유"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"달걀 흰자\",\n    \"전분\",\n    \"소금\",\n    \"후추\",\n    \"식용유\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_30_03.jpg",
+    "sample_id": 30,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "새우 토스트",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "계란",
+      "전분",
+      "식용유",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 토스트\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"계란\",\n    \"전분\",\n    \"식용유\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_30_04.jpg",
+    "sample_id": 30,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "달걀 흰자",
+      "전분",
+      "소금",
+      "후추",
+      "식용유"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"달걀 흰자\",\n    \"전분\",\n    \"소금\",\n    \"후추\",\n    \"식용유\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_30_05.jpg",
+    "sample_id": 30,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "달걀 흰자",
+      "전분",
+      "소금",
+      "후추",
+      "식용유"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"달걀 흰자\",\n    \"전분\",\n    \"소금\",\n    \"후추\",\n    \"식용유\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_30_06.jpg",
+    "sample_id": 30,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "전분",
+      "달걀 흰자",
+      "식용유",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"전분\",\n    \"달걀 흰자\",\n    \"식용유\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_30_07.jpg",
+    "sample_id": 30,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "새우 토스트",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "기름",
+      "전분",
+      "계란"
+    ],
+    "raw_response": "{\n  \"food_name\": \"새우 토스트\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"기름\",\n    \"전분\",\n    \"계란\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_30_08.jpg",
+    "sample_id": 30,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "전분",
+      "달걀 흰자",
+      "식용유",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"멘보샤\",\n  \"ingredients\": [\n    \"식빵\",\n    \"새우\",\n    \"전분\",\n    \"달걀 흰자\",\n    \"식용유\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_25_01.jpg",
+    "sample_id": 25,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "숙주나물",
+      "양파",
+      "쌀국수 육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀면\",\n    \"숙주나물\",\n    \"양파\",\n    \"쌀국수 육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_25_02.jpg",
+    "sample_id": 25,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "숙주나물국",
+    "pred_ingredients": [
+      "숙주나물",
+      "양파",
+      "간장",
+      "물",
+      "다진 마늘"
+    ],
+    "raw_response": "{\n  \"food_name\": \"숙주나물국\",\n  \"ingredients\": [\n    \"숙주나물\",\n    \"양파\",\n    \"간장\",\n    \"물\",\n    \"다진 마늘\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_25_03.jpg",
+    "sample_id": 25,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "콩나물국",
+    "pred_ingredients": [
+      "콩나물",
+      "양파",
+      "국물"
+    ],
+    "raw_response": "{\n  \"food_name\": \"콩나물국\",\n  \"ingredients\": [\n    \"콩나물\",\n    \"양파\",\n    \"국물\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_25_04.jpg",
+    "sample_id": 25,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀국수 면",
+      "숙주나물",
+      "양파",
+      "쌀국수 육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀국수 면\",\n    \"숙주나물\",\n    \"양파\",\n    \"쌀국수 육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_25_05.jpg",
+    "sample_id": 25,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "숙주나물국",
+    "pred_ingredients": [
+      "숙주나물",
+      "간장",
+      "물",
+      "파",
+      "마늘"
+    ],
+    "raw_response": "{\n  \"food_name\": \"숙주나물국\",\n  \"ingredients\": [\n    \"숙주나물\",\n    \"간장\",\n    \"물\",\n    \"파\",\n    \"마늘\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_25_06.jpg",
+    "sample_id": 25,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "소고기 육수",
+      "숙주나물",
+      "양파"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀면\",\n    \"소고기 육수\",\n    \"숙주나물\",\n    \"양파\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_25_07.jpg",
+    "sample_id": 25,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "숙주나물",
+      "양파",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀면\",\n    \"숙주나물\",\n    \"양파\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_25_08.jpg",
+    "sample_id": 25,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "숙주나물",
+      "양파",
+      "소고기 육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"쌀국수\",\n  \"ingredients\": [\n    \"쌀면\",\n    \"숙주나물\",\n    \"양파\",\n    \"소고기 육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_37_01.jpg",
+    "sample_id": 37,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "울면",
+    "pred_ingredients": [
+      "밀가루 면",
+      "표고버섯",
+      "계란",
+      "애호박",
+      "빨간 파프리카",
+      "노란 파프리카",
+      "전분물",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"울면\",\n  \"ingredients\": [\n    \"밀가루 면\",\n    \"표고버섯\",\n    \"계란\",\n    \"애호박\",\n    \"빨간 파프리카\",\n    \"노란 파프리카\",\n    \"전분물\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_37_02.jpg",
+    "sample_id": 37,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "울면",
+    "pred_ingredients": [
+      "중화면",
+      "새우",
+      "표고버섯",
+      "계란",
+      "피망",
+      "파프리카",
+      "애호박",
+      "전분물",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"울면\",\n  \"ingredients\": [\n    \"중화면\",\n    \"새우\",\n    \"표고버섯\",\n    \"계란\",\n    \"피망\",\n    \"파프리카\",\n    \"애호박\",\n    \"전분물\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_37_03.jpg",
+    "sample_id": 37,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "울면",
+    "pred_ingredients": [
+      "중화면",
+      "새우",
+      "표고버섯",
+      "계란",
+      "피망",
+      "애호박",
+      "전분물"
+    ],
+    "raw_response": "{\n  \"food_name\": \"울면\",\n  \"ingredients\": [\n    \"중화면\",\n    \"새우\",\n    \"표고버섯\",\n    \"계란\",\n    \"피망\",\n    \"애호박\",\n    \"전분물\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_37_04.jpg",
+    "sample_id": 37,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "울면",
+    "pred_ingredients": [
+      "중화면",
+      "새우",
+      "표고버섯",
+      "계란",
+      "피망",
+      "오이",
+      "전분물",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"울면\",\n  \"ingredients\": [\n    \"중화면\",\n    \"새우\",\n    \"표고버섯\",\n    \"계란\",\n    \"피망\",\n    \"오이\",\n    \"전분물\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_37_05.jpg",
+    "sample_id": 37,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "울면",
+    "pred_ingredients": [
+      "밀가루 면",
+      "새우",
+      "표고버섯",
+      "애호박",
+      "당근",
+      "노란 파프리카",
+      "빨간 파프리카",
+      "계란",
+      "전분물"
+    ],
+    "raw_response": "{\n  \"food_name\": \"울면\",\n  \"ingredients\": [\n    \"밀가루 면\",\n    \"새우\",\n    \"표고버섯\",\n    \"애호박\",\n    \"당근\",\n    \"노란 파프리카\",\n    \"빨간 파프리카\",\n    \"계란\",\n    \"전분물\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_37_06.jpg",
+    "sample_id": 37,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "중국식 냉면",
+    "pred_ingredients": [
+      "밀면",
+      "육수",
+      "오이",
+      "파프리카",
+      "표고버섯",
+      "계란 지단",
+      "새우",
+      "해파리"
+    ],
+    "raw_response": "{\n  \"food_name\": \"중국식 냉면\",\n  \"ingredients\": [\n    \"밀면\",\n    \"육수\",\n    \"오이\",\n    \"파프리카\",\n    \"표고버섯\",\n    \"계란 지단\",\n    \"새우\",\n    \"해파리\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_37_07.jpg",
+    "sample_id": 37,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "울면",
+    "pred_ingredients": [
+      "밀가루 면",
+      "새우",
+      "표고버섯",
+      "애호박",
+      "당근",
+      "파프리카",
+      "계란",
+      "전분물"
+    ],
+    "raw_response": "{\n  \"food_name\": \"울면\",\n  \"ingredients\": [\n    \"밀가루 면\",\n    \"새우\",\n    \"표고버섯\",\n    \"애호박\",\n    \"당근\",\n    \"파프리카\",\n    \"계란\",\n    \"전분물\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_37_08.jpg",
+    "sample_id": 37,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "울면",
+    "pred_ingredients": [
+      "밀가루 면",
+      "새우",
+      "표고버섯",
+      "애호박",
+      "당근",
+      "파프리카",
+      "계란",
+      "전분물"
+    ],
+    "raw_response": "{\n  \"food_name\": \"울면\",\n  \"ingredients\": [\n    \"밀가루 면\",\n    \"새우\",\n    \"표고버섯\",\n    \"애호박\",\n    \"당근\",\n    \"파프리카\",\n    \"계란\",\n    \"전분물\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11017_냉채족발_09_01.jpg",
+    "sample_id": 9,
+    "food_code": "B11017",
+    "gt_food_name": "냉채족발",
+    "pred_food_name": "치킨 샐러드 샌드위치",
+    "pred_ingredients": [
+      "식빵",
+      "닭가슴살",
+      "양배추",
+      "적양배추",
+      "상추",
+      "드레싱"
+    ],
+    "raw_response": "{\n  \"food_name\": \"치킨 샐러드 샌드위치\",\n  \"ingredients\": [\n    \"식빵\",\n    \"닭가슴살\",\n    \"양배추\",\n    \"적양배추\",\n    \"상추\",\n    \"드레싱\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11017_냉채족발_09_02.jpg",
+    "sample_id": 9,
+    "food_code": "B11017",
+    "gt_food_name": "냉채족발",
+    "pred_food_name": "치킨 샐러드 샌드위치",
+    "pred_ingredients": [
+      "빵",
+      "닭가슴살",
+      "양배추",
+      "적양배추",
+      "상추",
+      "드레싱"
+    ],
+    "raw_response": "{\n  \"food_name\": \"치킨 샐러드 샌드위치\",\n  \"ingredients\": [\n    \"빵\",\n    \"닭가슴살\",\n    \"양배추\",\n    \"적양배추\",\n    \"상추\",\n    \"드레싱\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11017_냉채족발_09_03.jpg",
+    "sample_id": 9,
+    "food_code": "B11017",
+    "gt_food_name": "냉채족발",
+    "pred_food_name": "치킨 샐러드",
+    "pred_ingredients": [
+      "닭고기",
+      "양배추",
+      "적양배추",
+      "상추",
+      "드레싱"
+    ],
+    "raw_response": "{\n  \"food_name\": \"치킨 샐러드\",\n  \"ingredients\": [\n    \"닭고기\",\n    \"양배추\",\n    \"적양배추\",\n    \"상추\",\n    \"드레싱\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11017_냉채족발_09_04.jpg",
+    "sample_id": 9,
+    "food_code": "B11017",
+    "gt_food_name": "냉채족발",
+    "pred_food_name": "치킨 샐러드",
+    "pred_ingredients": [
+      "닭가슴살",
+      "양상추",
+      "적양배추",
+      "양배추",
+      "드레싱"
+    ],
+    "raw_response": "{\n  \"food_name\": \"치킨 샐러드\",\n  \"ingredients\": [\n    \"닭가슴살\",\n    \"양상추\",\n    \"적양배추\",\n    \"양배추\",\n    \"드레싱\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11017_냉채족발_09_05.jpg",
+    "sample_id": 9,
+    "food_code": "B11017",
+    "gt_food_name": "냉채족발",
+    "pred_food_name": "족발 냉채",
+    "pred_ingredients": [
+      "족발",
+      "양배추",
+      "적양배추",
+      "겨자 소스",
+      "오이"
+    ],
+    "raw_response": "{\n  \"food_name\": \"족발 냉채\",\n  \"ingredients\": [\n    \"족발\",\n    \"양배추\",\n    \"적양배추\",\n    \"겨자 소스\",\n    \"오이\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11017_냉채족발_09_06.jpg",
+    "sample_id": 9,
+    "food_code": "B11017",
+    "gt_food_name": "냉채족발",
+    "pred_food_name": "족발",
+    "pred_ingredients": [
+      "돼지족발",
+      "양배추",
+      "적양배추",
+      "파",
+      "간장",
+      "마늘",
+      "생강",
+      "설탕"
+    ],
+    "raw_response": "{\n  \"food_name\": \"족발\",\n  \"ingredients\": [\n    \"돼지족발\",\n    \"양배추\",\n    \"적양배추\",\n    \"파\",\n    \"간장\",\n    \"마늘\",\n    \"생강\",\n    \"설탕\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11017_냉채족발_09_07.jpg",
+    "sample_id": 9,
+    "food_code": "B11017",
+    "gt_food_name": "냉채족발",
+    "pred_food_name": "또띠아 샐러드",
+    "pred_ingredients": [
+      "또띠아",
+      "양배추",
+      "적양배추",
+      "닭고기",
+      "드레싱",
+      "허브"
+    ],
+    "raw_response": "{\n  \"food_name\": \"또띠아 샐러드\",\n  \"ingredients\": [\n    \"또띠아\",\n    \"양배추\",\n    \"적양배추\",\n    \"닭고기\",\n    \"드레싱\",\n    \"허브\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11017_냉채족발_09_08.jpg",
+    "sample_id": 9,
+    "food_code": "B11017",
+    "gt_food_name": "냉채족발",
+    "pred_food_name": "치킨 샐러드 샌드위치",
+    "pred_ingredients": [
+      "빵",
+      "닭고기",
+      "양배추",
+      "적양배추",
+      "상추",
+      "드레싱"
+    ],
+    "raw_response": "{\n  \"food_name\": \"치킨 샐러드 샌드위치\",\n  \"ingredients\": [\n    \"빵\",\n    \"닭고기\",\n    \"양배추\",\n    \"적양배추\",\n    \"상추\",\n    \"드레싱\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11041_미니족발_01_01.jpg",
+    "sample_id": 1,
+    "food_code": "B11041",
+    "gt_food_name": "미니족발",
+    "pred_food_name": "족발",
+    "pred_ingredients": [
+      "돼지족",
+      "간장",
+      "설탕",
+      "마늘",
+      "생강",
+      "팔각",
+      "계피",
+      "물엿"
+    ],
+    "raw_response": "{\n  \"food_name\": \"족발\",\n  \"ingredients\": [\n    \"돼지족\",\n    \"간장\",\n    \"설탕\",\n    \"마늘\",\n    \"생강\",\n    \"팔각\",\n    \"계피\",\n    \"물엿\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11041_미니족발_01_02.jpg",
+    "sample_id": 1,
+    "food_code": "B11041",
+    "gt_food_name": "미니족발",
+    "pred_food_name": "돼지족발찜",
+    "pred_ingredients": [
+      "돼지족발",
+      "고추장",
+      "간장",
+      "설탕",
+      "마늘",
+      "생강",
+      "양파",
+      "대파"
+    ],
+    "raw_response": "{\n  \"food_name\": \"돼지족발찜\",\n  \"ingredients\": [\n    \"돼지족발\",\n    \"고추장\",\n    \"간장\",\n    \"설탕\",\n    \"마늘\",\n    \"생강\",\n    \"양파\",\n    \"대파\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11041_미니족발_01_03.jpg",
+    "sample_id": 1,
+    "food_code": "B11041",
+    "gt_food_name": "미니족발",
+    "pred_food_name": "족발",
+    "pred_ingredients": [
+      "돼지족",
+      "간장",
+      "설탕",
+      "마늘",
+      "생강",
+      "팔각",
+      "계피",
+      "물엿"
+    ],
+    "raw_response": "{\n  \"food_name\": \"족발\",\n  \"ingredients\": [\n    \"돼지족\",\n    \"간장\",\n    \"설탕\",\n    \"마늘\",\n    \"생강\",\n    \"팔각\",\n    \"계피\",\n    \"물엿\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11041_미니족발_01_04.jpg",
+    "sample_id": 1,
+    "food_code": "B11041",
+    "gt_food_name": "미니족발",
+    "pred_food_name": "족발",
+    "pred_ingredients": [
+      "돼지족",
+      "간장",
+      "설탕",
+      "마늘",
+      "생강",
+      "팔각",
+      "계피",
+      "대파",
+      "양파"
+    ],
+    "raw_response": "{\n  \"food_name\": \"족발\",\n  \"ingredients\": [\n    \"돼지족\",\n    \"간장\",\n    \"설탕\",\n    \"마늘\",\n    \"생강\",\n    \"팔각\",\n    \"계피\",\n    \"대파\",\n    \"양파\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11041_미니족발_01_05.jpg",
+    "sample_id": 1,
+    "food_code": "B11041",
+    "gt_food_name": "미니족발",
+    "pred_food_name": "족발",
+    "pred_ingredients": [
+      "돼지족",
+      "간장",
+      "설탕",
+      "생강",
+      "마늘",
+      "팔각",
+      "계피",
+      "청주"
+    ],
+    "raw_response": "{\n  \"food_name\": \"족발\",\n  \"ingredients\": [\n    \"돼지족\",\n    \"간장\",\n    \"설탕\",\n    \"생강\",\n    \"마늘\",\n    \"팔각\",\n    \"계피\",\n    \"청주\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11041_미니족발_01_06.jpg",
+    "sample_id": 1,
+    "food_code": "B11041",
+    "gt_food_name": "미니족발",
+    "pred_food_name": "족발",
+    "pred_ingredients": [
+      "돼지족",
+      "간장",
+      "설탕",
+      "마늘",
+      "생강",
+      "팔각",
+      "계피",
+      "대파",
+      "양파",
+      "청주"
+    ],
+    "raw_response": "{\n  \"food_name\": \"족발\",\n  \"ingredients\": [\n    \"돼지족\",\n    \"간장\",\n    \"설탕\",\n    \"마늘\",\n    \"생강\",\n    \"팔각\",\n    \"계피\",\n    \"대파\",\n    \"양파\",\n    \"청주\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11041_미니족발_01_07.jpg",
+    "sample_id": 1,
+    "food_code": "B11041",
+    "gt_food_name": "미니족발",
+    "pred_food_name": "족발",
+    "pred_ingredients": [
+      "돼지족",
+      "간장",
+      "설탕",
+      "생강",
+      "마늘",
+      "팔각",
+      "계피",
+      "청주"
+    ],
+    "raw_response": "{\n  \"food_name\": \"족발\",\n  \"ingredients\": [\n    \"돼지족\",\n    \"간장\",\n    \"설탕\",\n    \"생강\",\n    \"마늘\",\n    \"팔각\",\n    \"계피\",\n    \"청주\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11041_미니족발_01_08.jpg",
+    "sample_id": 1,
+    "food_code": "B11041",
+    "gt_food_name": "미니족발",
+    "pred_food_name": "족발",
+    "pred_ingredients": [
+      "돼지족",
+      "간장",
+      "설탕",
+      "마늘",
+      "생강",
+      "팔각",
+      "계피",
+      "대파",
+      "양파"
+    ],
+    "raw_response": "{\n  \"food_name\": \"족발\",\n  \"ingredients\": [\n    \"돼지족\",\n    \"간장\",\n    \"설탕\",\n    \"마늘\",\n    \"생강\",\n    \"팔각\",\n    \"계피\",\n    \"대파\",\n    \"양파\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11041_미니족발_05_01.jpg",
+    "sample_id": 5,
+    "food_code": "B11041",
+    "gt_food_name": "미니족발",
+    "pred_food_name": "족발",
+    "pred_ingredients": [
+      "돼지족",
+      "간장",
+      "설탕",
+      "마늘",
+      "생강",
+      "팔각",
+      "계피",
+      "대파",
+      "양파"
+    ],
+    "raw_response": "{\n  \"food_name\": \"족발\",\n  \"ingredients\": [\n    \"돼지족\",\n    \"간장\",\n    \"설탕\",\n    \"마늘\",\n    \"생강\",\n    \"팔각\",\n    \"계피\",\n    \"대파\",\n    \"양파\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11041_미니족발_05_02.jpg",
+    "sample_id": 5,
+    "food_code": "B11041",
+    "gt_food_name": "미니족발",
+    "pred_food_name": "족발",
+    "pred_ingredients": [
+      "돼지족발",
+      "간장",
+      "설탕",
+      "마늘",
+      "생강",
+      "팔각",
+      "계피",
+      "대파",
+      "양파",
+      "청주"
+    ],
+    "raw_response": "{\n  \"food_name\": \"족발\",\n  \"ingredients\": [\n    \"돼지족발\",\n    \"간장\",\n    \"설탕\",\n    \"마늘\",\n    \"생강\",\n    \"팔각\",\n    \"계피\",\n    \"대파\",\n    \"양파\",\n    \"청주\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11041_미니족발_05_03.jpg",
+    "sample_id": 5,
+    "food_code": "B11041",
+    "gt_food_name": "미니족발",
+    "pred_food_name": "족발",
+    "pred_ingredients": [
+      "돼지족",
+      "간장",
+      "설탕",
+      "마늘",
+      "생강",
+      "팔각",
+      "계피",
+      "대파",
+      "양파"
+    ],
+    "raw_response": "{\n  \"food_name\": \"족발\",\n  \"ingredients\": [\n    \"돼지족\",\n    \"간장\",\n    \"설탕\",\n    \"마늘\",\n    \"생강\",\n    \"팔각\",\n    \"계피\",\n    \"대파\",\n    \"양파\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11041_미니족발_05_04.jpg",
+    "sample_id": 5,
+    "food_code": "B11041",
+    "gt_food_name": "미니족발",
+    "pred_food_name": "족발",
+    "pred_ingredients": [
+      "돼지족발",
+      "간장",
+      "설탕",
+      "마늘",
+      "생강",
+      "팔각",
+      "계피",
+      "대파",
+      "양파"
+    ],
+    "raw_response": "{\n  \"food_name\": \"족발\",\n  \"ingredients\": [\n    \"돼지족발\",\n    \"간장\",\n    \"설탕\",\n    \"마늘\",\n    \"생강\",\n    \"팔각\",\n    \"계피\",\n    \"대파\",\n    \"양파\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11041_미니족발_05_05.jpg",
+    "sample_id": 5,
+    "food_code": "B11041",
+    "gt_food_name": "미니족발",
+    "pred_food_name": "족발",
+    "pred_ingredients": [
+      "돼지족",
+      "간장",
+      "설탕",
+      "마늘",
+      "생강",
+      "팔각",
+      "계피",
+      "대파",
+      "양파",
+      "청주"
+    ],
+    "raw_response": "{\n  \"food_name\": \"족발\",\n  \"ingredients\": [\n    \"돼지족\",\n    \"간장\",\n    \"설탕\",\n    \"마늘\",\n    \"생강\",\n    \"팔각\",\n    \"계피\",\n    \"대파\",\n    \"양파\",\n    \"청주\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11041_미니족발_05_06.jpg",
+    "sample_id": 5,
+    "food_code": "B11041",
+    "gt_food_name": "미니족발",
+    "pred_food_name": "족발",
+    "pred_ingredients": [
+      "돼지족발",
+      "간장",
+      "설탕",
+      "물엿",
+      "생강",
+      "마늘",
+      "팔각",
+      "계피",
+      "청주"
+    ],
+    "raw_response": "{\n  \"food_name\": \"족발\",\n  \"ingredients\": [\n    \"돼지족발\",\n    \"간장\",\n    \"설탕\",\n    \"물엿\",\n    \"생강\",\n    \"마늘\",\n    \"팔각\",\n    \"계피\",\n    \"청주\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11041_미니족발_05_07.jpg",
+    "sample_id": 5,
+    "food_code": "B11041",
+    "gt_food_name": "미니족발",
+    "pred_food_name": "족발",
+    "pred_ingredients": [
+      "돼지족발",
+      "간장",
+      "설탕",
+      "마늘",
+      "생강",
+      "팔각",
+      "계피",
+      "대파",
+      "양파",
+      "청주"
+    ],
+    "raw_response": "{\n  \"food_name\": \"족발\",\n  \"ingredients\": [\n    \"돼지족발\",\n    \"간장\",\n    \"설탕\",\n    \"마늘\",\n    \"생강\",\n    \"팔각\",\n    \"계피\",\n    \"대파\",\n    \"양파\",\n    \"청주\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11041_미니족발_05_08.jpg",
+    "sample_id": 5,
+    "food_code": "B11041",
+    "gt_food_name": "미니족발",
+    "pred_food_name": "족발",
+    "pred_ingredients": [
+      "돼지족",
+      "간장",
+      "설탕",
+      "마늘",
+      "생강",
+      "팔각",
+      "계피",
+      "대파",
+      "양파",
+      "청주"
+    ],
+    "raw_response": "{\n  \"food_name\": \"족발\",\n  \"ingredients\": [\n    \"돼지족\",\n    \"간장\",\n    \"설탕\",\n    \"마늘\",\n    \"생강\",\n    \"팔각\",\n    \"계피\",\n    \"대파\",\n    \"양파\",\n    \"청주\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12005_갈비전골_05_01.jpg",
+    "sample_id": 5,
+    "food_code": "B12005",
+    "gt_food_name": "갈비전골",
+    "pred_food_name": "갈비탕",
+    "pred_ingredients": [
+      "소갈비",
+      "무",
+      "대파",
+      "양파",
+      "마늘",
+      "간장",
+      "후추",
+      "소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"갈비탕\",\n  \"ingredients\": [\n    \"소갈비\",\n    \"무\",\n    \"대파\",\n    \"양파\",\n    \"마늘\",\n    \"간장\",\n    \"후추\",\n    \"소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12005_갈비전골_05_02.jpg",
+    "sample_id": 5,
+    "food_code": "B12005",
+    "gt_food_name": "갈비전골",
+    "pred_food_name": "갈비탕",
+    "pred_ingredients": [
+      "소갈비",
+      "무",
+      "대파",
+      "당면",
+      "마늘",
+      "간장",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"갈비탕\",\n  \"ingredients\": [\n    \"소갈비\",\n    \"무\",\n    \"대파\",\n    \"당면\",\n    \"마늘\",\n    \"간장\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12005_갈비전골_05_03.jpg",
+    "sample_id": 5,
+    "food_code": "B12005",
+    "gt_food_name": "갈비전골",
+    "pred_food_name": "갈비탕",
+    "pred_ingredients": [
+      "소갈비",
+      "무",
+      "대파",
+      "양파",
+      "마늘",
+      "간장",
+      "후추",
+      "소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"갈비탕\",\n  \"ingredients\": [\n    \"소갈비\",\n    \"무\",\n    \"대파\",\n    \"양파\",\n    \"마늘\",\n    \"간장\",\n    \"후추\",\n    \"소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12005_갈비전골_05_04.jpg",
+    "sample_id": 5,
+    "food_code": "B12005",
+    "gt_food_name": "갈비전골",
+    "pred_food_name": "갈비탕",
+    "pred_ingredients": [
+      "소갈비",
+      "무",
+      "대파",
+      "마늘",
+      "양파",
+      "간장",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"갈비탕\",\n  \"ingredients\": [\n    \"소갈비\",\n    \"무\",\n    \"대파\",\n    \"마늘\",\n    \"양파\",\n    \"간장\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12005_갈비전골_05_05.jpg",
+    "sample_id": 5,
+    "food_code": "B12005",
+    "gt_food_name": "갈비전골",
+    "pred_food_name": "갈비탕",
+    "pred_ingredients": [
+      "소갈비",
+      "무",
+      "대파",
+      "양파",
+      "마늘",
+      "간장",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"갈비탕\",\n  \"ingredients\": [\n    \"소갈비\",\n    \"무\",\n    \"대파\",\n    \"양파\",\n    \"마늘\",\n    \"간장\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12005_갈비전골_05_06.jpg",
+    "sample_id": 5,
+    "food_code": "B12005",
+    "gt_food_name": "갈비전골",
+    "pred_food_name": "갈비탕",
+    "pred_ingredients": [
+      "소갈비",
+      "무",
+      "대파",
+      "당면",
+      "마늘",
+      "간장",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"갈비탕\",\n  \"ingredients\": [\n    \"소갈비\",\n    \"무\",\n    \"대파\",\n    \"당면\",\n    \"마늘\",\n    \"간장\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12005_갈비전골_05_07.jpg",
+    "sample_id": 5,
+    "food_code": "B12005",
+    "gt_food_name": "갈비전골",
+    "pred_food_name": "갈비탕",
+    "pred_ingredients": [
+      "소갈비",
+      "무",
+      "대파",
+      "당면",
+      "마늘",
+      "간장",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"갈비탕\",\n  \"ingredients\": [\n    \"소갈비\",\n    \"무\",\n    \"대파\",\n    \"당면\",\n    \"마늘\",\n    \"간장\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12005_갈비전골_05_08.jpg",
+    "sample_id": 5,
+    "food_code": "B12005",
+    "gt_food_name": "갈비전골",
+    "pred_food_name": "갈비탕",
+    "pred_ingredients": [
+      "소갈비",
+      "무",
+      "대파",
+      "당면",
+      "마늘",
+      "간장",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"갈비탕\",\n  \"ingredients\": [\n    \"소갈비\",\n    \"무\",\n    \"대파\",\n    \"당면\",\n    \"마늘\",\n    \"간장\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12008_감자만두_12_01.jpg",
+    "sample_id": 12,
+    "food_code": "B12008",
+    "gt_food_name": "감자만두",
+    "pred_food_name": "감자떡",
+    "pred_ingredients": [
+      "감자 전분",
+      "팥앙금",
+      "소금",
+      "설탕",
+      "물"
+    ],
+    "raw_response": "{\n  \"food_name\": \"감자떡\",\n  \"ingredients\": [\n    \"감자 전분\",\n    \"팥앙금\",\n    \"소금\",\n    \"설탕\",\n    \"물\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12008_감자만두_12_02.jpg",
+    "sample_id": 12,
+    "food_code": "B12008",
+    "gt_food_name": "감자만두",
+    "pred_food_name": "감자떡",
+    "pred_ingredients": [
+      "감자 전분",
+      "팥앙금",
+      "소금",
+      "설탕",
+      "물"
+    ],
+    "raw_response": "{\n  \"food_name\": \"감자떡\",\n  \"ingredients\": [\n    \"감자 전분\",\n    \"팥앙금\",\n    \"소금\",\n    \"설탕\",\n    \"물\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12008_감자만두_12_03.jpg",
+    "sample_id": 12,
+    "food_code": "B12008",
+    "gt_food_name": "감자만두",
+    "pred_food_name": "감자만두",
+    "pred_ingredients": [
+      "감자 전분",
+      "돼지고기",
+      "부추",
+      "양파",
+      "당면",
+      "간장",
+      "참기름",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"감자만두\",\n  \"ingredients\": [\n    \"감자 전분\",\n    \"돼지고기\",\n    \"부추\",\n    \"양파\",\n    \"당면\",\n    \"간장\",\n    \"참기름\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12008_감자만두_12_04.jpg",
+    "sample_id": 12,
+    "food_code": "B12008",
+    "gt_food_name": "감자만두",
+    "pred_food_name": "감자떡",
+    "pred_ingredients": [
+      "감자 전분",
+      "팥앙금",
+      "설탕",
+      "소금",
+      "물"
+    ],
+    "raw_response": "{\n  \"food_name\": \"감자떡\",\n  \"ingredients\": [\n    \"감자 전분\",\n    \"팥앙금\",\n    \"설탕\",\n    \"소금\",\n    \"물\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12008_감자만두_12_05.jpg",
+    "sample_id": 12,
+    "food_code": "B12008",
+    "gt_food_name": "감자만두",
+    "pred_food_name": "감자만두",
+    "pred_ingredients": [
+      "감자 전분",
+      "밀가루",
+      "돼지고기",
+      "부추",
+      "양파",
+      "당면",
+      "간장",
+      "참기름",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"감자만두\",\n  \"ingredients\": [\n    \"감자 전분\",\n    \"밀가루\",\n    \"돼지고기\",\n    \"부추\",\n    \"양파\",\n    \"당면\",\n    \"간장\",\n    \"참기름\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12008_감자만두_12_06.jpg",
+    "sample_id": 12,
+    "food_code": "B12008",
+    "gt_food_name": "감자만두",
+    "pred_food_name": "감자떡",
+    "pred_ingredients": [
+      "감자 전분",
+      "팥앙금",
+      "소금",
+      "설탕",
+      "물"
+    ],
+    "raw_response": "{\n  \"food_name\": \"감자떡\",\n  \"ingredients\": [\n    \"감자 전분\",\n    \"팥앙금\",\n    \"소금\",\n    \"설탕\",\n    \"물\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12008_감자만두_12_07.jpg",
+    "sample_id": 12,
+    "food_code": "B12008",
+    "gt_food_name": "감자만두",
+    "pred_food_name": "감자떡",
+    "pred_ingredients": [
+      "감자 전분",
+      "팥앙금",
+      "설탕",
+      "소금",
+      "물"
+    ],
+    "raw_response": "{\n  \"food_name\": \"감자떡\",\n  \"ingredients\": [\n    \"감자 전분\",\n    \"팥앙금\",\n    \"설탕\",\n    \"소금\",\n    \"물\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12008_감자만두_12_08.jpg",
+    "sample_id": 12,
+    "food_code": "B12008",
+    "gt_food_name": "감자만두",
+    "pred_food_name": "감자떡",
+    "pred_ingredients": [
+      "감자 전분",
+      "멥쌀가루",
+      "팥앙금",
+      "설탕",
+      "소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"감자떡\",\n  \"ingredients\": [\n    \"감자 전분\",\n    \"멥쌀가루\",\n    \"팥앙금\",\n    \"설탕\",\n    \"소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12010_감자옹심이_03_01.jpg",
+    "sample_id": 3,
+    "food_code": "B12010",
+    "gt_food_name": "감자옹심이",
+    "pred_food_name": "떡국",
+    "pred_ingredients": [
+      "떡국떡",
+      "소고기",
+      "대파",
+      "물",
+      "소금",
+      "국간장"
+    ],
+    "raw_response": "{\n  \"food_name\": \"떡국\",\n  \"ingredients\": [\n    \"떡국떡\",\n    \"소고기\",\n    \"대파\",\n    \"물\",\n    \"소금\",\n    \"국간장\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12010_감자옹심이_03_02.jpg",
+    "sample_id": 3,
+    "food_code": "B12010",
+    "gt_food_name": "감자옹심이",
+    "pred_food_name": "떡국",
+    "pred_ingredients": [
+      "떡국떡",
+      "소고기",
+      "대파",
+      "계란",
+      "김가루",
+      "국간장",
+      "다진 마늘",
+      "참기름"
+    ],
+    "raw_response": "{\n  \"food_name\": \"떡국\",\n  \"ingredients\": [\n    \"떡국떡\",\n    \"소고기\",\n    \"대파\",\n    \"계란\",\n    \"김가루\",\n    \"국간장\",\n    \"다진 마늘\",\n    \"참기름\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12010_감자옹심이_03_03.jpg",
+    "sample_id": 3,
+    "food_code": "B12010",
+    "gt_food_name": "감자옹심이",
+    "pred_food_name": "떡국",
+    "pred_ingredients": [
+      "떡국떡",
+      "소고기",
+      "대파",
+      "육수",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"떡국\",\n  \"ingredients\": [\n    \"떡국떡\",\n    \"소고기\",\n    \"대파\",\n    \"육수\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12010_감자옹심이_03_04.jpg",
+    "sample_id": 3,
+    "food_code": "B12010",
+    "gt_food_name": "감자옹심이",
+    "pred_food_name": "떡국",
+    "pred_ingredients": [
+      "떡국떡",
+      "사골 육수",
+      "대파",
+      "소고기",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"떡국\",\n  \"ingredients\": [\n    \"떡국떡\",\n    \"사골 육수\",\n    \"대파\",\n    \"소고기\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12010_감자옹심이_03_05.jpg",
+    "sample_id": 3,
+    "food_code": "B12010",
+    "gt_food_name": "감자옹심이",
+    "pred_food_name": "떡국",
+    "pred_ingredients": [
+      "떡국떡",
+      "사골 육수",
+      "대파",
+      "소고기",
+      "마늘"
+    ],
+    "raw_response": "{\n  \"food_name\": \"떡국\",\n  \"ingredients\": [\n    \"떡국떡\",\n    \"사골 육수\",\n    \"대파\",\n    \"소고기\",\n    \"마늘\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12010_감자옹심이_03_06.jpg",
+    "sample_id": 3,
+    "food_code": "B12010",
+    "gt_food_name": "감자옹심이",
+    "pred_food_name": "떡국",
+    "pred_ingredients": [
+      "떡국떡",
+      "소고기",
+      "대파",
+      "사골 육수",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"떡국\",\n  \"ingredients\": [\n    \"떡국떡\",\n    \"소고기\",\n    \"대파\",\n    \"사골 육수\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12010_감자옹심이_03_07.jpg",
+    "sample_id": 3,
+    "food_code": "B12010",
+    "gt_food_name": "감자옹심이",
+    "pred_food_name": "떡국",
+    "pred_ingredients": [
+      "떡국떡",
+      "사골 육수",
+      "대파",
+      "소고기"
+    ],
+    "raw_response": "{\n  \"food_name\": \"떡국\",\n  \"ingredients\": [\n    \"떡국떡\",\n    \"사골 육수\",\n    \"대파\",\n    \"소고기\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12010_감자옹심이_03_08.jpg",
+    "sample_id": 3,
+    "food_code": "B12010",
+    "gt_food_name": "감자옹심이",
+    "pred_food_name": "떡국",
+    "pred_ingredients": [
+      "떡국떡",
+      "사골 육수",
+      "대파",
+      "소고기"
+    ],
+    "raw_response": "{\n  \"food_name\": \"떡국\",\n  \"ingredients\": [\n    \"떡국떡\",\n    \"사골 육수\",\n    \"대파\",\n    \"소고기\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12010_감자옹심이_13_01.jpg",
+    "sample_id": 13,
+    "food_code": "B12010",
+    "gt_food_name": "감자옹심이",
+    "pred_food_name": "떡만둣국",
+    "pred_ingredients": [
+      "떡국떡",
+      "만두",
+      "계란",
+      "당근",
+      "대파",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"떡만둣국\",\n  \"ingredients\": [\n    \"떡국떡\",\n    \"만두\",\n    \"계란\",\n    \"당근\",\n    \"대파\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12010_감자옹심이_13_02.jpg",
+    "sample_id": 13,
+    "food_code": "B12010",
+    "gt_food_name": "감자옹심이",
+    "pred_food_name": "떡국",
+    "pred_ingredients": [
+      "떡국떡",
+      "육수",
+      "계란",
+      "당근",
+      "대파",
+      "완자"
+    ],
+    "raw_response": "{\n  \"food_name\": \"떡국\",\n  \"ingredients\": [\n    \"떡국떡\",\n    \"육수\",\n    \"계란\",\n    \"당근\",\n    \"대파\",\n    \"완자\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12010_감자옹심이_13_03.jpg",
+    "sample_id": 13,
+    "food_code": "B12010",
+    "gt_food_name": "감자옹심이",
+    "pred_food_name": "어묵탕",
+    "pred_ingredients": [
+      "어묵",
+      "무",
+      "당근",
+      "대파",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"어묵탕\",\n  \"ingredients\": [\n    \"어묵\",\n    \"무\",\n    \"당근\",\n    \"대파\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12010_감자옹심이_13_04.jpg",
+    "sample_id": 13,
+    "food_code": "B12010",
+    "gt_food_name": "감자옹심이",
+    "pred_food_name": "떡만두국",
+    "pred_ingredients": [
+      "떡국떡",
+      "만두",
+      "계란",
+      "당근",
+      "대파",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"떡만두국\",\n  \"ingredients\": [\n    \"떡국떡\",\n    \"만두\",\n    \"계란\",\n    \"당근\",\n    \"대파\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12010_감자옹심이_13_05.jpg",
+    "sample_id": 13,
+    "food_code": "B12010",
+    "gt_food_name": "감자옹심이",
+    "pred_food_name": "떡만둣국",
+    "pred_ingredients": [
+      "떡국떡",
+      "만두",
+      "계란",
+      "당근",
+      "파",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"떡만둣국\",\n  \"ingredients\": [\n    \"떡국떡\",\n    \"만두\",\n    \"계란\",\n    \"당근\",\n    \"파\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12010_감자옹심이_13_06.jpg",
+    "sample_id": 13,
+    "food_code": "B12010",
+    "gt_food_name": "감자옹심이",
+    "pred_food_name": "떡국",
+    "pred_ingredients": [
+      "떡국떡",
+      "계란",
+      "당근",
+      "파",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"떡국\",\n  \"ingredients\": [\n    \"떡국떡\",\n    \"계란\",\n    \"당근\",\n    \"파\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12010_감자옹심이_13_07.jpg",
+    "sample_id": 13,
+    "food_code": "B12010",
+    "gt_food_name": "감자옹심이",
+    "pred_food_name": "떡국",
+    "pred_ingredients": [
+      "떡국떡",
+      "계란",
+      "당근",
+      "파",
+      "만두",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"떡국\",\n  \"ingredients\": [\n    \"떡국떡\",\n    \"계란\",\n    \"당근\",\n    \"파\",\n    \"만두\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12010_감자옹심이_13_08.jpg",
+    "sample_id": 13,
+    "food_code": "B12010",
+    "gt_food_name": "감자옹심이",
+    "pred_food_name": "떡만둣국",
+    "pred_ingredients": [
+      "떡국떡",
+      "만두",
+      "계란",
+      "당근",
+      "대파",
+      "육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"떡만둣국\",\n  \"ingredients\": [\n    \"떡국떡\",\n    \"만두\",\n    \"계란\",\n    \"당근\",\n    \"대파\",\n    \"육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_03_01.jpg",
+    "sample_id": 3,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "짬뽕 파스타",
+    "pred_ingredients": [
+      "파스타 면",
+      "홍합",
+      "닭가슴살",
+      "짬뽕 소스",
+      "양파",
+      "고추기름"
+    ],
+    "raw_response": "{\n  \"food_name\": \"짬뽕 파스타\",\n  \"ingredients\": [\n    \"파스타 면\",\n    \"홍합\",\n    \"닭가슴살\",\n    \"짬뽕 소스\",\n    \"양파\",\n    \"고추기름\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_03_02.jpg",
+    "sample_id": 3,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "짬뽕",
+    "pred_ingredients": [
+      "면",
+      "홍합",
+      "닭고기",
+      "양파",
+      "짬뽕 국물"
+    ],
+    "raw_response": "{\n  \"food_name\": \"짬뽕\",\n  \"ingredients\": [\n    \"면\",\n    \"홍합\",\n    \"닭고기\",\n    \"양파\",\n    \"짬뽕 국물\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_03_03.jpg",
+    "sample_id": 3,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "짬뽕",
+    "pred_ingredients": [
+      "면",
+      "홍합",
+      "닭가슴살",
+      "고추기름",
+      "양파",
+      "대파"
+    ],
+    "raw_response": "{\n  \"food_name\": \"짬뽕\",\n  \"ingredients\": [\n    \"면\",\n    \"홍합\",\n    \"닭가슴살\",\n    \"고추기름\",\n    \"양파\",\n    \"대파\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_03_04.jpg",
+    "sample_id": 3,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "짬뽕",
+    "pred_ingredients": [
+      "면",
+      "짬뽕 국물",
+      "홍합",
+      "닭가슴살",
+      "양파",
+      "고춧가루"
+    ],
+    "raw_response": "{\n  \"food_name\": \"짬뽕\",\n  \"ingredients\": [\n    \"면\",\n    \"짬뽕 국물\",\n    \"홍합\",\n    \"닭가슴살\",\n    \"양파\",\n    \"고춧가루\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_03_05.jpg",
+    "sample_id": 3,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "짬뽕",
+    "pred_ingredients": [
+      "면",
+      "짬뽕 국물",
+      "홍합",
+      "닭가슴살",
+      "양파",
+      "당근"
+    ],
+    "raw_response": "{\n  \"food_name\": \"짬뽕\",\n  \"ingredients\": [\n    \"면\",\n    \"짬뽕 국물\",\n    \"홍합\",\n    \"닭가슴살\",\n    \"양파\",\n    \"당근\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_03_06.jpg",
+    "sample_id": 3,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "짬뽕",
+    "pred_ingredients": [
+      "면",
+      "짬뽕 국물",
+      "홍합",
+      "닭가슴살",
+      "양파",
+      "당근"
+    ],
+    "raw_response": "{\n  \"food_name\": \"짬뽕\",\n  \"ingredients\": [\n    \"면\",\n    \"짬뽕 국물\",\n    \"홍합\",\n    \"닭가슴살\",\n    \"양파\",\n    \"당근\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_03_07.jpg",
+    "sample_id": 3,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "짬뽕 파스타",
+    "pred_ingredients": [
+      "파스타 면",
+      "홍합",
+      "닭가슴살",
+      "짬뽕 소스",
+      "양파",
+      "고추기름"
+    ],
+    "raw_response": "{\n  \"food_name\": \"짬뽕 파스타\",\n  \"ingredients\": [\n    \"파스타 면\",\n    \"홍합\",\n    \"닭가슴살\",\n    \"짬뽕 소스\",\n    \"양파\",\n    \"고추기름\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_03_08.jpg",
+    "sample_id": 3,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "토마토 해산물 파스타",
+    "pred_ingredients": [
+      "파스타 면",
+      "토마토 소스",
+      "홍합",
+      "닭가슴살",
+      "양파"
+    ],
+    "raw_response": "{\n  \"food_name\": \"토마토 해산물 파스타\",\n  \"ingredients\": [\n    \"파스타 면\",\n    \"토마토 소스\",\n    \"홍합\",\n    \"닭가슴살\",\n    \"양파\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_06_01.jpg",
+    "sample_id": 6,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "짬뽕",
+    "pred_ingredients": [
+      "중화면",
+      "오징어",
+      "홍합",
+      "고춧가루",
+      "양파",
+      "배추",
+      "마늘",
+      "파"
+    ],
+    "raw_response": "{\n  \"food_name\": \"짬뽕\",\n  \"ingredients\": [\n    \"중화면\",\n    \"오징어\",\n    \"홍합\",\n    \"고춧가루\",\n    \"양파\",\n    \"배추\",\n    \"마늘\",\n    \"파\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_06_02.jpg",
+    "sample_id": 6,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "짬뽕",
+    "pred_ingredients": [
+      "면",
+      "고추기름",
+      "고춧가루",
+      "홍합",
+      "오징어",
+      "양파",
+      "배추",
+      "마늘"
+    ],
+    "raw_response": "{\n  \"food_name\": \"짬뽕\",\n  \"ingredients\": [\n    \"면\",\n    \"고추기름\",\n    \"고춧가루\",\n    \"홍합\",\n    \"오징어\",\n    \"양파\",\n    \"배추\",\n    \"마늘\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_06_03.jpg",
+    "sample_id": 6,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "짬뽕",
+    "pred_ingredients": [
+      "중화면",
+      "홍합",
+      "오징어",
+      "양파",
+      "양배추",
+      "고춧가루",
+      "마늘",
+      "대파",
+      "닭육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"짬뽕\",\n  \"ingredients\": [\n    \"중화면\",\n    \"홍합\",\n    \"오징어\",\n    \"양파\",\n    \"양배추\",\n    \"고춧가루\",\n    \"마늘\",\n    \"대파\",\n    \"닭육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_06_04.jpg",
+    "sample_id": 6,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "짬뽕",
+    "pred_ingredients": [
+      "중화면",
+      "홍합",
+      "오징어",
+      "양파",
+      "배추",
+      "고춧가루",
+      "마늘",
+      "대파"
+    ],
+    "raw_response": "{\n  \"food_name\": \"짬뽕\",\n  \"ingredients\": [\n    \"중화면\",\n    \"홍합\",\n    \"오징어\",\n    \"양파\",\n    \"배추\",\n    \"고춧가루\",\n    \"마늘\",\n    \"대파\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_06_05.jpg",
+    "sample_id": 6,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "짬뽕",
+    "pred_ingredients": [
+      "중화면",
+      "홍합",
+      "오징어",
+      "고춧가루",
+      "양파",
+      "양배추",
+      "대파",
+      "마늘",
+      "닭 육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"짬뽕\",\n  \"ingredients\": [\n    \"중화면\",\n    \"홍합\",\n    \"오징어\",\n    \"고춧가루\",\n    \"양파\",\n    \"양배추\",\n    \"대파\",\n    \"마늘\",\n    \"닭 육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_06_06.jpg",
+    "sample_id": 6,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "짬뽕",
+    "pred_ingredients": [
+      "중화면",
+      "홍합",
+      "오징어",
+      "고춧가루",
+      "양파",
+      "배추",
+      "마늘",
+      "대파",
+      "닭 육수"
+    ],
+    "raw_response": "{\n  \"food_name\": \"짬뽕\",\n  \"ingredients\": [\n    \"중화면\",\n    \"홍합\",\n    \"오징어\",\n    \"고춧가루\",\n    \"양파\",\n    \"배추\",\n    \"마늘\",\n    \"대파\",\n    \"닭 육수\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_06_07.jpg",
+    "sample_id": 6,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "짬뽕",
+    "pred_ingredients": [
+      "중화면",
+      "홍합",
+      "오징어",
+      "양파",
+      "배추",
+      "고춧가루",
+      "마늘",
+      "대파"
+    ],
+    "raw_response": "{\n  \"food_name\": \"짬뽕\",\n  \"ingredients\": [\n    \"중화면\",\n    \"홍합\",\n    \"오징어\",\n    \"양파\",\n    \"배추\",\n    \"고춧가루\",\n    \"마늘\",\n    \"대파\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_15_01.jpg",
+    "sample_id": 15,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "순두부찌개",
+    "pred_ingredients": [
+      "순두부",
+      "고추기름",
+      "고춧가루",
+      "대파",
+      "양파",
+      "마늘",
+      "해물",
+      "달걀"
+    ],
+    "raw_response": "{\n  \"food_name\": \"순두부찌개\",\n  \"ingredients\": [\n    \"순두부\",\n    \"고추기름\",\n    \"고춧가루\",\n    \"대파\",\n    \"양파\",\n    \"마늘\",\n    \"해물\",\n    \"달걀\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_15_02.jpg",
+    "sample_id": 15,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "순두부찌개",
+    "pred_ingredients": [
+      "순두부",
+      "고추기름",
+      "고춧가루",
+      "대파",
+      "양파",
+      "마늘",
+      "해산물",
+      "달걀"
+    ],
+    "raw_response": "{\n  \"food_name\": \"순두부찌개\",\n  \"ingredients\": [\n    \"순두부\",\n    \"고추기름\",\n    \"고춧가루\",\n    \"대파\",\n    \"양파\",\n    \"마늘\",\n    \"해산물\",\n    \"달걀\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_15_03.jpg",
+    "sample_id": 15,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "순두부찌개",
+    "pred_ingredients": [
+      "순두부",
+      "고추기름",
+      "고춧가루",
+      "대파",
+      "양파",
+      "마늘",
+      "애호박",
+      "바지락",
+      "달걀"
+    ],
+    "raw_response": "{\n  \"food_name\": \"순두부찌개\",\n  \"ingredients\": [\n    \"순두부\",\n    \"고추기름\",\n    \"고춧가루\",\n    \"대파\",\n    \"양파\",\n    \"마늘\",\n    \"애호박\",\n    \"바지락\",\n    \"달걀\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_15_04.jpg",
+    "sample_id": 15,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "순두부찌개",
+    "pred_ingredients": [
+      "순두부",
+      "고추기름",
+      "고춧가루",
+      "대파",
+      "양파",
+      "마늘",
+      "해물"
+    ],
+    "raw_response": "{\n  \"food_name\": \"순두부찌개\",\n  \"ingredients\": [\n    \"순두부\",\n    \"고추기름\",\n    \"고춧가루\",\n    \"대파\",\n    \"양파\",\n    \"마늘\",\n    \"해물\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_15_06.jpg",
+    "sample_id": 15,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "순두부찌개",
+    "pred_ingredients": [
+      "순두부",
+      "고추기름",
+      "고춧가루",
+      "대파",
+      "양파",
+      "다진 마늘",
+      "국간장",
+      "소금",
+      "물"
+    ],
+    "raw_response": "{\n  \"food_name\": \"순두부찌개\",\n  \"ingredients\": [\n    \"순두부\",\n    \"고추기름\",\n    \"고춧가루\",\n    \"대파\",\n    \"양파\",\n    \"다진 마늘\",\n    \"국간장\",\n    \"소금\",\n    \"물\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_15_07.jpg",
+    "sample_id": 15,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "순두부찌개",
+    "pred_ingredients": [
+      "순두부",
+      "고추기름",
+      "고춧가루",
+      "다진 마늘",
+      "대파",
+      "양파",
+      "애호박",
+      "바지락",
+      "달걀"
+    ],
+    "raw_response": "{\n  \"food_name\": \"순두부찌개\",\n  \"ingredients\": [\n    \"순두부\",\n    \"고추기름\",\n    \"고춧가루\",\n    \"다진 마늘\",\n    \"대파\",\n    \"양파\",\n    \"애호박\",\n    \"바지락\",\n    \"달걀\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_15_08.jpg",
+    "sample_id": 15,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "순두부찌개",
+    "pred_ingredients": [
+      "순두부",
+      "고추기름",
+      "고춧가루",
+      "대파",
+      "양파",
+      "마늘",
+      "버섯"
+    ],
+    "raw_response": "{\n  \"food_name\": \"순두부찌개\",\n  \"ingredients\": [\n    \"순두부\",\n    \"고추기름\",\n    \"고춧가루\",\n    \"대파\",\n    \"양파\",\n    \"마늘\",\n    \"버섯\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12153_케이준양념감자_07_03.jpg",
+    "sample_id": 7,
+    "food_code": "B12153",
+    "gt_food_name": "케이준양념감자",
+    "pred_food_name": "감자튀김",
+    "pred_ingredients": [
+      "감자",
+      "식용유",
+      "소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"감자튀김\",\n  \"ingredients\": [\n    \"감자\",\n    \"식용유\",\n    \"소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12153_케이준양념감자_07_05.jpg",
+    "sample_id": 7,
+    "food_code": "B12153",
+    "gt_food_name": "케이준양념감자",
+    "pred_food_name": "감자튀김",
+    "pred_ingredients": [
+      "감자",
+      "식용유",
+      "소금"
+    ],
+    "raw_response": "{\n  \"food_name\": \"감자튀김\",\n  \"ingredients\": [\n    \"감자\",\n    \"식용유\",\n    \"소금\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12155_코울슬로_01_08.jpg",
+    "sample_id": 1,
+    "food_code": "B12155",
+    "gt_food_name": "코울슬로",
+    "pred_food_name": "코울슬로",
+    "pred_ingredients": [
+      "양배추",
+      "당근",
+      "마요네즈",
+      "식초",
+      "설탕",
+      "소금",
+      "후추"
+    ],
+    "raw_response": "{\n  \"food_name\": \"코울슬로\",\n  \"ingredients\": [\n    \"양배추\",\n    \"당근\",\n    \"마요네즈\",\n    \"식초\",\n    \"설탕\",\n    \"소금\",\n    \"후추\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12160_크림함박스테이크_12_04.jpg",
+    "sample_id": 12,
+    "food_code": "B12160",
+    "gt_food_name": "크림함박스테이크",
+    "pred_food_name": "함박 스테이크",
+    "pred_ingredients": [
+      "다진 소고기",
+      "다진 돼지고기",
+      "양파",
+      "빵가루",
+      "달걀",
+      "우유",
+      "크림 소스",
+      "파슬리"
+    ],
+    "raw_response": "{\n  \"food_name\": \"함박 스테이크\",\n  \"ingredients\": [\n    \"다진 소고기\",\n    \"다진 돼지고기\",\n    \"양파\",\n    \"빵가루\",\n    \"달걀\",\n    \"우유\",\n    \"크림 소스\",\n    \"파슬리\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12160_크림함박스테이크_12_08.jpg",
+    "sample_id": 12,
+    "food_code": "B12160",
+    "gt_food_name": "크림함박스테이크",
+    "pred_food_name": "함박 스테이크",
+    "pred_ingredients": [
+      "다진 소고기",
+      "다진 돼지고기",
+      "양파",
+      "빵가루",
+      "달걀",
+      "우유",
+      "크림 소스",
+      "파슬리"
+    ],
+    "raw_response": "{\n  \"food_name\": \"함박 스테이크\",\n  \"ingredients\": [\n    \"다진 소고기\",\n    \"다진 돼지고기\",\n    \"양파\",\n    \"빵가루\",\n    \"달걀\",\n    \"우유\",\n    \"크림 소스\",\n    \"파슬리\"\n  ]\n}",
+    "error": null,
+    "model": "gemini-3.1-flash-lite"
+  }
+]

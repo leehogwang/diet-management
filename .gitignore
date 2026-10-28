@@ -1,0 +1,12 @@
+# 비밀 정보
+.gemini_key
+.aihub
+# 이전 서버 pip 패키지
+.pydeps/
+__pycache__/
+# 이미지·캐시 (AIHub 원본 파생, 용량 큼)
+data/*/img/
+data/image_cache/
+data/emb_cache*.json
+# 체크포인트 (100MB 이상)
+*.pth

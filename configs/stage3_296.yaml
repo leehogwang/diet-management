@@ -1,0 +1,97 @@
+# AIHub 296 → Gemini 임베딩 + 주파수 인코딩 특징 → 영양성분 예측
+# model_stage3_296_final.pth 의 저장된 config 값을 기준으로 작성.
+# [원본]  = 체크포인트 config 에 있던 값 그대로
+# [추정]  = 체크포인트에 없어서 가정한 값 (README "검토 필요" 참고)
+
+seed: 42
+device: cuda:0
+
+paths:
+  # 아래 상대 경로의 기준 (player0070 서버로 옮김, 2026-10-05).
+  storage_root: /home/player0070/2025-2/n296_stage3_3
+  output_dir: runs/stage3_296
+  manifest: data/manifest_296.csv            # build_manifest.py 출력
+  text_only_manifest: null                   # build_text_only.py 출력 (DB 기반 텍스트 전용 샘플)
+  emb_cache: data/emb_cache.json             # 텍스트 → Gemini 임베딩 캐시
+  image_cache_dir: data/image_cache          # 원본(2560~3024px)을 줄여 저장. null 이면 매번 원본 디코딩
+
+data:
+  root_296: "/mnt/data/food_leehogwang/296.비전영역,_음식이미지_및_정보소개_텍스트_데이터/01-1.정식개방데이터"  # [원본]
+  view: 측면                                  # [원본]
+  xlsx_path: "052.건강관리를_위한_음식_이미지_데이터/통합_영양성분DB.xlsx"  # [원본] 텍스트 전용 샘플용
+  db_category: 음식                            # [원본]
+  csv_path_std: "전국통합식품영양성분정보_음식_표준데이터.csv"            # [원본]
+  std_carb_max: 2.0                          # [원본] 의미 불명 — build_text_only.py 에서만 참조
+  enable_text_only: true                     # [원본]
+  image_size: 224                            # [추정] 196 토큰(14x14) 과 58 토큰에서 역산
+  cache_max_side: 384                        # 이미지 캐시 해상도
+  use_bbox_crop: false                       # [추정] 2d_annotation bbox 로 크롭할지
+  split_by: food_code                        # [추정] food_code(음식 단위, 누수 없음) | image
+  val_ratio: 0.1                             # [추정]
+  exclude_manifest: /home/students/cs/202321024/datasets/test_dataset_296/test_manifest.csv  # 테스트셋은 학습에서 제외
+  text_template: "{food_name}"               # [추정] Gemini 로 임베딩할 텍스트
+
+embedding:
+  provider: gemini                           # gemini | fake(스모크 테스트용 해시 임베딩)
+  model: models/gemini-embedding-2           # [원본]
+  dim: 3072                                  # [원본] text_encoder 입력 차원
+  api_key_env: GEMINI_KEY                    # [원본]
+  task_type: SEMANTIC_SIMILARITY             # [추정]
+  batch_size: 50
+
+model:
+  text_hidden1: 512                          # [원본]
+  text_hidden2: 512                          # [원본]
+  image_dim: 1024                            # [원본]
+  head_hidden: 2048                          # [원본]
+  dropout: 0.3                               # [원본]
+  freeze_backbone_layers: true               # [원본] 얼리는 범위는 [추정]: ConvNeXt stem~stage2
+  modality_dropout_prob: 0.3                 # [원본] 적용 방식은 [추정]
+
+freq:
+  enabled: true                              # [원본]
+  mode: spatial                              # [원본]
+  r_low: 0.15                                # [원본]
+  r_high: 0.85                               # [원본]
+  window_alpha: 0.25                         # [원본] Tukey window
+  cnx_tap: 5                                 # [원본] ConvNeXt features[5] 출력(512ch, 14x14)
+  vgg_out_dim: 512                           # [원본]
+  freeze_vgg_layers: true                    # [원본] 얼리는 범위는 [추정]: VGG block2~3
+  mixer1_token_hidden: 256                   # [원본]
+  mixer1_channel_hidden: 2048                # [원본]
+  conv_dims: [512, 256]                      # [원본]
+  mixer2_dim: 256                            # [원본]
+  mixer2_token_hidden: 64                    # [원본]
+  mixer2_channel_hidden: 512                 # [원본]
+
+augmentation:
+  enabled: false                             # [원본]
+
+training:
+  lr: 0.0003                                 # [원본]
+  weight_decay: 0.0001                       # [원본]
+  batch_size: 64                             # [원본]
+  epochs: 500                                # [원본] (단계별 epochs 가 없으면 이 값 사용)
+  patience: 10                               # [원본]
+  image_workers: 0                           # [원본] 이미지 캐시를 쓰면 4~8 권장
+  loss: smooth_l1                            # [추정] 표준화된 타깃에 적용
+  loss_weights: {calories: 1.0, mass: 0.5, fat: 1.0, carb: 0.5, protein: 1.0}  # [추정]
+  amp: true
+
+# 단계 구성 [추정] — 체크포인트에는 stage=3 만 기록되어 있음
+stages:
+  - name: stage1_text
+    train_modules: [text_encoder, nutrition_head]
+    image_mode: masked          # 이미지 분기를 mask_token 으로 대체
+    epochs: 100
+  - name: stage2_image
+    train_modules: [image_encoder, freq_encoder, mixer1, conv_blocks, cnx_proj, mixer2, pooling, mask_token, mix_mask_token, nutrition_head]
+    image_mode: full
+    modality_dropout: false
+    epochs: 100
+  - name: stage3_fusion
+    train_modules: all
+    image_mode: full
+    modality_dropout: true
+    lr_scale: 0.3
+    epochs: 500

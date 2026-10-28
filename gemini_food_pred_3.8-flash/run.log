@@ -1,0 +1,11 @@
+전체 2664장, 완료 0장, 남은 2664장 (model=gemini-3.8-flash)
+Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+  0%|          | 0/2664 [00:00<?, ?it/s]
+일일 한도 도달, 중지합니다: ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https
+  0%|          | 1/2664 [00:01<45:11,  1.02s/it]  0%|          | 2/2664 [00:06<2:44:56,  3.72s/it]  0%|          | 3/2664 [00:16<4:54:01,  6.63s/it]  0%|          | 4/2664 [00:22<4:42:40,  6.38s/it]  0%|          | 5/2664 [00:24<3:30:06,  4.74s/it]Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+전체 2664장, 완료 2장, 남은 2662장 (model=gemini-3.8-flash)
+  0%|          | 0/2662 [00:00<?, ?it/s]  0%|          | 1/2662 [00:00<40:35,  1.09it/s]  0%|          | 2/2662 [00:06<2:50:01,  3.84s/it]100%|█████████▉| 2660/2662 [00:12<00:00, 253.10it/s]100%|██████████| 2662/2662 [00:24<00:00, 107.24it/s]
+
+일일 한도 도달, 중지합니다: ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https
+저장: gemini_food_pred_3.8-flash  (성공 2/2664, 이번 실행 실패 0)
+일일 한도로 중지했습니다. 한도가 초기화된 뒤 같은 명령을 실행하면 이어서 진행합니다.

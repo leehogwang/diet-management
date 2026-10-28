@@ -1,0 +1,654 @@
+[
+  {
+    "image": "A_13_A13010_대하구이_02_02.jpg",
+    "sample_id": 2,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "소금구이 새우",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "name_judgement": "정답",
+    "ingredients_judgement": "정답",
+    "overall_judgement": "정답",
+    "reason": "대하구이는 굵은 소금 위에 굽는 새우 요리라 '소금구이 새우'와 같은 음식",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_13_A13010_대하구이_18_01.jpg",
+    "sample_id": 18,
+    "food_code": "A13010",
+    "gt_food_name": "대하구이",
+    "pred_food_name": "소금구이 새우",
+    "pred_ingredients": [
+      "새우",
+      "굵은 소금"
+    ],
+    "name_judgement": "정답",
+    "ingredients_judgement": "정답",
+    "overall_judgement": "정답",
+    "reason": "소금 위에 구운 새우가 보임. 대하구이와 같은 음식",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_01_01.jpg",
+    "sample_id": 1,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "새우 토스트",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "다진 돼지고기",
+      "계란",
+      "전분",
+      "식용유"
+    ],
+    "name_judgement": "정답",
+    "ingredients_judgement": "정답",
+    "overall_judgement": "정답",
+    "reason": "멘보샤는 새우 토스트(面包虾)의 다른 이름. 식빵·새우·전분 모두 맞음",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14050_멘보샤_13_01.jpg",
+    "sample_id": 13,
+    "food_code": "A14050",
+    "gt_food_name": "멘보샤",
+    "pred_food_name": "멘보샤",
+    "pred_ingredients": [
+      "식빵",
+      "새우",
+      "달걀 흰자",
+      "전분",
+      "식용유",
+      "소금",
+      "후추"
+    ],
+    "name_judgement": "정답",
+    "ingredients_judgement": "정답",
+    "overall_judgement": "정답",
+    "reason": "음식명 일치. 식빵·새우·달걀 흰자·전분 맞음",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_02_01.jpg",
+    "sample_id": 2,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀국수 면",
+      "소고기",
+      "숙주나물",
+      "고수",
+      "육수"
+    ],
+    "name_judgement": "부분정답",
+    "ingredients_judgement": "정답",
+    "overall_judgement": "부분정답",
+    "reason": "'쌀국수'는 상위 범주. 양지(소고기)는 재료에서 맞힘",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14094_양지쌀국수_05_01.jpg",
+    "sample_id": 5,
+    "food_code": "A14094",
+    "gt_food_name": "양지쌀국수",
+    "pred_food_name": "쌀국수",
+    "pred_ingredients": [
+      "쌀면",
+      "소고기",
+      "숙주나물",
+      "청양고추",
+      "홍고추",
+      "쪽파",
+      "육수"
+    ],
+    "name_judgement": "부분정답",
+    "ingredients_judgement": "정답",
+    "overall_judgement": "부분정답",
+    "reason": "'쌀국수'는 상위 범주. 소고기·숙주·고추 등 보이는 재료 맞음",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_09_01.jpg",
+    "sample_id": 9,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "밀면",
+    "pred_ingredients": [
+      "밀면",
+      "새우",
+      "계란 지단",
+      "오이",
+      "당근",
+      "얼음",
+      "육수"
+    ],
+    "name_judgement": "오답",
+    "ingredients_judgement": "부분정답",
+    "overall_judgement": "오답",
+    "reason": "밀면은 다른 음식. 새우·지단·오이·당근 고명은 중화냉면과 일치",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "A_14_A14107_중화냉면_16_01.jpg",
+    "sample_id": 16,
+    "food_code": "A14107",
+    "gt_food_name": "중화냉면",
+    "pred_food_name": "라멘",
+    "pred_ingredients": [
+      "면",
+      "닭고기",
+      "새우",
+      "삶은 달걀",
+      "숙주나물",
+      "무순",
+      "할라피뇨",
+      "당근",
+      "육수"
+    ],
+    "name_judgement": "오답",
+    "ingredients_judgement": "부분정답",
+    "overall_judgement": "오답",
+    "reason": "라멘은 뜨거운 국물 면요리로 다른 음식. 닭고기·새우·달걀·숙주 고명은 맞음",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12003_간장닭갈비_01_01.jpg",
+    "sample_id": 1,
+    "food_code": "B12003",
+    "gt_food_name": "간장닭갈비",
+    "pred_food_name": "찜닭",
+    "pred_ingredients": [
+      "닭고기",
+      "간장",
+      "설탕",
+      "마늘",
+      "떡",
+      "양파",
+      "대파"
+    ],
+    "name_judgement": "오답",
+    "ingredients_judgement": "정답",
+    "overall_judgement": "부분정답",
+    "reason": "찜닭은 다른 음식. 간장 양념 닭고기·떡·대파 등 재료는 간장닭갈비와 일치",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12003_간장닭갈비_01_02.jpg",
+    "sample_id": 1,
+    "food_code": "B12003",
+    "gt_food_name": "간장닭갈비",
+    "pred_food_name": "닭갈비",
+    "pred_ingredients": [
+      "닭고기",
+      "고추장",
+      "간장",
+      "설탕",
+      "마늘",
+      "양파",
+      "고구마"
+    ],
+    "name_judgement": "부분정답",
+    "ingredients_judgement": "부분정답",
+    "overall_judgement": "부분정답",
+    "reason": "'닭갈비'까지는 맞았으나 간장 양념인 것을 놓침. 재료에 고추장이 들어가 틀림",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12005_갈비전골_14_01.jpg",
+    "sample_id": 14,
+    "food_code": "B12005",
+    "gt_food_name": "갈비전골",
+    "pred_food_name": "김치찜",
+    "pred_ingredients": [
+      "돼지고기",
+      "김치",
+      "고춧가루",
+      "다진 마늘",
+      "대파",
+      "양파",
+      "설탕"
+    ],
+    "name_judgement": "오답",
+    "ingredients_judgement": "오답",
+    "overall_judgement": "오답",
+    "reason": "김치찜으로 오인. 돼지고기·김치는 갈비전골(소갈비) 재료가 아님",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12005_갈비전골_05_01.jpg",
+    "sample_id": 5,
+    "food_code": "B12005",
+    "gt_food_name": "갈비전골",
+    "pred_food_name": "갈비탕",
+    "pred_ingredients": [
+      "소갈비",
+      "무",
+      "대파",
+      "양파",
+      "마늘",
+      "간장",
+      "후추",
+      "소금"
+    ],
+    "name_judgement": "부분정답",
+    "ingredients_judgement": "정답",
+    "overall_judgement": "부분정답",
+    "reason": "갈비탕은 전골과 조리 형태만 다르고 주재료(소갈비·무·대파)가 같음",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12061_등갈비찜_13_01.jpg",
+    "sample_id": 13,
+    "food_code": "B12061",
+    "gt_food_name": "등갈비찜",
+    "pred_food_name": "김치찜",
+    "pred_ingredients": [
+      "김치",
+      "돼지고기",
+      "대파",
+      "양파",
+      "고춧가루",
+      "다진 마늘",
+      "설탕"
+    ],
+    "name_judgement": "오답",
+    "ingredients_judgement": "부분정답",
+    "overall_judgement": "오답",
+    "reason": "김치찜으로 오인. 돼지고기는 맞지만 김치가 틀리고 사진에 보이는 감자가 빠짐",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12061_등갈비찜_13_02.jpg",
+    "sample_id": 13,
+    "food_code": "B12061",
+    "gt_food_name": "등갈비찜",
+    "pred_food_name": "김치찜",
+    "pred_ingredients": [
+      "김치",
+      "돼지고기",
+      "대파",
+      "고춧가루",
+      "다진 마늘",
+      "설탕"
+    ],
+    "name_judgement": "오답",
+    "ingredients_judgement": "부분정답",
+    "overall_judgement": "오답",
+    "reason": "김치찜으로 오인. 돼지고기는 맞지만 김치가 틀리고 감자가 빠짐",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12104_생태찌개_14_01.jpg",
+    "sample_id": 14,
+    "food_code": "B12104",
+    "gt_food_name": "생태찌개",
+    "pred_food_name": "김치찌개",
+    "pred_ingredients": [
+      "김치",
+      "두부",
+      "돼지고기",
+      "무",
+      "콩나물",
+      "고춧가루",
+      "물"
+    ],
+    "name_judgement": "오답",
+    "ingredients_judgement": "부분정답",
+    "overall_judgement": "오답",
+    "reason": "김치찌개로 오인. 두부·무·콩나물은 맞지만 주재료인 생태 대신 김치·돼지고기",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12104_생태찌개_14_02.jpg",
+    "sample_id": 14,
+    "food_code": "B12104",
+    "gt_food_name": "생태찌개",
+    "pred_food_name": "동태찌개",
+    "pred_ingredients": [
+      "동태",
+      "두부",
+      "무",
+      "콩나물",
+      "고춧가루",
+      "마늘",
+      "파"
+    ],
+    "name_judgement": "정답",
+    "ingredients_judgement": "정답",
+    "overall_judgement": "정답",
+    "reason": "생태와 동태는 같은 명태(생물/냉동)라 사진으로 구분할 수 없음. 같은 음식으로 판정",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_11_01.jpg",
+    "sample_id": 11,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "순두부찌개",
+    "pred_ingredients": [
+      "순두부",
+      "고추기름",
+      "고춧가루",
+      "대파",
+      "양파",
+      "마늘",
+      "달걀"
+    ],
+    "name_judgement": "오답",
+    "ingredients_judgement": "부분정답",
+    "overall_judgement": "오답",
+    "reason": "순두부찌개로 오인. 순두부·고추기름은 맞지만 짬뽕의 면·해물이 빠짐(탄수화물 차이 큼)",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12110_순두부짬뽕_11_02.jpg",
+    "sample_id": 11,
+    "food_code": "B12110",
+    "gt_food_name": "순두부짬뽕",
+    "pred_food_name": "순두부찌개",
+    "pred_ingredients": [
+      "순두부",
+      "고추기름",
+      "고춧가루",
+      "양파",
+      "대파",
+      "마늘",
+      "물",
+      "소금"
+    ],
+    "name_judgement": "오답",
+    "ingredients_judgement": "부분정답",
+    "overall_judgement": "오답",
+    "reason": "순두부찌개로 오인. 면·해물 누락",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12153_케이준양념감자_09_02.jpg",
+    "sample_id": 9,
+    "food_code": "B12153",
+    "gt_food_name": "케이준양념감자",
+    "pred_food_name": "감자튀김",
+    "pred_ingredients": [
+      "감자",
+      "식용유",
+      "소금",
+      "시즈닝"
+    ],
+    "name_judgement": "부분정답",
+    "ingredients_judgement": "정답",
+    "overall_judgement": "부분정답",
+    "reason": "'감자튀김'은 상위 범주. 재료에 시즈닝이 있어 양념은 반영됨",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12153_케이준양념감자_09_03.jpg",
+    "sample_id": 9,
+    "food_code": "B12153",
+    "gt_food_name": "케이준양념감자",
+    "pred_food_name": "감자튀김",
+    "pred_ingredients": [
+      "감자",
+      "식용유",
+      "소금"
+    ],
+    "name_judgement": "부분정답",
+    "ingredients_judgement": "부분정답",
+    "overall_judgement": "부분정답",
+    "reason": "'감자튀김'은 상위 범주. 케이준 양념 누락",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12155_코울슬로_14_01.jpg",
+    "sample_id": 14,
+    "food_code": "B12155",
+    "gt_food_name": "코울슬로",
+    "pred_food_name": "마카로니 샐러드",
+    "pred_ingredients": [
+      "마카로니",
+      "옥수수",
+      "당근",
+      "마요네즈",
+      "파슬리"
+    ],
+    "name_judgement": "오답",
+    "ingredients_judgement": "부분정답",
+    "overall_judgement": "오답",
+    "reason": "사진은 양배추 샐러드인데 마카로니 샐러드로 오인. 옥수수·당근·마요네즈는 맞음",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12155_코울슬로_14_02.jpg",
+    "sample_id": 14,
+    "food_code": "B12155",
+    "gt_food_name": "코울슬로",
+    "pred_food_name": "코울슬로",
+    "pred_ingredients": [
+      "양배추",
+      "당근",
+      "옥수수",
+      "마요네즈",
+      "식초",
+      "설탕",
+      "소금",
+      "후추"
+    ],
+    "name_judgement": "정답",
+    "ingredients_judgement": "정답",
+    "overall_judgement": "정답",
+    "reason": "음식명 일치. 양배추·당근·옥수수·마요네즈 맞음",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12160_크림함박스테이크_07_01.jpg",
+    "sample_id": 7,
+    "food_code": "B12160",
+    "gt_food_name": "크림함박스테이크",
+    "pred_food_name": "함박 스테이크",
+    "pred_ingredients": [
+      "다진 소고기",
+      "다진 돼지고기",
+      "양파",
+      "빵가루",
+      "계란",
+      "크림 소스",
+      "파슬리",
+      "피클"
+    ],
+    "name_judgement": "부분정답",
+    "ingredients_judgement": "정답",
+    "overall_judgement": "부분정답",
+    "reason": "'크림'이 빠진 상위 범주. 재료에 크림 소스가 있음",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12160_크림함박스테이크_07_02.jpg",
+    "sample_id": 7,
+    "food_code": "B12160",
+    "gt_food_name": "크림함박스테이크",
+    "pred_food_name": "함박 스테이크",
+    "pred_ingredients": [
+      "다진 소고기",
+      "다진 돼지고기",
+      "양파",
+      "빵가루",
+      "계란",
+      "우유",
+      "크림 소스",
+      "파슬리",
+      "피클"
+    ],
+    "name_judgement": "부분정답",
+    "ingredients_judgement": "정답",
+    "overall_judgement": "부분정답",
+    "reason": "'크림'이 빠진 상위 범주. 재료에 크림 소스·우유가 있음",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11017_냉채족발_09_01.jpg",
+    "sample_id": 9,
+    "food_code": "B11017",
+    "gt_food_name": "냉채족발",
+    "pred_food_name": "치킨 샐러드 샌드위치",
+    "pred_ingredients": [
+      "식빵",
+      "닭가슴살",
+      "양배추",
+      "적양배추",
+      "상추",
+      "드레싱"
+    ],
+    "name_judgement": "오답",
+    "ingredients_judgement": "오답",
+    "overall_judgement": "오답",
+    "reason": "채소 아래 족발 조각을 식빵으로 오인. 주재료(족발)를 식빵·닭가슴살로 틀림",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11017_냉채족발_09_02.jpg",
+    "sample_id": 9,
+    "food_code": "B11017",
+    "gt_food_name": "냉채족발",
+    "pred_food_name": "치킨 샐러드 샌드위치",
+    "pred_ingredients": [
+      "빵",
+      "닭가슴살",
+      "양배추",
+      "적양배추",
+      "상추",
+      "드레싱"
+    ],
+    "name_judgement": "오답",
+    "ingredients_judgement": "오답",
+    "overall_judgement": "오답",
+    "reason": "치킨 샐러드 샌드위치로 오인. 주재료 틀림(채소·드레싱만 맞음)",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11041_미니족발_01_01.jpg",
+    "sample_id": 1,
+    "food_code": "B11041",
+    "gt_food_name": "미니족발",
+    "pred_food_name": "족발",
+    "pred_ingredients": [
+      "돼지족",
+      "간장",
+      "설탕",
+      "마늘",
+      "생강",
+      "팔각",
+      "계피",
+      "물엿"
+    ],
+    "name_judgement": "부분정답",
+    "ingredients_judgement": "정답",
+    "overall_judgement": "부분정답",
+    "reason": "'족발'은 상위 범주. 미니족발과 조리법·재료가 같음",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_11_B11041_미니족발_05_01.jpg",
+    "sample_id": 5,
+    "food_code": "B11041",
+    "gt_food_name": "미니족발",
+    "pred_food_name": "족발",
+    "pred_ingredients": [
+      "돼지족",
+      "간장",
+      "설탕",
+      "마늘",
+      "생강",
+      "팔각",
+      "계피",
+      "대파",
+      "양파"
+    ],
+    "name_judgement": "부분정답",
+    "ingredients_judgement": "정답",
+    "overall_judgement": "부분정답",
+    "reason": "'족발'은 상위 범주. 재료 맞음",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12008_감자만두_12_01.jpg",
+    "sample_id": 12,
+    "food_code": "B12008",
+    "gt_food_name": "감자만두",
+    "pred_food_name": "감자떡",
+    "pred_ingredients": [
+      "감자 전분",
+      "팥앙금",
+      "소금",
+      "설탕",
+      "물"
+    ],
+    "name_judgement": "오답",
+    "ingredients_judgement": "부분정답",
+    "overall_judgement": "오답",
+    "reason": "감자떡으로 오인(겉모습이 거의 같음). 감자 전분은 맞지만 소가 팥앙금으로 틀림(원래 고기·채소)",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12008_감자만두_12_02.jpg",
+    "sample_id": 12,
+    "food_code": "B12008",
+    "gt_food_name": "감자만두",
+    "pred_food_name": "감자떡",
+    "pred_ingredients": [
+      "감자 전분",
+      "팥앙금",
+      "소금",
+      "설탕",
+      "물"
+    ],
+    "name_judgement": "오답",
+    "ingredients_judgement": "부분정답",
+    "overall_judgement": "오답",
+    "reason": "감자떡으로 오인. 소가 팥앙금으로 틀림",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12010_감자옹심이_03_01.jpg",
+    "sample_id": 3,
+    "food_code": "B12010",
+    "gt_food_name": "감자옹심이",
+    "pred_food_name": "떡국",
+    "pred_ingredients": [
+      "떡국떡",
+      "소고기",
+      "대파",
+      "물",
+      "소금",
+      "국간장"
+    ],
+    "name_judgement": "오답",
+    "ingredients_judgement": "오답",
+    "overall_judgement": "오답",
+    "reason": "떡국으로 오인. 감자 옹심이를 떡국떡으로 판단",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "image": "B_12_B12010_감자옹심이_13_01.jpg",
+    "sample_id": 13,
+    "food_code": "B12010",
+    "gt_food_name": "감자옹심이",
+    "pred_food_name": "떡만둣국",
+    "pred_ingredients": [
+      "떡국떡",
+      "만두",
+      "계란",
+      "당근",
+      "대파",
+      "육수"
+    ],
+    "name_judgement": "오답",
+    "ingredients_judgement": "오답",
+    "overall_judgement": "오답",
+    "reason": "떡만둣국으로 오인. 옹심이를 떡·만두로 판단. 계란·당근·대파만 맞음",
+    "model": "gemini-3.1-flash-lite"
+  }
+]

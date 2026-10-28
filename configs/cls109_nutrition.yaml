@@ -1,0 +1,100 @@
+# AIHub 122 음식분류 109종 이미지(food_classifier 데이터) → Gemini 임베딩 + 주파수 인코딩 특징 → 영양성분 예측
+# 텍스트 = "음식명 (재료: ...)" (pipeline_infer 와 같은 형식). manifest 는 n296.build_manifest_cls109 가 만든다.
+# 정답 = 영양DB 1인분(Q4) 값. 음식분류 사진은 양 정보가 없어 모든 사진을 1인분으로 가정 [추정].
+# 모델·학습 설정은 stage3_296.yaml 과 동일. 데이터 부분만 122 에 맞춤.
+# 정답 = 영양DB(Q4 기준) × 양 등급 비율(Q1 0.25 ~ Q5 1.25), 공식 활용가이드 계산식.
+# [원본]  = 체크포인트 config 에 있던 값 그대로
+# [추정]  = 체크포인트에 없어서 가정한 값 (README "검토 필요" 참고)
+
+seed: 42
+device: cuda:0
+
+paths:
+  # 아래 상대 경로의 기준 (player0070 서버로 옮김, 2026-10-05).
+  storage_root: /home/player0070/2025-2/n296_stage3_3
+  output_dir: runs/nutrition_cls109
+  manifest: data/manifest_cls109.csv         # train 음식 사진(Training) + val 음식 사진(Validation)
+  text_only_manifest: data/manifest_cls109_db.csv  # 영양DB 텍스트 전용 (val·test_unseen 음식 제외)
+  emb_cache: data/emb_cache.json             # 텍스트 → Gemini 임베딩 캐시
+  image_cache_dir: null                      # 입력이 이미 384px 사본이라 캐시 불필요
+
+data:
+  label_root_122: "/home/player0070/datasets/aihub_122/122.음식_분류를_위한_음식종류_및_양에_따른_칼로리_데이터셋(재료,_양념,_완제품_등)/01.데이터"                       # 라벨 zip 이 있는 폴더 (zip 은 풀지 않음)
+  db_path_122: "/home/player0070/datasets/aihub_122/122.음식_분류를_위한_음식종류_및_양에_따른_칼로리_데이터셋(재료,_양념,_완제품_등)/01.데이터/9.칼로리데이터셋/44.음식분류_AI_데이터_영양DB.xlsx"
+  classifier_split: data/food_cls_122/split.csv      # food_classifier prepare 출력 (384px 사본 + 분할)
+  ingredients_json: data/food_ingredients_122.json   # 영양DB 400종 재료 (Gemini 생성, 캐시)
+  test_seen_manifest: data/manifest_cls109_test_seen.csv      # 학습한 음식의 test 사진
+  test_unseen_manifest: data/manifest_cls109_test_unseen.csv  # 학습에 없는 음식의 모든 사진
+  enable_text_only: true                     # 영양DB 400종을 이미지 없는 샘플로 사용
+  image_size: 224
+  cache_max_side: 384
+  use_bbox_crop: false
+  split_by: official                         # manifest 의 source_split (val = 처음 보는 음식)
+  val_ratio: 0.1                             # split_by 가 group/image/food_code 일 때만 사용
+  exclude_manifest: null
+  text_template: "{food_name} (재료: {ingredients})"   # pipeline_infer 기본값과 같아야 한다
+
+embedding:
+  provider: gemini                           # gemini | fake(스모크 테스트용 해시 임베딩)
+  model: models/gemini-embedding-2           # [원본]
+  dim: 3072                                  # [원본] text_encoder 입력 차원
+  api_key_env: GEMINI_KEY                    # [원본]
+  task_type: SEMANTIC_SIMILARITY             # [추정]
+  batch_size: 50
+
+model:
+  text_hidden1: 512                          # [원본]
+  text_hidden2: 512                          # [원본]
+  image_dim: 1024                            # [원본]
+  head_hidden: 2048                          # [원본]
+  dropout: 0.3                               # [원본]
+  freeze_backbone_layers: true               # [원본] 얼리는 범위는 [추정]: ConvNeXt stem~stage2
+  modality_dropout_prob: 0.3                 # [원본] 적용 방식은 [추정]
+
+freq:
+  enabled: true                              # [원본]
+  mode: spatial                              # [원본]
+  r_low: 0.15                                # [원본]
+  r_high: 0.85                               # [원본]
+  window_alpha: 0.25                         # [원본] Tukey window
+  cnx_tap: 5                                 # [원본] ConvNeXt features[5] 출력(512ch, 14x14)
+  vgg_out_dim: 512                           # [원본]
+  freeze_vgg_layers: true                    # [원본] 얼리는 범위는 [추정]: VGG block2~3
+  mixer1_token_hidden: 256                   # [원본]
+  mixer1_channel_hidden: 2048                # [원본]
+  conv_dims: [512, 256]                      # [원본]
+  mixer2_dim: 256                            # [원본]
+  mixer2_token_hidden: 64                    # [원본]
+  mixer2_channel_hidden: 512                 # [원본]
+
+augmentation:
+  enabled: false                             # [원본]
+
+training:
+  lr: 0.0003                                 # [원본]
+  weight_decay: 0.0001                       # [원본]
+  batch_size: 64                             # [원본]
+  epochs: 500                                # [원본] (단계별 epochs 가 없으면 이 값 사용)
+  patience: 10                               # [원본]
+  image_workers: 8                           # 384px 사본이라 병렬 디코딩
+  loss: smooth_l1                            # [추정] 표준화된 타깃에 적용
+  loss_weights: {calories: 1.0, mass: 1.0, fat: 1.0, carb: 1.0, protein: 1.0}  # 122 는 탄수화물·중량이 실제 값이라 동일 가중치
+  amp: true
+
+# 단계 구성 [추정] — 체크포인트에는 stage=3 만 기록되어 있음
+stages:
+  - name: stage1_text
+    train_modules: [text_encoder, nutrition_head]
+    image_mode: masked          # 이미지 분기를 mask_token 으로 대체
+    epochs: 100
+  - name: stage2_image
+    train_modules: [image_encoder, freq_encoder, mixer1, conv_blocks, cnx_proj, mixer2, pooling, mask_token, mix_mask_token, nutrition_head]
+    image_mode: full
+    modality_dropout: false
+    epochs: 100
+  - name: stage3_fusion
+    train_modules: all
+    image_mode: full
+    modality_dropout: true
+    lr_scale: 0.3
+    epochs: 500

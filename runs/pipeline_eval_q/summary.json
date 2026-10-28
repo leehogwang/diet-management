@@ -1,0 +1,373 @@
+{
+  "aihub122": {
+    "images": 109,
+    "foods": 109,
+    "to_gemini": 0.211,
+    "name_acc": 0.761,
+    "pipeline": {
+      "cal": 32.1,
+      "fat": 37.8,
+      "prot": 35.9,
+      "mass": 28.2,
+      "carb_head": 31.8,
+      "mean_pmae": 35.3
+    },
+    "pipeline_q4": {
+      "cal": 16.5,
+      "fat": 26.5,
+      "prot": 21.8,
+      "mass": 13.4,
+      "carb_head": 16.0,
+      "mean_pmae": 21.6
+    },
+    "q_level_counts": {
+      "Q1": 6,
+      "Q2": 7,
+      "Q3": 15,
+      "Q4": 38,
+      "Q5": 43
+    },
+    "by_source_classifier": {
+      "images": 86,
+      "name_acc": 0.919,
+      "cal": 27.9,
+      "fat": 33.2,
+      "prot": 31.0,
+      "mass": 24.6,
+      "carb_head": 28.3,
+      "mean_pmae": 30.7
+    },
+    "by_source_gemini": {
+      "images": 23,
+      "name_acc": 0.174,
+      "cal": 49.4,
+      "fat": 67.3,
+      "prot": 60.9,
+      "mass": 39.6,
+      "carb_head": 42.3,
+      "mean_pmae": 59.2
+    },
+    "oracle": {
+      "cal": 28.0,
+      "fat": 29.6,
+      "prot": 26.4,
+      "mass": 23.5,
+      "carb_head": 30.3,
+      "mean_pmae": 28.0
+    },
+    "nut_unseen": {
+      "images": 26,
+      "pipeline": {
+        "cal": 43.7,
+        "fat": 48.8,
+        "prot": 42.9,
+        "mass": 31.1,
+        "carb_head": 49.0,
+        "mean_pmae": 45.1
+      },
+      "oracle": {
+        "cal": 45.0,
+        "fat": 50.6,
+        "prot": 39.5,
+        "mass": 26.3,
+        "carb_head": 51.9,
+        "mean_pmae": 45.0
+      }
+    },
+    "nut_seen": {
+      "images": 83,
+      "pipeline": {
+        "cal": 28.7,
+        "fat": 34.4,
+        "prot": 33.7,
+        "mass": 27.3,
+        "carb_head": 27.1,
+        "mean_pmae": 32.3
+      },
+      "oracle": {
+        "cal": 22.9,
+        "fat": 23.1,
+        "prot": 22.2,
+        "mass": 22.7,
+        "carb_head": 24.4,
+        "mean_pmae": 22.7
+      }
+    },
+    "name_wrong": {
+      "images": 26,
+      "pipeline": {
+        "cal": 53.7,
+        "fat": 80.1,
+        "prot": 70.6,
+        "mass": 42.2,
+        "carb_head": 44.4,
+        "mean_pmae": 68.1
+      },
+      "oracle": {
+        "cal": 36.0,
+        "fat": 38.1,
+        "prot": 30.7,
+        "mass": 27.7,
+        "carb_head": 38.3,
+        "mean_pmae": 34.9
+      }
+    },
+    "name_correct": {
+      "images": 83,
+      "pipeline": {
+        "cal": 25.9,
+        "fat": 28.7,
+        "prot": 27.9,
+        "mass": 23.5,
+        "carb_head": 27.1,
+        "mean_pmae": 27.5
+      },
+      "oracle": {
+        "cal": 25.6,
+        "fat": 27.8,
+        "prot": 25.4,
+        "mass": 22.2,
+        "carb_head": 27.3,
+        "mean_pmae": 26.3
+      }
+    }
+  },
+  "quantity122": {
+    "images": 115,
+    "foods": 23,
+    "to_gemini": 0.322,
+    "name_acc": 0.617,
+    "pipeline": {
+      "cal": 21.9,
+      "fat": 34.6,
+      "prot": 34.7,
+      "mass": 14.4,
+      "carb_head": 17.1,
+      "mean_pmae": 30.4
+    },
+    "pipeline_q4": {
+      "cal": 58.6,
+      "fat": 66.3,
+      "prot": 64.2,
+      "mass": 55.9,
+      "carb_head": 58.9,
+      "mean_pmae": 63.0
+    },
+    "q_level_counts": {
+      "Q1": 23,
+      "Q2": 23,
+      "Q3": 23,
+      "Q4": 22,
+      "Q5": 24
+    },
+    "by_source_classifier": {
+      "images": 78,
+      "name_acc": 0.808,
+      "cal": 20.5,
+      "fat": 32.0,
+      "prot": 31.8,
+      "mass": 12.7,
+      "carb_head": 14.6,
+      "mean_pmae": 28.1
+    },
+    "by_source_gemini": {
+      "images": 37,
+      "name_acc": 0.216,
+      "cal": 25.9,
+      "fat": 42.6,
+      "prot": 42.1,
+      "mass": 19.3,
+      "carb_head": 24.1,
+      "mean_pmae": 36.9
+    },
+    "q_acc": 0.991,
+    "q_acc_within1": 1.0,
+    "oracle_q": {
+      "cal": 12.0,
+      "fat": 16.9,
+      "prot": 15.7,
+      "mass": 8.4,
+      "carb_head": 12.0,
+      "mean_pmae": 14.8
+    },
+    "gt_Q1": {
+      "images": 23,
+      "pipeline": {
+        "cal": 29.4,
+        "fat": 47.9,
+        "prot": 46.6,
+        "mass": 19.4,
+        "carb_head": 20.8,
+        "mean_pmae": 41.3
+      },
+      "pipeline_q4": {
+        "cal": 299.2,
+        "fat": 284.7,
+        "prot": 289.1,
+        "mass": 324.2,
+        "carb_head": 332.4,
+        "mean_pmae": 291.0
+      }
+    },
+    "gt_Q2": {
+      "images": 23,
+      "pipeline": {
+        "cal": 25.2,
+        "fat": 38.6,
+        "prot": 38.3,
+        "mass": 18.2,
+        "carb_head": 20.3,
+        "mean_pmae": 34.0
+      },
+      "pipeline_q4": {
+        "cal": 106.0,
+        "fat": 115.3,
+        "prot": 110.5,
+        "mass": 112.2,
+        "carb_head": 116.1,
+        "mean_pmae": 110.6
+      }
+    },
+    "gt_Q3": {
+      "images": 23,
+      "pipeline": {
+        "cal": 21.9,
+        "fat": 33.4,
+        "prot": 33.6,
+        "mass": 15.5,
+        "carb_head": 19.7,
+        "mean_pmae": 29.6
+      },
+      "pipeline_q4": {
+        "cal": 41.1,
+        "fat": 49.7,
+        "prot": 45.1,
+        "mass": 38.9,
+        "carb_head": 43.3,
+        "mean_pmae": 45.3
+      }
+    },
+    "gt_Q4": {
+      "images": 23,
+      "pipeline": {
+        "cal": 21.4,
+        "fat": 33.3,
+        "prot": 33.7,
+        "mass": 13.8,
+        "carb_head": 14.7,
+        "mean_pmae": 29.5
+      },
+      "pipeline_q4": {
+        "cal": 20.8,
+        "fat": 33.3,
+        "prot": 32.9,
+        "mass": 12.8,
+        "carb_head": 14.1,
+        "mean_pmae": 29.0
+      }
+    },
+    "gt_Q5": {
+      "images": 23,
+      "pipeline": {
+        "cal": 19.6,
+        "fat": 32.2,
+        "prot": 32.4,
+        "mass": 11.8,
+        "carb_head": 15.5,
+        "mean_pmae": 28.1
+      },
+      "pipeline_q4": {
+        "cal": 32.4,
+        "fat": 39.4,
+        "prot": 37.1,
+        "mass": 24.4,
+        "carb_head": 26.7,
+        "mean_pmae": 36.3
+      }
+    },
+    "oracle": {
+      "cal": 12.2,
+      "fat": 16.9,
+      "prot": 15.9,
+      "mass": 8.7,
+      "carb_head": 12.2,
+      "mean_pmae": 15.0
+    },
+    "nut_unseen": {
+      "images": 30,
+      "pipeline": {
+        "cal": 47.2,
+        "fat": 59.0,
+        "prot": 73.7,
+        "mass": 28.2,
+        "carb_head": 39.2,
+        "mean_pmae": 60.0
+      },
+      "oracle": {
+        "cal": 44.5,
+        "fat": 55.8,
+        "prot": 69.2,
+        "mass": 26.8,
+        "carb_head": 41.8,
+        "mean_pmae": 56.5
+      }
+    },
+    "nut_seen": {
+      "images": 85,
+      "pipeline": {
+        "cal": 15.5,
+        "fat": 28.1,
+        "prot": 27.7,
+        "mass": 11.4,
+        "carb_head": 10.8,
+        "mean_pmae": 23.8
+      },
+      "oracle": {
+        "cal": 4.0,
+        "fat": 6.5,
+        "prot": 6.3,
+        "mass": 4.8,
+        "carb_head": 3.8,
+        "mean_pmae": 5.6
+      }
+    },
+    "name_wrong": {
+      "images": 44,
+      "pipeline": {
+        "cal": 28.5,
+        "fat": 57.0,
+        "prot": 47.8,
+        "mass": 17.6,
+        "carb_head": 19.6,
+        "mean_pmae": 44.4
+      },
+      "oracle": {
+        "cal": 6.9,
+        "fat": 10.4,
+        "prot": 9.8,
+        "mass": 6.1,
+        "carb_head": 10.7,
+        "mean_pmae": 9.0
+      }
+    },
+    "name_correct": {
+      "images": 71,
+      "pipeline": {
+        "cal": 17.6,
+        "fat": 24.1,
+        "prot": 25.0,
+        "mass": 12.0,
+        "carb_head": 15.3,
+        "mean_pmae": 22.2
+      },
+      "oracle": {
+        "cal": 15.7,
+        "fat": 20.0,
+        "prot": 20.4,
+        "mass": 10.7,
+        "carb_head": 13.3,
+        "mean_pmae": 18.7
+      }
+    }
+  }
+}
