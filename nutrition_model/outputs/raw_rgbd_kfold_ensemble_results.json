@@ -1,0 +1,68 @@
+{
+  "test_497_cutout_subset": {
+    "n": 497,
+    "ensemble": {
+      "kcal": {
+        "mae": 40.592,
+        "paper_pmae": 15.87
+      },
+      "mass_g": {
+        "mae": 23.534,
+        "paper_pmae": 11.76
+      },
+      "fat_g": {
+        "mae": 3.014,
+        "paper_pmae": 23.51
+      },
+      "carb_g": {
+        "mae": 4.181,
+        "paper_pmae": 21.29
+      },
+      "protein_g": {
+        "mae": 3.521,
+        "paper_pmae": 19.95
+      },
+      "mean_paper_pmae": 18.48
+    },
+    "single_fold_mean_paper_pmae": [
+      19.39,
+      19.81,
+      19.62,
+      19.65,
+      19.03
+    ]
+  },
+  "test_507_official": {
+    "n": 507,
+    "ensemble": {
+      "kcal": {
+        "mae": 40.655,
+        "paper_pmae": 15.91
+      },
+      "mass_g": {
+        "mae": 25.048,
+        "paper_pmae": 12.62
+      },
+      "fat_g": {
+        "mae": 3.026,
+        "paper_pmae": 23.58
+      },
+      "carb_g": {
+        "mae": 4.286,
+        "paper_pmae": 21.77
+      },
+      "protein_g": {
+        "mae": 3.739,
+        "paper_pmae": 21.39
+      },
+      "mean_paper_pmae": 19.06
+    },
+    "single_fold_mean_paper_pmae": [
+      19.86,
+      20.4,
+      20.25,
+      20.29,
+      19.68
+    ]
+  }
+}
