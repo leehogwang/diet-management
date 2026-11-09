@@ -1,0 +1,20 @@
+===== 122_2_forunseen | train 음식 44 | 대분류별 train 음식 수 {'구이': 5, '국·탕': 4, '국물면': 2, '기타': 2, '반찬': 5, '밥': 3, '볶음': 4, '볶음밥': 1, '비빔·볶음면': 1, '비빔밥·덮밥': 4, '전·부침': 1, '조림': 2, '죽·스프': 3, '찌개·전골': 3, '찜·수육': 1, '튀김': 3}
+  test 대분류 중 train 에 없는 것 (전체 평균으로 대체): ['김밥·주먹밥', '파스타'] (0.175)
+  model                  G4  45.78 A4  82.04 | G {'calories': 37.76, 'fat': 58.0, 'protein': 49.02, 'carb': 38.34, 'mass': 34.44}
+  cat_mean               G4  49.90 A4  92.01 | G {'calories': 36.47, 'fat': 71.18, 'protein': 55.68, 'carb': 36.29, 'mass': 36.45}
+  cat_median             G4  48.82 A4  74.87 | G {'calories': 36.83, 'fat': 70.05, 'protein': 52.07, 'carb': 36.34, 'mass': 34.75}
+  cat_mean_gtcat         G4  49.73 A4  92.03 | G {'calories': 36.07, 'fat': 72.43, 'protein': 54.44, 'carb': 35.98, 'mass': 35.99}
+  dens_x_catmass         G4  48.46 A4  91.44 | G {'calories': 40.75, 'fat': 59.26, 'protein': 48.61, 'carb': 45.24, 'mass': 34.75}
+  dens_x_catmass_gtcat   G4  48.07 A4  90.95 | G {'calories': 40.59, 'fat': 58.4, 'protein': 48.77, 'carb': 44.52, 'mass': 34.64}
+  train_mean_all         G4  59.42 A4 108.94 | G {'calories': 47.33, 'fat': 66.62, 'protein': 63.81, 'carb': 59.94, 'mass': 51.33}
+  gemini_ing             G4  33.67 A4  35.01 | G {'calories': 29.77, 'fat': 47.53, 'protein': 31.5, 'carb': 25.9, 'mass': 21.05}
+===== 122_1_forseen | train 음식 78 | 대분류별 train 음식 수 {'구이': 5, '국·탕': 13, '국물면': 4, '기타': 1, '김밥·주먹밥': 3, '반찬': 6, '밥': 4, '볶음': 6, '볶음밥': 3, '비빔·볶음면': 3, '비빔밥·덮밥': 7, '전·부침': 3, '조림': 3, '죽·스프': 3, '찌개·전골': 3, '찜·수육': 3, '튀김': 6, '파스타': 2}
+  test 대분류 중 train 에 없는 것 (전체 평균으로 대체): [] (0.000)
+  model                  G4   1.20 A4   1.93 | G {'calories': 0.86, 'fat': 1.5, 'protein': 1.02, 'carb': 1.44, 'mass': 0.93}
+  cat_mean               G4   1.38 A4   2.11 | G {'calories': 0.96, 'fat': 1.73, 'protein': 1.29, 'carb': 1.55, 'mass': 1.02}
+  cat_median             G4   1.37 A4   2.07 | G {'calories': 0.93, 'fat': 1.68, 'protein': 1.29, 'carb': 1.58, 'mass': 1.0}
+  cat_mean_gtcat         G4   1.36 A4   2.07 | G {'calories': 0.93, 'fat': 1.71, 'protein': 1.28, 'carb': 1.52, 'mass': 1.0}
+  dens_x_catmass         G4   1.29 A4   2.02 | G {'calories': 0.95, 'fat': 1.57, 'protein': 1.11, 'carb': 1.52, 'mass': 1.0}
+  dens_x_catmass_gtcat   G4   1.28 A4   2.01 | G {'calories': 0.93, 'fat': 1.57, 'protein': 1.13, 'carb': 1.5, 'mass': 0.99}
+  train_mean_all         G4   1.52 A4   2.30 | G {'calories': 1.06, 'fat': 1.79, 'protein': 1.47, 'carb': 1.75, 'mass': 1.26}
+  gemini_ing             G4   1.40 A4   2.10 | G {'calories': 1.01, 'fat': 1.64, 'protein': 1.27, 'carb': 1.69, 'mass': 1.04}

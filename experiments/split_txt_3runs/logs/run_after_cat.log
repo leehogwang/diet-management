@@ -1,0 +1,31 @@
+[1] Gemini 음식명 재료·임베딩 완료
+[2] 분류기 2개 완료
+진행 4500 토큰 [7177118, 286830]
+DONE 토큰 [7848807, 311660]
+DONE 11572 남은 미임베딩 0
+[3] 파이프라인 음식명 재료·임베딩 완료
+[122_1_forseen 대분류 gt] acc 0.9954 ±1 1.0000 ratio MAE 0.0011 | 기타 아님 0.988 정답표와 같음 1.000
+[122_1_forseen 대분류 masked] acc 0.9957 ±1 1.0000 ratio MAE 0.0011 | 기타 아님 0.000 정답표와 같음 0.012
+[122_1_forseen 대분류 gemini] acc 0.9954 ±1 1.0000 ratio MAE 0.0011 | 기타 아님 0.982 정답표와 같음 0.911
+[122_1_forseen 대분류 pipe] acc 0.9954 ±1 1.0000 ratio MAE 0.0011 | 기타 아님 0.988 정답표와 같음 0.987
+[122_2_forunseen 대분류 gt] acc 0.5573 ±1 0.9215 ratio MAE 0.1337 | 기타 아님 1.000 정답표와 같음 1.000
+[122_2_forunseen 대분류 masked] acc 0.5591 ±1 0.9210 ratio MAE 0.1334 | 기타 아님 0.000 정답표와 같음 0.000
+[122_2_forunseen 대분류 gemini] acc 0.5574 ±1 0.9215 ratio MAE 0.1337 | 기타 아님 1.000 정답표와 같음 0.932
+[122_2_forunseen 대분류 pipe] acc 0.5580 ±1 0.9213 ratio MAE 0.1336 | 기타 아님 0.979 정답표와 같음 0.770
+[4] 양추정 재평가 완료
+[5] 영양 4런 완료
+122_1_forseen actual [EVAL_ONLY text_gt] G4 2.86 A4 4.49 | G {'calories': 2.69, 'fat': 3.15, 'protein': 2.73, 'carb': 2.86, 'mass': 2.6} | n 4387 (텍스트 없음 0)
+122_1_forseen actual [EVAL_ONLY text_gemini] G4 5.76 A4 9.24 | G {'calories': 4.31, 'fat': 7.56, 'protein': 5.4, 'carb': 5.78, 'mass': 4.75} | n 4387 (텍스트 없음 0)
+122_1_forseen actual [EVAL_ONLY text_pipe] G4 3.16 A4 5.39 | G {'calories': 2.85, 'fat': 3.58, 'protein': 2.92, 'carb': 3.3, 'mass': 2.7} | n 4387 (텍스트 없음 0)
+122_1_forseen q4 [EVAL_ONLY text_gt] G4 0.25 A4 0.67 | G {'calories': 0.19, 'fat': 0.32, 'protein': 0.24, 'carb': 0.27, 'mass': 0.26} | n 4387 (텍스트 없음 0)
+122_1_forseen q4 [EVAL_ONLY text_gemini] G4 5.95 A4 8.10 | G {'calories': 4.17, 'fat': 7.36, 'protein': 6.32, 'carb': 5.96, 'mass': 4.67} | n 4387 (텍스트 없음 0)
+122_1_forseen q4 [EVAL_ONLY text_pipe] G4 1.05 A4 1.88 | G {'calories': 0.71, 'fat': 1.35, 'protein': 0.88, 'carb': 1.26, 'mass': 0.79} | n 4387 (텍스트 없음 0)
+122_2_forunseen actual [EVAL_ONLY text_gt] G4 45.56 A4 74.00 | G {'calories': 39.25, 'fat': 57.29, 'protein': 48.38, 'carb': 37.32, 'mass': 36.47} | n 5884 (텍스트 없음 0)
+122_2_forunseen actual [EVAL_ONLY text_gemini] G4 45.73 A4 72.85 | G {'calories': 39.23, 'fat': 55.5, 'protein': 51.09, 'carb': 37.08, 'mass': 37.02} | n 5884 (텍스트 없음 0)
+122_2_forunseen actual [EVAL_ONLY text_pipe] G4 49.28 A4 86.29 | G {'calories': 43.7, 'fat': 57.93, 'protein': 54.06, 'carb': 41.43, 'mass': 38.34} | n 5884 (텍스트 없음 0)
+122_2_forunseen q4 [EVAL_ONLY text_gt] G4 43.44 A4 96.04 | G {'calories': 33.94, 'fat': 59.21, 'protein': 45.4, 'carb': 35.23, 'mass': 30.36} | n 5884 (텍스트 없음 0)
+122_2_forunseen q4 [EVAL_ONLY text_gemini] G4 45.08 A4 96.50 | G {'calories': 35.93, 'fat': 58.0, 'protein': 50.12, 'carb': 36.28, 'mass': 31.24} | n 5884 (텍스트 없음 0)
+122_2_forunseen q4 [EVAL_ONLY text_pipe] G4 49.67 A4 113.21 | G {'calories': 41.82, 'fat': 59.99, 'protein': 54.01, 'carb': 42.88, 'mass': 34.1} | n 5884 (텍스트 없음 0)
+122_1_forseen {'gt': {'direct': 2.86, 'pipe_q4': 46.7, 'pipe_gated': 0.65, 'pipe_always': 0.38, 'pipe_expected_gated': 0.72, 'oracle_q': 0.26}, 'gemini': {'direct': 5.76, 'pipe_q4': 46.79, 'pipe_gated': 5.92, 'pipe_always': 5.23, 'pipe_expected_gated': 5.96, 'oracle_q': 5.12}, 'pipe': {'direct': 3.16, 'pipe_q4': 46.93, 'pipe_gated': 1.44, 'pipe_always': 1.17, 'pipe_expected_gated': 1.48, 'oracle_q': 1.05}}
+122_2_forunseen {'gt': {'direct': 45.56, 'pipe_q4': 69.36, 'pipe_gated': 44.87, 'pipe_always': 44.87, 'pipe_expected_gated': 49.9, 'oracle_q': 43.48}, 'gemini': {'direct': 45.73, 'pipe_q4': 70.55, 'pipe_gated': 45.78, 'pipe_always': 45.75, 'pipe_expected_gated': 50.62, 'oracle_q': 44.99}, 'pipe': {'direct': 49.28, 'pipe_q4': 75.51, 'pipe_gated': 50.11, 'pipe_always': 49.53, 'pipe_expected_gated': 54.95, 'oracle_q': 49.28}}
+ALL_CAT_DONE

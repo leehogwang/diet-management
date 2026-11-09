@@ -1,0 +1,38 @@
+[122_1_forseen_quantity] train 31484 val 3423 test 4387 | 대분류 18개 학습 | cuda:1
+ep  1 (169s) loss 1.2133 | val acc 0.7491 ±1 0.9912
+ep  2 (210s) loss 0.7988 | val acc 0.8931 ±1 0.9985
+ep  3 (234s) loss 0.6588 | val acc 0.9045 ±1 0.9988
+ep  4 (233s) loss 0.5846 | val acc 0.9506 ±1 0.9994
+ep  5 (225s) loss 0.5460 | val acc 0.9585 ±1 1.0000
+ep  6 (232s) loss 0.5140 | val acc 0.9524 ±1 0.9997
+ep  7 (233s) loss 0.4979 | val acc 0.9603 ±1 1.0000
+ep  8 (233s) loss 0.4781 | val acc 0.9725 ±1 0.9997
+ep  9 (174s) loss 0.4675 | val acc 0.9749 ±1 0.9997
+ep 10 (125s) loss 0.4589 | val acc 0.9755 ±1 0.9991
+ep 11 (125s) loss 0.4513 | val acc 0.9763 ±1 1.0000
+ep 12 (125s) loss 0.4446 | val acc 0.9798 ±1 1.0000
+ep 13 (126s) loss 0.4337 | val acc 0.9836 ±1 0.9997
+ep 14 (125s) loss 0.4319 | val acc 0.9822 ±1 1.0000
+ep 15 (126s) loss 0.4297 | val acc 0.9845 ±1 0.9997
+ep 16 (125s) loss 0.4180 | val acc 0.9883 ±1 1.0000
+ep 17 (125s) loss 0.4150 | val acc 0.9831 ±1 0.9997
+ep 18 (125s) loss 0.4129 | val acc 0.9904 ±1 0.9997
+ep 19 (125s) loss 0.4097 | val acc 0.9871 ±1 1.0000
+ep 20 (125s) loss 0.4066 | val acc 0.9921 ±1 0.9997
+ep 21 (125s) loss 0.4055 | val acc 0.9874 ±1 0.9997
+ep 22 (125s) loss 0.4022 | val acc 0.9921 ±1 0.9997
+ep 23 (126s) loss 0.4000 | val acc 0.9944 ±1 0.9997
+ep 24 (126s) loss 0.4001 | val acc 0.9939 ±1 0.9997
+ep 25 (124s) loss 0.3984 | val acc 0.9944 ±1 1.0000
+ep 26 (125s) loss 0.3981 | val acc 0.9944 ±1 1.0000
+ep 27 (125s) loss 0.3969 | val acc 0.9939 ±1 0.9997
+ep 28 (125s) loss 0.3975 | val acc 0.9956 ±1 0.9997
+ep 29 (125s) loss 0.3968 | val acc 0.9956 ±1 0.9997
+ep 30 (125s) loss 0.3969 | val acc 0.9950 ±1 0.9997
+/home/leehogwang/food_b/n296/food_classifier.py:151: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return float(log_t.exp())
+[TEST 대분류 gt] acc 0.9954 ±1 1.0000 ratio MAE 0.0011
+[TEST 대분류 gemini] acc 0.9954 ±1 1.0000 ratio MAE 0.0011
+[TEST 대분류 masked] acc 0.9957 ±1 1.0000 ratio MAE 0.0011
+DONE

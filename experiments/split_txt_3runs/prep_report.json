@@ -1,0 +1,90 @@
+{
+ "n5k_drop": {
+  "사진 없음": 12,
+  "칼로리 0": 2
+ },
+ "122_1_forseen": {
+  "train": {
+   "n": 31484,
+   "views": {
+    "side": 15865,
+    "top": 15619
+   },
+   "foods": 78
+  },
+  "val": {
+   "n": 3423,
+   "views": {
+    "side": 1730,
+    "top": 1693
+   },
+   "foods": 78
+  },
+  "test": {
+   "n": 4387,
+   "views": {
+    "side": 2138,
+    "top": 2249
+   },
+   "foods": 78
+  }
+ },
+ "122_2_forunseen": {
+  "train": {
+   "n": 10840,
+   "views": {
+    "side": 10840
+   },
+   "foods": 44
+  },
+  "val": {
+   "n": 2989,
+   "views": {
+    "side": 2989
+   },
+   "foods": 12
+  },
+  "test": {
+   "n": 5884,
+   "views": {
+    "side": 5884
+   },
+   "foods": 23
+  }
+ },
+ "n5k": {
+  "train": {
+   "n": 3641,
+   "views": {
+    "camera_A": 1101,
+    "overhead": 2483,
+    "camera_B": 45,
+    "camera_C": 10,
+    "camera_D": 2
+   },
+   "foods": null
+  },
+  "val": {
+   "n": 405,
+   "views": {
+    "overhead": 271,
+    "camera_B": 10,
+    "camera_A": 121,
+    "camera_D": 2,
+    "camera_C": 1
+   },
+   "foods": null
+  },
+  "test": {
+   "n": 708,
+   "views": {
+    "camera_A": 193,
+    "overhead": 506,
+    "camera_B": 7,
+    "camera_D": 1,
+    "camera_C": 1
+   },
+   "foods": null
+  }
+ }
+}

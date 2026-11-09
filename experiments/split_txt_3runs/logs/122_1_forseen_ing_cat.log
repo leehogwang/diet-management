@@ -1,0 +1,79 @@
+[122_1_forseen] train 31484 val 3423 test 4387 | 학습 파라미터 113.0M (얼린 모듈 2) | batch 64 | budget 180.0분 | cuda:0
+ep   1 (526s) lr 3.00e-04 loss 0.1042 | val G4 17.22 A4 26.31 | {'calories': 15.73, 'fat': 19.24, 'protein': 18.24, 'carb': 15.66, 'mass': 14.43}
+ep   2 (395s) lr 3.00e-04 loss 0.0559 | val G4 14.12 A4 26.23 | {'calories': 12.67, 'fat': 16.04, 'protein': 14.35, 'carb': 13.41, 'mass': 14.91}
+ep   3 (257s) lr 3.00e-04 loss 0.0479 | val G4 11.06 A4 17.61 | {'calories': 10.05, 'fat': 12.61, 'protein': 11.48, 'carb': 10.09, 'mass': 11.06}
+ep   4 (256s) lr 3.00e-04 loss 0.0442 | val G4 10.63 A4 17.59 | {'calories': 9.51, 'fat': 12.49, 'protein': 10.98, 'carb': 9.55, 'mass': 9.54}
+ep   5 (255s) lr 3.00e-04 loss 0.0429 | val G4 11.11 A4 16.83 | {'calories': 10.16, 'fat': 11.81, 'protein': 11.77, 'carb': 10.68, 'mass': 10.58}
+ep   6 (259s) lr 3.00e-04 loss 0.0425 | val G4 9.17 A4 14.47 | {'calories': 8.24, 'fat': 9.97, 'protein': 9.14, 'carb': 9.33, 'mass': 8.82}
+ep   7 (250s) lr 3.00e-04 loss 0.0398 | val G4 9.11 A4 18.15 | {'calories': 8.41, 'fat': 10.16, 'protein': 8.73, 'carb': 9.14, 'mass': 8.41}
+ep   8 (166s) lr 3.00e-04 loss 0.0396 | val G4 9.07 A4 14.46 | {'calories': 8.47, 'fat': 9.87, 'protein': 9.12, 'carb': 8.81, 'mass': 8.44}
+ep   9 (132s) lr 3.00e-04 loss 0.0386 | val G4 8.27 A4 12.51 | {'calories': 7.91, 'fat': 8.96, 'protein': 8.24, 'carb': 7.98, 'mass': 8.54}
+ep  10 (132s) lr 3.00e-04 loss 0.0374 | val G4 8.03 A4 14.85 | {'calories': 7.2, 'fat': 8.93, 'protein': 8.26, 'carb': 7.73, 'mass': 7.33}
+ep  11 (131s) lr 3.00e-04 loss 0.0390 | val G4 9.27 A4 13.85 | {'calories': 8.39, 'fat': 9.6, 'protein': 9.46, 'carb': 9.65, 'mass': 9.21}
+ep  12 (134s) lr 3.00e-04 loss 0.0373 | val G4 8.52 A4 15.40 | {'calories': 7.75, 'fat': 9.09, 'protein': 8.7, 'carb': 8.53, 'mass': 7.38}
+ep  13 (132s) lr 3.00e-04 loss 0.0352 | val G4 7.87 A4 14.58 | {'calories': 7.15, 'fat': 8.35, 'protein': 7.65, 'carb': 8.33, 'mass': 8.17}
+ep  14 (131s) lr 3.00e-04 loss 0.0381 | val G4 7.81 A4 13.38 | {'calories': 7.14, 'fat': 8.84, 'protein': 7.61, 'carb': 7.65, 'mass': 8.49}
+ep  15 (132s) lr 3.00e-04 loss 0.0365 | val G4 8.92 A4 14.92 | {'calories': 8.2, 'fat': 8.88, 'protein': 9.27, 'carb': 9.33, 'mass': 8.59}
+ep  16 (131s) lr 3.00e-04 loss 0.0368 | val G4 7.74 A4 12.20 | {'calories': 7.16, 'fat': 7.86, 'protein': 7.37, 'carb': 8.55, 'mass': 7.74}
+ep  17 (131s) lr 3.00e-04 loss 0.0363 | val G4 7.60 A4 12.79 | {'calories': 6.89, 'fat': 8.53, 'protein': 7.78, 'carb': 7.22, 'mass': 7.44}
+ep  18 (132s) lr 3.00e-04 loss 0.0374 | val G4 7.95 A4 12.60 | {'calories': 7.44, 'fat': 8.2, 'protein': 8.32, 'carb': 7.84, 'mass': 7.24}
+ep  19 (131s) lr 3.00e-04 loss 0.0354 | val G4 7.76 A4 11.54 | {'calories': 7.4, 'fat': 8.73, 'protein': 7.25, 'carb': 7.65, 'mass': 7.26}
+ep  20 (132s) lr 3.00e-04 loss 0.0353 | val G4 7.60 A4 13.19 | {'calories': 7.15, 'fat': 8.03, 'protein': 7.35, 'carb': 7.85, 'mass': 7.57}
+ep  21 (138s) lr 3.00e-04 loss 0.0357 | val G4 7.41 A4 11.53 | {'calories': 6.96, 'fat': 8.02, 'protein': 7.04, 'carb': 7.61, 'mass': 7.25}
+ep  22 (132s) lr 3.00e-04 loss 0.0353 | val G4 8.92 A4 13.24 | {'calories': 8.01, 'fat': 9.81, 'protein': 9.13, 'carb': 8.72, 'mass': 8.28}
+ep  23 (132s) lr 3.00e-04 loss 0.0351 | val G4 7.35 A4 11.60 | {'calories': 6.67, 'fat': 7.96, 'protein': 7.4, 'carb': 7.36, 'mass': 6.8}
+ep  24 (133s) lr 3.00e-04 loss 0.0344 | val G4 8.04 A4 11.51 | {'calories': 7.45, 'fat': 8.52, 'protein': 8.8, 'carb': 7.38, 'mass': 7.39}
+ep  25 (132s) lr 3.00e-04 loss 0.0368 | val G4 8.01 A4 17.02 | {'calories': 6.92, 'fat': 9.32, 'protein': 8.39, 'carb': 7.43, 'mass': 7.27}
+ep  26 (132s) lr 3.00e-04 loss 0.0348 | val G4 6.89 A4 13.04 | {'calories': 6.22, 'fat': 7.65, 'protein': 6.26, 'carb': 7.41, 'mass': 5.84}
+ep  27 (132s) lr 3.00e-04 loss 0.0342 | val G4 7.11 A4 11.21 | {'calories': 6.65, 'fat': 8.01, 'protein': 6.87, 'carb': 6.92, 'mass': 6.42}
+ep  28 (132s) lr 3.00e-04 loss 0.0352 | val G4 6.54 A4 12.24 | {'calories': 6.03, 'fat': 6.76, 'protein': 6.22, 'carb': 7.13, 'mass': 6.02}
+ep  29 (131s) lr 3.00e-04 loss 0.0341 | val G4 7.06 A4 12.74 | {'calories': 6.28, 'fat': 8.09, 'protein': 6.6, 'carb': 7.29, 'mass': 6.57}
+ep  30 (131s) lr 3.00e-04 loss 0.0333 | val G4 5.96 A4 9.30 | {'calories': 5.44, 'fat': 6.74, 'protein': 5.84, 'carb': 5.83, 'mass': 5.87}
+ep  31 (132s) lr 3.00e-04 loss 0.0335 | val G4 6.90 A4 11.11 | {'calories': 6.14, 'fat': 7.21, 'protein': 6.93, 'carb': 7.31, 'mass': 6.1}
+ep  32 (131s) lr 3.00e-04 loss 0.0336 | val G4 6.08 A4 10.72 | {'calories': 5.46, 'fat': 6.08, 'protein': 6.29, 'carb': 6.49, 'mass': 5.37}
+ep  33 (132s) lr 3.00e-04 loss 0.0334 | val G4 6.81 A4 10.15 | {'calories': 6.14, 'fat': 7.1, 'protein': 6.49, 'carb': 7.5, 'mass': 6.02}
+ep  34 (132s) lr 1.50e-04 loss 0.0341 | val G4 6.56 A4 13.75 | {'calories': 6.02, 'fat': 7.13, 'protein': 6.0, 'carb': 7.08, 'mass': 5.87}
+ep  35 (131s) lr 1.50e-04 loss 0.0301 | val G4 5.02 A4 8.35 | {'calories': 4.62, 'fat': 5.26, 'protein': 5.09, 'carb': 5.14, 'mass': 4.46}
+ep  36 (132s) lr 1.50e-04 loss 0.0308 | val G4 4.93 A4 8.54 | {'calories': 4.56, 'fat': 5.22, 'protein': 4.75, 'carb': 5.18, 'mass': 4.72}
+ep  37 (130s) lr 1.50e-04 loss 0.0318 | val G4 4.59 A4 7.77 | {'calories': 4.3, 'fat': 4.82, 'protein': 4.46, 'carb': 4.8, 'mass': 4.14}
+ep  38 (132s) lr 1.50e-04 loss 0.0316 | val G4 4.57 A4 7.83 | {'calories': 4.31, 'fat': 4.91, 'protein': 4.42, 'carb': 4.64, 'mass': 4.53}
+ep  39 (131s) lr 1.50e-04 loss 0.0318 | val G4 5.03 A4 9.43 | {'calories': 4.59, 'fat': 5.5, 'protein': 5.06, 'carb': 4.98, 'mass': 4.61}
+ep  40 (132s) lr 1.50e-04 loss 0.0322 | val G4 4.88 A4 8.83 | {'calories': 4.39, 'fat': 5.77, 'protein': 4.99, 'carb': 4.37, 'mass': 4.56}
+ep  41 (131s) lr 1.50e-04 loss 0.0316 | val G4 4.42 A4 7.75 | {'calories': 4.09, 'fat': 4.55, 'protein': 4.2, 'carb': 4.85, 'mass': 4.03}
+ep  42 (131s) lr 1.50e-04 loss 0.0314 | val G4 4.68 A4 7.71 | {'calories': 4.32, 'fat': 5.15, 'protein': 4.52, 'carb': 4.71, 'mass': 4.37}
+ep  43 (132s) lr 1.50e-04 loss 0.0298 | val G4 4.15 A4 7.54 | {'calories': 3.88, 'fat': 4.17, 'protein': 4.28, 'carb': 4.29, 'mass': 4.18}
+ep  44 (132s) lr 1.50e-04 loss 0.0301 | val G4 4.82 A4 10.17 | {'calories': 4.18, 'fat': 5.56, 'protein': 5.11, 'carb': 4.41, 'mass': 4.72}
+ep  45 (131s) lr 1.50e-04 loss 0.0306 | val G4 4.23 A4 7.21 | {'calories': 3.82, 'fat': 4.56, 'protein': 4.27, 'carb': 4.26, 'mass': 4.1}
+ep  46 (131s) lr 1.50e-04 loss 0.0313 | val G4 4.64 A4 7.63 | {'calories': 4.25, 'fat': 5.12, 'protein': 4.69, 'carb': 4.51, 'mass': 4.3}
+ep  47 (132s) lr 7.50e-05 loss 0.0310 | val G4 4.82 A4 8.80 | {'calories': 4.55, 'fat': 5.21, 'protein': 4.72, 'carb': 4.82, 'mass': 4.34}
+ep  48 (132s) lr 7.50e-05 loss 0.0302 | val G4 3.82 A4 6.91 | {'calories': 3.52, 'fat': 4.01, 'protein': 3.73, 'carb': 4.01, 'mass': 3.75}
+ep  49 (132s) lr 7.50e-05 loss 0.0304 | val G4 3.40 A4 5.58 | {'calories': 3.2, 'fat': 3.55, 'protein': 3.26, 'carb': 3.59, 'mass': 3.13}
+ep  50 (131s) lr 7.50e-05 loss 0.0306 | val G4 3.72 A4 6.60 | {'calories': 3.48, 'fat': 3.95, 'protein': 3.56, 'carb': 3.88, 'mass': 3.57}
+ep  51 (132s) lr 7.50e-05 loss 0.0305 | val G4 3.42 A4 5.90 | {'calories': 3.22, 'fat': 3.54, 'protein': 3.3, 'carb': 3.61, 'mass': 3.12}
+ep  52 (138s) lr 7.50e-05 loss 0.0307 | val G4 3.55 A4 6.15 | {'calories': 3.31, 'fat': 3.81, 'protein': 3.55, 'carb': 3.51, 'mass': 3.13}
+ep  53 (132s) lr 3.75e-05 loss 0.0295 | val G4 3.59 A4 6.05 | {'calories': 3.31, 'fat': 4.01, 'protein': 3.44, 'carb': 3.59, 'mass': 3.47}
+ep  54 (131s) lr 3.75e-05 loss 0.0295 | val G4 3.88 A4 7.18 | {'calories': 3.7, 'fat': 4.15, 'protein': 3.71, 'carb': 3.95, 'mass': 3.3}
+ep  55 (132s) lr 3.75e-05 loss 0.0292 | val G4 3.38 A4 5.83 | {'calories': 3.24, 'fat': 3.59, 'protein': 3.27, 'carb': 3.42, 'mass': 2.98}
+ep  56 (131s) lr 3.75e-05 loss 0.0304 | val G4 3.21 A4 5.52 | {'calories': 2.97, 'fat': 3.43, 'protein': 3.18, 'carb': 3.28, 'mass': 2.91}
+ep  57 (132s) lr 3.75e-05 loss 0.0296 | val G4 3.26 A4 5.52 | {'calories': 3.02, 'fat': 3.43, 'protein': 3.27, 'carb': 3.31, 'mass': 3.0}
+ep  58 (132s) lr 3.75e-05 loss 0.0296 | val G4 3.09 A4 5.04 | {'calories': 2.87, 'fat': 3.29, 'protein': 3.1, 'carb': 3.11, 'mass': 2.85}
+ep  59 (131s) lr 3.75e-05 loss 0.0299 | val G4 3.11 A4 4.86 | {'calories': 2.92, 'fat': 3.31, 'protein': 3.01, 'carb': 3.19, 'mass': 2.78}
+ep  60 (132s) lr 3.75e-05 loss 0.0298 | val G4 3.07 A4 5.40 | {'calories': 2.83, 'fat': 3.35, 'protein': 2.99, 'carb': 3.1, 'mass': 2.8}
+ep  61 (131s) lr 3.75e-05 loss 0.0300 | val G4 3.10 A4 5.31 | {'calories': 2.86, 'fat': 3.44, 'protein': 2.92, 'carb': 3.16, 'mass': 2.75}
+ep  62 (132s) lr 3.75e-05 loss 0.0296 | val G4 3.16 A4 5.87 | {'calories': 2.92, 'fat': 3.37, 'protein': 3.09, 'carb': 3.28, 'mass': 2.9}
+ep  63 (132s) lr 3.75e-05 loss 0.0287 | val G4 3.05 A4 4.97 | {'calories': 2.83, 'fat': 3.34, 'protein': 3.01, 'carb': 3.04, 'mass': 2.84}
+ep  64 (132s) lr 3.75e-05 loss 0.0294 | val G4 3.23 A4 5.54 | {'calories': 3.02, 'fat': 3.34, 'protein': 3.25, 'carb': 3.3, 'mass': 3.0}
+ep  65 (132s) lr 3.75e-05 loss 0.0305 | val G4 3.08 A4 6.10 | {'calories': 2.82, 'fat': 3.56, 'protein': 2.92, 'carb': 3.03, 'mass': 2.77}
+ep  66 (131s) lr 3.75e-05 loss 0.0282 | val G4 2.97 A4 5.40 | {'calories': 2.73, 'fat': 3.17, 'protein': 3.03, 'carb': 2.95, 'mass': 2.72}
+ep  67 (131s) lr 3.75e-05 loss 0.0301 | val G4 3.36 A4 5.52 | {'calories': 3.16, 'fat': 3.5, 'protein': 3.29, 'carb': 3.49, 'mass': 3.25}
+ep  68 (131s) lr 3.75e-05 loss 0.0297 | val G4 3.16 A4 5.61 | {'calories': 2.97, 'fat': 3.3, 'protein': 3.07, 'carb': 3.3, 'mass': 2.89}
+ep  69 (132s) lr 3.75e-05 loss 0.0301 | val G4 3.19 A4 5.54 | {'calories': 2.97, 'fat': 3.46, 'protein': 3.15, 'carb': 3.17, 'mass': 2.85}
+ep  70 (132s) lr 1.87e-05 loss 0.0295 | val G4 3.03 A4 5.11 | {'calories': 2.79, 'fat': 3.29, 'protein': 2.84, 'carb': 3.18, 'mass': 2.72}
+ep  71 (132s) lr 1.87e-05 loss 0.0297 | val G4 2.96 A4 4.54 | {'calories': 2.82, 'fat': 3.22, 'protein': 2.79, 'carb': 3.0, 'mass': 2.75}
+ep  72 (128s) lr 1.87e-05 loss 0.0296 | val G4 3.05 A4 5.55 | {'calories': 2.87, 'fat': 3.25, 'protein': 2.95, 'carb': 3.15, 'mass': 2.77}
+[TimeCap] 180.0분 도달, ep 72, best ep 71
+[TEST text_gt] G4 2.86 A4 4.49 mean_pmae 2.86 | G {'calories': 2.69, 'fat': 3.15, 'protein': 2.73, 'carb': 2.86, 'mass': 2.6} | n 4387 (텍스트 없음 0)
+[TEST text_gemini] G4 5.76 A4 9.24 mean_pmae 5.75 | G {'calories': 4.31, 'fat': 7.56, 'protein': 5.4, 'carb': 5.78, 'mass': 4.75} | n 4387 (텍스트 없음 0)
+[TEST text_pipe] G4 3.16 A4 5.39 mean_pmae 3.12 | G {'calories': 2.85, 'fat': 3.58, 'protein': 2.92, 'carb': 3.3, 'mass': 2.7} | n 4387 (텍스트 없음 0)
+[TEST baseline] G4 73.36
+DONE

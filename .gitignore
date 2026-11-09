@@ -10,3 +10,10 @@ data/image_cache/
 data/emb_cache*.json
 # 체크포인트 (100MB 이상)
 *.pth
+# 실험 산출물 (용량 큼: 학습 결과·임베딩 캐시·백업)
+experiments/*/runs/
+experiments/*/runs_smoke/
+experiments/*/backup_before_pipe_osr/
+experiments/*/emb_cache*.json
+experiments/*/emb_cache*.npz
+*.npz

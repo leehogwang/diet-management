@@ -9,6 +9,7 @@
 - 음식 분류기·영양 모델 재학습 보고서: [`FOOD_CLASSIFIER_REPORT.md`](FOOD_CLASSIFIER_REPORT.md)
 - 양 보정 이전 파이프라인 평가 보고서: [`PIPELINE_EVAL_REPORT.md`](PIPELINE_EVAL_REPORT.md)
 - 구조도: `../n296_stage3_3_pipeline.drawio`, 버전 비교: `../n296_파이프라인_비교_보고서.docx`
+- **2026-11 개선 파이프라인 (open-set 분류기 + 모르는 음식은 Gemini 1인분)과 수정사항 전체: [8절](#8-2026-11-개선-파이프라인-실험-experimentssplit_txt_3runs)** — 아직 `pipeline_infer.py` 에는 미반영
 
 ---
 
@@ -398,3 +399,123 @@ quantity122 의 정답 Q 등급별 mean PMAE (보정 후 / 보정 전)
    csgpu2 에는 `datasets/test_dataset_296` 이 있으므로 4절 명령으로 다시 돌릴 수 있다.
 6. 표본이 작다. aihub122 109장, quantity122 115장이라 그룹별 수치(20~40장)는 변동이 크다.
    Gemini 출력도 temperature 0 이지만 호출마다 조금 다를 수 있다.
+
+---
+
+## 8. 2026-11 개선 파이프라인 (실험: `experiments/split_txt_3runs/`)
+
+- 작성 2026-11-02. AIHub 122 를 학습한 음식 / 처음 보는 음식 분할(`food_split_txt`)로 나눠 단계별로 바꿔 보고, test G4 가 가장 낮은 구성을 정리했다.
+- **상태: 실험 스크립트로만 평가했다.** `n296/pipeline_infer.py` 에는 아직 반영하지 않았다. 2절은 지금 `pipeline_infer.py` 의 동작 그대로다.
+- 원본 코드에서 고친 파일은 `n296/model.py` 하나다 (대분류 입력 옵션 `model.cat_dim`, 기본 0 이면 원래 구조와 같다). 나머지는 모두 `experiments/split_txt_3runs/` 의 새 파일이다.
+- 상세: [`REPORT.md`](experiments/split_txt_3runs/REPORT.md)(분할 학습), [`CHANGES_OSR_CLASSIFIER.md`](experiments/split_txt_3runs/CHANGES_OSR_CLASSIFIER.md)(open-set 분류기·파이프라인 재평가). 8.5 이후 내용은 이 절에만 있다.
+
+### 8.1 현재 최고 성능 파이프라인
+
+```
+이미지
+ ├─ 1.   음식 분류기 top1 + open-set 판정 (Mahalanobis 거리 점수, 처음 보는 음식을 넣은 val 로 정한 threshold)
+ │
+ ├─ [아는 음식]                                   ├─ [모르는 음식]
+ │   1-a. 음식명 = 분류기 top1                     │   1-b. 음식명 = Gemini (사진)
+ │   2.   재료·대분류 = Gemini (사진 + 음식명)       │   2.   재료·대분류 = Gemini (사진 + 음식명)
+ │   3.   "음식명 (재료: …)" → Gemini 임베딩         │   3.   1인분 영양값 = Gemini (음식명 + 재료, 텍스트만)
+ │   4-1. 1인분 영양값 = 영양 모델                   │        (임베딩·영양 모델 단계 없음)
+ │        (텍스트 임베딩 + 이미지 + 대분류 입력)       │
+ │
+ ├─ 4-2. 양       양추정 모델 (사진 + 대분류) → Q1~Q5, argmax
+ └─ 5.   보정     최종 = 1인분 영양값 × Q 비율 (0.25 / 0.5 / 0.75 / 1.0 / 1.25), 항상 보정
+```
+
+| 단계 | 2절(stage3_3) 과 다른 점 | 실험 코드·파일 |
+|---|---|---|
+| 1 판정 | softmax 확신도 ≥ 0.7 → **Mahalanobis 거리 + val 균형 threshold** (처음 보는 음식 val 이 없는 분할은 known val TPR99). 분류기는 재학습 없이 그대로 | `src/train_classifier_osr.py --baseline`, `runs/cls_osr_<split>_baseline/` |
+| 1-b, 2 Gemini | `gemini-3.5-flash-lite` → `gemini-3.8-flash` (temperature 0, thinking 0) | `src/gemini.py`, `src/gemini_ing.py` |
+| 4-1 영양 모델 | 대분류 임베딩(64차원)을 헤드 입력에 추가 (`--cat`, 학습 때 20% 확률로 기타로 가림) | `src/train.py --text ing --cat`, `runs/<split>_q4_ing_cat/` |
+| 3 (모르는 음식) | **신규.** 영양 모델 대신 Gemini 가 음식명 + 재료로 1인분 영양값(칼로리·지방·단백질·탄수·중량) 추정 | `src/gemini_serving.py --prompt ing`, `gemini_serving_ing.jsonl` |
+| 5 보정 | `known_category`(대분류 기타면 보정 안 함) → `always` | `src/compare_pipeline_cat.py`, `src/eval_gemini_serving.py` |
+
+실험에서는 분류기·영양 모델·양추정 모델을 분할마다 처음부터 따로 학습했다 (2절의 109종 모델이 아님).
+
+### 8.2 성능 (영양 G4 %, 낮을수록 좋음)
+
+test: `122_2_forunseen` = 처음 보는 음식 23종 5,884장, `122_1_forseen` = 학습한 음식 78종 4,387장.
+
+| 단계별 누적 변경 | unseen G4 | unseen A4 | seen G4 |
+|---|---|---|---|
+| 2절 규칙 (softmax 0.7, 보정 `known_category`) | 50.11 | 94.8 | 1.44 |
+| + 보정 항상 적용 | 49.53 | 94.1 | 1.17 |
+| + open-set 분류기 판정 | 45.78 | 82.0 | 1.20 |
+| + 모르는 음식은 Gemini 1인분 (음식명만) | 34.59 | 36.4 | 1.40 |
+| **+ Gemini 1인분에 재료 추가 (현재 최고)** | **33.67** | **35.0** | **1.40** |
+
+현재 최고 구성의 영양소별 G: unseen 칼로리 29.8 · 지방 47.5 · 단백질 31.5 · 탄수 25.9 · 중량 21.1 / seen 1.01 · 1.64 · 1.27 · 1.69 · 1.04.
+분류기 음식명 사용률은 unseen 0.85%, seen 99.3% 다. seen 이 1.17 → 1.40 으로 오른 것은 아는 음식 약 30장(0.7%)이 Gemini 로 넘어갔기 때문이다.
+
+### 8.3 변경 사항 (시간순)
+
+| # | 날짜 | 변경 | 결과 |
+|---|---|---|---|
+| 1 | 11/1 | 영양 모델을 3개 분할(122_1_forseen, 122_2_forunseen, n5k)에 따로 학습 | 정답 텍스트 G4: seen 2.82 / unseen 50.77 / n5k 31.39 |
+| 2 | 11/1 | 분할별 1인분(Q4) 영양 모델·양추정 모델 학습, 직접 예측 vs 1인분 × 양 비교 | 두 방식 차이 거의 없음 (unseen 45.80 vs 45.78) |
+| 3 | 11/2 | 텍스트를 `음식명 (재료: …)` 형식으로 학습 (`_ing`) | 중단, 4로 대체 |
+| 4 | 11/2 | 영양 모델에 대분류 입력 추가 (`_ing_cat`), `n296/model.py` 수정 | 현재 사용하는 영양 모델 |
+| 5 | 11/2 | 분할별 음식 분류기 학습 + 2절 규칙 평가 | 처음 보는 음식의 50.3% 가 확신도 0.7 을 넘어 오답 음식명으로 넘어감 |
+| 6 | 11/2 | open-set 분류기: ArcFace 재학습(효과 없음, 미채택) vs 기존 CE + 거리 점수 | 기존 CE + Mahalanobis 로 오답 음식명 통과 0.503 → 0.008 |
+| 7 | 11/2 | 파이프라인 재평가(`pipe_osr`), 기존 조건 재계산값이 백업과 같음을 확인 | unseen 49.53 → 45.78 |
+| 8 | 11/2 | 오차 분해 (8.4) | 병목은 처음 보는 음식의 1인분 영양값 |
+| 9 | 11/2 | 모르는 음식의 1인분 값을 Gemini 가 추정 (음식명만) | unseen 45.78 → 34.59 |
+| 10 | 11/2 | Gemini 1인분 추정에 재료 추가 | unseen 34.59 → 33.67 (지방 50.5 → 47.5) |
+
+### 8.4 병목 분석 (unseen, 7번 시점 G4 45.78 기준)
+
+| 정답으로 바꾼 단계 | G4 |
+|---|---|
+| 음식명 | 44.86 |
+| 양(Q) | 45.02 |
+| **1인분 영양값** | **15.76** |
+
+- 122 정답은 `영양DB 1인분값 × Q 비율` 이라 같은 음식 안에서 1인분 정답이 일정하다. 영양 모델은 학습 음식 44종의 값을 외우고, 처음 보는 음식은 train 평균 쪽으로 수축한다 (음식별 정답 → 예측 기울기 칼로리 0.29, 지방 0.17).
+- 정답 음식명·재료를 줘도 거의 나아지지 않아, 텍스트에서 영양값으로 일반화하지 못한다. 그래서 외부 지식(Gemini)으로 1인분 값을 공급하는 9번을 시도했다.
+- 7절 3번(OOD 검출 없음)은 6번으로, 7절 4번(처음 보는 음식에 약함)은 9·10번으로 일부 해결했다.
+
+### 8.5 시도했지만 채택하지 않은 것
+
+| 시도 | unseen G4 | 이유 |
+|---|---|---|
+| ArcFace 로 분류기 재학습 | 라우팅이 기존 CE + Mahalanobis 보다 나쁨 | best epoch 1, 학습이 진행될수록 촬영 환경에 과적합 |
+| Gemini 프롬프트에 "식약처 DB 1인분 기준" 명시 | 37.18 | 영양값이 흔들림. Gemini 1인분 중량은 원래도 DB 와 중앙값 1.00 으로 맞음 |
+| Gemini g당 밀도 × 사진 기반 중량 예측 | 42.5 ~ 45.3 | 사진 중량 추정 G 34~37 (Gemini 1인분 중량 × Q 비율은 20.3). 정답 중량이면 25~28 |
+| 대분류별 평균·중앙값 1인분값 (Gemini 없이) | 48 ~ 50 | 같은 대분류 안에서도 값 차이가 큼 (국·탕 38~964 kcal). 정답 대분류여도 49.7 |
+| 양 비율 Q 확률 가중 평균 (`expected`) | 50.67 (영양 모델 기준) | argmax 보다 나쁨, 특히 Q1·Q5 |
+
+### 8.6 남은 문제
+
+1. **`pipeline_infer.py` 반영.** open-set 판정(점수·threshold 저장)과 모르는 음식의 Gemini 1인분 단계를 옵션으로 넣어야 한다. 실험은 분할별 모델·threshold 라 운영용 분류기 하나와 threshold 하나를 정해야 한다.
+2. **양 추정.** Gemini 1인분값에 정답 Q 를 쓰면 27.93 (현재 33.67). unseen 양 정확도 0.557.
+3. **지방.** G 47.5 로 가장 크다. 재료 목록에는 양이 없고, DB 값 자체가 일반 조리법과 다른 음식도 있다 (김치볶음밥 500 g 에 지방 5.1 g).
+4. **1인분 값.** 정답 1인분값 × 예측 Q 는 15.76 이라 아직 여지가 크다. 후보: 같은 음식명끼리 Gemini 값 중앙값으로 안정화, Gemini 에 사진도 함께 주기, 로컬 영양 DB 최근접 검색.
+5. **Gemini 의존.** 모르는 음식 1장당 Gemini 3회 호출 (음식명, 재료·대분류, 1인분).
+6. **검증 범위.** test 한 번의 결과라 작은 차이(10번의 0.9%p)는 우연일 수 있다.
+
+### 8.7 파일 (`experiments/split_txt_3runs/`)
+
+| 구분 | 파일 |
+|---|---|
+| 데이터 | `src/prep.py`, `records.json`, `splits.json` |
+| 영양·양 모델 | `src/train.py`, `src/train_quantity.py`, `src/eval_quantity_cats.py`, `runs/<split>[_q4]_ing_cat/`, `runs/<split>_quantity/` |
+| 분류기 | `src/train_classifier.py`, `src/train_classifier_osr.py`, `runs/cls_<split>/`, `runs/cls_osr_<split>[_baseline]/` |
+| Gemini·텍스트 | `src/gemini.py`, `src/gemini_ing.py`, `src/gemini_serving.py` (`--prompt default/mfds/ing`), `src/texts_ing.py`, `src/embed.py`, `src/embed_ing.py` |
+| 평가 | `src/compare_pipeline.py`, `src/compare_pipeline_cat.py`, `src/eval_gemini_serving.py` (현재 최고 = 조건 `r_ing`), `src/eval_category_serving.py` |
+| 결과 | `pipeline_compare_ing_cat.json`, `gemini_serving_eval.json`, `logs/eval_gemini_serving.log`, `logs/eval_category_serving.log` |
+| 실행 | `run_all.sh`, `run_pipeline.sh`, `run_ing.sh`, `run_ing_cat.sh`, `run_after_cat.sh`, `run_osr.sh`, `run_pipe_osr.sh` |
+| 백업 | `backup_before_pipe_osr/` (7번 실행 전 결과) |
+
+현재 최고 구성 재현 (이미 만든 Gemini 캐시가 있으면 새 호출 없음):
+
+```bash
+cd /home/leehogwang/food_b/experiments/split_txt_3runs
+PY=/home/leehogwang/Food-Nutrition-Estimation/.venv/bin/python
+./run_pipe_osr.sh > logs/run_pipe_osr.log 2>&1          # open-set 판정 → 재료·임베딩 → 양추정·영양 재평가
+$PY src/gemini_serving.py --prompt ing                    # 모르는 음식 1인분 (음식명 + 재료)
+$PY src/eval_gemini_serving.py                            # 조건 r_ing
+```

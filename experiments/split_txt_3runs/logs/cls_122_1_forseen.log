@@ -1,0 +1,17 @@
+[cls_122_1_forseen] 78종 | train 31484 val 3423 (분할 val 중 train 음식) test 4387 | cuda:0
+/home/leehogwang/food_b/experiments/split_txt_3runs/src/train_classifier.py:67: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(); crit = nn.CrossEntropyLoss(label_smoothing=0.1); best, bad, bep = -1.0, 0, 0
+ep01 loss 2.3879 val top1 0.9991
+ep02 loss 0.8846 val top1 1.0000
+ep03 loss 0.8292 val top1 1.0000
+ep04 loss 0.8092 val top1 0.9997
+ep05 loss 0.8032 val top1 1.0000
+ep06 loss 0.7940 val top1 1.0000
+ep07 loss 0.7871 val top1 1.0000
+ep08 loss 0.7873 val top1 0.9997
+early stop ep 8, best ep 2
+/home/leehogwang/food_b/n296/food_classifier.py:151: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return float(log_t.exp())
+{"best_epoch": 2, "temperature": 0.20294250547885895, "test_n_known_food": 4387, "test_top1_prob_mean": {"known_food": 1.0, "unseen_food": null}, "test_rate_prob_ge_0.7": {"known_food": 1.0, "unseen_food": null}}
+DONE

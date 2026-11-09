@@ -1,0 +1,31 @@
+[122_2_forunseen_quantity_grlaug] soft_sigma 0.0 grl 1.0 aug strong 음식 44 | train 10840 val 2989 test 5884 | 대분류 16개 학습 | cuda:0
+ep  1 (66s) loss 4.8879 | val acc 0.4597 ±1 0.8993 | 음식헤드 loss 3.418 acc 0.163
+ep  2 (49s) loss 4.8803 | val acc 0.4741 ±1 0.9408 | 음식헤드 loss 3.714 acc 0.053
+ep  3 (49s) loss 4.7929 | val acc 0.4644 ±1 0.8966 | 음식헤드 loss 3.822 acc 0.036
+ep  4 (49s) loss 5.4868 | val acc 0.5008 ±1 0.8973 | 음식헤드 loss 4.519 acc 0.020
+ep  5 (48s) loss 5.0213 | val acc 0.4349 ±1 0.9140 | 음식헤드 loss 4.163 acc 0.021
+ep  6 (49s) loss 4.8014 | val acc 0.4567 ±1 0.9341 | 음식헤드 loss 4.019 acc 0.019
+ep  7 (48s) loss 4.6472 | val acc 0.4891 ±1 0.9197 | 음식헤드 loss 3.932 acc 0.017
+ep  8 (49s) loss 4.5338 | val acc 0.4808 ±1 0.9120 | 음식헤드 loss 3.872 acc 0.023
+ep  9 (49s) loss 4.4943 | val acc 0.4778 ±1 0.9281 | 음식헤드 loss 3.858 acc 0.023
+ep 10 (48s) loss 4.4358 | val acc 0.5059 ±1 0.9180 | 음식헤드 loss 3.836 acc 0.024
+ep 11 (48s) loss 4.4003 | val acc 0.4788 ±1 0.9247 | 음식헤드 loss 3.824 acc 0.024
+ep 12 (48s) loss 4.3852 | val acc 0.4958 ±1 0.9348 | 음식헤드 loss 3.828 acc 0.022
+ep 13 (49s) loss 4.3533 | val acc 0.5059 ±1 0.9251 | 음식헤드 loss 3.817 acc 0.024
+ep 14 (49s) loss 4.3166 | val acc 0.5015 ±1 0.9231 | 음식헤드 loss 3.798 acc 0.028
+ep 15 (49s) loss 4.3125 | val acc 0.4901 ±1 0.9264 | 음식헤드 loss 3.807 acc 0.023
+ep 16 (49s) loss 4.2957 | val acc 0.4895 ±1 0.9237 | 음식헤드 loss 3.800 acc 0.022
+[EarlyStop] ep 16, best ep 10
+/home/leehogwang/food_b/n296/food_classifier.py:151: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return float(log_t.exp())
+[TEST 대분류 gt] acc 0.5891 ±1 0.9545 ratio MAE 0.1161
+[TEST 대분류 gemini] acc 0.5887 ±1 0.9546 ratio MAE 0.1161
+[TEST 대분류 masked] acc 0.5891 ±1 0.9541 ratio MAE 0.1162
+DONE
+[122_2_forunseen 대분류 gt] acc 0.5891 ±1 0.9545 ratio MAE 0.1161 | 기타 아님 1.000 정답표와 같음 1.000
+[122_2_forunseen 대분류 masked] acc 0.5891 ±1 0.9541 ratio MAE 0.1162 | 기타 아님 0.000 정답표와 같음 0.000
+[122_2_forunseen 대분류 gemini] acc 0.5894 ±1 0.9545 ratio MAE 0.1160 | 기타 아님 1.000 정답표와 같음 0.932
+[122_2_forunseen 대분류 pipe] acc 0.5882 ±1 0.9546 ratio MAE 0.1162 | 기타 아님 0.979 정답표와 같음 0.770
+[122_2_forunseen 대분류 pipe_osr] acc 0.5892 ±1 0.9545 ratio MAE 0.1160 | 기타 아님 1.000 정답표와 같음 0.940
+DONE

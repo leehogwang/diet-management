@@ -1,0 +1,38 @@
+===== 122_2_forunseen n 5884 분류기 통과 0.0085
+  model          G4  45.78 A4  82.04 | oracle_q  45.02 | 1인분 G4  45.14 | G {'calories': 37.76, 'fat': 58.0, 'protein': 49.02, 'carb': 38.34, 'mass': 34.44} | 기울기 {'calories': 0.29, 'fat': 0.17, 'protein': 0.28, 'carb': 0.53} 상관 {'calories': 0.56, 'fat': 0.4, 'protein': 0.51, 'carb': 0.8}
+  gemini         G4  34.57 A4  36.42 | oracle_q  28.90 | 1인분 G4  29.16 | G {'calories': 29.14, 'fat': 50.49, 'protein': 31.96, 'carb': 26.69, 'mass': 20.26} | 기울기 {'calories': 0.72, 'fat': 0.36, 'protein': 0.62, 'carb': 1.0} 상관 {'calories': 0.86, 'fat': 0.67, 'protein': 0.86, 'carb': 0.95}
+  routed         G4  34.59 A4  36.43 | oracle_q  28.92 | 1인분 G4  29.19 | G {'calories': 29.16, 'fat': 50.47, 'protein': 32.05, 'carb': 26.68, 'mass': 20.2} | 기울기 {'calories': 0.72, 'fat': 0.36, 'protein': 0.62, 'carb': 1.0} 상관 {'calories': 0.86, 'fat': 0.67, 'protein': 0.85, 'carb': 0.95}
+  avg            G4  37.07 A4  54.71 | oracle_q  33.55 | 1인분 G4  33.79 | G {'calories': 31.57, 'fat': 50.7, 'protein': 35.95, 'carb': 30.04, 'mass': 24.83} | 기울기 {'calories': 0.51, 'fat': 0.27, 'protein': 0.45, 'carb': 0.76} 상관 {'calories': 0.81, 'fat': 0.62, 'protein': 0.81, 'carb': 0.92}
+  gemini_gtname  G4  32.94 A4  33.91 | oracle_q  26.89 | 1인분 G4  26.92 | G {'calories': 28.3, 'fat': 50.38, 'protein': 27.83, 'carb': 25.26, 'mass': 16.92} | 기울기 {'calories': 0.7, 'fat': 0.33, 'protein': 0.71, 'carb': 0.98} 상관 {'calories': 0.86, 'fat': 0.64, 'protein': 0.89, 'carb': 0.95}
+  routed_ing     G4  33.67 A4  35.01 | oracle_q  27.93 | 1인분 G4  28.49 | G {'calories': 29.77, 'fat': 47.53, 'protein': 31.5, 'carb': 25.9, 'mass': 21.05} | 기울기 {'calories': 0.69, 'fat': 0.41, 'protein': 0.61, 'carb': 0.97} 상관 {'calories': 0.88, 'fat': 0.77, 'protein': 0.85, 'carb': 0.96}
+  -- 최종값 조건 (routed 기준)
+  model                    G4  45.78 A4  82.04 | G {'calories': 37.76, 'fat': 58.0, 'protein': 49.02, 'carb': 38.34, 'mass': 34.44}
+  routed                   G4  34.59 A4  36.43 | G {'calories': 29.16, 'fat': 50.47, 'protein': 32.05, 'carb': 26.68, 'mass': 20.2}
+  r_ing                    G4  33.67 A4  35.01 | G {'calories': 29.77, 'fat': 47.53, 'protein': 31.5, 'carb': 25.9, 'mass': 21.05}
+  r_mfds                   G4  37.18 A4  44.19 | G {'calories': 29.56, 'fat': 51.48, 'protein': 35.05, 'carb': 32.62, 'mass': 22.23}
+  r_dens_direct            G4  44.92 A4  49.87 | G {'calories': 40.19, 'fat': 58.62, 'protein': 43.68, 'carb': 37.19, 'mass': 36.93}
+  r_dens_q4                G4  42.54 A4  49.57 | G {'calories': 36.8, 'fat': 57.18, 'protein': 40.58, 'carb': 35.59, 'mass': 34.44}
+  r_dens_truemass          G4  27.63 A4  27.25 | G {'calories': 19.55, 'fat': 44.56, 'protein': 27.59, 'carb': 18.83, 'mass': 0.12}
+  r_dens_mfds_direct       G4  45.33 A4  52.63 | G {'calories': 39.23, 'fat': 61.74, 'protein': 43.41, 'carb': 36.94, 'mass': 36.93}
+  r_dens_mfds_q4           G4  44.09 A4  54.74 | G {'calories': 37.36, 'fat': 62.44, 'protein': 40.34, 'carb': 36.22, 'mass': 34.44}
+  r_dens_mfds_truemass     G4  25.27 A4  28.22 | G {'calories': 15.18, 'fat': 42.01, 'protein': 26.5, 'carb': 17.39, 'mass': 0.12}
+  중량 G (%, 실제 중량 기준): {'direct': 36.95, 'q4': 34.44, 'truemass': 0.0, 'gemini_serving_x_ratio': 20.26, 'gemini_mfds_serving_x_ratio': 22.29} | Gemini 1인분 중량 / DB 1인분 중량 (정답 음식명, 중앙값): {'default': 1.0, 'mfds': 1.0}
+===== 122_1_forseen n 4387 분류기 통과 0.9932
+  model          G4   1.20 A4   1.93 | oracle_q   1.09 | 1인분 G4   1.10 | G {'calories': 0.86, 'fat': 1.5, 'protein': 1.02, 'carb': 1.44, 'mass': 0.93} | 기울기 {'calories': 0.99, 'fat': 0.98, 'protein': 0.99, 'carb': 0.98} 상관 {'calories': 1.0, 'fat': 1.0, 'protein': 1.0, 'carb': 1.0}
+  gemini         G4  28.92 A4  33.45 | oracle_q  28.87 | 1인분 G4  28.86 | G {'calories': 22.59, 'fat': 40.48, 'protein': 29.88, 'carb': 22.74, 'mass': 16.04} | 기울기 {'calories': 0.65, 'fat': 0.51, 'protein': 0.77, 'carb': 0.92} 상관 {'calories': 0.79, 'fat': 0.73, 'protein': 0.78, 'carb': 0.9}
+  routed         G4   1.40 A4   2.11 | oracle_q   1.29 | 1인분 G4   1.28 | G {'calories': 1.01, 'fat': 1.64, 'protein': 1.27, 'carb': 1.69, 'mass': 1.02} | 기울기 {'calories': 0.99, 'fat': 0.98, 'protein': 0.99, 'carb': 0.98} 상관 {'calories': 1.0, 'fat': 1.0, 'protein': 1.0, 'carb': 1.0}
+  avg            G4  14.71 A4  17.04 | oracle_q  14.64 | 1인분 G4  14.65 | G {'calories': 11.46, 'fat': 20.62, 'protein': 15.14, 'carb': 11.64, 'mass': 8.42} | 기울기 {'calories': 0.82, 'fat': 0.75, 'protein': 0.88, 'carb': 0.95} 상관 {'calories': 0.95, 'fat': 0.95, 'protein': 0.94, 'carb': 0.97}
+  gemini_gtname  G4  28.90 A4  33.44 | oracle_q  28.84 | 1인분 G4  28.83 | G {'calories': 22.58, 'fat': 40.47, 'protein': 29.82, 'carb': 22.72, 'mass': 16.06} | 기울기 {'calories': 0.65, 'fat': 0.51, 'protein': 0.78, 'carb': 0.92} 상관 {'calories': 0.78, 'fat': 0.73, 'protein': 0.78, 'carb': 0.9}
+  routed_ing     G4   1.40 A4   2.10 | oracle_q   1.29 | 1인분 G4   1.28 | G {'calories': 1.01, 'fat': 1.64, 'protein': 1.27, 'carb': 1.69, 'mass': 1.04} | 기울기 {'calories': 0.99, 'fat': 0.98, 'protein': 0.99, 'carb': 0.98} 상관 {'calories': 1.0, 'fat': 1.0, 'protein': 1.0, 'carb': 1.0}
+  -- 최종값 조건 (routed 기준)
+  model                    G4   1.20 A4   1.93 | G {'calories': 0.86, 'fat': 1.5, 'protein': 1.02, 'carb': 1.44, 'mass': 0.93}
+  routed                   G4   1.40 A4   2.11 | G {'calories': 1.01, 'fat': 1.64, 'protein': 1.27, 'carb': 1.69, 'mass': 1.02}
+  r_ing                    G4   1.40 A4   2.10 | G {'calories': 1.01, 'fat': 1.64, 'protein': 1.27, 'carb': 1.69, 'mass': 1.04}
+  r_mfds                   G4   1.38 A4   2.08 | G {'calories': 0.99, 'fat': 1.62, 'protein': 1.23, 'carb': 1.67, 'mass': 1.02}
+  r_dens_direct            G4   1.35 A4   2.06 | G {'calories': 0.93, 'fat': 1.65, 'protein': 1.21, 'carb': 1.6, 'mass': 0.93}
+  r_dens_q4                G4   1.35 A4   2.05 | G {'calories': 0.93, 'fat': 1.66, 'protein': 1.21, 'carb': 1.59, 'mass': 0.93}
+  r_dens_truemass          G4   1.35 A4   2.06 | G {'calories': 0.93, 'fat': 1.66, 'protein': 1.21, 'carb': 1.59, 'mass': 0.9}
+  r_dens_mfds_direct       G4   1.33 A4   2.04 | G {'calories': 0.91, 'fat': 1.64, 'protein': 1.19, 'carb': 1.58, 'mass': 0.93}
+  r_dens_mfds_q4           G4   1.33 A4   2.03 | G {'calories': 0.91, 'fat': 1.64, 'protein': 1.19, 'carb': 1.57, 'mass': 0.93}
+  r_dens_mfds_truemass     G4   1.33 A4   2.05 | G {'calories': 0.91, 'fat': 1.65, 'protein': 1.19, 'carb': 1.58, 'mass': 0.9}
+  중량 G (%, 실제 중량 기준): {'direct': 2.72, 'q4': 0.93, 'truemass': 0.0, 'gemini_serving_x_ratio': 16.04, 'gemini_mfds_serving_x_ratio': 14.31} | Gemini 1인분 중량 / DB 1인분 중량 (정답 음식명, 중앙값): {'default': 1.0, 'mfds': 1.0}

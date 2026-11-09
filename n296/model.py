@@ -188,7 +188,12 @@ class Stage3NutritionModel(nn.Module):
         )
         self.cnx_proj = nn.Linear(img_dim, fq["mixer2_dim"])
         self.mixer2 = MixerBlock(n_tok2, fq["mixer2_dim"], fq["mixer2_token_hidden"], fq["mixer2_channel_hidden"])
-        self.nutrition_head = NutritionHead(m["text_hidden2"] + img_dim + fq["mixer2_dim"], m["head_hidden"], m["dropout"])
+        # 대분류 입력 (선택): model.cat_dim > 0 이면 대분류 임베딩을 헤드 입력에 붙인다. 0(기본)이면 원래 구조 그대로.
+        self.cat_dim = int(m.get("cat_dim", 0) or 0)
+        if self.cat_dim:
+            from .food_category import CATEGORY_NAMES
+            self.cat_emb = nn.Embedding(len(CATEGORY_NAMES), self.cat_dim)
+        self.nutrition_head = NutritionHead(m["text_hidden2"] + img_dim + fq["mixer2_dim"] + self.cat_dim, m["head_hidden"], m["dropout"])
 
         self.register_buffer("img_mean", torch.tensor(IMAGENET_MEAN).view(1, 3, 1, 1), persistent=False)
         self.register_buffer("img_std", torch.tensor(IMAGENET_STD).view(1, 3, 1, 1), persistent=False)
@@ -227,7 +232,8 @@ class Stage3NutritionModel(nn.Module):
         t2 = self.mixer2(torch.cat([t_cnx, conv.flatten(2).transpose(1, 2)], dim=1))  # [B,58,256]
         return img_feat, t2.mean(dim=1)
 
-    def forward(self, image, text_emb, has_image=None, modality_dropout: bool = False, image_mode: str = "full"):
+    def forward(self, image, text_emb, has_image=None, modality_dropout: bool = False, image_mode: str = "full", cat=None):
+        """cat: 대분류 인덱스 [B] (food_category.CATEGORY_NAMES 순서). cat_dim > 0 인 모델에서만 쓰고, None 이면 기타."""
         B = text_emb.shape[0]
         device = text_emb.device
         has_image = torch.ones(B, dtype=torch.bool, device=device) if has_image is None else has_image.bool()
@@ -254,4 +260,10 @@ class Stage3NutritionModel(nn.Module):
 
         txt_feat = self.text_encoder(text_emb)
         txt_feat = txt_feat * use_txt.unsqueeze(1).to(txt_feat.dtype)
-        return self.nutrition_head(torch.cat([txt_feat, img_feat, mix_feat], dim=1))  # [추정] 순서
+        feats = [txt_feat, img_feat, mix_feat]
+        if self.cat_dim:
+            if cat is None:
+                from .food_category import CATEGORY_NAMES, UNKNOWN
+                cat = torch.full((B,), CATEGORY_NAMES.index(UNKNOWN), dtype=torch.long, device=device)
+            feats.append(self.cat_emb(cat).to(txt_feat.dtype))
+        return self.nutrition_head(torch.cat(feats, dim=1))  # [추정] 순서

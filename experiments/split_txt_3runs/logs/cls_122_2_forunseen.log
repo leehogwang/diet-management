@@ -1,0 +1,18 @@
+[cls_122_2_forunseen] 44종 | train 9756 val 1316 (분할 val 중 train 음식 + train 10% 접시) test 5884 | cuda:1
+/home/leehogwang/food_b/experiments/split_txt_3runs/src/train_classifier.py:67: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(); crit = nn.CrossEntropyLoss(label_smoothing=0.1); best, bad, bep = -1.0, 0, 0
+ep01 loss 2.6261 val top1 0.8222
+ep02 loss 0.9368 val top1 0.8237
+ep03 loss 0.7865 val top1 0.8275
+ep04 loss 0.7623 val top1 0.8191
+ep05 loss 0.7446 val top1 0.8245
+ep06 loss 0.7383 val top1 0.8237
+ep07 loss 0.7289 val top1 0.8267
+ep08 loss 0.7277 val top1 0.8275
+ep09 loss 0.7248 val top1 0.8275
+early stop ep 9, best ep 3
+/home/leehogwang/food_b/n296/food_classifier.py:151: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return float(log_t.exp())
+{"best_epoch": 3, "temperature": 0.8062300086021423, "test_n_known_food": 0, "test_top1_prob_mean": {"known_food": null, "unseen_food": 0.6784}, "test_rate_prob_ge_0.7": {"known_food": null, "unseen_food": 0.5032}}
+DONE

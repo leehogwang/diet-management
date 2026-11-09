@@ -1,0 +1,23 @@
+[122_2_forunseen_quantity_grl20aug] soft_sigma 0.0 grl 2.0 aug strong 음식 44 | train 10840 val 2989 test 5884 | 대분류 16개 학습 | cuda:0
+ep  1 (108s) loss 5.0824 | val acc 0.4620 ±1 0.8598 | 음식헤드 loss 3.587 acc 0.113
+ep  2 (92s) loss 4.9395 | val acc 0.5059 ±1 0.9505 | 음식헤드 loss 3.761 acc 0.038
+ep  3 (92s) loss 5.4354 | val acc 0.4962 ±1 0.8689 | 음식헤드 loss 4.317 acc 0.028
+ep  4 (92s) loss 5.2241 | val acc 0.4921 ±1 0.8869 | 음식헤드 loss 4.195 acc 0.021
+ep  5 (91s) loss 4.9952 | val acc 0.4798 ±1 0.9170 | 음식헤드 loss 4.085 acc 0.018
+ep  6 (91s) loss 4.8443 | val acc 0.4286 ±1 0.9251 | 음식헤드 loss 4.007 acc 0.017
+ep  7 (90s) loss 4.6693 | val acc 0.4751 ±1 0.9147 | 음식헤드 loss 3.922 acc 0.017
+ep  8 (90s) loss 4.5953 | val acc 0.4761 ±1 0.9207 | 음식헤드 loss 3.883 acc 0.019
+[EarlyStop] ep 8, best ep 2
+/home/leehogwang/food_b/n296/food_classifier.py:151: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return float(log_t.exp())
+[TEST 대분류 gt] acc 0.5134 ±1 0.9276 ratio MAE 0.1426
+[TEST 대분류 gemini] acc 0.5160 ±1 0.9269 ratio MAE 0.1423
+[TEST 대분류 masked] acc 0.5167 ±1 0.9257 ratio MAE 0.1424
+DONE
+[122_2_forunseen 대분류 gt] acc 0.5134 ±1 0.9276 ratio MAE 0.1426 | 기타 아님 1.000 정답표와 같음 1.000
+[122_2_forunseen 대분류 masked] acc 0.5167 ±1 0.9257 ratio MAE 0.1424 | 기타 아님 0.000 정답표와 같음 0.000
+[122_2_forunseen 대분류 gemini] acc 0.5144 ±1 0.9276 ratio MAE 0.1424 | 기타 아님 1.000 정답표와 같음 0.932
+[122_2_forunseen 대분류 pipe] acc 0.5150 ±1 0.9283 ratio MAE 0.1421 | 기타 아님 0.979 정답표와 같음 0.770
+[122_2_forunseen 대분류 pipe_osr] acc 0.5146 ±1 0.9276 ratio MAE 0.1423 | 기타 아님 1.000 정답표와 같음 0.940
+DONE

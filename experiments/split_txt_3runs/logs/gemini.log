@@ -1,0 +1,12 @@
+대상 10359 재사용 포함 완료 7875 새로 호출 2484
+Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+진행 250 토큰 [286250, 2585]
+진행 500 토큰 [572500, 5412]
+진행 750 토큰 [858750, 7962]
+진행 1000 토큰 [1145000, 10702]
+진행 1250 토큰 [1431250, 13333]
+진행 1500 토큰 [1717500, 16068]
+진행 1750 토큰 [2003750, 18937]
+진행 2000 토큰 [2290000, 21765]
+진행 2250 토큰 [2576250, 24291]
+DONE 토큰 [2841554, 29104]

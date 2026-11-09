@@ -1,0 +1,24 @@
+[122_2_forunseen_quantity_serv_in] train 10840 val 2989 test 5884 | log 1인분 평균 5.598 표준편차 0.798 | cuda:0
+ep  1 (65s) loss 1.3510 | val acc 0.4570 ±1 0.9033
+ep  2 (47s) loss 0.9013 | val acc 0.4865 ±1 0.9077
+ep  3 (47s) loss 0.7048 | val acc 0.4885 ±1 0.9097
+ep  4 (47s) loss 0.6036 | val acc 0.4778 ±1 0.9053
+ep  5 (47s) loss 0.5542 | val acc 0.4640 ±1 0.9016
+ep  6 (47s) loss 0.5143 | val acc 0.4650 ±1 0.9284
+ep  7 (47s) loss 0.5030 | val acc 0.4908 ±1 0.9133
+ep  8 (47s) loss 0.4776 | val acc 0.4580 ±1 0.9220
+ep  9 (48s) loss 0.4685 | val acc 0.4908 ±1 0.9030
+ep 10 (47s) loss 0.4587 | val acc 0.4951 ±1 0.8990
+ep 11 (47s) loss 0.4505 | val acc 0.4865 ±1 0.9217
+ep 12 (47s) loss 0.4389 | val acc 0.4878 ±1 0.9237
+ep 13 (47s) loss 0.4363 | val acc 0.4875 ±1 0.9328
+ep 14 (46s) loss 0.4372 | val acc 0.4667 ±1 0.9043
+ep 15 (46s) loss 0.4222 | val acc 0.4831 ±1 0.9026
+ep 16 (46s) loss 0.4245 | val acc 0.4701 ±1 0.8933
+[EarlyStop] ep 16, best ep 10
+/home/leehogwang/food_b/n296/food_classifier.py:151: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return float(log_t.exp())
+[TEST 1인분 pipe] acc 0.5284 ±1 0.8975 Q2~4 0.4316
+[TEST 1인분 db] acc 0.5282 ±1 0.8979 Q2~4 0.4313
+DONE

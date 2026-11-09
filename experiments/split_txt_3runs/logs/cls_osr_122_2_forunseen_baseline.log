@@ -1,0 +1,11 @@
+[cls_osr_122_2_forunseen_baseline] 44종 | train 9756 known val 774 unknown val 2757 | known test 542 unknown test 5884 | cuda:1
+/home/leehogwang/food_b/n296/food_classifier.py:151: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return float(log_t.exp())
+primary energy threshold 4.6058 | known test top1 1.0000
+  msp        val AUROC 0.7567 test AUROC 0.9894 | TPR95: known 통과 1.000 정확도(통과분) 1.0000 unknown→Gemini 0.010
+  energy     val AUROC 0.7974 test AUROC 0.9909 | TPR95: known 통과 1.000 정확도(통과분) 1.0000 unknown→Gemini 0.045
+  center_cos val AUROC 0.7551 test AUROC 0.9963 | TPR95: known 통과 1.000 정확도(통과분) 1.0000 unknown→Gemini 0.020
+  knn        val AUROC 0.7495 test AUROC 0.9984 | TPR95: known 통과 1.000 정확도(통과분) 1.0000 unknown→Gemini 0.017
+  maha       val AUROC 0.7299 test AUROC 0.9998 | TPR95: known 통과 1.000 정확도(통과분) 1.0000 unknown→Gemini 0.028
+DONE

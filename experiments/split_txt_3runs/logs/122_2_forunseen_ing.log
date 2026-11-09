@@ -1,0 +1,14 @@
+[122_2_forunseen] train 10840 val 2989 test 5884 | 학습 파라미터 112.9M (얼린 모듈 2) | batch 64 | budget 150.0분 | cuda:1
+ep   1 (192s) lr 3.00e-04 loss 0.1226 | val G4 54.90 A4 178.15 | {'calories': 47.79, 'fat': 62.31, 'protein': 55.5, 'carb': 53.98, 'mass': 33.19}
+ep   2 (87s) lr 3.00e-04 loss 0.0604 | val G4 53.73 A4 177.42 | {'calories': 47.66, 'fat': 57.78, 'protein': 54.14, 'carb': 55.33, 'mass': 32.99}
+ep   3 (107s) lr 3.00e-04 loss 0.0530 | val G4 53.06 A4 196.71 | {'calories': 48.83, 'fat': 55.65, 'protein': 54.86, 'carb': 52.89, 'mass': 37.31}
+ep   4 (102s) lr 3.00e-04 loss 0.0442 | val G4 51.81 A4 176.05 | {'calories': 47.18, 'fat': 52.12, 'protein': 54.32, 'carb': 53.61, 'mass': 36.27}
+ep   5 (92s) lr 3.00e-04 loss 0.0426 | val G4 53.65 A4 227.25 | {'calories': 47.27, 'fat': 58.5, 'protein': 58.14, 'carb': 50.68, 'mass': 35.7}
+ep   6 (102s) lr 3.00e-04 loss 0.0411 | val G4 52.50 A4 207.43 | {'calories': 48.07, 'fat': 54.68, 'protein': 53.97, 'carb': 53.29, 'mass': 36.06}
+ep   7 (95s) lr 3.00e-04 loss 0.0388 | val G4 51.98 A4 213.05 | {'calories': 46.21, 'fat': 55.47, 'protein': 55.08, 'carb': 51.17, 'mass': 36.45}
+ep   8 (105s) lr 3.00e-04 loss 0.0397 | val G4 51.45 A4 195.78 | {'calories': 45.46, 'fat': 56.56, 'protein': 55.24, 'carb': 48.56, 'mass': 35.35}
+ep   9 (102s) lr 3.00e-04 loss 0.0392 | val G4 53.08 A4 211.70 | {'calories': 47.88, 'fat': 58.12, 'protein': 53.42, 'carb': 52.88, 'mass': 37.54}
+ep  10 (102s) lr 3.00e-04 loss 0.0380 | val G4 51.75 A4 202.62 | {'calories': 46.74, 'fat': 55.04, 'protein': 53.88, 'carb': 51.35, 'mass': 37.11}
+ep  11 (98s) lr 3.00e-04 loss 0.0378 | val G4 54.61 A4 215.68 | {'calories': 47.36, 'fat': 61.33, 'protein': 58.79, 'carb': 50.99, 'mass': 36.08}
+ep  12 (102s) lr 1.50e-04 loss 0.0357 | val G4 52.16 A4 181.38 | {'calories': 46.84, 'fat': 55.5, 'protein': 55.28, 'carb': 51.0, 'mass': 37.19}
+ep  13 (98s) lr 1.50e-04 loss 0.0318 | val G4 51.71 A4 191.04 | {'calories': 46.3, 'fat': 55.58, 'protein': 55.02, 'carb': 49.92, 'mass': 35.86}

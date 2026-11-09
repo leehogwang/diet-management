@@ -1,0 +1,1148 @@
+{
+ "122_2_forunseen": {
+  "n": 5884,
+  "conf_lt": 0.9991502379333786,
+  "gemini_answered": 107,
+  "missing_gemini": 5772,
+  "conds": {
+   "model": {
+    "G4": 33.67,
+    "A4": 35.01,
+    "mean_pmae": 36.26,
+    "G": {
+     "calories": 29.77,
+     "fat": 47.53,
+     "protein": 31.5,
+     "carb": 25.9,
+     "mass": 21.05
+    },
+    "MAE": {
+     "calories": 107.36,
+     "fat": 5.81,
+     "protein": 5.19,
+     "carb": 11.0,
+     "mass": 67.91
+    },
+    "n": 5884,
+    "q_acc": 0.5574,
+    "q_within1": 0.9215,
+    "q_acc_low": 0.6449,
+    "confusion": [
+     [
+      865,
+      248,
+      64,
+      1,
+      0
+     ],
+     [
+      309,
+      610,
+      200,
+      45,
+      6
+     ],
+     [
+      42,
+      380,
+      458,
+      233,
+      62
+     ],
+     [
+      12,
+      71,
+      343,
+      530,
+      223
+     ],
+     [
+      4,
+      53,
+      102,
+      206,
+      817
+     ]
+    ]
+   },
+   "hybrid": {
+    "G4": 34.16,
+    "A4": 35.33,
+    "mean_pmae": 36.86,
+    "G": {
+     "calories": 30.28,
+     "fat": 48.29,
+     "protein": 31.99,
+     "carb": 26.06,
+     "mass": 21.23
+    },
+    "MAE": {
+     "calories": 109.22,
+     "fat": 5.9,
+     "protein": 5.27,
+     "carb": 11.07,
+     "mass": 68.47
+    },
+    "n": 5884,
+    "q_acc": 0.5542,
+    "q_within1": 0.9213,
+    "q_acc_low": 0.4673,
+    "confusion": [
+     [
+      888,
+      225,
+      64,
+      1,
+      0
+     ],
+     [
+      357,
+      573,
+      189,
+      45,
+      6
+     ],
+     [
+      43,
+      388,
+      453,
+      229,
+      62
+     ],
+     [
+      12,
+      71,
+      343,
+      530,
+      223
+     ],
+     [
+      4,
+      53,
+      102,
+      206,
+      817
+     ]
+    ]
+   },
+   "hybrid_g": {
+    "G4": 34.16,
+    "A4": 35.33,
+    "mean_pmae": 36.86,
+    "G": {
+     "calories": 30.28,
+     "fat": 48.29,
+     "protein": 31.99,
+     "carb": 26.06,
+     "mass": 21.23
+    },
+    "MAE": {
+     "calories": 109.22,
+     "fat": 5.9,
+     "protein": 5.27,
+     "carb": 11.07,
+     "mass": 68.47
+    },
+    "n": 5884,
+    "q_acc": 0.5542,
+    "q_within1": 0.9213,
+    "q_acc_low": 0.4673,
+    "confusion": [
+     [
+      888,
+      225,
+      64,
+      1,
+      0
+     ],
+     [
+      357,
+      573,
+      189,
+      45,
+      6
+     ],
+     [
+      43,
+      388,
+      453,
+      229,
+      62
+     ],
+     [
+      12,
+      71,
+      343,
+      530,
+      223
+     ],
+     [
+      4,
+      53,
+      102,
+      206,
+      817
+     ]
+    ]
+   },
+   "oracle_q": {
+    "G4": 27.93,
+    "A4": 32.32,
+    "mean_pmae": 31.65,
+    "G": {
+     "calories": 22.43,
+     "fat": 43.83,
+     "protein": 28.7,
+     "carb": 16.77,
+     "mass": 12.35
+    },
+    "MAE": {
+     "calories": 80.88,
+     "fat": 5.36,
+     "protein": 4.73,
+     "carb": 7.12,
+     "mass": 39.84
+    },
+    "n": 5884,
+    "q_acc": 1.0,
+    "q_within1": 1.0,
+    "q_acc_low": 1.0,
+    "confusion": [
+     [
+      1178,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      1170,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      1175,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      1179,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      1182
+     ]
+    ]
+   },
+   "hybrid_cont": {
+    "G4": 34.16,
+    "A4": 35.33,
+    "mean_pmae": 36.86,
+    "G": {
+     "calories": 30.28,
+     "fat": 48.29,
+     "protein": 31.99,
+     "carb": 26.06,
+     "mass": 21.23
+    },
+    "MAE": {
+     "calories": 109.22,
+     "fat": 5.9,
+     "protein": 5.27,
+     "carb": 11.07,
+     "mass": 68.47
+    },
+    "n": 5884
+   }
+  },
+  "per_food_q_acc": {
+   "갈치조림": {
+    "n": 245,
+    "model": 0.204,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "감자탕": {
+    "n": 250,
+    "model": 0.744,
+    "gemini": 0.467,
+    "gemini_bias": -0.54
+   },
+   "감자튀김": {
+    "n": 490,
+    "model": 0.447,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "김치볶음밥": {
+    "n": 237,
+    "model": 0.705,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "달걀말이": {
+    "n": 247,
+    "model": 0.725,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "매운탕": {
+    "n": 237,
+    "model": 0.747,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "미소된장국": {
+    "n": 236,
+    "model": 0.301,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "삼선짬뽕": {
+    "n": 248,
+    "model": 0.762,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "새우튀김": {
+    "n": 246,
+    "model": 0.72,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "소고기김밥": {
+    "n": 249,
+    "model": 0.57,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "소고기무국": {
+    "n": 245,
+    "model": 0.755,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "순대국": {
+    "n": 244,
+    "model": 0.43,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "시래기된장국": {
+    "n": 220,
+    "model": 0.218,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "알밥": {
+    "n": 249,
+    "model": 0.671,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "자장면": {
+    "n": 247,
+    "model": 0.478,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "전주비빔밥": {
+    "n": 257,
+    "model": 0.619,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "쫄면": {
+    "n": 245,
+    "model": 0.551,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "참치마요삼각김밥": {
+    "n": 244,
+    "model": 0.41,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "콩국수": {
+    "n": 248,
+    "model": 0.633,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "크림소스스파게티": {
+    "n": 257,
+    "model": 0.335,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "토마토소스스파게티": {
+    "n": 246,
+    "model": 0.374,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "해물찜": {
+    "n": 246,
+    "model": 0.683,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "회덮밥": {
+    "n": 251,
+    "model": 0.809,
+    "gemini": null,
+    "gemini_bias": null
+   }
+  }
+ },
+ "122_1_forseen": {
+  "n": 4387,
+  "conf_lt": 0.0018235696375655346,
+  "gemini_answered": 0,
+  "missing_gemini": 8,
+  "conds": {
+   "model": {
+    "G4": 1.4,
+    "A4": 2.1,
+    "mean_pmae": 1.31,
+    "G": {
+     "calories": 1.01,
+     "fat": 1.64,
+     "protein": 1.27,
+     "carb": 1.69,
+     "mass": 1.04
+    },
+    "MAE": {
+     "calories": 3.31,
+     "fat": 0.19,
+     "protein": 0.21,
+     "carb": 0.64,
+     "mass": 2.93
+    },
+    "n": 4387,
+    "q_acc": 0.9954,
+    "q_within1": 1.0,
+    "q_acc_low": null,
+    "confusion": [
+     [
+      873,
+      3,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      877,
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      4,
+      866,
+      4,
+      0
+     ],
+     [
+      0,
+      0,
+      3,
+      871,
+      3
+     ],
+     [
+      0,
+      0,
+      0,
+      2,
+      880
+     ]
+    ]
+   },
+   "hybrid": {
+    "G4": 1.4,
+    "A4": 2.1,
+    "mean_pmae": 1.31,
+    "G": {
+     "calories": 1.01,
+     "fat": 1.64,
+     "protein": 1.27,
+     "carb": 1.69,
+     "mass": 1.04
+    },
+    "MAE": {
+     "calories": 3.31,
+     "fat": 0.19,
+     "protein": 0.21,
+     "carb": 0.64,
+     "mass": 2.93
+    },
+    "n": 4387,
+    "q_acc": 0.9954,
+    "q_within1": 1.0,
+    "q_acc_low": null,
+    "confusion": [
+     [
+      873,
+      3,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      877,
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      4,
+      866,
+      4,
+      0
+     ],
+     [
+      0,
+      0,
+      3,
+      871,
+      3
+     ],
+     [
+      0,
+      0,
+      0,
+      2,
+      880
+     ]
+    ]
+   },
+   "hybrid_g": {
+    "G4": 1.4,
+    "A4": 2.1,
+    "mean_pmae": 1.31,
+    "G": {
+     "calories": 1.01,
+     "fat": 1.64,
+     "protein": 1.27,
+     "carb": 1.69,
+     "mass": 1.04
+    },
+    "MAE": {
+     "calories": 3.31,
+     "fat": 0.19,
+     "protein": 0.21,
+     "carb": 0.64,
+     "mass": 2.93
+    },
+    "n": 4387,
+    "q_acc": 0.9954,
+    "q_within1": 1.0,
+    "q_acc_low": null,
+    "confusion": [
+     [
+      873,
+      3,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      877,
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      4,
+      866,
+      4,
+      0
+     ],
+     [
+      0,
+      0,
+      3,
+      871,
+      3
+     ],
+     [
+      0,
+      0,
+      0,
+      2,
+      880
+     ]
+    ]
+   },
+   "oracle_q": {
+    "G4": 1.29,
+    "A4": 1.96,
+    "mean_pmae": 1.2,
+    "G": {
+     "calories": 0.89,
+     "fat": 1.54,
+     "protein": 1.16,
+     "carb": 1.55,
+     "mass": 0.92
+    },
+    "MAE": {
+     "calories": 2.9,
+     "fat": 0.18,
+     "protein": 0.19,
+     "carb": 0.59,
+     "mass": 2.59
+    },
+    "n": 4387,
+    "q_acc": 1.0,
+    "q_within1": 1.0,
+    "q_acc_low": null,
+    "confusion": [
+     [
+      876,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      878,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      874,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      877,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      882
+     ]
+    ]
+   },
+   "hybrid_cont": {
+    "G4": 1.4,
+    "A4": 2.1,
+    "mean_pmae": 1.31,
+    "G": {
+     "calories": 1.01,
+     "fat": 1.64,
+     "protein": 1.27,
+     "carb": 1.69,
+     "mass": 1.04
+    },
+    "MAE": {
+     "calories": 3.31,
+     "fat": 0.19,
+     "protein": 0.21,
+     "carb": 0.64,
+     "mass": 2.93
+    },
+    "n": 4387
+   }
+  },
+  "per_food_q_acc": {
+   "갈비탕": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "갈치조림": {
+    "n": 55,
+    "model": 0.982,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "감자탕": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "감자튀김": {
+    "n": 110,
+    "model": 0.982,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "곱창전골": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "기타잡곡밥": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "김치볶음밥": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "깻잎장아찌": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "꽁치조림": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "꽃게탕": {
+    "n": 55,
+    "model": 0.982,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "녹두빈대떡": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "달걀말이": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "닭갈비": {
+    "n": 56,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "닭볶음탕": {
+    "n": 54,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "닭죽": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "닭튀김": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "돈가스": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "돌솥밥": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "돼지갈비": {
+    "n": 56,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "두부구이": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "두부김치": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "떡갈비": {
+    "n": 50,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "떡만둣국": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "떡볶이": {
+    "n": 55,
+    "model": 0.982,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "라볶이": {
+    "n": 55,
+    "model": 0.982,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "매운탕": {
+    "n": 54,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "문어숙회": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "미소된장국": {
+    "n": 54,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "부대찌개": {
+    "n": 54,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "삼계탕": {
+    "n": 54,
+    "model": 0.981,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "삼선볶음밥": {
+    "n": 56,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "삼선짬뽕": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "새우볶음밥": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "새우튀김": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "소고기김밥": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "소고기무국": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "수제비": {
+    "n": 55,
+    "model": 0.982,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "순대국": {
+    "n": 54,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "순대볶음": {
+    "n": 55,
+    "model": 0.982,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "순두부찌개": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "시금치나물": {
+    "n": 55,
+    "model": 0.964,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "시래기된장국": {
+    "n": 51,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "쌀밥": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "알밥": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "알탕": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "양념게장": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "어묵볶음": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "오므라이스": {
+    "n": 105,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "오징어볶음": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "오징어젓갈": {
+    "n": 55,
+    "model": 0.964,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "육개장": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "일반김밥": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "일식우동": {
+    "n": 57,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "자장면": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "잡탕밥": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "전주비빔밥": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "전주콩나물국밥": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "제육덮밥": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "쫄면": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "참치마요삼각김밥": {
+    "n": 55,
+    "model": 0.982,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "채소튀김": {
+    "n": 55,
+    "model": 0.982,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "총각김치": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "치킨윙": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "카레라이스": {
+    "n": 55,
+    "model": 0.945,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "코다리조림": {
+    "n": 56,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "콘스프": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "콩국수": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "콩밥": {
+    "n": 55,
+    "model": 0.982,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "크림소스스파게티": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "토마토소스스파게티": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "파전": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "해물찜": {
+    "n": 55,
+    "model": 0.982,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "햄버거스테이크": {
+    "n": 56,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "호박죽": {
+    "n": 57,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "회냉면": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "회덮밥": {
+    "n": 55,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "훈제연어": {
+    "n": 54,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   },
+   "훈제오리": {
+    "n": 54,
+    "model": 1.0,
+    "gemini": null,
+    "gemini_bias": null
+   }
+  }
+ }
+}

@@ -1,0 +1,23 @@
+[cls_osr_122_1_forseen] 78종 | train 31484 known val 3423 unknown val 0 | known test 4387 unknown test 0 | cuda:1
+/home/leehogwang/food_b/experiments/split_txt_3runs/src/train_classifier_osr.py:184: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  opt.zero_grad(set_to_none=True); scaler.scale(loss).backward(); scaler.step(opt); scaler.update(); sch.step()
+ep01 loss 3.6374 known val top1 0.9997
+ep02 loss 0.4073 known val top1 1.0000
+ep03 loss 0.2890 known val top1 1.0000
+ep04 loss 0.2536 known val top1 0.9997
+ep05 loss 0.2129 known val top1 1.0000
+ep06 loss 0.1792 known val top1 1.0000
+ep07 loss 0.1537 known val top1 1.0000
+ep08 loss 0.1742 known val top1 1.0000
+early stop ep 8, best ep 2
+/home/leehogwang/food_b/n296/food_classifier.py:151: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return float(log_t.exp())
+primary center_cos threshold 0.9045 | known test top1 1.0000
+  msp        val AUROC nan test AUROC nan | TPR95: known 통과 0.949 정확도(통과분) 1.0000 unknown→Gemini nan
+  energy     val AUROC nan test AUROC nan | TPR95: known 통과 0.960 정확도(통과분) 1.0000 unknown→Gemini nan
+  proto_cos  val AUROC nan test AUROC nan | TPR95: known 통과 0.960 정확도(통과분) 1.0000 unknown→Gemini nan
+  center_cos val AUROC nan test AUROC nan | TPR95: known 통과 0.955 정확도(통과분) 1.0000 unknown→Gemini nan
+  knn        val AUROC nan test AUROC nan | TPR95: known 통과 0.957 정확도(통과분) 1.0000 unknown→Gemini nan
+  maha       val AUROC nan test AUROC nan | TPR95: known 통과 0.955 정확도(통과분) 1.0000 unknown→Gemini nan
+DONE

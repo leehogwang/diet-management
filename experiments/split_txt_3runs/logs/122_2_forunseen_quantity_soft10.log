@@ -1,0 +1,31 @@
+[122_2_forunseen_quantity_soft10] soft_sigma 1.0 | train 10840 val 2989 test 5884 | 대분류 16개 학습 | cuda:1
+ep  1 (64s) loss 1.4138 | val acc 0.4359 ±1 0.9036
+ep  2 (47s) loss 1.2336 | val acc 0.4888 ±1 0.9200
+ep  3 (47s) loss 1.1993 | val acc 0.4901 ±1 0.9103
+ep  4 (47s) loss 1.1836 | val acc 0.4647 ±1 0.9057
+ep  5 (47s) loss 1.1772 | val acc 0.4794 ±1 0.9254
+ep  6 (47s) loss 1.1708 | val acc 0.4945 ±1 0.9174
+ep  7 (47s) loss 1.1648 | val acc 0.4945 ±1 0.9197
+ep  8 (47s) loss 1.1602 | val acc 0.4791 ±1 0.9070
+ep  9 (47s) loss 1.1578 | val acc 0.4868 ±1 0.9130
+ep 10 (47s) loss 1.1587 | val acc 0.5012 ±1 0.9247
+ep 11 (47s) loss 1.1554 | val acc 0.4901 ±1 0.9244
+ep 12 (47s) loss 1.1525 | val acc 0.5002 ±1 0.9150
+ep 13 (47s) loss 1.1521 | val acc 0.4854 ±1 0.9150
+ep 14 (47s) loss 1.1516 | val acc 0.4844 ±1 0.9204
+ep 15 (47s) loss 1.1502 | val acc 0.4744 ±1 0.9130
+ep 16 (47s) loss 1.1501 | val acc 0.4788 ±1 0.9113
+[EarlyStop] ep 16, best ep 10
+/home/leehogwang/food_b/n296/food_classifier.py:151: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return float(log_t.exp())
+[TEST 대분류 gt] acc 0.5501 ±1 0.9315 ratio MAE 0.1306
+[TEST 대분류 gemini] acc 0.5505 ±1 0.9312 ratio MAE 0.1306
+[TEST 대분류 masked] acc 0.5505 ±1 0.9307 ratio MAE 0.1308
+DONE
+[122_2_forunseen 대분류 gt] acc 0.5501 ±1 0.9315 ratio MAE 0.1306 | 기타 아님 1.000 정답표와 같음 1.000
+[122_2_forunseen 대분류 masked] acc 0.5505 ±1 0.9307 ratio MAE 0.1308 | 기타 아님 0.000 정답표와 같음 0.000
+[122_2_forunseen 대분류 gemini] acc 0.5505 ±1 0.9315 ratio MAE 0.1305 | 기타 아님 1.000 정답표와 같음 0.932
+[122_2_forunseen 대분류 pipe] acc 0.5513 ±1 0.9312 ratio MAE 0.1304 | 기타 아님 0.979 정답표와 같음 0.770
+[122_2_forunseen 대분류 pipe_osr] acc 0.5505 ±1 0.9315 ratio MAE 0.1305 | 기타 아님 1.000 정답표와 같음 0.940
+DONE

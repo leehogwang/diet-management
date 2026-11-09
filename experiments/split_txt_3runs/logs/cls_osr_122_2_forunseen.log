@@ -1,0 +1,22 @@
+[cls_osr_122_2_forunseen] 44종 | train 9756 known val 774 unknown val 2757 | known test 542 unknown test 5884 | cuda:0
+/home/leehogwang/food_b/experiments/split_txt_3runs/src/train_classifier_osr.py:184: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  opt.zero_grad(set_to_none=True); scaler.scale(loss).backward(); scaler.step(opt); scaler.update(); sch.step()
+ep01 loss 4.8948 known val top1 0.7455 | unknown val AUROC(proto_cos) 0.7660 | 선택점수 0.7557
+ep02 loss 0.6208 known val top1 0.7093 | unknown val AUROC(proto_cos) 0.7896 | 선택점수 0.7494
+ep03 loss 0.3946 known val top1 0.7003 | unknown val AUROC(proto_cos) 0.7698 | 선택점수 0.7351
+ep04 loss 0.3322 known val top1 0.7209 | unknown val AUROC(proto_cos) 0.7240 | 선택점수 0.7225
+ep05 loss 0.2560 known val top1 0.7003 | unknown val AUROC(proto_cos) 0.7784 | 선택점수 0.7393
+ep06 loss 0.2331 known val top1 0.7003 | unknown val AUROC(proto_cos) 0.7971 | 선택점수 0.7487
+ep07 loss 0.1856 known val top1 0.7003 | unknown val AUROC(proto_cos) 0.7377 | 선택점수 0.7190
+early stop ep 7, best ep 1
+/home/leehogwang/food_b/n296/food_classifier.py:151: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return float(log_t.exp())
+primary center_cos threshold 0.4850 | known test top1 1.0000
+  msp        val AUROC 0.7709 test AUROC 0.9805 | TPR95: known 통과 1.000 정확도(통과분) 1.0000 unknown→Gemini 0.032
+  energy     val AUROC 0.7668 test AUROC 0.9899 | TPR95: known 통과 1.000 정확도(통과분) 1.0000 unknown→Gemini 0.059
+  proto_cos  val AUROC 0.7660 test AUROC 0.9897 | TPR95: known 통과 1.000 정확도(통과분) 1.0000 unknown→Gemini 0.044
+  center_cos val AUROC 0.8383 test AUROC 0.9967 | TPR95: known 통과 1.000 정확도(통과분) 1.0000 unknown→Gemini 0.199
+  knn        val AUROC 0.8308 test AUROC 0.9990 | TPR95: known 통과 1.000 정확도(통과분) 1.0000 unknown→Gemini 0.180
+  maha       val AUROC 0.7660 test AUROC 0.9997 | TPR95: known 통과 1.000 정확도(통과분) 1.0000 unknown→Gemini 0.056
+DONE

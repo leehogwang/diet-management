@@ -1,0 +1,796 @@
+{
+ "122_1_forseen": {
+  "quantity": {
+   "gt": {
+    "acc": 0.9954410791397095,
+    "acc_within1": 1.0,
+    "ratio_mae_argmax": 0.0011397310299798846,
+    "ratio_mae_expected": 0.002144756494089961
+   },
+   "gemini": {
+    "acc": 0.9954410791397095,
+    "acc_within1": 1.0,
+    "ratio_mae_argmax": 0.0011397310299798846,
+    "ratio_mae_expected": 0.0021556636784225702
+   },
+   "masked": {
+    "acc": 0.9956690073013306,
+    "acc_within1": 1.0,
+    "ratio_mae_argmax": 0.00108274444937706,
+    "ratio_mae_expected": 0.0021520331501960754
+   }
+  },
+  "quantity_val_acc": 0.9956178665161133,
+  "quantity_best_epoch": 28,
+  "gemini_category_known": 0.619101891953499,
+  "text_gt": {
+   "direct": {
+    "G4": 2.82,
+    "A4": 4.43,
+    "mean_pmae": 2.83,
+    "G": {
+     "calories": 2.64,
+     "fat": 3.01,
+     "protein": 2.83,
+     "carb": 2.81,
+     "mass": 2.59
+    },
+    "MAE": {
+     "calories": 8.62,
+     "fat": 0.35,
+     "protein": 0.46,
+     "carb": 1.06,
+     "mass": 7.32
+    },
+    "n": 4387
+   },
+   "pipe_q4": {
+    "G4": 46.71,
+    "A4": 75.79,
+    "mean_pmae": 46.71,
+    "G": {
+     "calories": 46.7,
+     "fat": 46.77,
+     "protein": 46.66,
+     "carb": 46.73,
+     "mass": 46.71
+    },
+    "MAE": {
+     "calories": 152.1,
+     "fat": 5.44,
+     "protein": 7.59,
+     "carb": 17.62,
+     "mass": 131.97
+    },
+    "n": 4387
+   },
+   "pipe_argmax": {
+    "G4": 0.5,
+    "A4": 1.07,
+    "mean_pmae": 0.5,
+    "G": {
+     "calories": 0.41,
+     "fat": 0.59,
+     "protein": 0.49,
+     "carb": 0.51,
+     "mass": 0.47
+    },
+    "MAE": {
+     "calories": 1.34,
+     "fat": 0.07,
+     "protein": 0.08,
+     "carb": 0.19,
+     "mass": 1.33
+    },
+    "n": 4387
+   },
+   "pipe_expected": {
+    "G4": 0.56,
+    "A4": 1.15,
+    "mean_pmae": 0.55,
+    "G": {
+     "calories": 0.48,
+     "fat": 0.64,
+     "protein": 0.54,
+     "carb": 0.58,
+     "mass": 0.52
+    },
+    "MAE": {
+     "calories": 1.57,
+     "fat": 0.07,
+     "protein": 0.09,
+     "carb": 0.22,
+     "mass": 1.47
+    },
+    "n": 4387
+   },
+   "oracle_q": {
+    "G4": 0.38,
+    "A4": 0.92,
+    "mean_pmae": 0.38,
+    "G": {
+     "calories": 0.29,
+     "fat": 0.49,
+     "protein": 0.38,
+     "carb": 0.38,
+     "mass": 0.35
+    },
+    "MAE": {
+     "calories": 0.93,
+     "fat": 0.06,
+     "protein": 0.06,
+     "carb": 0.14,
+     "mass": 0.98
+    },
+    "n": 4387
+   },
+   "oracle_food": {
+    "G4": 0.12,
+    "A4": 0.15,
+    "mean_pmae": 0.11,
+    "G": {
+     "calories": 0.13,
+     "fat": 0.11,
+     "protein": 0.11,
+     "carb": 0.14,
+     "mass": 0.12
+    },
+    "MAE": {
+     "calories": 0.41,
+     "fat": 0.01,
+     "protein": 0.02,
+     "carb": 0.05,
+     "mass": 0.35
+    },
+    "n": 4387
+   }
+  },
+  "text_gt_q4_target": {
+   "G4": 0.37,
+   "A4": 1.03,
+   "mean_pmae": 0.37,
+   "G": {
+    "calories": 0.28,
+    "fat": 0.47,
+    "protein": 0.37,
+    "carb": 0.37,
+    "mass": 0.34
+   },
+   "MAE": {
+    "calories": 1.21,
+    "fat": 0.07,
+    "protein": 0.08,
+    "carb": 0.19,
+    "mass": 1.28
+   },
+   "n": 4387
+  },
+  "text_gt_by_q": {
+   "direct": [
+    5.55,
+    3.88,
+    3.82,
+    2.69,
+    1.37
+   ],
+   "pipe_q4": [
+    299.85,
+    99.97,
+    33.32,
+    0.39,
+    19.99
+   ],
+   "pipe_argmax": [
+    0.66,
+    0.36,
+    0.65,
+    0.5,
+    0.44
+   ],
+   "pipe_expected": [
+    1.07,
+    0.43,
+    0.72,
+    0.5,
+    0.47
+   ],
+   "oracle_q": [
+    0.35,
+    0.36,
+    0.37,
+    0.39,
+    0.4
+   ],
+   "oracle_food": [
+    0.31,
+    0.01,
+    0.28,
+    0.11,
+    0.04
+   ]
+  },
+  "text_gemini": {
+   "direct": {
+    "G4": 4.63,
+    "A4": 7.01,
+    "mean_pmae": 4.69,
+    "G": {
+     "calories": 3.74,
+     "fat": 5.25,
+     "protein": 5.09,
+     "carb": 4.44,
+     "mass": 4.07
+    },
+    "MAE": {
+     "calories": 12.17,
+     "fat": 0.61,
+     "protein": 0.83,
+     "carb": 1.67,
+     "mass": 11.5
+    },
+    "n": 4387
+   },
+   "pipe_q4": {
+    "G4": 46.15,
+    "A4": 80.04,
+    "mean_pmae": 45.74,
+    "G": {
+     "calories": 45.83,
+     "fat": 46.62,
+     "protein": 44.77,
+     "carb": 47.39,
+     "mass": 46.09
+    },
+    "MAE": {
+     "calories": 149.29,
+     "fat": 5.43,
+     "protein": 7.28,
+     "carb": 17.87,
+     "mass": 130.21
+    },
+    "n": 4387
+   },
+   "pipe_argmax": {
+    "G4": 4.14,
+    "A4": 6.45,
+    "mean_pmae": 4.14,
+    "G": {
+     "calories": 3.01,
+     "fat": 4.63,
+     "protein": 4.78,
+     "carb": 4.12,
+     "mass": 3.59
+    },
+    "MAE": {
+     "calories": 9.8,
+     "fat": 0.54,
+     "protein": 0.78,
+     "carb": 1.55,
+     "mass": 10.13
+    },
+    "n": 4387
+   },
+   "pipe_expected": {
+    "G4": 4.18,
+    "A4": 6.51,
+    "mean_pmae": 4.19,
+    "G": {
+     "calories": 3.06,
+     "fat": 4.68,
+     "protein": 4.82,
+     "carb": 4.17,
+     "mass": 3.62
+    },
+    "MAE": {
+     "calories": 9.96,
+     "fat": 0.54,
+     "protein": 0.78,
+     "carb": 1.57,
+     "mass": 10.22
+    },
+    "n": 4387
+   },
+   "oracle_q": {
+    "G4": 4.02,
+    "A4": 6.32,
+    "mean_pmae": 4.04,
+    "G": {
+     "calories": 2.89,
+     "fat": 4.54,
+     "protein": 4.68,
+     "carb": 3.99,
+     "mass": 3.47
+    },
+    "MAE": {
+     "calories": 9.41,
+     "fat": 0.53,
+     "protein": 0.76,
+     "carb": 1.5,
+     "mass": 9.79
+    },
+    "n": 4387
+   },
+   "oracle_food": {
+    "G4": 0.12,
+    "A4": 0.15,
+    "mean_pmae": 0.11,
+    "G": {
+     "calories": 0.13,
+     "fat": 0.11,
+     "protein": 0.11,
+     "carb": 0.14,
+     "mass": 0.12
+    },
+    "MAE": {
+     "calories": 0.41,
+     "fat": 0.01,
+     "protein": 0.02,
+     "carb": 0.05,
+     "mass": 0.35
+    },
+    "n": 4387
+   }
+  },
+  "text_gemini_q4_target": {
+   "G4": 4.92,
+   "A4": 7.04,
+   "mean_pmae": 5.04,
+   "G": {
+    "calories": 3.59,
+    "fat": 5.64,
+    "protein": 5.89,
+    "carb": 4.57,
+    "mass": 4.14
+   },
+   "MAE": {
+    "calories": 15.59,
+    "fat": 0.88,
+    "protein": 1.28,
+    "carb": 2.3,
+    "mass": 15.59
+   },
+   "n": 4387
+  },
+  "text_gemini_by_q": {
+   "direct": [
+    10.58,
+    6.13,
+    6.1,
+    3.98,
+    2.5
+   ],
+   "pipe_q4": [
+    286.03,
+    95.26,
+    32.88,
+    3.32,
+    20.87
+   ],
+   "pipe_argmax": [
+    8.51,
+    5.73,
+    5.0,
+    3.43,
+    2.68
+   ],
+   "pipe_expected": [
+    8.68,
+    5.75,
+    5.08,
+    3.44,
+    2.72
+   ],
+   "oracle_q": [
+    8.19,
+    5.73,
+    4.75,
+    3.32,
+    2.65
+   ],
+   "oracle_food": [
+    0.31,
+    0.01,
+    0.28,
+    0.11,
+    0.04
+   ]
+  }
+ },
+ "122_2_forunseen": {
+  "quantity": {
+   "gt": {
+    "acc": 0.5572739839553833,
+    "acc_within1": 0.9214819669723511,
+    "ratio_mae_argmax": 0.13371005654335022,
+    "ratio_mae_expected": 0.19686345756053925
+   },
+   "gemini": {
+    "acc": 0.5579537749290466,
+    "acc_within1": 0.9209721088409424,
+    "ratio_mae_argmax": 0.13366757333278656,
+    "ratio_mae_expected": 0.19602735340595245
+   },
+   "masked": {
+    "acc": 0.5591434240341187,
+    "acc_within1": 0.9209721088409424,
+    "ratio_mae_argmax": 0.13337016105651855,
+    "ratio_mae_expected": 0.19581414759159088
+   }
+  },
+  "quantity_val_acc": 0.49347609281539917,
+  "quantity_best_epoch": 9,
+  "gemini_category_known": 0.48861318830727396,
+  "text_gt": {
+   "direct": {
+    "G4": 50.77,
+    "A4": 84.2,
+    "mean_pmae": 52.11,
+    "G": {
+     "calories": 43.59,
+     "fat": 60.89,
+     "protein": 51.86,
+     "carb": 46.74,
+     "mass": 35.84
+    },
+    "MAE": {
+     "calories": 157.21,
+     "fat": 7.44,
+     "protein": 8.54,
+     "carb": 19.85,
+     "mass": 115.6
+    },
+    "n": 5884
+   },
+   "pipe_q4": {
+    "G4": 69.49,
+    "A4": 187.88,
+    "mean_pmae": 68.4,
+    "G": {
+     "calories": 59.12,
+     "fat": 76.17,
+     "protein": 69.91,
+     "carb": 72.76,
+     "mass": 62.01
+    },
+    "MAE": {
+     "calories": 213.23,
+     "fat": 9.31,
+     "protein": 11.51,
+     "carb": 30.9,
+     "mass": 199.99
+    },
+    "n": 5884
+   },
+   "pipe_argmax": {
+    "G4": 48.37,
+    "A4": 88.36,
+    "mean_pmae": 49.69,
+    "G": {
+     "calories": 38.28,
+     "fat": 60.8,
+     "protein": 49.98,
+     "carb": 44.41,
+     "mass": 34.17
+    },
+    "MAE": {
+     "calories": 138.05,
+     "fat": 7.43,
+     "protein": 8.23,
+     "carb": 18.86,
+     "mass": 110.2
+    },
+    "n": 5884
+   },
+   "pipe_expected": {
+    "G4": 52.39,
+    "A4": 111.49,
+    "mean_pmae": 52.8,
+    "G": {
+     "calories": 43.68,
+     "fat": 63.33,
+     "protein": 51.39,
+     "carb": 51.16,
+     "mass": 37.28
+    },
+    "MAE": {
+     "calories": 157.54,
+     "fat": 7.74,
+     "protein": 8.46,
+     "carb": 21.73,
+     "mass": 120.24
+    },
+    "n": 5884
+   },
+   "oracle_q": {
+    "G4": 46.88,
+    "A4": 94.13,
+    "mean_pmae": 48.64,
+    "G": {
+     "calories": 36.09,
+     "fat": 60.3,
+     "protein": 49.53,
+     "carb": 41.61,
+     "mass": 29.78
+    },
+    "MAE": {
+     "calories": 130.16,
+     "fat": 7.37,
+     "protein": 8.16,
+     "carb": 17.67,
+     "mass": 96.04
+    },
+    "n": 5884
+   },
+   "oracle_food": {
+    "G4": 15.77,
+    "A4": 19.17,
+    "mean_pmae": 15.62,
+    "G": {
+     "calories": 15.82,
+     "fat": 16.74,
+     "protein": 14.29,
+     "carb": 16.22,
+     "mass": 15.18
+    },
+    "MAE": {
+     "calories": 57.06,
+     "fat": 2.05,
+     "protein": 2.35,
+     "carb": 6.89,
+     "mass": 48.97
+    },
+    "n": 5884
+   }
+  },
+  "text_gt_q4_target": {
+   "G4": 46.83,
+   "A4": 102.73,
+   "mean_pmae": 48.72,
+   "G": {
+    "calories": 36.22,
+    "fat": 60.35,
+    "protein": 49.58,
+    "carb": 41.17,
+    "mass": 29.16
+   },
+   "MAE": {
+    "calories": 173.93,
+    "fat": 9.81,
+    "protein": 10.89,
+    "carb": 23.28,
+    "mass": 125.36
+   },
+   "n": 5884
+  },
+  "text_gt_by_q": {
+   "direct": [
+    59.98,
+    48.66,
+    49.97,
+    51.19,
+    49.91
+   ],
+   "pipe_q4": [
+    255.12,
+    92.37,
+    56.28,
+    46.86,
+    49.39
+   ],
+   "pipe_argmax": [
+    55.07,
+    48.2,
+    49.91,
+    48.17,
+    46.34
+   ],
+   "pipe_expected": [
+    104.13,
+    50.14,
+    46.91,
+    48.41,
+    49.41
+   ],
+   "oracle_q": [
+    46.54,
+    46.77,
+    47.11,
+    46.86,
+    46.88
+   ],
+   "oracle_food": [
+    36.34,
+    22.58,
+    21.17,
+    13.94,
+    7.25
+   ]
+  },
+  "text_gemini": {
+   "direct": {
+    "G4": 50.25,
+    "A4": 83.61,
+    "mean_pmae": 51.61,
+    "G": {
+     "calories": 43.54,
+     "fat": 59.37,
+     "protein": 51.92,
+     "carb": 46.16,
+     "mass": 36.54
+    },
+    "MAE": {
+     "calories": 157.03,
+     "fat": 7.25,
+     "protein": 8.55,
+     "carb": 19.6,
+     "mass": 117.84
+    },
+    "n": 5884
+   },
+   "pipe_q4": {
+    "G4": 67.25,
+    "A4": 184.58,
+    "mean_pmae": 66.52,
+    "G": {
+     "calories": 57.37,
+     "fat": 72.51,
+     "protein": 69.67,
+     "carb": 69.44,
+     "mass": 58.47
+    },
+    "MAE": {
+     "calories": 206.92,
+     "fat": 8.86,
+     "protein": 11.47,
+     "carb": 29.49,
+     "mass": 188.59
+    },
+    "n": 5884
+   },
+   "pipe_argmax": {
+    "G4": 47.84,
+    "A4": 87.0,
+    "mean_pmae": 49.7,
+    "G": {
+     "calories": 39.07,
+     "fat": 59.06,
+     "protein": 50.96,
+     "carb": 42.26,
+     "mass": 34.35
+    },
+    "MAE": {
+     "calories": 140.91,
+     "fat": 7.22,
+     "protein": 8.39,
+     "carb": 17.95,
+     "mass": 110.77
+    },
+    "n": 5884
+   },
+   "pipe_expected": {
+    "G4": 51.57,
+    "A4": 109.44,
+    "mean_pmae": 52.54,
+    "G": {
+     "calories": 43.74,
+     "fat": 61.56,
+     "protein": 52.34,
+     "carb": 48.63,
+     "mass": 36.66
+    },
+    "MAE": {
+     "calories": 157.74,
+     "fat": 7.52,
+     "protein": 8.62,
+     "carb": 20.66,
+     "mass": 118.25
+    },
+    "n": 5884
+   },
+   "oracle_q": {
+    "G4": 46.47,
+    "A4": 93.33,
+    "mean_pmae": 48.94,
+    "G": {
+     "calories": 37.32,
+     "fat": 58.7,
+     "protein": 50.79,
+     "carb": 39.07,
+     "mass": 30.46
+    },
+    "MAE": {
+     "calories": 134.59,
+     "fat": 7.17,
+     "protein": 8.36,
+     "carb": 16.59,
+     "mass": 98.23
+    },
+    "n": 5884
+   },
+   "oracle_food": {
+    "G4": 15.75,
+    "A4": 19.15,
+    "mean_pmae": 15.59,
+    "G": {
+     "calories": 15.8,
+     "fat": 16.71,
+     "protein": 14.26,
+     "carb": 16.22,
+     "mass": 15.19
+    },
+    "MAE": {
+     "calories": 57.0,
+     "fat": 2.04,
+     "protein": 2.35,
+     "carb": 6.89,
+     "mass": 49.01
+    },
+    "n": 5884
+   }
+  },
+  "text_gemini_q4_target": {
+   "G4": 46.69,
+   "A4": 102.06,
+   "mean_pmae": 49.24,
+   "G": {
+    "calories": 37.84,
+    "fat": 58.75,
+    "protein": 51.13,
+    "carb": 39.07,
+    "mass": 29.99
+   },
+   "MAE": {
+    "calories": 181.68,
+    "fat": 9.55,
+    "protein": 11.23,
+    "carb": 22.09,
+    "mass": 128.92
+   },
+   "n": 5884
+  },
+  "text_gemini_by_q": {
+   "direct": [
+    59.04,
+    48.06,
+    49.28,
+    50.78,
+    49.51
+   ],
+   "pipe_q4": [
+    242.42,
+    87.53,
+    53.72,
+    46.7,
+    48.79
+   ],
+   "pipe_argmax": [
+    54.61,
+    48.22,
+    49.81,
+    47.75,
+    45.24
+   ],
+   "pipe_expected": [
+    96.82,
+    47.98,
+    46.82,
+    48.93,
+    48.9
+   ],
+   "oracle_q": [
+    47.21,
+    46.92,
+    47.03,
+    46.7,
+    45.63
+   ],
+   "oracle_food": [
+    36.36,
+    22.68,
+    20.99,
+    14.0,
+    7.2
+   ]
+  }
+ }
+}

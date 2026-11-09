@@ -1,0 +1,6 @@
+[122_1_forseen] train 31484 val 3423 test 4387 | 학습 파라미터 112.9M (얼린 모듈 2) | batch 64 | budget 180.0분 | cuda:1
+ep   1 (329s) lr 3.00e-04 loss 0.0433 | val G4 5.42 A4 11.79 | {'calories': 3.23, 'fat': 6.46, 'protein': 7.04, 'carb': 4.97, 'mass': 6.58}
+ep   2 (260s) lr 3.00e-04 loss 0.0125 | val G4 3.24 A4 7.92 | {'calories': 2.26, 'fat': 4.13, 'protein': 3.35, 'carb': 3.21, 'mass': 3.14}
+ep   3 (256s) lr 3.00e-04 loss 0.0081 | val G4 3.12 A4 6.43 | {'calories': 2.02, 'fat': 4.43, 'protein': 2.89, 'carb': 3.14, 'mass': 2.67}
+ep   4 (257s) lr 3.00e-04 loss 0.0064 | val G4 2.70 A4 5.58 | {'calories': 1.96, 'fat': 3.79, 'protein': 2.77, 'carb': 2.29, 'mass': 2.47}
+ep   5 (258s) lr 3.00e-04 loss 0.0049 | val G4 3.31 A4 8.75 | {'calories': 2.7, 'fat': 3.4, 'protein': 3.65, 'carb': 3.49, 'mass': 2.26}

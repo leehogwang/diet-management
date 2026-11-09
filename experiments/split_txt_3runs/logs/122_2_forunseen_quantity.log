@@ -1,0 +1,24 @@
+[122_2_forunseen_quantity] train 10840 val 2989 test 5884 | 대분류 16개 학습 | cuda:0
+ep  1 (67s) loss 1.3529 | val acc 0.4128 ±1 0.8869
+ep  2 (55s) loss 0.8890 | val acc 0.4828 ±1 0.9180
+ep  3 (73s) loss 0.7025 | val acc 0.4791 ±1 0.8919
+ep  4 (88s) loss 0.6091 | val acc 0.4486 ±1 0.8980
+ep  5 (77s) loss 0.5630 | val acc 0.4757 ±1 0.8996
+ep  6 (77s) loss 0.5243 | val acc 0.4791 ±1 0.8990
+ep  7 (89s) loss 0.5032 | val acc 0.4844 ±1 0.9070
+ep  8 (85s) loss 0.4715 | val acc 0.4761 ±1 0.9097
+ep  9 (82s) loss 0.4636 | val acc 0.4935 ±1 0.8876
+ep 10 (88s) loss 0.4698 | val acc 0.4674 ±1 0.9133
+ep 11 (82s) loss 0.4506 | val acc 0.4667 ±1 0.9180
+ep 12 (87s) loss 0.4393 | val acc 0.4781 ±1 0.9117
+ep 13 (85s) loss 0.4385 | val acc 0.4704 ±1 0.9013
+ep 14 (88s) loss 0.4309 | val acc 0.4654 ±1 0.9080
+ep 15 (88s) loss 0.4240 | val acc 0.4704 ±1 0.9100
+[EarlyStop] ep 15, best ep 9
+/home/leehogwang/food_b/n296/food_classifier.py:151: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return float(log_t.exp())
+[TEST 대분류 gt] acc 0.5573 ±1 0.9215 ratio MAE 0.1337
+[TEST 대분류 gemini] acc 0.5580 ±1 0.9210 ratio MAE 0.1337
+[TEST 대분류 masked] acc 0.5591 ±1 0.9210 ratio MAE 0.1334
+DONE

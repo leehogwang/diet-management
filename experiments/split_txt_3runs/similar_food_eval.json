@@ -1,0 +1,890 @@
+{
+ "n": 5884,
+ "gemini_route": 5834,
+ "conds": {
+  "r_ing": {
+   "pipe": {
+    "G4": 33.67,
+    "A4": 35.01,
+    "mean_pmae": 36.26,
+    "G": {
+     "calories": 29.77,
+     "fat": 47.53,
+     "protein": 31.5,
+     "carb": 25.9,
+     "mass": 21.05
+    },
+    "MAE": {
+     "calories": 107.36,
+     "fat": 5.81,
+     "protein": 5.19,
+     "carb": 11.0,
+     "mass": 67.91
+    },
+    "n": 5884
+   },
+   "oracle_q": {
+    "G4": 27.93,
+    "A4": 32.32,
+    "mean_pmae": 31.65,
+    "G": {
+     "calories": 22.43,
+     "fat": 43.83,
+     "protein": 28.7,
+     "carb": 16.77,
+     "mass": 12.35
+    },
+    "MAE": {
+     "calories": 80.88,
+     "fat": 5.36,
+     "protein": 4.73,
+     "carb": 7.12,
+     "mass": 39.84
+    },
+    "n": 5884
+   },
+   "serving": {
+    "G4": 28.49,
+    "A4": 34.24,
+    "mean_pmae": 32.27,
+    "G": {
+     "calories": 22.85,
+     "fat": 44.28,
+     "protein": 29.68,
+     "carb": 17.17,
+     "mass": 13.01
+    },
+    "MAE": {
+     "calories": 109.7,
+     "fat": 7.2,
+     "protein": 6.52,
+     "carb": 9.71,
+     "mass": 55.93
+    },
+    "n": 5884
+   }
+  },
+  "sim_top1": {
+   "pipe": {
+    "G4": 60.88,
+    "A4": 135.64,
+    "mean_pmae": 58.3,
+    "G": {
+     "calories": 54.04,
+     "fat": 60.02,
+     "protein": 60.83,
+     "carb": 68.63,
+     "mass": 43.53
+    },
+    "MAE": {
+     "calories": 194.9,
+     "fat": 7.33,
+     "protein": 10.02,
+     "carb": 29.15,
+     "mass": 140.41
+    },
+    "n": 5884
+   },
+   "oracle_q": {
+    "G4": 62.87,
+    "A4": 153.59,
+    "mean_pmae": 61.02,
+    "G": {
+     "calories": 53.72,
+     "fat": 63.68,
+     "protein": 65.65,
+     "carb": 68.42,
+     "mass": 43.49
+    },
+    "MAE": {
+     "calories": 193.76,
+     "fat": 7.78,
+     "protein": 10.81,
+     "carb": 29.06,
+     "mass": 140.27
+    },
+    "n": 5884
+   },
+   "serving": {
+    "G4": 62.65,
+    "A4": 167.93,
+    "mean_pmae": 61.1,
+    "G": {
+     "calories": 53.49,
+     "fat": 64.52,
+     "protein": 65.29,
+     "carb": 67.3,
+     "mass": 41.84
+    },
+    "MAE": {
+     "calories": 256.86,
+     "fat": 10.48,
+     "protein": 14.34,
+     "carb": 38.05,
+     "mass": 179.85
+    },
+    "n": 5884
+   }
+  },
+  "sim_top5w": {
+   "pipe": {
+    "G4": 54.86,
+    "A4": 122.54,
+    "mean_pmae": 52.73,
+    "G": {
+     "calories": 47.83,
+     "fat": 57.05,
+     "protein": 53.31,
+     "carb": 61.27,
+     "mass": 38.64
+    },
+    "MAE": {
+     "calories": 172.49,
+     "fat": 6.97,
+     "protein": 8.78,
+     "carb": 26.02,
+     "mass": 124.61
+    },
+    "n": 5884
+   },
+   "oracle_q": {
+    "G4": 56.14,
+    "A4": 139.26,
+    "mean_pmae": 54.52,
+    "G": {
+     "calories": 47.85,
+     "fat": 58.14,
+     "protein": 57.55,
+     "carb": 61.01,
+     "mass": 39.11
+    },
+    "MAE": {
+     "calories": 172.59,
+     "fat": 7.1,
+     "protein": 9.48,
+     "carb": 25.91,
+     "mass": 126.15
+    },
+    "n": 5884
+   },
+   "serving": {
+    "G4": 56.24,
+    "A4": 152.55,
+    "mean_pmae": 54.92,
+    "G": {
+     "calories": 47.61,
+     "fat": 59.17,
+     "protein": 57.98,
+     "carb": 60.2,
+     "mass": 38.21
+    },
+    "MAE": {
+     "calories": 228.61,
+     "fat": 9.62,
+     "protein": 12.73,
+     "carb": 34.03,
+     "mass": 164.26
+    },
+    "n": 5884
+   }
+  },
+  "avg_top1_gem": {
+   "pipe": {
+    "G4": 41.91,
+    "A4": 78.85,
+    "mean_pmae": 42.56,
+    "G": {
+     "calories": 37.82,
+     "fat": 49.01,
+     "protein": 40.86,
+     "carb": 39.95,
+     "mass": 29.18
+    },
+    "MAE": {
+     "calories": 136.4,
+     "fat": 5.99,
+     "protein": 6.73,
+     "carb": 16.97,
+     "mass": 94.11
+    },
+    "n": 5884
+   },
+   "oracle_q": {
+    "G4": 40.05,
+    "A4": 86.67,
+    "mean_pmae": 41.39,
+    "G": {
+     "calories": 34.54,
+     "fat": 47.23,
+     "protein": 42.4,
+     "carb": 36.02,
+     "mass": 25.12
+    },
+    "MAE": {
+     "calories": 124.58,
+     "fat": 5.77,
+     "protein": 6.98,
+     "carb": 15.3,
+     "mass": 81.02
+    },
+    "n": 5884
+   },
+   "serving": {
+    "G4": 40.15,
+    "A4": 94.45,
+    "mean_pmae": 41.68,
+    "G": {
+     "calories": 34.34,
+     "fat": 48.24,
+     "protein": 42.47,
+     "carb": 35.56,
+     "mass": 24.6
+    },
+    "MAE": {
+     "calories": 164.88,
+     "fat": 7.84,
+     "protein": 9.33,
+     "carb": 20.1,
+     "mass": 105.75
+    },
+    "n": 5884
+   }
+  },
+  "avg_top5w_gem": {
+   "pipe": {
+    "G4": 39.87,
+    "A4": 72.86,
+    "mean_pmae": 40.93,
+    "G": {
+     "calories": 35.93,
+     "fat": 48.78,
+     "protein": 38.08,
+     "carb": 36.67,
+     "mass": 27.06
+    },
+    "MAE": {
+     "calories": 129.59,
+     "fat": 5.96,
+     "protein": 6.27,
+     "carb": 15.58,
+     "mass": 87.28
+    },
+    "n": 5884
+   },
+   "oracle_q": {
+    "G4": 37.6,
+    "A4": 79.75,
+    "mean_pmae": 39.27,
+    "G": {
+     "calories": 32.61,
+     "fat": 46.14,
+     "protein": 39.05,
+     "carb": 32.59,
+     "mass": 22.93
+    },
+    "MAE": {
+     "calories": 117.62,
+     "fat": 5.64,
+     "protein": 6.43,
+     "carb": 13.84,
+     "mass": 73.95
+    },
+    "n": 5884
+   },
+   "serving": {
+    "G4": 37.89,
+    "A4": 87.0,
+    "mean_pmae": 39.71,
+    "G": {
+     "calories": 32.64,
+     "fat": 46.84,
+     "protein": 39.66,
+     "carb": 32.44,
+     "mass": 22.8
+    },
+    "MAE": {
+     "calories": 156.72,
+     "fat": 7.61,
+     "protein": 8.71,
+     "carb": 18.34,
+     "mass": 98.0
+    },
+    "n": 5884
+   }
+  },
+  "dens_top1_massgem": {
+   "pipe": {
+    "G4": 57.16,
+    "A4": 84.77,
+    "mean_pmae": 55.34,
+    "G": {
+     "calories": 48.49,
+     "fat": 60.29,
+     "protein": 57.24,
+     "carb": 62.62,
+     "mass": 21.05
+    },
+    "MAE": {
+     "calories": 174.88,
+     "fat": 7.37,
+     "protein": 9.43,
+     "carb": 26.6,
+     "mass": 67.91
+    },
+    "n": 5884
+   },
+   "oracle_q": {
+    "G4": 56.87,
+    "A4": 85.9,
+    "mean_pmae": 55.43,
+    "G": {
+     "calories": 47.51,
+     "fat": 62.68,
+     "protein": 56.11,
+     "carb": 61.18,
+     "mass": 12.35
+    },
+    "MAE": {
+     "calories": 171.34,
+     "fat": 7.66,
+     "protein": 9.24,
+     "carb": 25.98,
+     "mass": 39.84
+    },
+    "n": 5884
+   },
+   "serving": {
+    "G4": 56.18,
+    "A4": 91.57,
+    "mean_pmae": 54.97,
+    "G": {
+     "calories": 47.13,
+     "fat": 62.39,
+     "protein": 55.4,
+     "carb": 59.8,
+     "mass": 13.01
+    },
+    "MAE": {
+     "calories": 226.28,
+     "fat": 10.14,
+     "protein": 12.17,
+     "carb": 33.81,
+     "mass": 55.93
+    },
+    "n": 5884
+   }
+  },
+  "dens_gem_masstop1": {
+   "pipe": {
+    "G4": 47.88,
+    "A4": 61.86,
+    "mean_pmae": 47.68,
+    "G": {
+     "calories": 43.22,
+     "fat": 56.3,
+     "protein": 43.53,
+     "carb": 48.49,
+     "mass": 43.53
+    },
+    "MAE": {
+     "calories": 155.86,
+     "fat": 6.88,
+     "protein": 7.17,
+     "carb": 20.6,
+     "mass": 140.41
+    },
+    "n": 5884
+   },
+   "oracle_q": {
+    "G4": 47.51,
+    "A4": 66.89,
+    "mean_pmae": 47.76,
+    "G": {
+     "calories": 41.41,
+     "fat": 56.47,
+     "protein": 45.39,
+     "carb": 46.75,
+     "mass": 43.49
+    },
+    "MAE": {
+     "calories": 149.34,
+     "fat": 6.9,
+     "protein": 7.47,
+     "carb": 19.86,
+     "mass": 140.27
+    },
+    "n": 5884
+   },
+   "serving": {
+    "G4": 46.92,
+    "A4": 72.27,
+    "mean_pmae": 47.38,
+    "G": {
+     "calories": 40.5,
+     "fat": 56.3,
+     "protein": 45.33,
+     "carb": 45.57,
+     "mass": 41.84
+    },
+    "MAE": {
+     "calories": 194.48,
+     "fat": 9.15,
+     "protein": 9.95,
+     "carb": 25.77,
+     "mass": 179.85
+    },
+    "n": 5884
+   }
+  },
+  "oracle_best_known": {
+   "pipe": {
+    "G4": 28.31,
+    "A4": 28.22,
+    "mean_pmae": 29.61,
+    "G": {
+     "calories": 24.87,
+     "fat": 32.89,
+     "protein": 31.06,
+     "carb": 24.4,
+     "mass": 54.13
+    },
+    "MAE": {
+     "calories": 89.71,
+     "fat": 4.02,
+     "protein": 5.11,
+     "carb": 10.36,
+     "mass": 174.59
+    },
+    "n": 5884
+   },
+   "oracle_q": {
+    "G4": 21.25,
+    "A4": 20.99,
+    "mean_pmae": 22.43,
+    "G": {
+     "calories": 17.34,
+     "fat": 27.18,
+     "protein": 22.79,
+     "carb": 17.7,
+     "mass": 44.79
+    },
+    "MAE": {
+     "calories": 62.54,
+     "fat": 3.32,
+     "protein": 3.75,
+     "carb": 7.52,
+     "mass": 144.44
+    },
+    "n": 5884
+   },
+   "serving": {
+    "G4": 21.31,
+    "A4": 21.93,
+    "mean_pmae": 22.52,
+    "G": {
+     "calories": 17.39,
+     "fat": 27.36,
+     "protein": 22.8,
+     "carb": 17.71,
+     "mass": 44.54
+    },
+    "MAE": {
+     "calories": 83.49,
+     "fat": 4.45,
+     "protein": 5.01,
+     "carb": 10.01,
+     "mass": 191.44
+    },
+    "n": 5884
+   }
+  }
+ },
+ "per_food": {
+  "갈치조림": {
+   "top1_known": [
+    [
+     "닭볶음탕",
+     192
+    ],
+    [
+     "곱창전골",
+     53
+    ]
+   ],
+   "true_cal": 99.4,
+   "top1_cal": 406.6,
+   "gem_cal": 253.2,
+   "err_top1": 304.6,
+   "err_gem": 152.8,
+   "err_top5w": 337.8
+  },
+  "감자탕": {
+   "top1_known": [
+    [
+     "닭죽",
+     173
+    ],
+    [
+     "순대볶음",
+     59
+    ]
+   ],
+   "true_cal": 963.7,
+   "top1_cal": 964.4,
+   "gem_cal": 489.2,
+   "err_top1": 33.7,
+   "err_gem": 48.8,
+   "err_top5w": 22.6
+  },
+  "감자튀김": {
+   "top1_known": [
+    [
+     "치킨윙",
+     490
+    ]
+   ],
+   "true_cal": 462.1,
+   "top1_cal": 219.4,
+   "gem_cal": 281.8,
+   "err_top1": 55.0,
+   "err_gem": 38.1,
+   "err_top5w": 54.5
+  },
+  "김치볶음밥": {
+   "top1_known": [
+    [
+     "오징어볶음",
+     236
+    ],
+    [
+     "회냉면",
+     1
+    ]
+   ],
+   "true_cal": 657.0,
+   "top1_cal": 245.4,
+   "gem_cal": 530.0,
+   "err_top1": 63.6,
+   "err_gem": 20.0,
+   "err_top5w": 54.6
+  },
+  "달걀말이": {
+   "top1_known": [
+    [
+     "녹두빈대떡",
+     247
+    ]
+   ],
+   "true_cal": 172.2,
+   "top1_cal": 200.7,
+   "gem_cal": 218.4,
+   "err_top1": 23.7,
+   "err_gem": 28.5,
+   "err_top5w": 25.8
+  },
+  "매운탕": {
+   "top1_known": [
+    [
+     "꽃게탕",
+     237
+    ]
+   ],
+   "true_cal": 402.8,
+   "top1_cal": 240.7,
+   "gem_cal": 232.1,
+   "err_top1": 38.6,
+   "err_gem": 41.4,
+   "err_top5w": 38.1
+  },
+  "미소된장국": {
+   "top1_known": [
+    [
+     "닭죽",
+     188
+    ],
+    [
+     "수제비",
+     46
+    ]
+   ],
+   "true_cal": 38.0,
+   "top1_cal": 1063.8,
+   "gem_cal": 56.6,
+   "err_top1": 2676.9,
+   "err_gem": 53.0,
+   "err_top5w": 2301.3
+  },
+  "삼선짬뽕": {
+   "top1_known": [
+    [
+     "생선물회",
+     157
+    ],
+    [
+     "꽃게탕",
+     60
+    ]
+   ],
+   "true_cal": 629.1,
+   "top1_cal": 502.3,
+   "gem_cal": 701.2,
+   "err_top1": 21.4,
+   "err_gem": 16.6,
+   "err_top5w": 18.0
+  },
+  "새우튀김": {
+   "top1_known": [
+    [
+     "어묵볶음",
+     130
+    ],
+    [
+     "돈가스",
+     61
+    ]
+   ],
+   "true_cal": 311.3,
+   "top1_cal": 356.5,
+   "gem_cal": 350.6,
+   "err_top1": 39.4,
+   "err_gem": 18.6,
+   "err_top5w": 21.9
+  },
+  "소고기김밥": {
+   "top1_known": [
+    [
+     "꽁치조림",
+     133
+    ],
+    [
+     "치킨윙",
+     116
+    ]
+   ],
+   "true_cal": 425.7,
+   "top1_cal": 251.8,
+   "gem_cal": 448.9,
+   "err_top1": 48.8,
+   "err_gem": 9.6,
+   "err_top5w": 43.7
+  },
+  "소고기무국": {
+   "top1_known": [
+    [
+     "수제비",
+     207
+    ],
+    [
+     "콘스프",
+     36
+    ]
+   ],
+   "true_cal": 125.2,
+   "top1_cal": 571.6,
+   "gem_cal": 138.3,
+   "err_top1": 365.0,
+   "err_gem": 12.5,
+   "err_top5w": 351.3
+  },
+  "순대국": {
+   "top1_known": [
+    [
+     "삼계탕",
+     244
+    ]
+   ],
+   "true_cal": 550.7,
+   "top1_cal": 881.3,
+   "gem_cal": 489.3,
+   "err_top1": 61.0,
+   "err_gem": 13.3,
+   "err_top5w": 60.0
+  },
+  "시래기된장국": {
+   "top1_known": [
+    [
+     "생선물회",
+     88
+    ],
+    [
+     "육개장",
+     41
+    ]
+   ],
+   "true_cal": 99.1,
+   "top1_cal": 403.4,
+   "gem_cal": 62.8,
+   "err_top1": 327.7,
+   "err_gem": 37.0,
+   "err_top5w": 269.2
+  },
+  "알밥": {
+   "top1_known": [
+    [
+     "전주콩나물국밥",
+     249
+    ]
+   ],
+   "true_cal": 606.5,
+   "top1_cal": 432.4,
+   "gem_cal": 542.8,
+   "err_top1": 25.1,
+   "err_gem": 11.8,
+   "err_top5w": 20.4
+  },
+  "자장면": {
+   "top1_known": [
+    [
+     "제육덮밥",
+     247
+    ]
+   ],
+   "true_cal": 760.9,
+   "top1_cal": 796.9,
+   "gem_cal": 796.6,
+   "err_top1": 10.8,
+   "err_gem": 7.1,
+   "err_top5w": 12.2
+  },
+  "전주비빔밥": {
+   "top1_known": [
+    [
+     "일식우동",
+     256
+    ],
+    [
+     "전주콩나물국밥",
+     1
+    ]
+   ],
+   "true_cal": 662.2,
+   "top1_cal": 420.8,
+   "gem_cal": 549.5,
+   "err_top1": 33.9,
+   "err_gem": 16.2,
+   "err_top5w": 28.6
+  },
+  "쫄면": {
+   "top1_known": [
+    [
+     "회냉면",
+     199
+    ],
+    [
+     "생선물회",
+     46
+    ]
+   ],
+   "true_cal": 622.4,
+   "top1_cal": 626.9,
+   "gem_cal": 529.6,
+   "err_top1": 7.8,
+   "err_gem": 13.9,
+   "err_top5w": 6.9
+  },
+  "참치마요삼각김밥": {
+   "top1_known": [
+    [
+     "총각김치",
+     162
+    ],
+    [
+     "시금치나물",
+     82
+    ]
+   ],
+   "true_cal": 189.6,
+   "top1_cal": 24.3,
+   "gem_cal": 214.1,
+   "err_top1": 87.0,
+   "err_gem": 19.6,
+   "err_top5w": 84.2
+  },
+  "콩국수": {
+   "top1_known": [
+    [
+     "수제비",
+     248
+    ]
+   ],
+   "true_cal": 623.5,
+   "top1_cal": 622.1,
+   "gem_cal": 527.6,
+   "err_top1": 7.5,
+   "err_gem": 19.1,
+   "err_top5w": 14.5
+  },
+  "크림소스스파게티": {
+   "top1_known": [
+    [
+     "채소튀김",
+     109
+    ],
+    [
+     "콘스프",
+     76
+    ]
+   ],
+   "true_cal": 825.1,
+   "top1_cal": 431.0,
+   "gem_cal": 719.3,
+   "err_top1": 50.4,
+   "err_gem": 12.8,
+   "err_top5w": 45.0
+  },
+  "토마토소스스파게티": {
+   "top1_known": [
+    [
+     "육개장",
+     199
+    ],
+    [
+     "순두부찌개",
+     29
+    ]
+   ],
+   "true_cal": 642.2,
+   "top1_cal": 183.1,
+   "gem_cal": 516.5,
+   "err_top1": 74.0,
+   "err_gem": 19.5,
+   "err_top5w": 60.2
+  },
+  "해물찜": {
+   "top1_known": [
+    [
+     "제육덮밥",
+     233
+    ],
+    [
+     "순두부찌개",
+     7
+    ]
+   ],
+   "true_cal": 397.4,
+   "top1_cal": 765.1,
+   "gem_cal": 428.3,
+   "err_top1": 97.2,
+   "err_gem": 31.3,
+   "err_top5w": 75.1
+  },
+  "회덮밥": {
+   "top1_known": [
+    [
+     "회냉면",
+     189
+    ],
+    [
+     "생선물회",
+     62
+    ]
+   ],
+   "true_cal": 698.0,
+   "top1_cal": 623.1,
+   "gem_cal": 535.1,
+   "err_top1": 14.5,
+   "err_gem": 23.3,
+   "err_top5w": 13.8
+  }
+ }
+}

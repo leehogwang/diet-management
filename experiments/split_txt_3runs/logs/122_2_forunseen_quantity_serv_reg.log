@@ -1,0 +1,12 @@
+[122_2_forunseen_quantity_serv_reg] train 10840 val 2989 test 5884 | log 1인분 평균 5.598 표준편차 0.798 | cuda:1
+ep  1 (64s) loss 0.4045 | val acc 0.4731 ±1 0.8317
+ep  2 (47s) loss 0.1890 | val acc 0.3807 ±1 0.8096
+ep  3 (48s) loss 0.1326 | val acc 0.3764 ±1 0.7986
+ep  4 (47s) loss 0.1064 | val acc 0.3700 ±1 0.7989
+ep  5 (47s) loss 0.0921 | val acc 0.3868 ±1 0.8076
+ep  6 (47s) loss 0.0822 | val acc 0.3623 ±1 0.7989
+ep  7 (47s) loss 0.0744 | val acc 0.3493 ±1 0.7896
+[EarlyStop] ep 7, best ep 1
+[TEST 1인분 pipe] acc 0.3832 ±1 0.7617 Q2~4 0.3124
+[TEST 1인분 db] acc 0.3822 ±1 0.7680 Q2~4 0.3056
+DONE

@@ -1,0 +1,3251 @@
+{
+ "122_2_forunseen": {
+  "n": 5884,
+  "classifier_route_rate": 0.00849762066621346,
+  "conds": {
+   "model": {
+    "pipe_always": {
+     "G4": 45.78,
+     "A4": 82.04,
+     "mean_pmae": 48.26,
+     "G": {
+      "calories": 37.76,
+      "fat": 58.0,
+      "protein": 49.02,
+      "carb": 38.34,
+      "mass": 34.44
+     },
+     "MAE": {
+      "calories": 136.19,
+      "fat": 7.09,
+      "protein": 8.07,
+      "carb": 16.28,
+      "mass": 111.08
+     },
+     "n": 5884
+    },
+    "oracle_q": {
+     "G4": 45.02,
+     "A4": 88.99,
+     "mean_pmae": 48.0,
+     "G": {
+      "calories": 35.74,
+      "fat": 58.21,
+      "protein": 50.05,
+      "carb": 36.08,
+      "mass": 31.33
+     },
+     "MAE": {
+      "calories": 128.89,
+      "fat": 7.11,
+      "protein": 8.24,
+      "carb": 15.32,
+      "mass": 101.04
+     },
+     "n": 5884
+    },
+    "serving": {
+     "G4": 45.14,
+     "A4": 96.55,
+     "mean_pmae": 48.09,
+     "G": {
+      "calories": 36.02,
+      "fat": 58.39,
+      "protein": 49.88,
+      "carb": 36.27,
+      "mass": 30.95
+     },
+     "MAE": {
+      "calories": 172.93,
+      "fat": 9.49,
+      "protein": 10.95,
+      "carb": 20.5,
+      "mass": 133.03
+     },
+     "n": 5884
+    },
+    "food_slope": {
+     "calories": 0.29,
+     "fat": 0.17,
+     "protein": 0.28,
+     "carb": 0.53
+    },
+    "food_corr": {
+     "calories": 0.56,
+     "fat": 0.4,
+     "protein": 0.51,
+     "carb": 0.8
+    }
+   },
+   "gemini": {
+    "pipe_always": {
+     "G4": 34.57,
+     "A4": 36.42,
+     "mean_pmae": 37.2,
+     "G": {
+      "calories": 29.14,
+      "fat": 50.49,
+      "protein": 31.96,
+      "carb": 26.69,
+      "mass": 20.26
+     },
+     "MAE": {
+      "calories": 105.1,
+      "fat": 6.17,
+      "protein": 5.26,
+      "carb": 11.34,
+      "mass": 65.33
+     },
+     "n": 5884
+    },
+    "oracle_q": {
+     "G4": 28.9,
+     "A4": 33.56,
+     "mean_pmae": 32.34,
+     "G": {
+      "calories": 21.46,
+      "fat": 45.58,
+      "protein": 29.96,
+      "carb": 18.59,
+      "mass": 12.39
+     },
+     "MAE": {
+      "calories": 77.39,
+      "fat": 5.57,
+      "protein": 4.93,
+      "carb": 7.9,
+      "mass": 39.97
+     },
+     "n": 5884
+    },
+    "serving": {
+     "G4": 29.16,
+     "A4": 35.49,
+     "mean_pmae": 32.6,
+     "G": {
+      "calories": 21.54,
+      "fat": 45.64,
+      "protein": 30.63,
+      "carb": 18.82,
+      "mass": 13.12
+     },
+     "MAE": {
+      "calories": 103.44,
+      "fat": 7.42,
+      "protein": 6.73,
+      "carb": 10.64,
+      "mass": 56.4
+     },
+     "n": 5884
+    },
+    "food_slope": {
+     "calories": 0.72,
+     "fat": 0.36,
+     "protein": 0.62,
+     "carb": 1.0
+    },
+    "food_corr": {
+     "calories": 0.86,
+     "fat": 0.67,
+     "protein": 0.86,
+     "carb": 0.95
+    }
+   },
+   "routed": {
+    "pipe_always": {
+     "G4": 34.59,
+     "A4": 36.43,
+     "mean_pmae": 37.22,
+     "G": {
+      "calories": 29.16,
+      "fat": 50.47,
+      "protein": 32.05,
+      "carb": 26.68,
+      "mass": 20.2
+     },
+     "MAE": {
+      "calories": 105.16,
+      "fat": 6.17,
+      "protein": 5.28,
+      "carb": 11.33,
+      "mass": 65.16
+     },
+     "n": 5884
+    },
+    "oracle_q": {
+     "G4": 28.92,
+     "A4": 33.57,
+     "mean_pmae": 32.37,
+     "G": {
+      "calories": 21.48,
+      "fat": 45.56,
+      "protein": 30.07,
+      "carb": 18.58,
+      "mass": 12.15
+     },
+     "MAE": {
+      "calories": 77.46,
+      "fat": 5.57,
+      "protein": 4.95,
+      "carb": 7.89,
+      "mass": 39.18
+     },
+     "n": 5884
+    },
+    "serving": {
+     "G4": 29.19,
+     "A4": 35.5,
+     "mean_pmae": 32.65,
+     "G": {
+      "calories": 21.57,
+      "fat": 45.59,
+      "protein": 30.8,
+      "carb": 18.8,
+      "mass": 12.74
+     },
+     "MAE": {
+      "calories": 103.58,
+      "fat": 7.41,
+      "protein": 6.76,
+      "carb": 10.63,
+      "mass": 54.74
+     },
+     "n": 5884
+    },
+    "food_slope": {
+     "calories": 0.72,
+     "fat": 0.36,
+     "protein": 0.62,
+     "carb": 1.0
+    },
+    "food_corr": {
+     "calories": 0.86,
+     "fat": 0.67,
+     "protein": 0.85,
+     "carb": 0.95
+    }
+   },
+   "avg": {
+    "pipe_always": {
+     "G4": 37.07,
+     "A4": 54.71,
+     "mean_pmae": 39.41,
+     "G": {
+      "calories": 31.57,
+      "fat": 50.7,
+      "protein": 35.95,
+      "carb": 30.04,
+      "mass": 24.83
+     },
+     "MAE": {
+      "calories": 113.86,
+      "fat": 6.2,
+      "protein": 5.92,
+      "carb": 12.76,
+      "mass": 80.1
+     },
+     "n": 5884
+    },
+    "oracle_q": {
+     "G4": 33.55,
+     "A4": 56.39,
+     "mean_pmae": 36.43,
+     "G": {
+      "calories": 26.28,
+      "fat": 48.03,
+      "protein": 34.98,
+      "carb": 24.92,
+      "mass": 19.2
+     },
+     "MAE": {
+      "calories": 94.79,
+      "fat": 5.87,
+      "protein": 5.76,
+      "carb": 10.58,
+      "mass": 61.92
+     },
+     "n": 5884
+    },
+    "serving": {
+     "G4": 33.79,
+     "A4": 60.88,
+     "mean_pmae": 36.66,
+     "G": {
+      "calories": 26.4,
+      "fat": 48.35,
+      "protein": 35.23,
+      "carb": 25.17,
+      "mass": 19.54
+     },
+     "MAE": {
+      "calories": 126.76,
+      "fat": 7.86,
+      "protein": 7.74,
+      "carb": 14.23,
+      "mass": 83.99
+     },
+     "n": 5884
+    },
+    "food_slope": {
+     "calories": 0.51,
+     "fat": 0.27,
+     "protein": 0.45,
+     "carb": 0.76
+    },
+    "food_corr": {
+     "calories": 0.81,
+     "fat": 0.62,
+     "protein": 0.81,
+     "carb": 0.92
+    }
+   },
+   "gemini_gtname": {
+    "pipe_always": {
+     "G4": 32.94,
+     "A4": 33.91,
+     "mean_pmae": 35.5,
+     "G": {
+      "calories": 28.3,
+      "fat": 50.38,
+      "protein": 27.83,
+      "carb": 25.26,
+      "mass": 16.92
+     },
+     "MAE": {
+      "calories": 102.05,
+      "fat": 6.16,
+      "protein": 4.58,
+      "carb": 10.73,
+      "mass": 54.56
+     },
+     "n": 5884
+    },
+    "oracle_q": {
+     "G4": 26.89,
+     "A4": 30.9,
+     "mean_pmae": 30.27,
+     "G": {
+      "calories": 20.17,
+      "fat": 46.99,
+      "protein": 23.65,
+      "carb": 16.76,
+      "mass": 7.83
+     },
+     "MAE": {
+      "calories": 72.73,
+      "fat": 5.74,
+      "protein": 3.89,
+      "carb": 7.12,
+      "mass": 25.27
+     },
+     "n": 5884
+    },
+    "serving": {
+     "G4": 26.92,
+     "A4": 32.75,
+     "mean_pmae": 30.29,
+     "G": {
+      "calories": 20.18,
+      "fat": 46.99,
+      "protein": 23.7,
+      "carb": 16.79,
+      "mass": 7.84
+     },
+     "MAE": {
+      "calories": 96.92,
+      "fat": 7.64,
+      "protein": 5.21,
+      "carb": 9.49,
+      "mass": 33.71
+     },
+     "n": 5884
+    },
+    "food_slope": {
+     "calories": 0.7,
+     "fat": 0.33,
+     "protein": 0.71,
+     "carb": 0.98
+    },
+    "food_corr": {
+     "calories": 0.86,
+     "fat": 0.64,
+     "protein": 0.89,
+     "carb": 0.95
+    }
+   },
+   "routed_ing": {
+    "pipe_always": {
+     "G4": 33.67,
+     "A4": 35.01,
+     "mean_pmae": 36.26,
+     "G": {
+      "calories": 29.77,
+      "fat": 47.53,
+      "protein": 31.5,
+      "carb": 25.9,
+      "mass": 21.05
+     },
+     "MAE": {
+      "calories": 107.36,
+      "fat": 5.81,
+      "protein": 5.19,
+      "carb": 11.0,
+      "mass": 67.91
+     },
+     "n": 5884
+    },
+    "oracle_q": {
+     "G4": 27.93,
+     "A4": 32.32,
+     "mean_pmae": 31.65,
+     "G": {
+      "calories": 22.43,
+      "fat": 43.83,
+      "protein": 28.7,
+      "carb": 16.77,
+      "mass": 12.35
+     },
+     "MAE": {
+      "calories": 80.88,
+      "fat": 5.36,
+      "protein": 4.73,
+      "carb": 7.12,
+      "mass": 39.84
+     },
+     "n": 5884
+    },
+    "serving": {
+     "G4": 28.49,
+     "A4": 34.24,
+     "mean_pmae": 32.27,
+     "G": {
+      "calories": 22.85,
+      "fat": 44.28,
+      "protein": 29.68,
+      "carb": 17.17,
+      "mass": 13.01
+     },
+     "MAE": {
+      "calories": 109.7,
+      "fat": 7.2,
+      "protein": 6.52,
+      "carb": 9.71,
+      "mass": 55.93
+     },
+     "n": 5884
+    },
+    "food_slope": {
+     "calories": 0.69,
+     "fat": 0.41,
+     "protein": 0.61,
+     "carb": 0.97
+    },
+    "food_corr": {
+     "calories": 0.88,
+     "fat": 0.77,
+     "protein": 0.85,
+     "carb": 0.96
+    }
+   }
+  },
+  "final": {
+   "model": {
+    "G4": 45.78,
+    "A4": 82.04,
+    "mean_pmae": 48.26,
+    "G": {
+     "calories": 37.76,
+     "fat": 58.0,
+     "protein": 49.02,
+     "carb": 38.34,
+     "mass": 34.44
+    },
+    "MAE": {
+     "calories": 136.19,
+     "fat": 7.09,
+     "protein": 8.07,
+     "carb": 16.28,
+     "mass": 111.08
+    },
+    "n": 5884
+   },
+   "routed": {
+    "G4": 34.59,
+    "A4": 36.43,
+    "mean_pmae": 37.22,
+    "G": {
+     "calories": 29.16,
+     "fat": 50.47,
+     "protein": 32.05,
+     "carb": 26.68,
+     "mass": 20.2
+    },
+    "MAE": {
+     "calories": 105.16,
+     "fat": 6.17,
+     "protein": 5.28,
+     "carb": 11.33,
+     "mass": 65.16
+    },
+    "n": 5884
+   },
+   "r_ing": {
+    "G4": 33.67,
+    "A4": 35.01,
+    "mean_pmae": 36.26,
+    "G": {
+     "calories": 29.77,
+     "fat": 47.53,
+     "protein": 31.5,
+     "carb": 25.9,
+     "mass": 21.05
+    },
+    "MAE": {
+     "calories": 107.36,
+     "fat": 5.81,
+     "protein": 5.19,
+     "carb": 11.0,
+     "mass": 67.91
+    },
+    "n": 5884
+   },
+   "r_mfds": {
+    "G4": 37.18,
+    "A4": 44.19,
+    "mean_pmae": 38.7,
+    "G": {
+     "calories": 29.56,
+     "fat": 51.48,
+     "protein": 35.05,
+     "carb": 32.62,
+     "mass": 22.23
+    },
+    "MAE": {
+     "calories": 106.6,
+     "fat": 6.29,
+     "protein": 5.77,
+     "carb": 13.85,
+     "mass": 71.71
+    },
+    "n": 5884
+   },
+   "r_dens_direct": {
+    "G4": 44.92,
+    "A4": 49.87,
+    "mean_pmae": 47.5,
+    "G": {
+     "calories": 40.19,
+     "fat": 58.62,
+     "protein": 43.68,
+     "carb": 37.19,
+     "mass": 36.93
+    },
+    "MAE": {
+     "calories": 144.94,
+     "fat": 7.16,
+     "protein": 7.19,
+     "carb": 15.79,
+     "mass": 119.11
+    },
+    "n": 5884
+   },
+   "r_dens_q4": {
+    "G4": 42.54,
+    "A4": 49.57,
+    "mean_pmae": 44.86,
+    "G": {
+     "calories": 36.8,
+     "fat": 57.18,
+     "protein": 40.58,
+     "carb": 35.59,
+     "mass": 34.44
+    },
+    "MAE": {
+     "calories": 132.73,
+     "fat": 6.99,
+     "protein": 6.68,
+     "carb": 15.12,
+     "mass": 111.08
+    },
+    "n": 5884
+   },
+   "r_dens_truemass": {
+    "G4": 27.63,
+    "A4": 27.25,
+    "mean_pmae": 30.56,
+    "G": {
+     "calories": 19.55,
+     "fat": 44.56,
+     "protein": 27.59,
+     "carb": 18.83,
+     "mass": 0.12
+    },
+    "MAE": {
+     "calories": 70.5,
+     "fat": 5.45,
+     "protein": 4.54,
+     "carb": 8.0,
+     "mass": 0.38
+    },
+    "n": 5884
+   },
+   "r_dens_mfds_direct": {
+    "G4": 45.33,
+    "A4": 52.63,
+    "mean_pmae": 48.13,
+    "G": {
+     "calories": 39.23,
+     "fat": 61.74,
+     "protein": 43.41,
+     "carb": 36.94,
+     "mass": 36.93
+    },
+    "MAE": {
+     "calories": 141.48,
+     "fat": 7.54,
+     "protein": 7.15,
+     "carb": 15.69,
+     "mass": 119.11
+    },
+    "n": 5884
+   },
+   "r_dens_mfds_q4": {
+    "G4": 44.09,
+    "A4": 54.74,
+    "mean_pmae": 46.71,
+    "G": {
+     "calories": 37.36,
+     "fat": 62.44,
+     "protein": 40.34,
+     "carb": 36.22,
+     "mass": 34.44
+    },
+    "MAE": {
+     "calories": 134.72,
+     "fat": 7.63,
+     "protein": 6.64,
+     "carb": 15.38,
+     "mass": 111.08
+    },
+    "n": 5884
+   },
+   "r_dens_mfds_truemass": {
+    "G4": 25.27,
+    "A4": 28.22,
+    "mean_pmae": 27.9,
+    "G": {
+     "calories": 15.18,
+     "fat": 42.01,
+     "protein": 26.5,
+     "carb": 17.39,
+     "mass": 0.12
+    },
+    "MAE": {
+     "calories": 54.75,
+     "fat": 5.13,
+     "protein": 4.36,
+     "carb": 7.39,
+     "mass": 0.38
+    },
+    "n": 5884
+   }
+  },
+  "mass_G": {
+   "direct": 36.95,
+   "q4": 34.44,
+   "truemass": 0.0,
+   "gemini_serving_x_ratio": 20.26,
+   "gemini_mfds_serving_x_ratio": 22.29
+  },
+  "serving_mass_ratio_median": {
+   "default": 1.0,
+   "mfds": 1.0
+  },
+  "per_food": {
+   "갈치조림": {
+    "true_serving_cal": 99.4,
+    "model": {
+     "G4": 41.4,
+     "serving_cal": 269.6
+    },
+    "gemini": {
+     "G4": 35.89,
+     "serving_cal": 251.8
+    },
+    "routed_ing": {
+     "G4": 35.79,
+     "serving_cal": 253.2
+    },
+    "gemini_gtname": {
+     "G4": 30.57,
+     "serving_cal": 242.0
+    }
+   },
+   "감자탕": {
+    "true_serving_cal": 963.7,
+    "model": {
+     "G4": 54.17,
+     "serving_cal": 370.3
+    },
+    "gemini": {
+     "G4": 47.55,
+     "serving_cal": 459.0
+    },
+    "routed_ing": {
+     "G4": 45.78,
+     "serving_cal": 489.2
+    },
+    "gemini_gtname": {
+     "G4": 50.28,
+     "serving_cal": 429.0
+    }
+   },
+   "감자튀김": {
+    "true_serving_cal": 462.1,
+    "model": {
+     "G4": 62.08,
+     "serving_cal": 252.9
+    },
+    "gemini": {
+     "G4": 34.14,
+     "serving_cal": 286.1
+    },
+    "routed_ing": {
+     "G4": 35.16,
+     "serving_cal": 281.8
+    },
+    "gemini_gtname": {
+     "G4": 30.66,
+     "serving_cal": 312.0
+    }
+   },
+   "김치볶음밥": {
+    "true_serving_cal": 657.0,
+    "model": {
+     "G4": 101.53,
+     "serving_cal": 542.8
+    },
+    "gemini": {
+     "G4": 72.84,
+     "serving_cal": 570.9
+    },
+    "routed_ing": {
+     "G4": 54.86,
+     "serving_cal": 530.0
+    },
+    "gemini_gtname": {
+     "G4": 72.83,
+     "serving_cal": 571.0
+    }
+   },
+   "달걀말이": {
+    "true_serving_cal": 172.2,
+    "model": {
+     "G4": 153.05,
+     "serving_cal": 290.6
+    },
+    "gemini": {
+     "G4": 53.39,
+     "serving_cal": 284.0
+    },
+    "routed_ing": {
+     "G4": 31.33,
+     "serving_cal": 218.4
+    },
+    "gemini_gtname": {
+     "G4": 23.34,
+     "serving_cal": 218.0
+    }
+   },
+   "매운탕": {
+    "true_serving_cal": 402.8,
+    "model": {
+     "G4": 35.06,
+     "serving_cal": 274.0
+    },
+    "gemini": {
+     "G4": 52.33,
+     "serving_cal": 208.7
+    },
+    "routed_ing": {
+     "G4": 45.36,
+     "serving_cal": 232.1
+    },
+    "gemini_gtname": {
+     "G4": 45.97,
+     "serving_cal": 235.0
+    }
+   },
+   "미소된장국": {
+    "true_serving_cal": 38.0,
+    "model": {
+     "G4": 805.8,
+     "serving_cal": 379.2
+    },
+    "gemini": {
+     "G4": 58.36,
+     "serving_cal": 54.0
+    },
+    "routed_ing": {
+     "G4": 58.37,
+     "serving_cal": 56.6
+    },
+    "gemini_gtname": {
+     "G4": 57.93,
+     "serving_cal": 45.0
+    }
+   },
+   "삼선짬뽕": {
+    "true_serving_cal": 629.1,
+    "model": {
+     "G4": 14.92,
+     "serving_cal": 535.3
+    },
+    "gemini": {
+     "G4": 36.67,
+     "serving_cal": 747.2
+    },
+    "routed_ing": {
+     "G4": 27.04,
+     "serving_cal": 701.2
+    },
+    "gemini_gtname": {
+     "G4": 16.86,
+     "serving_cal": 701.0
+    }
+   },
+   "새우튀김": {
+    "true_serving_cal": 311.3,
+    "model": {
+     "G4": 38.5,
+     "serving_cal": 439.9
+    },
+    "gemini": {
+     "G4": 16.27,
+     "serving_cal": 299.9
+    },
+    "routed_ing": {
+     "G4": 22.46,
+     "serving_cal": 350.6
+    },
+    "gemini_gtname": {
+     "G4": 16.11,
+     "serving_cal": 301.2
+    }
+   },
+   "소고기김밥": {
+    "true_serving_cal": 425.7,
+    "model": {
+     "G4": 66.77,
+     "serving_cal": 472.8
+    },
+    "gemini": {
+     "G4": 35.88,
+     "serving_cal": 318.7
+    },
+    "routed_ing": {
+     "G4": 42.37,
+     "serving_cal": 448.9
+    },
+    "gemini_gtname": {
+     "G4": 64.58,
+     "serving_cal": 493.0
+    }
+   },
+   "소고기무국": {
+    "true_serving_cal": 125.2,
+    "model": {
+     "G4": 221.59,
+     "serving_cal": 392.3
+    },
+    "gemini": {
+     "G4": 14.73,
+     "serving_cal": 129.4
+    },
+    "routed_ing": {
+     "G4": 23.81,
+     "serving_cal": 138.3
+    },
+    "gemini_gtname": {
+     "G4": 12.79,
+     "serving_cal": 128.0
+    }
+   },
+   "순대국": {
+    "true_serving_cal": 550.7,
+    "model": {
+     "G4": 34.14,
+     "serving_cal": 767.3
+    },
+    "gemini": {
+     "G4": 33.45,
+     "serving_cal": 493.8
+    },
+    "routed_ing": {
+     "G4": 30.8,
+     "serving_cal": 489.3
+    },
+    "gemini_gtname": {
+     "G4": 31.95,
+     "serving_cal": 520.0
+    }
+   },
+   "시래기된장국": {
+    "true_serving_cal": 99.1,
+    "model": {
+     "G4": 291.31,
+     "serving_cal": 306.4
+    },
+    "gemini": {
+     "G4": 28.13,
+     "serving_cal": 63.9
+    },
+    "routed_ing": {
+     "G4": 33.62,
+     "serving_cal": 62.8
+    },
+    "gemini_gtname": {
+     "G4": 25.18,
+     "serving_cal": 65.2
+    }
+   },
+   "알밥": {
+    "true_serving_cal": 606.5,
+    "model": {
+     "G4": 113.79,
+     "serving_cal": 599.4
+    },
+    "gemini": {
+     "G4": 92.0,
+     "serving_cal": 596.0
+    },
+    "routed_ing": {
+     "G4": 76.93,
+     "serving_cal": 542.8
+    },
+    "gemini_gtname": {
+     "G4": 88.48,
+     "serving_cal": 586.2
+    }
+   },
+   "자장면": {
+    "true_serving_cal": 760.9,
+    "model": {
+     "G4": 38.8,
+     "serving_cal": 565.3
+    },
+    "gemini": {
+     "G4": 30.82,
+     "serving_cal": 786.4
+    },
+    "routed_ing": {
+     "G4": 31.55,
+     "serving_cal": 796.6
+    },
+    "gemini_gtname": {
+     "G4": 30.5,
+     "serving_cal": 797.0
+    }
+   },
+   "전주비빔밥": {
+    "true_serving_cal": 662.2,
+    "model": {
+     "G4": 21.59,
+     "serving_cal": 549.5
+    },
+    "gemini": {
+     "G4": 22.41,
+     "serving_cal": 584.3
+    },
+    "routed_ing": {
+     "G4": 23.64,
+     "serving_cal": 549.5
+    },
+    "gemini_gtname": {
+     "G4": 22.15,
+     "serving_cal": 644.0
+    }
+   },
+   "쫄면": {
+    "true_serving_cal": 622.4,
+    "model": {
+     "G4": 27.75,
+     "serving_cal": 559.2
+    },
+    "gemini": {
+     "G4": 21.42,
+     "serving_cal": 561.8
+    },
+    "routed_ing": {
+     "G4": 24.07,
+     "serving_cal": 529.6
+    },
+    "gemini_gtname": {
+     "G4": 21.91,
+     "serving_cal": 550.0
+    }
+   },
+   "참치마요삼각김밥": {
+    "true_serving_cal": 189.6,
+    "model": {
+     "G4": 75.68,
+     "serving_cal": 323.6
+    },
+    "gemini": {
+     "G4": 33.3,
+     "serving_cal": 211.4
+    },
+    "routed_ing": {
+     "G4": 37.46,
+     "serving_cal": 214.1
+    },
+    "gemini_gtname": {
+     "G4": 37.02,
+     "serving_cal": 198.0
+    }
+   },
+   "콩국수": {
+    "true_serving_cal": 623.5,
+    "model": {
+     "G4": 40.38,
+     "serving_cal": 540.2
+    },
+    "gemini": {
+     "G4": 40.68,
+     "serving_cal": 548.8
+    },
+    "routed_ing": {
+     "G4": 38.62,
+     "serving_cal": 527.6
+    },
+    "gemini_gtname": {
+     "G4": 40.68,
+     "serving_cal": 548.8
+    }
+   },
+   "크림소스스파게티": {
+    "true_serving_cal": 825.1,
+    "model": {
+     "G4": 50.94,
+     "serving_cal": 476.2
+    },
+    "gemini": {
+     "G4": 33.37,
+     "serving_cal": 719.3
+    },
+    "routed_ing": {
+     "G4": 34.02,
+     "serving_cal": 719.3
+    },
+    "gemini_gtname": {
+     "G4": 36.2,
+     "serving_cal": 679.0
+    }
+   },
+   "토마토소스스파게티": {
+    "true_serving_cal": 642.2,
+    "model": {
+     "G4": 39.23,
+     "serving_cal": 411.3
+    },
+    "gemini": {
+     "G4": 24.63,
+     "serving_cal": 609.2
+    },
+    "routed_ing": {
+     "G4": 33.15,
+     "serving_cal": 516.5
+    },
+    "gemini_gtname": {
+     "G4": 35.75,
+     "serving_cal": 475.2
+    }
+   },
+   "해물찜": {
+    "true_serving_cal": 397.4,
+    "model": {
+     "G4": 41.68,
+     "serving_cal": 414.2
+    },
+    "gemini": {
+     "G4": 48.93,
+     "serving_cal": 409.0
+    },
+    "routed_ing": {
+     "G4": 41.67,
+     "serving_cal": 428.3
+    },
+    "gemini_gtname": {
+     "G4": 32.69,
+     "serving_cal": 311.0
+    }
+   },
+   "회덮밥": {
+    "true_serving_cal": 698.0,
+    "model": {
+     "G4": 33.42,
+     "serving_cal": 627.1
+    },
+    "gemini": {
+     "G4": 25.98,
+     "serving_cal": 568.4
+    },
+    "routed_ing": {
+     "G4": 28.93,
+     "serving_cal": 535.1
+    },
+    "gemini_gtname": {
+     "G4": 29.17,
+     "serving_cal": 517.0
+    }
+   }
+  }
+ },
+ "122_1_forseen": {
+  "n": 4387,
+  "classifier_route_rate": 0.9931616138591293,
+  "conds": {
+   "model": {
+    "pipe_always": {
+     "G4": 1.2,
+     "A4": 1.93,
+     "mean_pmae": 1.13,
+     "G": {
+      "calories": 0.86,
+      "fat": 1.5,
+      "protein": 1.02,
+      "carb": 1.44,
+      "mass": 0.93
+     },
+     "MAE": {
+      "calories": 2.8,
+      "fat": 0.17,
+      "protein": 0.17,
+      "carb": 0.54,
+      "mass": 2.63
+     },
+     "n": 4387
+    },
+    "oracle_q": {
+     "G4": 1.09,
+     "A4": 1.79,
+     "mean_pmae": 1.01,
+     "G": {
+      "calories": 0.73,
+      "fat": 1.4,
+      "protein": 0.91,
+      "carb": 1.3,
+      "mass": 0.81
+     },
+     "MAE": {
+      "calories": 2.39,
+      "fat": 0.16,
+      "protein": 0.15,
+      "carb": 0.49,
+      "mass": 2.29
+     },
+     "n": 4387
+    },
+    "serving": {
+     "G4": 1.1,
+     "A4": 1.92,
+     "mean_pmae": 1.02,
+     "G": {
+      "calories": 0.75,
+      "fat": 1.39,
+      "protein": 0.92,
+      "carb": 1.33,
+      "mass": 0.83
+     },
+     "MAE": {
+      "calories": 3.24,
+      "fat": 0.22,
+      "protein": 0.2,
+      "carb": 0.67,
+      "mass": 3.12
+     },
+     "n": 4387
+    },
+    "food_slope": {
+     "calories": 0.99,
+     "fat": 0.98,
+     "protein": 0.99,
+     "carb": 0.98
+    },
+    "food_corr": {
+     "calories": 1.0,
+     "fat": 1.0,
+     "protein": 1.0,
+     "carb": 1.0
+    }
+   },
+   "gemini": {
+    "pipe_always": {
+     "G4": 28.92,
+     "A4": 33.45,
+     "mean_pmae": 30.98,
+     "G": {
+      "calories": 22.59,
+      "fat": 40.48,
+      "protein": 29.88,
+      "carb": 22.74,
+      "mass": 16.04
+     },
+     "MAE": {
+      "calories": 73.58,
+      "fat": 4.71,
+      "protein": 4.86,
+      "carb": 8.57,
+      "mass": 45.33
+     },
+     "n": 4387
+    },
+    "oracle_q": {
+     "G4": 28.87,
+     "A4": 33.37,
+     "mean_pmae": 30.93,
+     "G": {
+      "calories": 22.52,
+      "fat": 40.47,
+      "protein": 29.81,
+      "carb": 22.68,
+      "mass": 15.95
+     },
+     "MAE": {
+      "calories": 73.35,
+      "fat": 4.71,
+      "protein": 4.85,
+      "carb": 8.55,
+      "mass": 45.06
+     },
+     "n": 4387
+    },
+    "serving": {
+     "G4": 28.86,
+     "A4": 35.48,
+     "mean_pmae": 30.91,
+     "G": {
+      "calories": 22.52,
+      "fat": 40.43,
+      "protein": 29.77,
+      "carb": 22.72,
+      "mass": 15.97
+     },
+     "MAE": {
+      "calories": 97.75,
+      "fat": 6.27,
+      "protein": 6.45,
+      "carb": 11.41,
+      "mass": 60.11
+     },
+     "n": 4387
+    },
+    "food_slope": {
+     "calories": 0.65,
+     "fat": 0.51,
+     "protein": 0.77,
+     "carb": 0.92
+    },
+    "food_corr": {
+     "calories": 0.79,
+     "fat": 0.73,
+     "protein": 0.78,
+     "carb": 0.9
+    }
+   },
+   "routed": {
+    "pipe_always": {
+     "G4": 1.4,
+     "A4": 2.11,
+     "mean_pmae": 1.31,
+     "G": {
+      "calories": 1.01,
+      "fat": 1.64,
+      "protein": 1.27,
+      "carb": 1.69,
+      "mass": 1.02
+     },
+     "MAE": {
+      "calories": 3.3,
+      "fat": 0.19,
+      "protein": 0.21,
+      "carb": 0.64,
+      "mass": 2.87
+     },
+     "n": 4387
+    },
+    "oracle_q": {
+     "G4": 1.29,
+     "A4": 1.96,
+     "mean_pmae": 1.19,
+     "G": {
+      "calories": 0.89,
+      "fat": 1.53,
+      "protein": 1.16,
+      "carb": 1.56,
+      "mass": 0.9
+     },
+     "MAE": {
+      "calories": 2.9,
+      "fat": 0.18,
+      "protein": 0.19,
+      "carb": 0.59,
+      "mass": 2.53
+     },
+     "n": 4387
+    },
+    "serving": {
+     "G4": 1.28,
+     "A4": 2.1,
+     "mean_pmae": 1.19,
+     "G": {
+      "calories": 0.9,
+      "fat": 1.54,
+      "protein": 1.14,
+      "carb": 1.56,
+      "mass": 0.9
+     },
+     "MAE": {
+      "calories": 3.9,
+      "fat": 0.24,
+      "protein": 0.25,
+      "carb": 0.78,
+      "mass": 3.37
+     },
+     "n": 4387
+    },
+    "food_slope": {
+     "calories": 0.99,
+     "fat": 0.98,
+     "protein": 0.99,
+     "carb": 0.98
+    },
+    "food_corr": {
+     "calories": 1.0,
+     "fat": 1.0,
+     "protein": 1.0,
+     "carb": 1.0
+    }
+   },
+   "avg": {
+    "pipe_always": {
+     "G4": 14.71,
+     "A4": 17.04,
+     "mean_pmae": 15.74,
+     "G": {
+      "calories": 11.46,
+      "fat": 20.62,
+      "protein": 15.14,
+      "carb": 11.64,
+      "mass": 8.42
+     },
+     "MAE": {
+      "calories": 37.32,
+      "fat": 2.4,
+      "protein": 2.46,
+      "carb": 4.39,
+      "mass": 23.8
+     },
+     "n": 4387
+    },
+    "oracle_q": {
+     "G4": 14.64,
+     "A4": 16.95,
+     "mean_pmae": 15.68,
+     "G": {
+      "calories": 11.37,
+      "fat": 20.6,
+      "protein": 15.06,
+      "carb": 11.55,
+      "mass": 8.32
+     },
+     "MAE": {
+      "calories": 37.03,
+      "fat": 2.4,
+      "protein": 2.45,
+      "carb": 4.35,
+      "mass": 23.51
+     },
+     "n": 4387
+    },
+    "serving": {
+     "G4": 14.65,
+     "A4": 18.01,
+     "mean_pmae": 15.67,
+     "G": {
+      "calories": 11.38,
+      "fat": 20.58,
+      "protein": 15.05,
+      "carb": 11.58,
+      "mass": 8.34
+     },
+     "MAE": {
+      "calories": 49.39,
+      "fat": 3.19,
+      "protein": 3.26,
+      "carb": 5.82,
+      "mass": 31.39
+     },
+     "n": 4387
+    },
+    "food_slope": {
+     "calories": 0.82,
+     "fat": 0.75,
+     "protein": 0.88,
+     "carb": 0.95
+    },
+    "food_corr": {
+     "calories": 0.95,
+     "fat": 0.95,
+     "protein": 0.94,
+     "carb": 0.97
+    }
+   },
+   "gemini_gtname": {
+    "pipe_always": {
+     "G4": 28.9,
+     "A4": 33.44,
+     "mean_pmae": 30.96,
+     "G": {
+      "calories": 22.58,
+      "fat": 40.47,
+      "protein": 29.82,
+      "carb": 22.72,
+      "mass": 16.06
+     },
+     "MAE": {
+      "calories": 73.54,
+      "fat": 4.71,
+      "protein": 4.85,
+      "carb": 8.57,
+      "mass": 45.37
+     },
+     "n": 4387
+    },
+    "oracle_q": {
+     "G4": 28.84,
+     "A4": 33.36,
+     "mean_pmae": 30.91,
+     "G": {
+      "calories": 22.51,
+      "fat": 40.46,
+      "protein": 29.76,
+      "carb": 22.66,
+      "mass": 15.96
+     },
+     "MAE": {
+      "calories": 73.32,
+      "fat": 4.71,
+      "protein": 4.84,
+      "carb": 8.54,
+      "mass": 45.11
+     },
+     "n": 4387
+    },
+    "serving": {
+     "G4": 28.83,
+     "A4": 35.47,
+     "mean_pmae": 30.89,
+     "G": {
+      "calories": 22.5,
+      "fat": 40.43,
+      "protein": 29.73,
+      "carb": 22.66,
+      "mass": 15.97
+     },
+     "MAE": {
+      "calories": 97.66,
+      "fat": 6.27,
+      "protein": 6.44,
+      "carb": 11.39,
+      "mass": 60.1
+     },
+     "n": 4387
+    },
+    "food_slope": {
+     "calories": 0.65,
+     "fat": 0.51,
+     "protein": 0.78,
+     "carb": 0.92
+    },
+    "food_corr": {
+     "calories": 0.78,
+     "fat": 0.73,
+     "protein": 0.78,
+     "carb": 0.9
+    }
+   },
+   "routed_ing": {
+    "pipe_always": {
+     "G4": 1.4,
+     "A4": 2.1,
+     "mean_pmae": 1.31,
+     "G": {
+      "calories": 1.01,
+      "fat": 1.64,
+      "protein": 1.27,
+      "carb": 1.69,
+      "mass": 1.04
+     },
+     "MAE": {
+      "calories": 3.31,
+      "fat": 0.19,
+      "protein": 0.21,
+      "carb": 0.64,
+      "mass": 2.93
+     },
+     "n": 4387
+    },
+    "oracle_q": {
+     "G4": 1.29,
+     "A4": 1.96,
+     "mean_pmae": 1.2,
+     "G": {
+      "calories": 0.89,
+      "fat": 1.54,
+      "protein": 1.16,
+      "carb": 1.55,
+      "mass": 0.92
+     },
+     "MAE": {
+      "calories": 2.9,
+      "fat": 0.18,
+      "protein": 0.19,
+      "carb": 0.59,
+      "mass": 2.59
+     },
+     "n": 4387
+    },
+    "serving": {
+     "G4": 1.28,
+     "A4": 2.1,
+     "mean_pmae": 1.19,
+     "G": {
+      "calories": 0.9,
+      "fat": 1.53,
+      "protein": 1.13,
+      "carb": 1.55,
+      "mass": 0.92
+     },
+     "MAE": {
+      "calories": 3.9,
+      "fat": 0.24,
+      "protein": 0.25,
+      "carb": 0.78,
+      "mass": 3.45
+     },
+     "n": 4387
+    },
+    "food_slope": {
+     "calories": 0.99,
+     "fat": 0.98,
+     "protein": 0.99,
+     "carb": 0.98
+    },
+    "food_corr": {
+     "calories": 1.0,
+     "fat": 1.0,
+     "protein": 1.0,
+     "carb": 1.0
+    }
+   }
+  },
+  "final": {
+   "model": {
+    "G4": 1.2,
+    "A4": 1.93,
+    "mean_pmae": 1.13,
+    "G": {
+     "calories": 0.86,
+     "fat": 1.5,
+     "protein": 1.02,
+     "carb": 1.44,
+     "mass": 0.93
+    },
+    "MAE": {
+     "calories": 2.8,
+     "fat": 0.17,
+     "protein": 0.17,
+     "carb": 0.54,
+     "mass": 2.63
+    },
+    "n": 4387
+   },
+   "routed": {
+    "G4": 1.4,
+    "A4": 2.11,
+    "mean_pmae": 1.31,
+    "G": {
+     "calories": 1.01,
+     "fat": 1.64,
+     "protein": 1.27,
+     "carb": 1.69,
+     "mass": 1.02
+    },
+    "MAE": {
+     "calories": 3.3,
+     "fat": 0.19,
+     "protein": 0.21,
+     "carb": 0.64,
+     "mass": 2.87
+    },
+    "n": 4387
+   },
+   "r_ing": {
+    "G4": 1.4,
+    "A4": 2.1,
+    "mean_pmae": 1.31,
+    "G": {
+     "calories": 1.01,
+     "fat": 1.64,
+     "protein": 1.27,
+     "carb": 1.69,
+     "mass": 1.04
+    },
+    "MAE": {
+     "calories": 3.31,
+     "fat": 0.19,
+     "protein": 0.21,
+     "carb": 0.64,
+     "mass": 2.93
+    },
+    "n": 4387
+   },
+   "r_mfds": {
+    "G4": 1.38,
+    "A4": 2.08,
+    "mean_pmae": 1.28,
+    "G": {
+     "calories": 0.99,
+     "fat": 1.62,
+     "protein": 1.23,
+     "carb": 1.67,
+     "mass": 1.02
+    },
+    "MAE": {
+     "calories": 3.24,
+     "fat": 0.19,
+     "protein": 0.2,
+     "carb": 0.63,
+     "mass": 2.88
+    },
+    "n": 4387
+   },
+   "r_dens_direct": {
+    "G4": 1.35,
+    "A4": 2.06,
+    "mean_pmae": 1.26,
+    "G": {
+     "calories": 0.93,
+     "fat": 1.65,
+     "protein": 1.21,
+     "carb": 1.6,
+     "mass": 0.93
+    },
+    "MAE": {
+     "calories": 3.02,
+     "fat": 0.19,
+     "protein": 0.2,
+     "carb": 0.6,
+     "mass": 2.63
+    },
+    "n": 4387
+   },
+   "r_dens_q4": {
+    "G4": 1.35,
+    "A4": 2.05,
+    "mean_pmae": 1.26,
+    "G": {
+     "calories": 0.93,
+     "fat": 1.66,
+     "protein": 1.21,
+     "carb": 1.59,
+     "mass": 0.93
+    },
+    "MAE": {
+     "calories": 3.02,
+     "fat": 0.19,
+     "protein": 0.2,
+     "carb": 0.6,
+     "mass": 2.63
+    },
+    "n": 4387
+   },
+   "r_dens_truemass": {
+    "G4": 1.35,
+    "A4": 2.06,
+    "mean_pmae": 1.27,
+    "G": {
+     "calories": 0.93,
+     "fat": 1.66,
+     "protein": 1.21,
+     "carb": 1.59,
+     "mass": 0.9
+    },
+    "MAE": {
+     "calories": 3.01,
+     "fat": 0.19,
+     "protein": 0.2,
+     "carb": 0.6,
+     "mass": 2.55
+    },
+    "n": 4387
+   },
+   "r_dens_mfds_direct": {
+    "G4": 1.33,
+    "A4": 2.04,
+    "mean_pmae": 1.25,
+    "G": {
+     "calories": 0.91,
+     "fat": 1.64,
+     "protein": 1.19,
+     "carb": 1.58,
+     "mass": 0.93
+    },
+    "MAE": {
+     "calories": 2.96,
+     "fat": 0.19,
+     "protein": 0.19,
+     "carb": 0.6,
+     "mass": 2.63
+    },
+    "n": 4387
+   },
+   "r_dens_mfds_q4": {
+    "G4": 1.33,
+    "A4": 2.03,
+    "mean_pmae": 1.24,
+    "G": {
+     "calories": 0.91,
+     "fat": 1.64,
+     "protein": 1.19,
+     "carb": 1.57,
+     "mass": 0.93
+    },
+    "MAE": {
+     "calories": 2.96,
+     "fat": 0.19,
+     "protein": 0.19,
+     "carb": 0.59,
+     "mass": 2.63
+    },
+    "n": 4387
+   },
+   "r_dens_mfds_truemass": {
+    "G4": 1.33,
+    "A4": 2.05,
+    "mean_pmae": 1.25,
+    "G": {
+     "calories": 0.91,
+     "fat": 1.65,
+     "protein": 1.19,
+     "carb": 1.58,
+     "mass": 0.9
+    },
+    "MAE": {
+     "calories": 2.98,
+     "fat": 0.19,
+     "protein": 0.19,
+     "carb": 0.59,
+     "mass": 2.55
+    },
+    "n": 4387
+   }
+  },
+  "mass_G": {
+   "direct": 2.72,
+   "q4": 0.93,
+   "truemass": 0.0,
+   "gemini_serving_x_ratio": 16.04,
+   "gemini_mfds_serving_x_ratio": 14.31
+  },
+  "serving_mass_ratio_median": {
+   "default": 1.0,
+   "mfds": 1.0
+  },
+  "per_food": {
+   "갈비탕": {
+    "true_serving_cal": 240.4,
+    "model": {
+     "G4": 2.29,
+     "serving_cal": 242.0
+    },
+    "gemini": {
+     "G4": 21.08,
+     "serving_cal": 237.0
+    },
+    "routed_ing": {
+     "G4": 2.29,
+     "serving_cal": 242.0
+    },
+    "gemini_gtname": {
+     "G4": 21.08,
+     "serving_cal": 237.0
+    }
+   },
+   "갈치조림": {
+    "true_serving_cal": 99.4,
+    "model": {
+     "G4": 4.87,
+     "serving_cal": 103.8
+    },
+    "gemini": {
+     "G4": 140.91,
+     "serving_cal": 242.0
+    },
+    "routed_ing": {
+     "G4": 4.87,
+     "serving_cal": 103.8
+    },
+    "gemini_gtname": {
+     "G4": 140.91,
+     "serving_cal": 242.0
+    }
+   },
+   "감자탕": {
+    "true_serving_cal": 963.7,
+    "model": {
+     "G4": 0.24,
+     "serving_cal": 965.2
+    },
+    "gemini": {
+     "G4": 51.58,
+     "serving_cal": 429.0
+    },
+    "routed_ing": {
+     "G4": 0.24,
+     "serving_cal": 965.2
+    },
+    "gemini_gtname": {
+     "G4": 51.58,
+     "serving_cal": 429.0
+    }
+   },
+   "감자튀김": {
+    "true_serving_cal": 462.1,
+    "model": {
+     "G4": 0.93,
+     "serving_cal": 462.1
+    },
+    "gemini": {
+     "G4": 34.37,
+     "serving_cal": 312.0
+    },
+    "routed_ing": {
+     "G4": 0.93,
+     "serving_cal": 462.1
+    },
+    "gemini_gtname": {
+     "G4": 34.37,
+     "serving_cal": 312.0
+    }
+   },
+   "곱창전골": {
+    "true_serving_cal": 532.7,
+    "model": {
+     "G4": 0.97,
+     "serving_cal": 530.7
+    },
+    "gemini": {
+     "G4": 13.73,
+     "serving_cal": 613.0
+    },
+    "routed_ing": {
+     "G4": 0.97,
+     "serving_cal": 530.7
+    },
+    "gemini_gtname": {
+     "G4": 13.73,
+     "serving_cal": 613.0
+    }
+   },
+   "기타잡곡밥": {
+    "true_serving_cal": 302.4,
+    "model": {
+     "G4": 7.65,
+     "serving_cal": 304.5
+    },
+    "gemini": {
+     "G4": 34.33,
+     "serving_cal": 345.5
+    },
+    "routed_ing": {
+     "G4": 7.65,
+     "serving_cal": 304.5
+    },
+    "gemini_gtname": {
+     "G4": 34.33,
+     "serving_cal": 345.5
+    }
+   },
+   "김치볶음밥": {
+    "true_serving_cal": 657.0,
+    "model": {
+     "G4": 2.57,
+     "serving_cal": 653.3
+    },
+    "gemini": {
+     "G4": 76.82,
+     "serving_cal": 571.0
+    },
+    "routed_ing": {
+     "G4": 2.57,
+     "serving_cal": 653.3
+    },
+    "gemini_gtname": {
+     "G4": 76.82,
+     "serving_cal": 571.0
+    }
+   },
+   "깻잎장아찌": {
+    "true_serving_cal": 33.6,
+    "model": {
+     "G4": 3.23,
+     "serving_cal": 34.8
+    },
+    "gemini": {
+     "G4": 39.7,
+     "serving_cal": 24.0
+    },
+    "routed_ing": {
+     "G4": 3.23,
+     "serving_cal": 34.8
+    },
+    "gemini_gtname": {
+     "G4": 39.7,
+     "serving_cal": 24.0
+    }
+   },
+   "꽁치조림": {
+    "true_serving_cal": 280.1,
+    "model": {
+     "G4": 3.46,
+     "serving_cal": 280.7
+    },
+    "gemini": {
+     "G4": 11.03,
+     "serving_cal": 245.0
+    },
+    "routed_ing": {
+     "G4": 3.78,
+     "serving_cal": 279.7
+    },
+    "gemini_gtname": {
+     "G4": 11.03,
+     "serving_cal": 245.0
+    }
+   },
+   "꽃게탕": {
+    "true_serving_cal": 240.7,
+    "model": {
+     "G4": 4.7,
+     "serving_cal": 246.5
+    },
+    "gemini": {
+     "G4": 13.5,
+     "serving_cal": 251.6
+    },
+    "routed_ing": {
+     "G4": 3.56,
+     "serving_cal": 244.5
+    },
+    "gemini_gtname": {
+     "G4": 12.99,
+     "serving_cal": 253.0
+    }
+   },
+   "녹두빈대떡": {
+    "true_serving_cal": 200.7,
+    "model": {
+     "G4": 1.04,
+     "serving_cal": 201.2
+    },
+    "gemini": {
+     "G4": 52.41,
+     "serving_cal": 295.9
+    },
+    "routed_ing": {
+     "G4": 4.12,
+     "serving_cal": 204.7
+    },
+    "gemini_gtname": {
+     "G4": 50.81,
+     "serving_cal": 294.0
+    }
+   },
+   "달걀말이": {
+    "true_serving_cal": 172.2,
+    "model": {
+     "G4": 0.66,
+     "serving_cal": 172.0
+    },
+    "gemini": {
+     "G4": 21.59,
+     "serving_cal": 218.0
+    },
+    "routed_ing": {
+     "G4": 0.66,
+     "serving_cal": 172.0
+    },
+    "gemini_gtname": {
+     "G4": 21.59,
+     "serving_cal": 218.0
+    }
+   },
+   "닭갈비": {
+    "true_serving_cal": 562.1,
+    "model": {
+     "G4": 1.44,
+     "serving_cal": 557.8
+    },
+    "gemini": {
+     "G4": 11.85,
+     "serving_cal": 595.6
+    },
+    "routed_ing": {
+     "G4": 1.44,
+     "serving_cal": 557.8
+    },
+    "gemini_gtname": {
+     "G4": 11.85,
+     "serving_cal": 595.6
+    }
+   },
+   "닭볶음탕": {
+    "true_serving_cal": 371.8,
+    "model": {
+     "G4": 1.31,
+     "serving_cal": 373.8
+    },
+    "gemini": {
+     "G4": 34.22,
+     "serving_cal": 495.6
+    },
+    "routed_ing": {
+     "G4": 1.31,
+     "serving_cal": 373.8
+    },
+    "gemini_gtname": {
+     "G4": 34.22,
+     "serving_cal": 495.6
+    }
+   },
+   "닭죽": {
+    "true_serving_cal": 1181.7,
+    "model": {
+     "G4": 1.11,
+     "serving_cal": 1167.6
+    },
+    "gemini": {
+     "G4": 64.33,
+     "serving_cal": 395.0
+    },
+    "routed_ing": {
+     "G4": 1.11,
+     "serving_cal": 1167.6
+    },
+    "gemini_gtname": {
+     "G4": 64.33,
+     "serving_cal": 395.0
+    }
+   },
+   "닭튀김": {
+    "true_serving_cal": 909.8,
+    "model": {
+     "G4": 0.19,
+     "serving_cal": 909.4
+    },
+    "gemini": {
+     "G4": 41.95,
+     "serving_cal": 530.0
+    },
+    "routed_ing": {
+     "G4": 0.19,
+     "serving_cal": 909.4
+    },
+    "gemini_gtname": {
+     "G4": 41.95,
+     "serving_cal": 530.0
+    }
+   },
+   "돈가스": {
+    "true_serving_cal": 620.6,
+    "model": {
+     "G4": 0.16,
+     "serving_cal": 620.7
+    },
+    "gemini": {
+     "G4": 19.42,
+     "serving_cal": 574.0
+    },
+    "routed_ing": {
+     "G4": 0.2,
+     "serving_cal": 619.7
+    },
+    "gemini_gtname": {
+     "G4": 19.42,
+     "serving_cal": 574.0
+    }
+   },
+   "돌솥밥": {
+    "true_serving_cal": 528.9,
+    "model": {
+     "G4": 1.98,
+     "serving_cal": 528.7
+    },
+    "gemini": {
+     "G4": 22.75,
+     "serving_cal": 492.0
+    },
+    "routed_ing": {
+     "G4": 1.98,
+     "serving_cal": 528.7
+    },
+    "gemini_gtname": {
+     "G4": 22.75,
+     "serving_cal": 492.0
+    }
+   },
+   "돼지갈비": {
+    "true_serving_cal": 248.5,
+    "model": {
+     "G4": 1.1,
+     "serving_cal": 249.7
+    },
+    "gemini": {
+     "G4": 113.85,
+     "serving_cal": 515.0
+    },
+    "routed_ing": {
+     "G4": 1.1,
+     "serving_cal": 249.7
+    },
+    "gemini_gtname": {
+     "G4": 113.85,
+     "serving_cal": 515.0
+    }
+   },
+   "두부구이": {
+    "true_serving_cal": 90.7,
+    "model": {
+     "G4": 3.02,
+     "serving_cal": 92.0
+    },
+    "gemini": {
+     "G4": 54.77,
+     "serving_cal": 138.0
+    },
+    "routed_ing": {
+     "G4": 3.02,
+     "serving_cal": 92.0
+    },
+    "gemini_gtname": {
+     "G4": 54.77,
+     "serving_cal": 138.0
+    }
+   },
+   "두부김치": {
+    "true_serving_cal": 292.4,
+    "model": {
+     "G4": 38.39,
+     "serving_cal": 357.3
+    },
+    "gemini": {
+     "G4": 16.33,
+     "serving_cal": 250.0
+    },
+    "routed_ing": {
+     "G4": 38.39,
+     "serving_cal": 357.3
+    },
+    "gemini_gtname": {
+     "G4": 16.33,
+     "serving_cal": 250.0
+    }
+   },
+   "떡갈비": {
+    "true_serving_cal": 763.0,
+    "model": {
+     "G4": 0.26,
+     "serving_cal": 763.3
+    },
+    "gemini": {
+     "G4": 39.35,
+     "serving_cal": 403.0
+    },
+    "routed_ing": {
+     "G4": 0.48,
+     "serving_cal": 757.7
+    },
+    "gemini_gtname": {
+     "G4": 39.35,
+     "serving_cal": 403.0
+    }
+   },
+   "떡만둣국": {
+    "true_serving_cal": 625.3,
+    "model": {
+     "G4": 3.64,
+     "serving_cal": 618.1
+    },
+    "gemini": {
+     "G4": 23.69,
+     "serving_cal": 625.3
+    },
+    "routed_ing": {
+     "G4": 3.64,
+     "serving_cal": 618.1
+    },
+    "gemini_gtname": {
+     "G4": 23.69,
+     "serving_cal": 625.3
+    }
+   },
+   "떡볶이": {
+    "true_serving_cal": 300.8,
+    "model": {
+     "G4": 3.25,
+     "serving_cal": 301.9
+    },
+    "gemini": {
+     "G4": 12.17,
+     "serving_cal": 304.0
+    },
+    "routed_ing": {
+     "G4": 3.25,
+     "serving_cal": 301.9
+    },
+    "gemini_gtname": {
+     "G4": 12.17,
+     "serving_cal": 304.0
+    }
+   },
+   "라볶이": {
+    "true_serving_cal": 266.0,
+    "model": {
+     "G4": 1.97,
+     "serving_cal": 269.1
+    },
+    "gemini": {
+     "G4": 112.14,
+     "serving_cal": 644.7
+    },
+    "routed_ing": {
+     "G4": 6.59,
+     "serving_cal": 280.5
+    },
+    "gemini_gtname": {
+     "G4": 112.63,
+     "serving_cal": 651.0
+    }
+   },
+   "매운탕": {
+    "true_serving_cal": 402.8,
+    "model": {
+     "G4": 1.43,
+     "serving_cal": 403.3
+    },
+    "gemini": {
+     "G4": 41.1,
+     "serving_cal": 235.0
+    },
+    "routed_ing": {
+     "G4": 1.43,
+     "serving_cal": 403.3
+    },
+    "gemini_gtname": {
+     "G4": 41.1,
+     "serving_cal": 235.0
+    }
+   },
+   "문어숙회": {
+    "true_serving_cal": 67.5,
+    "model": {
+     "G4": 12.98,
+     "serving_cal": 67.6
+    },
+    "gemini": {
+     "G4": 177.81,
+     "serving_cal": 111.0
+    },
+    "routed_ing": {
+     "G4": 12.98,
+     "serving_cal": 67.6
+    },
+    "gemini_gtname": {
+     "G4": 177.81,
+     "serving_cal": 111.0
+    }
+   },
+   "미소된장국": {
+    "true_serving_cal": 38.0,
+    "model": {
+     "G4": 4.4,
+     "serving_cal": 38.5
+    },
+    "gemini": {
+     "G4": 68.0,
+     "serving_cal": 45.0
+    },
+    "routed_ing": {
+     "G4": 4.4,
+     "serving_cal": 38.5
+    },
+    "gemini_gtname": {
+     "G4": 68.0,
+     "serving_cal": 45.0
+    }
+   },
+   "부대찌개": {
+    "true_serving_cal": 526.0,
+    "model": {
+     "G4": 0.57,
+     "serving_cal": 524.6
+    },
+    "gemini": {
+     "G4": 20.1,
+     "serving_cal": 602.0
+    },
+    "routed_ing": {
+     "G4": 0.57,
+     "serving_cal": 524.6
+    },
+    "gemini_gtname": {
+     "G4": 20.1,
+     "serving_cal": 602.0
+    }
+   },
+   "삼계탕": {
+    "true_serving_cal": 881.3,
+    "model": {
+     "G4": 0.93,
+     "serving_cal": 880.6
+    },
+    "gemini": {
+     "G4": 40.27,
+     "serving_cal": 918.0
+    },
+    "routed_ing": {
+     "G4": 0.93,
+     "serving_cal": 880.6
+    },
+    "gemini_gtname": {
+     "G4": 40.27,
+     "serving_cal": 918.0
+    }
+   },
+   "삼선볶음밥": {
+    "true_serving_cal": 683.6,
+    "model": {
+     "G4": 0.62,
+     "serving_cal": 680.8
+    },
+    "gemini": {
+     "G4": 21.82,
+     "serving_cal": 785.0
+    },
+    "routed_ing": {
+     "G4": 0.62,
+     "serving_cal": 680.8
+    },
+    "gemini_gtname": {
+     "G4": 21.82,
+     "serving_cal": 785.0
+    }
+   },
+   "삼선짬뽕": {
+    "true_serving_cal": 629.1,
+    "model": {
+     "G4": 0.33,
+     "serving_cal": 628.1
+    },
+    "gemini": {
+     "G4": 8.3,
+     "serving_cal": 701.0
+    },
+    "routed_ing": {
+     "G4": 0.33,
+     "serving_cal": 628.1
+    },
+    "gemini_gtname": {
+     "G4": 8.3,
+     "serving_cal": 701.0
+    }
+   },
+   "새우볶음밥": {
+    "true_serving_cal": 634.5,
+    "model": {
+     "G4": 0.35,
+     "serving_cal": 631.8
+    },
+    "gemini": {
+     "G4": 17.63,
+     "serving_cal": 686.0
+    },
+    "routed_ing": {
+     "G4": 0.35,
+     "serving_cal": 631.8
+    },
+    "gemini_gtname": {
+     "G4": 17.63,
+     "serving_cal": 686.0
+    }
+   },
+   "새우튀김": {
+    "true_serving_cal": 311.3,
+    "model": {
+     "G4": 0.76,
+     "serving_cal": 313.1
+    },
+    "gemini": {
+     "G4": 11.32,
+     "serving_cal": 301.2
+    },
+    "routed_ing": {
+     "G4": 0.76,
+     "serving_cal": 313.1
+    },
+    "gemini_gtname": {
+     "G4": 11.32,
+     "serving_cal": 301.2
+    }
+   },
+   "소고기김밥": {
+    "true_serving_cal": 425.7,
+    "model": {
+     "G4": 0.76,
+     "serving_cal": 426.2
+    },
+    "gemini": {
+     "G4": 43.04,
+     "serving_cal": 489.8
+    },
+    "routed_ing": {
+     "G4": 0.92,
+     "serving_cal": 425.7
+    },
+    "gemini_gtname": {
+     "G4": 43.16,
+     "serving_cal": 493.0
+    }
+   },
+   "소고기무국": {
+    "true_serving_cal": 125.2,
+    "model": {
+     "G4": 1.03,
+     "serving_cal": 125.1
+    },
+    "gemini": {
+     "G4": 6.12,
+     "serving_cal": 128.0
+    },
+    "routed_ing": {
+     "G4": 1.03,
+     "serving_cal": 125.1
+    },
+    "gemini_gtname": {
+     "G4": 6.12,
+     "serving_cal": 128.0
+    }
+   },
+   "수제비": {
+    "true_serving_cal": 622.1,
+    "model": {
+     "G4": 1.67,
+     "serving_cal": 616.7
+    },
+    "gemini": {
+     "G4": 31.95,
+     "serving_cal": 455.3
+    },
+    "routed_ing": {
+     "G4": 1.68,
+     "serving_cal": 611.9
+    },
+    "gemini_gtname": {
+     "G4": 31.74,
+     "serving_cal": 461.0
+    }
+   },
+   "순대국": {
+    "true_serving_cal": 550.7,
+    "model": {
+     "G4": 0.31,
+     "serving_cal": 550.5
+    },
+    "gemini": {
+     "G4": 25.94,
+     "serving_cal": 520.0
+    },
+    "routed_ing": {
+     "G4": 0.31,
+     "serving_cal": 550.5
+    },
+    "gemini_gtname": {
+     "G4": 25.94,
+     "serving_cal": 520.0
+    }
+   },
+   "순대볶음": {
+    "true_serving_cal": 579.6,
+    "model": {
+     "G4": 1.95,
+     "serving_cal": 573.0
+    },
+    "gemini": {
+     "G4": 13.7,
+     "serving_cal": 519.8
+    },
+    "routed_ing": {
+     "G4": 1.95,
+     "serving_cal": 573.0
+    },
+    "gemini_gtname": {
+     "G4": 13.7,
+     "serving_cal": 519.8
+    }
+   },
+   "순두부찌개": {
+    "true_serving_cal": 198.5,
+    "model": {
+     "G4": 3.34,
+     "serving_cal": 202.4
+    },
+    "gemini": {
+     "G4": 23.96,
+     "serving_cal": 252.6
+    },
+    "routed_ing": {
+     "G4": 3.34,
+     "serving_cal": 202.4
+    },
+    "gemini_gtname": {
+     "G4": 23.96,
+     "serving_cal": 252.6
+    }
+   },
+   "시금치나물": {
+    "true_serving_cal": 37.5,
+    "model": {
+     "G4": 3.84,
+     "serving_cal": 37.0
+    },
+    "gemini": {
+     "G4": 28.45,
+     "serving_cal": 52.0
+    },
+    "routed_ing": {
+     "G4": 3.84,
+     "serving_cal": 37.0
+    },
+    "gemini_gtname": {
+     "G4": 28.45,
+     "serving_cal": 52.0
+    }
+   },
+   "시래기된장국": {
+    "true_serving_cal": 99.1,
+    "model": {
+     "G4": 1.4,
+     "serving_cal": 99.8
+    },
+    "gemini": {
+     "G4": 37.31,
+     "serving_cal": 65.2
+    },
+    "routed_ing": {
+     "G4": 1.4,
+     "serving_cal": 99.8
+    },
+    "gemini_gtname": {
+     "G4": 37.31,
+     "serving_cal": 65.2
+    }
+   },
+   "쌀밥": {
+    "true_serving_cal": 334.8,
+    "model": {
+     "G4": 1.1,
+     "serving_cal": 334.7
+    },
+    "gemini": {
+     "G4": 17.55,
+     "serving_cal": 313.0
+    },
+    "routed_ing": {
+     "G4": 1.17,
+     "serving_cal": 334.2
+    },
+    "gemini_gtname": {
+     "G4": 17.55,
+     "serving_cal": 313.0
+    }
+   },
+   "알밥": {
+    "true_serving_cal": 606.5,
+    "model": {
+     "G4": 2.21,
+     "serving_cal": 605.6
+    },
+    "gemini": {
+     "G4": 72.41,
+     "serving_cal": 586.2
+    },
+    "routed_ing": {
+     "G4": 2.21,
+     "serving_cal": 605.6
+    },
+    "gemini_gtname": {
+     "G4": 72.41,
+     "serving_cal": 586.2
+    }
+   },
+   "알탕": {
+    "true_serving_cal": 424.1,
+    "model": {
+     "G4": 1.29,
+     "serving_cal": 425.5
+    },
+    "gemini": {
+     "G4": 46.81,
+     "serving_cal": 322.1
+    },
+    "routed_ing": {
+     "G4": 5.95,
+     "serving_cal": 421.5
+    },
+    "gemini_gtname": {
+     "G4": 46.26,
+     "serving_cal": 318.5
+    }
+   },
+   "양념게장": {
+    "true_serving_cal": 275.6,
+    "model": {
+     "G4": 2.1,
+     "serving_cal": 275.9
+    },
+    "gemini": {
+     "G4": 32.94,
+     "serving_cal": 235.0
+    },
+    "routed_ing": {
+     "G4": 2.1,
+     "serving_cal": 275.9
+    },
+    "gemini_gtname": {
+     "G4": 32.94,
+     "serving_cal": 235.0
+    }
+   },
+   "어묵볶음": {
+    "true_serving_cal": 281.5,
+    "model": {
+     "G4": 0.61,
+     "serving_cal": 283.0
+    },
+    "gemini": {
+     "G4": 53.07,
+     "serving_cal": 128.0
+    },
+    "routed_ing": {
+     "G4": 0.61,
+     "serving_cal": 283.0
+    },
+    "gemini_gtname": {
+     "G4": 53.07,
+     "serving_cal": 128.0
+    }
+   },
+   "오므라이스": {
+    "true_serving_cal": 685.0,
+    "model": {
+     "G4": 0.59,
+     "serving_cal": 678.9
+    },
+    "gemini": {
+     "G4": 9.58,
+     "serving_cal": 658.4
+    },
+    "routed_ing": {
+     "G4": 0.81,
+     "serving_cal": 676.1
+    },
+    "gemini_gtname": {
+     "G4": 9.47,
+     "serving_cal": 662.0
+    }
+   },
+   "오징어볶음": {
+    "true_serving_cal": 243.7,
+    "model": {
+     "G4": 0.52,
+     "serving_cal": 244.4
+    },
+    "gemini": {
+     "G4": 14.6,
+     "serving_cal": 219.0
+    },
+    "routed_ing": {
+     "G4": 0.52,
+     "serving_cal": 244.4
+    },
+    "gemini_gtname": {
+     "G4": 14.6,
+     "serving_cal": 219.0
+    }
+   },
+   "오징어젓갈": {
+    "true_serving_cal": 6.8,
+    "model": {
+     "G4": 38.47,
+     "serving_cal": 5.6
+    },
+    "gemini": {
+     "G4": 719.47,
+     "serving_cal": 45.0
+    },
+    "routed_ing": {
+     "G4": 38.47,
+     "serving_cal": 5.6
+    },
+    "gemini_gtname": {
+     "G4": 719.47,
+     "serving_cal": 45.0
+    }
+   },
+   "육개장": {
+    "true_serving_cal": 137.9,
+    "model": {
+     "G4": 1.37,
+     "serving_cal": 141.1
+    },
+    "gemini": {
+     "G4": 127.18,
+     "serving_cal": 340.0
+    },
+    "routed_ing": {
+     "G4": 1.37,
+     "serving_cal": 141.1
+    },
+    "gemini_gtname": {
+     "G4": 127.18,
+     "serving_cal": 340.0
+    }
+   },
+   "일반김밥": {
+    "true_serving_cal": 348.9,
+    "model": {
+     "G4": 1.28,
+     "serving_cal": 352.1
+    },
+    "gemini": {
+     "G4": 50.31,
+     "serving_cal": 478.9
+    },
+    "routed_ing": {
+     "G4": 2.45,
+     "serving_cal": 356.1
+    },
+    "gemini_gtname": {
+     "G4": 51.02,
+     "serving_cal": 485.0
+    }
+   },
+   "일식우동": {
+    "true_serving_cal": 420.8,
+    "model": {
+     "G4": 2.09,
+     "serving_cal": 420.4
+    },
+    "gemini": {
+     "G4": 41.95,
+     "serving_cal": 450.0
+    },
+    "routed_ing": {
+     "G4": 2.09,
+     "serving_cal": 420.4
+    },
+    "gemini_gtname": {
+     "G4": 41.95,
+     "serving_cal": 450.0
+    }
+   },
+   "자장면": {
+    "true_serving_cal": 760.9,
+    "model": {
+     "G4": 0.26,
+     "serving_cal": 759.9
+    },
+    "gemini": {
+     "G4": 11.64,
+     "serving_cal": 797.0
+    },
+    "routed_ing": {
+     "G4": 0.26,
+     "serving_cal": 759.9
+    },
+    "gemini_gtname": {
+     "G4": 11.64,
+     "serving_cal": 797.0
+    }
+   },
+   "잡탕밥": {
+    "true_serving_cal": 737.2,
+    "model": {
+     "G4": 0.46,
+     "serving_cal": 732.8
+    },
+    "gemini": {
+     "G4": 10.12,
+     "serving_cal": 677.0
+    },
+    "routed_ing": {
+     "G4": 0.46,
+     "serving_cal": 732.8
+    },
+    "gemini_gtname": {
+     "G4": 10.12,
+     "serving_cal": 677.0
+    }
+   },
+   "전주비빔밥": {
+    "true_serving_cal": 662.2,
+    "model": {
+     "G4": 0.79,
+     "serving_cal": 656.5
+    },
+    "gemini": {
+     "G4": 18.71,
+     "serving_cal": 644.0
+    },
+    "routed_ing": {
+     "G4": 0.79,
+     "serving_cal": 656.5
+    },
+    "gemini_gtname": {
+     "G4": 18.71,
+     "serving_cal": 644.0
+    }
+   },
+   "전주콩나물국밥": {
+    "true_serving_cal": 432.4,
+    "model": {
+     "G4": 0.6,
+     "serving_cal": 431.9
+    },
+    "gemini": {
+     "G4": 28.29,
+     "serving_cal": 445.0
+    },
+    "routed_ing": {
+     "G4": 0.6,
+     "serving_cal": 431.9
+    },
+    "gemini_gtname": {
+     "G4": 28.29,
+     "serving_cal": 445.0
+    }
+   },
+   "제육덮밥": {
+    "true_serving_cal": 796.9,
+    "model": {
+     "G4": 1.06,
+     "serving_cal": 788.0
+    },
+    "gemini": {
+     "G4": 9.48,
+     "serving_cal": 797.0
+    },
+    "routed_ing": {
+     "G4": 1.5,
+     "serving_cal": 788.4
+    },
+    "gemini_gtname": {
+     "G4": 9.48,
+     "serving_cal": 797.0
+    }
+   },
+   "쫄면": {
+    "true_serving_cal": 622.4,
+    "model": {
+     "G4": 1.16,
+     "serving_cal": 619.6
+    },
+    "gemini": {
+     "G4": 9.07,
+     "serving_cal": 550.3
+    },
+    "routed_ing": {
+     "G4": 1.73,
+     "serving_cal": 616.9
+    },
+    "gemini_gtname": {
+     "G4": 9.08,
+     "serving_cal": 550.0
+    }
+   },
+   "참치마요삼각김밥": {
+    "true_serving_cal": 189.6,
+    "model": {
+     "G4": 1.56,
+     "serving_cal": 189.9
+    },
+    "gemini": {
+     "G4": 33.63,
+     "serving_cal": 198.0
+    },
+    "routed_ing": {
+     "G4": 1.56,
+     "serving_cal": 189.9
+    },
+    "gemini_gtname": {
+     "G4": 33.63,
+     "serving_cal": 198.0
+    }
+   },
+   "채소튀김": {
+    "true_serving_cal": 312.0,
+    "model": {
+     "G4": 1.32,
+     "serving_cal": 313.0
+    },
+    "gemini": {
+     "G4": 24.22,
+     "serving_cal": 228.0
+    },
+    "routed_ing": {
+     "G4": 1.32,
+     "serving_cal": 313.0
+    },
+    "gemini_gtname": {
+     "G4": 24.22,
+     "serving_cal": 228.0
+    }
+   },
+   "총각김치": {
+    "true_serving_cal": 17.6,
+    "model": {
+     "G4": 9.5,
+     "serving_cal": 18.1
+    },
+    "gemini": {
+     "G4": 25.93,
+     "serving_cal": 24.5
+    },
+    "routed_ing": {
+     "G4": 9.5,
+     "serving_cal": 18.1
+    },
+    "gemini_gtname": {
+     "G4": 25.93,
+     "serving_cal": 24.5
+    }
+   },
+   "치킨윙": {
+    "true_serving_cal": 219.4,
+    "model": {
+     "G4": 2.2,
+     "serving_cal": 221.6
+    },
+    "gemini": {
+     "G4": 116.88,
+     "serving_cal": 455.0
+    },
+    "routed_ing": {
+     "G4": 2.2,
+     "serving_cal": 221.6
+    },
+    "gemini_gtname": {
+     "G4": 116.88,
+     "serving_cal": 455.0
+    }
+   },
+   "카레라이스": {
+    "true_serving_cal": 653.2,
+    "model": {
+     "G4": 3.6,
+     "serving_cal": 650.2
+    },
+    "gemini": {
+     "G4": 22.81,
+     "serving_cal": 652.5
+    },
+    "routed_ing": {
+     "G4": 3.6,
+     "serving_cal": 650.2
+    },
+    "gemini_gtname": {
+     "G4": 22.81,
+     "serving_cal": 652.5
+    }
+   },
+   "코다리조림": {
+    "true_serving_cal": 146.7,
+    "model": {
+     "G4": 1.09,
+     "serving_cal": 146.1
+    },
+    "gemini": {
+     "G4": 83.61,
+     "serving_cal": 195.0
+    },
+    "routed_ing": {
+     "G4": 1.09,
+     "serving_cal": 146.1
+    },
+    "gemini_gtname": {
+     "G4": 83.61,
+     "serving_cal": 195.0
+    }
+   },
+   "콘스프": {
+    "true_serving_cal": 280.5,
+    "model": {
+     "G4": 3.24,
+     "serving_cal": 283.6
+    },
+    "gemini": {
+     "G4": 47.5,
+     "serving_cal": 150.0
+    },
+    "routed_ing": {
+     "G4": 3.24,
+     "serving_cal": 283.6
+    },
+    "gemini_gtname": {
+     "G4": 47.5,
+     "serving_cal": 150.0
+    }
+   },
+   "콩국수": {
+    "true_serving_cal": 623.5,
+    "model": {
+     "G4": 0.38,
+     "serving_cal": 621.8
+    },
+    "gemini": {
+     "G4": 36.82,
+     "serving_cal": 548.8
+    },
+    "routed_ing": {
+     "G4": 1.37,
+     "serving_cal": 619.8
+    },
+    "gemini_gtname": {
+     "G4": 36.82,
+     "serving_cal": 548.8
+    }
+   },
+   "콩밥": {
+    "true_serving_cal": 322.9,
+    "model": {
+     "G4": 1.59,
+     "serving_cal": 322.5
+    },
+    "gemini": {
+     "G4": 11.53,
+     "serving_cal": 335.0
+    },
+    "routed_ing": {
+     "G4": 1.67,
+     "serving_cal": 323.1
+    },
+    "gemini_gtname": {
+     "G4": 11.53,
+     "serving_cal": 335.0
+    }
+   },
+   "크림소스스파게티": {
+    "true_serving_cal": 825.1,
+    "model": {
+     "G4": 0.21,
+     "serving_cal": 824.1
+    },
+    "gemini": {
+     "G4": 17.32,
+     "serving_cal": 679.0
+    },
+    "routed_ing": {
+     "G4": 0.21,
+     "serving_cal": 824.1
+    },
+    "gemini_gtname": {
+     "G4": 17.32,
+     "serving_cal": 679.0
+    }
+   },
+   "토마토소스스파게티": {
+    "true_serving_cal": 642.2,
+    "model": {
+     "G4": 0.63,
+     "serving_cal": 641.2
+    },
+    "gemini": {
+     "G4": 25.41,
+     "serving_cal": 475.2
+    },
+    "routed_ing": {
+     "G4": 0.63,
+     "serving_cal": 641.2
+    },
+    "gemini_gtname": {
+     "G4": 25.41,
+     "serving_cal": 475.2
+    }
+   },
+   "파전": {
+    "true_serving_cal": 280.5,
+    "model": {
+     "G4": 1.07,
+     "serving_cal": 282.2
+    },
+    "gemini": {
+     "G4": 21.78,
+     "serving_cal": 346.0
+    },
+    "routed_ing": {
+     "G4": 1.07,
+     "serving_cal": 282.2
+    },
+    "gemini_gtname": {
+     "G4": 21.78,
+     "serving_cal": 346.0
+    }
+   },
+   "해물찜": {
+    "true_serving_cal": 397.4,
+    "model": {
+     "G4": 0.92,
+     "serving_cal": 398.3
+    },
+    "gemini": {
+     "G4": 29.52,
+     "serving_cal": 309.5
+    },
+    "routed_ing": {
+     "G4": 1.59,
+     "serving_cal": 395.0
+    },
+    "gemini_gtname": {
+     "G4": 29.41,
+     "serving_cal": 311.0
+    }
+   },
+   "햄버거스테이크": {
+    "true_serving_cal": 436.8,
+    "model": {
+     "G4": 1.75,
+     "serving_cal": 436.6
+    },
+    "gemini": {
+     "G4": 8.45,
+     "serving_cal": 478.0
+    },
+    "routed_ing": {
+     "G4": 1.75,
+     "serving_cal": 436.6
+    },
+    "gemini_gtname": {
+     "G4": 8.45,
+     "serving_cal": 478.0
+    }
+   },
+   "호박죽": {
+    "true_serving_cal": 430.3,
+    "model": {
+     "G4": 3.75,
+     "serving_cal": 430.7
+    },
+    "gemini": {
+     "G4": 49.93,
+     "serving_cal": 177.0
+    },
+    "routed_ing": {
+     "G4": 3.75,
+     "serving_cal": 430.7
+    },
+    "gemini_gtname": {
+     "G4": 49.93,
+     "serving_cal": 177.0
+    }
+   },
+   "회냉면": {
+    "true_serving_cal": 638.9,
+    "model": {
+     "G4": 0.49,
+     "serving_cal": 638.1
+    },
+    "gemini": {
+     "G4": 10.41,
+     "serving_cal": 581.0
+    },
+    "routed_ing": {
+     "G4": 0.49,
+     "serving_cal": 638.1
+    },
+    "gemini_gtname": {
+     "G4": 10.41,
+     "serving_cal": 581.0
+    }
+   },
+   "회덮밥": {
+    "true_serving_cal": 698.0,
+    "model": {
+     "G4": 0.21,
+     "serving_cal": 697.0
+    },
+    "gemini": {
+     "G4": 29.94,
+     "serving_cal": 517.0
+    },
+    "routed_ing": {
+     "G4": 1.01,
+     "serving_cal": 694.4
+    },
+    "gemini_gtname": {
+     "G4": 29.94,
+     "serving_cal": 517.0
+    }
+   },
+   "훈제연어": {
+    "true_serving_cal": 169.0,
+    "model": {
+     "G4": 1.11,
+     "serving_cal": 170.2
+    },
+    "gemini": {
+     "G4": 38.79,
+     "serving_cal": 161.0
+    },
+    "routed_ing": {
+     "G4": 1.11,
+     "serving_cal": 170.2
+    },
+    "gemini_gtname": {
+     "G4": 38.79,
+     "serving_cal": 161.0
+    }
+   },
+   "훈제오리": {
+    "true_serving_cal": 790.0,
+    "model": {
+     "G4": 10.88,
+     "serving_cal": 767.1
+    },
+    "gemini": {
+     "G4": 48.55,
+     "serving_cal": 482.0
+    },
+    "routed_ing": {
+     "G4": 10.88,
+     "serving_cal": 767.1
+    },
+    "gemini_gtname": {
+     "G4": 48.55,
+     "serving_cal": 482.0
+    }
+   }
+  }
+ }
+}
