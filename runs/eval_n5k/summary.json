@@ -1,0 +1,96 @@
+{
+  "images": 709,
+  "selected": 709,
+  "clean_dishes": 706,
+  "views": {
+    "overhead": 507,
+    "camera_A": 199,
+    "camera_B": 3
+  },
+  "name_source": {
+    "gemini": 434,
+    "classifier": 275
+  },
+  "quantity_applied": 334,
+  "q_level": {
+    "Q1": 148,
+    "Q2": 168,
+    "Q3": 200,
+    "Q4": 157,
+    "Q5": 36
+  },
+  "all": {
+    "stage3_3": {
+      "cal": 79.72,
+      "mass": 54.99,
+      "fat": 97.31,
+      "carb_head": 102.24,
+      "prot": 64.32,
+      "mean_pmae": 80.45
+    },
+    "stage3_3_q4": {
+      "cal": 96.3,
+      "mass": 63.72,
+      "fat": 108.8,
+      "carb_head": 129.36,
+      "prot": 68.96,
+      "mean_pmae": 91.35
+    },
+    "stage3_4": {
+      "cal": 33.26,
+      "mass": 28.97,
+      "fat": 43.42,
+      "carb_head": 35.24,
+      "prot": 33.63,
+      "mean_pmae": 36.77
+    },
+    "trainmean": {
+      "cal": 73.38,
+      "mass": 64.59,
+      "fat": 89.63,
+      "carb_head": 75.1,
+      "prot": 89.34,
+      "mean_pmae": 84.12
+    }
+  },
+  "clean": {
+    "stage3_3": {
+      "cal": 77.36,
+      "mass": 52.09,
+      "fat": 96.78,
+      "carb_head": 102.33,
+      "prot": 63.84,
+      "mean_pmae": 79.32
+    },
+    "stage3_3_q4": {
+      "cal": 95.9,
+      "mass": 61.4,
+      "fat": 110.8,
+      "carb_head": 131.71,
+      "prot": 68.58,
+      "mean_pmae": 91.76
+    },
+    "stage3_4": {
+      "cal": 25.75,
+      "mass": 24.53,
+      "fat": 31.56,
+      "carb_head": 30.04,
+      "prot": 32.85,
+      "mean_pmae": 30.05
+    },
+    "trainmean": {
+      "cal": 70.43,
+      "mass": 62.44,
+      "fat": 87.51,
+      "carb_head": 73.23,
+      "prot": 89.33,
+      "mean_pmae": 82.42
+    }
+  },
+  "labels": {
+    "stage3_3": "stage3_3 (양 보정 후)",
+    "stage3_3_q4": "stage3_3 (양 보정 전, 1인분)",
+    "stage3_4": "stage3_4 pipeline (같은 사진 1장)",
+    "trainmean": "평균값 예측"
+  }
+}
